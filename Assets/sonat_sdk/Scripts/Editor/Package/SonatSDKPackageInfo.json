@@ -1,0 +1,59 @@
+{
+  "admobUrls": {
+    "10.4.2": "https://github.com/googleads/googleads-mobile-unity/releases/download/v10.4.2/GoogleMobileAds-v10.4.2.unitypackage",
+    "10.5.0": "https://github.com/googleads/googleads-mobile-unity/releases/download/v10.5.0/GoogleMobileAds-v10.5.0.unitypackage",
+    "10.6.0": "https://github.com/googleads/googleads-mobile-unity/releases/download/v10.6.0/GoogleMobileAds-v10.6.0.unitypackage",
+    "10.7.0": "https://github.com/googleads/googleads-mobile-unity/releases/download/10.7.0/GoogleMobileAds-v10.7.0.unitypackage"
+  },
+  "maxUrls": {
+    "8.0.0": "https://github.com/AppLovin/AppLovin-MAX-Unity-Plugin/releases/download/release_8_0_0/AppLovin-MAX-Unity-Plugin-8.0.0-Android-13.0.0-iOS-13.0.0.unitypackage",
+    "8.0.1": "https://github.com/AppLovin/AppLovin-MAX-Unity-Plugin/releases/download/release_8_0_1/AppLovin-MAX-Unity-Plugin-8.0.1-Android-13.0.1-iOS-13.0.1.unitypackage",
+    "8.1.0": "https://github.com/AppLovin/AppLovin-MAX-Unity-Plugin/releases/download/release_8_1_0/AppLovin-MAX-Unity-Plugin-8.1.0-Android-13.1.0-iOS-13.1.0.unitypackage",
+    "8.3.1": "https://github.com/AppLovin/AppLovin-MAX-Unity-Plugin/releases/download/release_8_3_1/AppLovin-MAX-Unity-Plugin-8.3.1-Android-13.3.1-iOS-13.3.1.unitypackage",
+    "8.4.2": "https://github.com/AppLovin/AppLovin-MAX-Unity-Plugin/releases/download/release_8_4_2/AppLovin-MAX-Unity-Plugin-8.3.1-Android-13.3.1-iOS-13.3.1.unitypackage",
+    "8.5.0": "https://github.com/AppLovin/AppLovin-MAX-Unity-Plugin/releases/download/release_8_5_0/AppLovin-MAX-Unity-Plugin-8.5.0-Android-13.5.0-iOS-13.5.0.unitypackage",
+    "8.5.1": "https://github.com/AppLovin/AppLovin-MAX-Unity-Plugin/releases/download/release_8_5_1/AppLovin-MAX-Unity-Plugin-8.5.1-Android-13.5.1-iOS-13.5.1.unitypackage"
+  },
+  "appsFlyerUrls": {
+    "6.17.1": "https://drive.google.com/uc?export=download&id=1cjOEpu8OcOnxFU3PpPxJX3ZshZCWZvHY",
+    "6.17.72": "https://drive.google.com/uc?export=download&id=1SNbk_PD0VhI-yz0S01CPqdIZG2fefUIs",
+    "6.17.81": "https://drive.google.com/uc?export=download&id=1hSwqpO0Rd6x1Wl7iH4a0crP25o2yH00o"
+  },
+  "facebookUrls": {
+    "17.0.0": "https://drive.google.com/uc?export=download&id=1vCfiWST6TBX_80xHf17Z-3uM40R9Khq-",
+    "17.0.1": "https://drive.google.com/uc?export=download&id=1XmFqAp3bWXugZQsIhIGe0pb9TlSiaAd3",
+    "17.0.2": "https://drive.google.com/uc?export=download&id=1F9aED8GIf6TWLsAeMx3oxae7XxCQxy0f",
+    "18.0.0": "https://drive.google.com/uc?export=download&id=1fzIl9e-LfwZ5wV2zjjwxulP9jiRvTZjE"
+  },
+  "admobNetworkUrls": {
+    "Applovin": {
+      "1.0": "https://developers.google.com/admob/unity/mediation/applovin#applovin-unity-mediation-plugin-changelog"
+    },
+    "DTExchange": {
+      "1.0": "https://developers.google.com/admob/unity/mediation/dt-exchange#dt-exchange-unity-mediation-plugin-changelog"
+    },
+    "IronSource": {
+      "1.0": "https://developers.google.com/admob/unity/mediation/ironsource#ironsource-unity-mediation-plugin-changelog"
+    },
+    "LiftoffMonetize": {
+      "1.0": "https://developers.google.com/admob/unity/mediation/liftoff-monetize#liftoff-monetize-unity-mediation-plugin-changelog"
+    },
+    "Line": {
+      "1.0": "https://developers.google.com/admob/unity/mediation/line#line-unity-mediation-plugin-changelog"
+    },
+    "MetaAudienceNetwork": {
+      "1.0": "https://developers.google.com/admob/unity/mediation/meta#meta-audience-network-unity-mediation-plugin-changelog"
+    },
+    "Mintegral": {
+      "1.0": "https://developers.google.com/admob/unity/mediation/mintegral#mintegral-unity-mediation-plugin-changelog"
+    },
+    "Pangle": {
+      "1.0": "https://developers.google.com/admob/unity/mediation/pangle#pangle-unity-mediation-plugin-changelog"
+    },
+    "Unity": {
+      "1.0": "https://developers.google.com/admob/unity/mediation/unity#unity-ads-unity-mediation-plugin-changelog"
+    }
+  },
+  "apsUrl": "https://drive.google.com/file/d/1h-MdRMUWLu9dXs8YfuPQIlVFSVzlYYOS/view?usp=sharing",
+  "admobNativeLibraryUrl": "https://dl.google.com/googleadmobadssdk/GoogleMobileAds-native.unitypackage"
+}

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fe936fa07f321847aed25886b5a3f75, type: 3}
+  m_Name: BlockPalette
+  m_EditorClassIdentifier: Assembly-CSharp::BlockPaletteSO
+  blockMaterials:
+  - {fileID: 2100000, guid: ce3296bd75beaf048a32551dd59eb329, type: 2}
+  - {fileID: 2100000, guid: 2cd40b4e4bf6ef34ea6933b31d96250b, type: 2}
+  - {fileID: 2100000, guid: 81b884a0dd54f8e4d919590f13e3a1d2, type: 2}
+  - {fileID: 2100000, guid: 1de52b65f8150cc43951b250258252d7, type: 2}
+  - {fileID: 2100000, guid: bea55e1c9fc7f8c4688f96589cf15036, type: 2}
+  - {fileID: 2100000, guid: 84e2b1ec5683e424db1516bd78719cb5, type: 2}
+  - {fileID: 2100000, guid: 2aacb1e5f375f2d408f34861b9afcd18, type: 2}
+  - {fileID: 2100000, guid: 6ddc46add7e811a4eb418ca68826943f, type: 2}
+  ghostMaterial: {fileID: 2100000, guid: 55cb1de9aa1ea3f4da2ec8d16292acfd, type: 2}
+  floodMaterial: {fileID: 2100000, guid: 6ff556a1d0628c34d88fdb3d97f79cac, type: 2}
+  previewOverlayMaterial: {fileID: 2100000, guid: affc7ed5b8c891444aba9007fab5b9eb, type: 2}

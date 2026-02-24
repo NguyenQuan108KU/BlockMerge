@@ -1,0 +1,283 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805ae3fb8163e3b4db2cb876210ecbce, type: 3}
+  m_Name: Level_18
+  m_EditorClassIdentifier: Assembly-CSharp::LevelDataSO
+  levelID: Level_18
+  displayName: Level 18
+  gameMode: 0
+  difficulty: 0
+  targetGoal: 60
+  timeLimit: 200
+  floodStartInterval: 4
+  floodIntervalIncrease: 0
+  gameConfig: {fileID: 11400000, guid: 27be30d4856668f408f0a972d666a08f, type: 2}
+  levelWidth: 6
+  floorPrefab: {fileID: 6383998934574555767, guid: bca1a1dd873f2d2419c419b92e8b0edc, type: 3}
+  mapData:
+  - faceIndex: 0
+    localX: 0
+    y: 0
+    blockShapeRef:
+      m_AssetGUID: 89df5ada638d7f241a9d0607dffcd838
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 3
+  - faceIndex: 0
+    localX: 5
+    y: 0
+    blockShapeRef:
+      m_AssetGUID: 89df5ada638d7f241a9d0607dffcd838
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 3
+  - faceIndex: 0
+    localX: 1
+    y: 0
+    blockShapeRef:
+      m_AssetGUID: afd332ba18575234d9168b906d36e2ae
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 7
+  - faceIndex: 0
+    localX: 1
+    y: 2
+    blockShapeRef:
+      m_AssetGUID: 4c5836c4f835ffd4eafd02ad5ff2eb41
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 2
+  - faceIndex: 0
+    localX: 3
+    y: 0
+    blockShapeRef:
+      m_AssetGUID: 36cc00af6cfd6e043afacbaaa0a44c2a
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 0
+  - faceIndex: 0
+    localX: 0
+    y: 3
+    blockShapeRef:
+      m_AssetGUID: 5b8a482a016e28443aeadb78592a169a
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 0
+  - faceIndex: 1
+    localX: 0
+    y: 3
+    blockShapeRef:
+      m_AssetGUID: 5b8a482a016e28443aeadb78592a169a
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 0
+  - faceIndex: 2
+    localX: 0
+    y: 3
+    blockShapeRef:
+      m_AssetGUID: 5b8a482a016e28443aeadb78592a169a
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 0
+  - faceIndex: 3
+    localX: 0
+    y: 3
+    blockShapeRef:
+      m_AssetGUID: 5b8a482a016e28443aeadb78592a169a
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 0
+  - faceIndex: 1
+    localX: 1
+    y: 0
+    blockShapeRef:
+      m_AssetGUID: afd332ba18575234d9168b906d36e2ae
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 7
+  - faceIndex: 1
+    localX: 1
+    y: 2
+    blockShapeRef:
+      m_AssetGUID: 4c5836c4f835ffd4eafd02ad5ff2eb41
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 2
+  - faceIndex: 1
+    localX: 2
+    y: 1
+    blockShapeRef:
+      m_AssetGUID: 69370d32d396cc74baae77ae397e96a5
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 3
+  - faceIndex: 1
+    localX: 2
+    y: 3
+    blockShapeRef:
+      m_AssetGUID: 69370d32d396cc74baae77ae397e96a5
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 3
+  - faceIndex: 1
+    localX: 3
+    y: 2
+    blockShapeRef:
+      m_AssetGUID: 36cc00af6cfd6e043afacbaaa0a44c2a
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 0
+  - faceIndex: 1
+    localX: 0
+    y: 0
+    blockShapeRef:
+      m_AssetGUID: 89df5ada638d7f241a9d0607dffcd838
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 3
+  - faceIndex: 2
+    localX: 1
+    y: 0
+    blockShapeRef:
+      m_AssetGUID: afd332ba18575234d9168b906d36e2ae
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 7
+  - faceIndex: 2
+    localX: 1
+    y: 2
+    blockShapeRef:
+      m_AssetGUID: 4c5836c4f835ffd4eafd02ad5ff2eb41
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 2
+  - faceIndex: 2
+    localX: 3
+    y: 0
+    blockShapeRef:
+      m_AssetGUID: 36cc00af6cfd6e043afacbaaa0a44c2a
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 0
+  - faceIndex: 3
+    localX: 0
+    y: 0
+    blockShapeRef:
+      m_AssetGUID: 89df5ada638d7f241a9d0607dffcd838
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 3
+  - faceIndex: 3
+    localX: 1
+    y: 0
+    blockShapeRef:
+      m_AssetGUID: afd332ba18575234d9168b906d36e2ae
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 7
+  - faceIndex: 3
+    localX: 1
+    y: 2
+    blockShapeRef:
+      m_AssetGUID: 4c5836c4f835ffd4eafd02ad5ff2eb41
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 2
+  - faceIndex: 3
+    localX: 2
+    y: 1
+    blockShapeRef:
+      m_AssetGUID: 69370d32d396cc74baae77ae397e96a5
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 3
+  - faceIndex: 3
+    localX: 3
+    y: 2
+    blockShapeRef:
+      m_AssetGUID: 36cc00af6cfd6e043afacbaaa0a44c2a
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 0
+  - faceIndex: 3
+    localX: 2
+    y: 3
+    blockShapeRef:
+      m_AssetGUID: 69370d32d396cc74baae77ae397e96a5
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 3
+  - faceIndex: 1
+    localX: 5
+    y: 0
+    blockShapeRef:
+      m_AssetGUID: 89df5ada638d7f241a9d0607dffcd838
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    colorIndex: 3
+  difficultyConfig: {fileID: 11400000, guid: eaa4ccbb339d282419b1dc3981ac3cbf, type: 2}
+  shapePool: {fileID: 11400000, guid: 42d14f63e9ac0074298170c9e971970e, type: 2}
+  fixedStartSequence:
+  - {fileID: 11400000, guid: 69370d32d396cc74baae77ae397e96a5, type: 2}
+  - {fileID: 11400000, guid: 69370d32d396cc74baae77ae397e96a5, type: 2}
+  - {fileID: 11400000, guid: 4c5836c4f835ffd4eafd02ad5ff2eb41, type: 2}
+  - {fileID: 11400000, guid: 4c5836c4f835ffd4eafd02ad5ff2eb41, type: 2}

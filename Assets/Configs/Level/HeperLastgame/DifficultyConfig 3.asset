@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0220b361838a5c2498c38fc762f89f1c, type: 3}
+  m_Name: DifficultyConfig 3
+  m_EditorClassIdentifier: Assembly-CSharp::Difficulty.DifficultyConfig
+  mercyTokensMin: 3
+  mercyTokensMax: 3
+  mercyTensionThreshold: 0.8
+  mercyStreakRequired: 2
+  mercyChance: 0.9
+  mercyCooldownMin: 3
+  mercyCooldownMax: 5
+  rescueWeight_1x1: 40
+  rescueWeight_1x2: 35
+  rescueWeight_2x1: 25
+  warningThreshold: 0.5
+  dangerThreshold: 0.7
+  criticalThreshold: 0.85
+  autoRefillBag: 1

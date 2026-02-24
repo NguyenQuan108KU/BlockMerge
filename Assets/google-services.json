@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "811959541909",
+    "project_id": "ih-block-merge-aos-f8ac",
+    "storage_bucket": "ih-block-merge-aos-f8ac.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:811959541909:android:fbfa17909a02f0aecfbb9c",
+        "android_client_info": {
+          "package_name": "com.block.merge3d.cube.jam.puzzle"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEkQnaPmkAjBvf9VZl04nHsKItwu8lESs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805ae3fb8163e3b4db2cb876210ecbce, type: 3}
+  m_Name: Level_31
+  m_EditorClassIdentifier: Assembly-CSharp::LevelDataSO
+  levelID: Level_23
+  displayName: Level 23
+  gameMode: 0
+  difficulty: 0
+  targetGoal: 60
+  timeLimit: 200
+  floodStartInterval: 4
+  floodIntervalIncrease: 0
+  gameConfig: {fileID: 11400000, guid: 27be30d4856668f408f0a972d666a08f, type: 2}
+  levelWidth: 6
+  floorPrefab: {fileID: 6383998934574555767, guid: bca1a1dd873f2d2419c419b92e8b0edc, type: 3}
+  mapData: []
+  difficultyConfig: {fileID: 11400000, guid: eaa4ccbb339d282419b1dc3981ac3cbf, type: 2}
+  shapePool: {fileID: 11400000, guid: 42d14f63e9ac0074298170c9e971970e, type: 2}
+  fixedStartSequence: []

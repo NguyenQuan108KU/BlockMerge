@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09261eb68c768134d8a1025f4379c6e6, type: 3}
+  m_Name: LivesService
+  m_EditorClassIdentifier: Assembly-CSharp::SonatFramework.Scripts.Feature.Lives.LivesService
+  timeRemainToRefill: 1800
+  inventoryService:
+    referenceType: 1
+    reference: {fileID: 11400000, guid: 94eb01dffdf47f246983483bb44e8587, type: 2}
+  timeService:
+    referenceType: 1
+    reference: {fileID: 11400000, guid: 137db6a4393f9bf48a4c79239faf9862, type: 2}
+  dataService:
+    referenceType: 1
+    reference: {fileID: 11400000, guid: fabb8deb140ad0c40941c0b7865c4149, type: 2}
+  config: {fileID: 11400000, guid: 2cf65f9ab68f3e14797eafc6f48cef6f, type: 2}
+  ignoreLives: 0

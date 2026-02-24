@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a39693fbd14af59a81b14de6234937, type: 3}
+  m_Name: SonatConfigService
+  m_EditorClassIdentifier: 
+  loadObjectService:
+    referenceType: 1
+    reference: {fileID: 0}
+  configsSo:
+  - {fileID: 11400000, guid: 0709cf56a1e1c40418c3254c120b6b97, type: 2}
+  - {fileID: 11400000, guid: 1ef609a8812fe46418bf4b7f91623118, type: 2}
+  - {fileID: 11400000, guid: 8f7fd954ce8d0b340bce1c575ca5a713, type: 2}
+  - {fileID: 11400000, guid: 56223c74145a3b946a6bc0b60914ec0d, type: 2}
+  - {fileID: 11400000, guid: 27be30d4856668f408f0a972d666a08f, type: 2}
+  - {fileID: 11400000, guid: eaa4ccbb339d282419b1dc3981ac3cbf, type: 2}
+  - {fileID: 11400000, guid: 2cf65f9ab68f3e14797eafc6f48cef6f, type: 2}

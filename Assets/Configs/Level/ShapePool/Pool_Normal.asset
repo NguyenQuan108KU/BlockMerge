@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bde5d02784437c489f00b4de24b58cd, type: 3}
+  m_Name: Pool_Normal
+  m_EditorClassIdentifier: Assembly-CSharp::Difficulty.ShapePoolSO
+  entries:
+  - shape: {fileID: 11400000, guid: 4c5836c4f835ffd4eafd02ad5ff2eb41, type: 2}
+    weight: 6
+    category: 0
+    isRescueShape: 1
+  - shape: {fileID: 11400000, guid: e5ba09d26899f39478439f7a066e8e55, type: 2}
+    weight: 4
+    category: 0
+    isRescueShape: 1
+  - shape: {fileID: 11400000, guid: 89df5ada638d7f241a9d0607dffcd838, type: 2}
+    weight: 2
+    category: 1
+    isRescueShape: 0
+  - shape: {fileID: 11400000, guid: 36cc00af6cfd6e043afacbaaa0a44c2a, type: 2}
+    weight: 3
+    category: 0
+    isRescueShape: 1
+  - shape: {fileID: 11400000, guid: 69370d32d396cc74baae77ae397e96a5, type: 2}
+    weight: 2
+    category: 1
+    isRescueShape: 0
+  - shape: {fileID: 11400000, guid: afd332ba18575234d9168b906d36e2ae, type: 2}
+    weight: 2
+    category: 1
+    isRescueShape: 0
+  - shape: {fileID: 11400000, guid: e9dd7f9fc275d3342b687ab5e258515a, type: 2}
+    weight: 2
+    category: 1
+    isRescueShape: 0
+  - shape: {fileID: 11400000, guid: f8928d83ab482234aa25388327f3c25e, type: 2}
+    weight: 1
+    category: 2
+    isRescueShape: 0
+  - shape: {fileID: 11400000, guid: 23b979c28a33c554091f2d45be3a0e12, type: 2}
+    weight: 1
+    category: 2
+    isRescueShape: 0

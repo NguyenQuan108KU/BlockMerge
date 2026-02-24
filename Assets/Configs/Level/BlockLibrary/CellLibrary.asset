@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25824b67cf245fe4588f5c5f8f57123b, type: 3}
+  m_Name: CellLibrary
+  m_EditorClassIdentifier: Assembly-CSharp::CellMeshLibrary
+  full: {fileID: -632554388696944736, guid: f240d8e7999d8754aa4a6d27ae299a01, type: 3}
+  straightVer: {fileID: 7186005810071805408, guid: 0e1e7e673e63bae4b82564e63940d57b, type: 3}
+  straightHor: {fileID: -6504877088829123198, guid: fe42eb78821f46248a439e96e3e020b7, type: 3}
+  center: {fileID: -5482626758170158920, guid: 4e8f0e6d7fee23043bea169f60da7d2b, type: 3}
+  edgeTop: {fileID: -3874956836926629488, guid: 671e1e18ceefa484ba2059af2f86272c, type: 3}
+  edgeBottom: {fileID: -970161094509513443, guid: 671e1e18ceefa484ba2059af2f86272c, type: 3}
+  edgeLeft: {fileID: -678654130164629323, guid: 198066762e6c706479b0d441d2d9a3c2, type: 3}
+  edgeRight: {fileID: -6971136719109933512, guid: 198066762e6c706479b0d441d2d9a3c2, type: 3}
+  cornerTL: {fileID: -1912202519887560447, guid: 69b85e8dee6e13648a36050be60e8f34, type: 3}
+  cornerTR: {fileID: -1912202519887560447, guid: 3687006b7398a4f468b660e9f802eee6, type: 3}
+  cornerBL: {fileID: -1388924947169810404, guid: 352f41808644c2c4c83d6a84bb00a957, type: 3}
+  cornerBR: {fileID: -5866867781555062154, guid: c43766d1b96b92641966c1fa4fc4c188, type: 3}
+  tripleTop: {fileID: -3643691791188839521, guid: 4e8f0e6d7fee23043bea169f60da7d2b, type: 3}
+  tripleBottom: {fileID: -3529104917601100359, guid: 4e8f0e6d7fee23043bea169f60da7d2b, type: 3}
+  tripleLeft: {fileID: 1454903278986915347, guid: 4e8f0e6d7fee23043bea169f60da7d2b, type: 3}
+  tripleRight: {fileID: -4680991648712419455, guid: 4e8f0e6d7fee23043bea169f60da7d2b, type: 3}

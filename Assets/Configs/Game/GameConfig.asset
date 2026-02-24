@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12e0e9d6d9bf0c8428ac1c44e2b99b8d, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: Assembly-CSharp::GameConfig
+  winReward:
+    gameResource: 0
+    id: 0
+    quantity: 0
+    seconds: 0
+    timestamp: 0
+  playOnPrice:
+    gameResource: 0
+    id: 0
+    quantity: 0
+    seconds: 0
+    timestamp: 0
+  towerHeightThreshold: 4
+  towerHeightRatio: 0.5
+  towerDropAdjustDuration: 0.1
+  towerHeightSmoothDuration: 0.1
+  towerHeightEase: 6
+  edgeRotateDelay: 0.25
+  dragHoldTime: 0.3
+  blockDragSensitivity: 0.01
+  useAbsolutePositioning: 1
+  absolutePositionSmoothing: 0.1
+  edgeScrollThreshold: 0.15
+  edgeScrollSpeed: 9
+  baseSmoothTime: 0.3
+  fastSmoothTime: 0.1
+  deadzoneAngle: 15
+  buttonRotateDuration: 0.4
+  buttonRotateEase: 1
+  towerSnapDuration: 0.4
+  towerSnapEase: 27
+  dropDuration: 0.3
+  dropEase: 5
+  blockPalette: {fileID: 11400000, guid: 73b03fc7ac9f6b6469aa7c8badf4dbde, type: 2}
+  ghostAlpha: 0.4
+  faceWidth: 6
+  height: 12
+  tileSize: 1
+  spawnY: 9
+  score1Line: 10
+  score2Lines: 20
+  score3Lines: 30
+  score4Lines: 40
+  pointsPerRow: 10
+  useMultiLineBonus: 0
+  multiLineMultiplier: 1.25
+  maxHeight: 9
+  warningThreshold: 3
+  totalLevelCount: 20
+  warningColor: {r: 1, g: 0, b: 0, a: 0.4}
+  gameOverColor: {r: 1, g: 0, b: 0, a: 0.9}
+  pulseDuration: 1

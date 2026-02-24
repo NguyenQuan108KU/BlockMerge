@@ -1,0 +1,71 @@
+#if CUSTOM_ENUM
+using SonatFramework.Systems.InventoryManagement.GameResources;
+
+namespace Sonat.Enums
+{
+     public enum GameResource : byte
+         {
+             None,
+             NoAds = 1,
+             NoAdsLimited = 2,
+             Coin = 3,
+             Live = 4,
+             UnlimitedLive = 5,
+             Star = 6,
+             Card = 7,
+
+            Undo = 20,
+            Hammer = 21,
+            Clock = 22,
+            Flood = 23,
+
+             MAX
+         }
+     
+         public enum GameResourceType : byte
+         {
+             None = 0,
+             Currency,
+             Booster
+         }
+     
+         public static class GameResourceHelper
+         {
+             public static GameResourceType ResourceType(this GameResource resource)
+             {
+                 switch (resource)
+                 {
+                     case GameResource.Coin:
+                     case GameResource.Live:
+                         return GameResourceType.Currency;
+
+                    case GameResource.Undo:
+                    case GameResource.Hammer:
+                    case GameResource.Clock:
+                    case GameResource.Flood:
+                        return GameResourceType.Booster;
+
+                }
+     
+                 return GameResourceType.None;
+             }
+             
+             public static GameResourceKey ToGameResourceKey(this GameResource resource)
+             {
+                 return new GameResourceKey()
+                 {
+                     gameResource = resource,
+                 };
+             }
+             
+             public static GameResourceKey ToGameResourceKey(this GameResource resource, int id)
+             {
+                 return new GameResourceKey()
+                 {
+                     gameResource = resource,
+                     id = id,
+                 };
+             }
+         }
+}
+#endif
