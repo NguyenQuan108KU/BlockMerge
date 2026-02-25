@@ -1,4 +1,4 @@
-using SonatFramework.Scripts.Feature.Shop.UI;
+//using SonatFramework.Scripts.Feature.Shop.UI;
 using SonatFramework.Scripts.SonatSDKAdapterModule;
 using SonatFramework.Scripts.UIModule;
 using SonatFramework.Scripts.UIModule.SpriteService;
@@ -51,7 +51,7 @@ namespace SonatFramework.Templates.UI.ScriptBase
             else
             {
                 PopupToast.Create("Not enough coin!");
-                PanelManager.Instance.OpenPanelByNameAsync<ShopPanelBase>("ShopPanel");
+                //PanelManager.Instance.OpenPanelByNameAsync<ShopPanelBase>("ShopPanel");
             }
         }
 

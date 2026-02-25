@@ -1,7 +1,6 @@
 using DG.Tweening;
 using SonatFramework.Systems.EventBus;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 
 public class TutDragPanel : TutorialPanelBase
@@ -38,17 +37,34 @@ public class TutDragPanel : TutorialPanelBase
     private void Update()
     {
         if (_step != Step.Idle) return;
-        if (Pointer.current == null) return;
 
-        if (Pointer.current.press.wasPressedThisFrame)
+        bool pressed = false;
+
+        if (Input.touchCount > 0)
         {
-            _step = Step.Dragging;
-
-            StopHandAnim();
-            if (handImage != null) handImage.SetActive(false);
-            if (textDrag != null) textDrag.SetActive(false);
-            if (textRelease != null) textRelease.SetActive(true);
+            if (Input.GetTouch(0).phase == TouchPhase.Began)
+                pressed = true;
         }
+        else
+        {
+            if (Input.GetMouseButtonDown(0))
+                pressed = true;
+        }
+
+        if (!pressed) return;
+
+        _step = Step.Dragging;
+
+        StopHandAnim();
+
+        if (handImage != null)
+            handImage.SetActive(false);
+
+        if (textDrag != null)
+            textDrag.SetActive(false);
+
+        if (textRelease != null)
+            textRelease.SetActive(true);
     }
 
     private void OnBlockLanded([Bridge.Ref] BlockLandedEvent e)

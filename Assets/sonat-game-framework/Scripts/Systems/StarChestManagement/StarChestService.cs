@@ -8,7 +8,7 @@ using SonatFramework.Systems;
 using SonatFramework.Systems.EventBus;
 using SonatFramework.Systems.InventoryManagement;
 using SonatFramework.Systems.InventoryManagement.GameResources;
-using Unity.VisualScripting;
+//using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "StarChestService", menuName = "Sonat Services/Star Chest Service")]

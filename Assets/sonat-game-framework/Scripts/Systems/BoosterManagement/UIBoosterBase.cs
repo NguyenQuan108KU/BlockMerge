@@ -8,7 +8,6 @@ using SonatFramework.Systems.InventoryManagement;
 using SonatFramework.Systems.InventoryManagement.GameResources;
 using SonatFramework.Templates.UI.ScriptBase;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace SonatFramework.Systems.BoosterManagement

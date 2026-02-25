@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using Sonat.Enums;
-using SonatFramework.Scripts.Feature.Shop;
 using SonatFramework.Scripts.SonatSDKAdapterModule;
 using SonatFramework.Systems.TimeManagement;
 
@@ -10,7 +9,7 @@ namespace SonatFramework.Systems.MOManagement
     public class PopupMoService
     {
         private readonly Dictionary<string, RemotePopupData> remotePopupDatas = new Dictionary<string, RemotePopupData>();
-        private readonly Service<ShopService> shopService = new Service<ShopService>();
+        //private readonly Service<ShopService> shopService = new Service<ShopService>();
         private readonly Service<TimeService> timeService = new Service<TimeService>();
 
         public RemotePopupData GetData(string popupName, ShopItemKey iapKey = ShopItemKey.None,
@@ -54,8 +53,8 @@ namespace SonatFramework.Systems.MOManagement
                 return false;
             if (remotePopupData.interval > 0 &&
                 (level - remotePopupData.levelStart) % remotePopupData.interval != 0) return false;
-            if (remotePopupData.iapKey != ShopItemKey.None && !shopService.Instance.VerifyPack(remotePopupData.iapKey))
-                return false;
+            //if (remotePopupData.iapKey != ShopItemKey.None && !shopService.Instance.VerifyPack(remotePopupData.iapKey))
+            //    return false;
 
             return true;
         }

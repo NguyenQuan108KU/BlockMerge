@@ -23,9 +23,9 @@ namespace SonatFramework.Systems.GameDataManagement
         public abstract void SetBool(string key, bool value);
 
         public abstract T GetData<T>(string key);
-        public abstract T GetData<T>(string key, JsonConverter converter);
+        //public abstract T GetData<T>(string key, JsonConverter converter);
         public abstract void SetData<T>(string key, T data);
-        public abstract void SetData<T>(string key, T data, JsonConverter converter);
+        //public abstract void SetData<T>(string key, T data, JsonConverter converter);
 
         public abstract void SaveData();
     }

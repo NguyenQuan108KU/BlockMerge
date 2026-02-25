@@ -1,5 +1,4 @@
 ﻿using Sonat.Enums;
-using SonatFramework.Scripts.Feature.Shop.UI;
 using SonatFramework.Scripts.UIModule;
 using SonatFramework.Systems;
 using SonatFramework.Systems.InventoryManagement;
@@ -21,7 +20,7 @@ public class PopupBuyBooster : PopupBuyBoosterBase
         }
         else
         {
-            PanelManager.Instance.OpenPanelByNameAsync<ShopPanelBase>("ShopPanel");
+            //PanelManager.Instance.OpenPanelByNameAsync<ShopPanelBase>("ShopPanel");
         }
     }
 }

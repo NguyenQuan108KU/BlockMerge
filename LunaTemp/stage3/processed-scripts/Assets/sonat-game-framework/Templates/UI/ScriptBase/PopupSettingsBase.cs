@@ -1,5 +1,5 @@
 using Sonat.Enums;
-using SonatFramework.Scripts.Feature.Shop;
+//using SonatFramework.Scripts.Feature.Shop;
 using SonatFramework.Scripts.SonatSDKAdapterModule;
 using SonatFramework.Scripts.UIModule;
 using SonatFramework.Systems;
@@ -57,7 +57,7 @@ public class PopupSettingsBase : Panel
 
     public virtual void RestoreClick()
     {
-        Service<ShopService>.Get().RestorePurchase((items) => { PopupToast.Create("Restore success!"); });
+        //Service<ShopService>.Get().RestorePurchase((items) => { PopupToast.Create("Restore success!"); });
     }
 
     public virtual void PolicyClick()

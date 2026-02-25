@@ -12,7 +12,7 @@ namespace SonatFramework.Systems.AudioManagement
 
         [SerializeField] protected AudioId audioId;
 
-        [ShowIf("@audioId == AudioId.None")] [SerializeField]
+        //[ShowIf("@audioId == AudioId.None")] [SerializeField]
         protected string audioName;
 
         [SerializeField] protected bool playOnAwake;

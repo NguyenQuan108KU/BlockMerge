@@ -20,7 +20,7 @@ public struct LevelUnlockedEvent : IEvent
 
 public struct GameLoseEvent : IEvent
 {
-    public LoseReason reason;
+    //public LoseReason reason;
 }
 
 public struct LevelChangedEvent : IEvent

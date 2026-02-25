@@ -10,19 +10,19 @@ namespace SonatFramework.Systems.LevelManagement
     [CreateAssetMenu(fileName = "GameLevelService", menuName = "Sonat Services/Game Level Service")]
     public class GameLevelService : SonatServiceSo, IServiceInitialize
     {
-        [BoxGroup("SERVICES", true)]
+        //[BoxGroup("SERVICES", true)]
         [SerializeField]
         protected Service<LoadObjectServiceAsync> loadServiceAsync = new Service<LoadObjectServiceAsync>();
 
-        [BoxGroup("SERVICES", true)]
+        //[BoxGroup("SERVICES", true)]
         [SerializeField]
         protected Service<DataService> dataService = new Service<DataService>();
 
-        [BoxGroup("CONFIGS", true)]
+        //[BoxGroup("CONFIGS", true)]
         [SerializeField]
         private string levelKeyPrefix = "Level_";
 
-        [BoxGroup("CONFIGS", true)]
+        //[BoxGroup("CONFIGS", true)]
         [SerializeField]
         private string prefCurrentLevel = "USER_CURRENT_LEVEL";
 

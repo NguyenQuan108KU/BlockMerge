@@ -1,22 +1,24 @@
 {
-    "version": "6.4.0",
+    "version": "7.0.0",
     "projectId": "15d5b0607dad2fe46bcff63b1ecfccbc",
     "applicationID": 36791,
     "creativeName": "",
     "pgServer": "EU",
     "window": {
-        "‐′": true
+        "‐⁏": true
     },
     "unity": {
-        "environmentID": 1144181396,
+        "environmentID": -2046678880,
         "scripts": {
             "excludes": [
                 "Assets/MaxSdk/",
+                "Assets/Scripts/Cheat/",
                 "Assets/Scripts/Data/LevelDataJson.cs",
                 "Assets/Scripts/Manager/ObjectPoolManager.cs",
                 "Assets/Scripts/Tutorial/TutorialConfigSO.cs",
                 "Assets/Scripts/UI/Panel/BtnNoAds.cs",
                 "Assets/Scripts/UI/Panel/PopupSettings.cs",
+                "Assets/sonat-game-framework/Scripts/Feature/Shop/",
                 "Assets/sonat_sdk/",
                 "**/Editor/",
                 "**/Luna/RuntimeScripts/",
@@ -337,7 +339,10 @@
             },
             "meshes": {
                 "default": {
-                    "halfPrecision": true
+                    "halfPrecision": true,
+                    "useSimplification": false,
+                    "simplificationPercentage": 30,
+                    "linkCloseVertices": true
                 },
                 "overrides": []
             },

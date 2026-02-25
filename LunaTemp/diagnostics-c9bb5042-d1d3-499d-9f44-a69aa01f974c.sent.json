@@ -1,0 +1,4521 @@
+{
+    "BuildID": "c9bb5042-d1d3-499d-9f44-a69aa01f974c",
+    "Command": "project:build",
+    "ProjectID": "15d5b0607dad2fe46bcff63b1ecfccbc",
+    "ProjectStateHash": "d36bbe8e549d26cf9197fe9a7a45874fa209a17ebf9029892121531b014e4098",
+    "StageCompletedAt": 3,
+    "EarliestFatalError": 3,
+    "StartTime": 1772035625986,
+    "EndTime": 1772035760014,
+    "PlaygroundUserID": 30374,
+    "OperatingSystem": "win32",
+    "UnityPackageID": null,
+    "TargetPlatform": "develop",
+    "UnityVersion": "2022.3.62f3",
+    "LunaVersion": "7.0.0",
+    "LogCount": 188,
+    "Logs": [
+        {
+            "LogID": "90abffcb-4b8a-4cd1-bec4-cdd59f1ca8c8",
+            "Order": 182,
+            "Timestamp": 1772035760321,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "LP3009",
+            "Description": "You are using an unsupported feature: OnGUI",
+            "Details": [
+                "You are using a function/component which are currently not supported in Luna: OnGUI. "
+            ],
+            "DescriptionValues": [
+                "OnGUI",
+                ""
+            ],
+            "DetailsValues": [
+                "OnGUI",
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 12,
+            "FilePath": "E:\\BlockMerge\\Assets\\I2\\Localization\\Examples\\Common\\Scripts\\RealTimeTranslation.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "b04f1269-062f-4c46-9f7c-553dd20b1868",
+            "Order": 182,
+            "Timestamp": 1772035761686,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "LP3009",
+            "Description": "You are using an unsupported feature: OnGUI",
+            "Details": [
+                "You are using a function/component which are currently not supported in Luna: OnGUI. "
+            ],
+            "DescriptionValues": [
+                "OnGUI",
+                ""
+            ],
+            "DetailsValues": [
+                "OnGUI",
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 111,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Helper\\FpsDebugController.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "4a1a251e-96d4-457a-a6b4-e82dec42071c",
+            "Order": 182,
+            "Timestamp": 1772035762251,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "LP3014",
+            "Description": "You are using the wrong API: Application.OpenURL.",
+            "Details": [
+                "You are using the wrong API: Application.OpenURL. which can lead to ad networks rejecting the playable. Please use Luna.Unity.Playable.InstallFullGame() instead. "
+            ],
+            "DescriptionValues": [
+                "Application.OpenURL"
+            ],
+            "DetailsValues": [
+                "Application.OpenURL"
+            ],
+            "LogCount": 1,
+            "LinePosition": 65,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Templates\\UI\\ScriptBase\\PopupSettingsBase.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "043bb54a-d258-4145-b1bf-91ff58a84835",
+            "Order": 182,
+            "Timestamp": 1772035763270,
+            "Stage": 3,
+            "ErrorType": 1,
+            "ErrorCode": "LP3006",
+            "Description": "You are not using the Luna API: Playable.InstallFullGame",
+            "Details": [
+                "You are not using the Luna API: Playable.InstallFullGame. Some ad networks require these calls. Please add these calls to ensure your playable works on all ad networks. Check documentation for more information."
+            ],
+            "DescriptionValues": [
+                "Playable",
+                "InstallFullGame"
+            ],
+            "DetailsValues": [
+                "Playable",
+                "InstallFullGame"
+            ],
+            "LogCount": 1,
+            "LinePosition": null,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "ffe08c95-eeba-4bad-99c7-aafef667b6fd",
+            "Order": 182,
+            "Timestamp": 1772035763271,
+            "Stage": 3,
+            "ErrorType": 1,
+            "ErrorCode": "LP3015",
+            "Description": "You are not the Game Ended API: LifeCycle.GameEnded",
+            "Details": [
+                "You are not using the Game Ended API: LifeCycle.GameEnded. Some ad networks require this call, please add the event to avoid the ad being rejected."
+            ],
+            "DescriptionValues": [
+                "LifeCycle",
+                "GameEnded"
+            ],
+            "DetailsValues": [
+                "LifeCycle",
+                "GameEnded"
+            ],
+            "LogCount": 1,
+            "LinePosition": null,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "eee1d0c4-2ed3-4c93-9c38-7677b1648646",
+            "Order": 182,
+            "Timestamp": 1772035763272,
+            "Stage": 3,
+            "ErrorType": 3,
+            "ErrorCode": "LP3007",
+            "Description": "You are not using any custom events",
+            "Details": [
+                "You are not using any custom events. It is recommended to use custom events to have a better understanding of the playable."
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": null,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "8f666f14-7bcc-4ddd-8e14-0a4046cdbee3",
+            "Order": 182,
+            "Timestamp": 1772035763272,
+            "Stage": 3,
+            "ErrorType": 3,
+            "ErrorCode": "LP3011",
+            "Description": "You are not using any LunaPlaygroundFields attributes.",
+            "Details": [
+                "You are not using any LunaPlaygroundFields attributes, it allows you to configure your playable to different concepts to find the best variation, which can drastically improve playable performance on all ad networks."
+            ],
+            "DescriptionValues": null,
+            "DetailsValues": null,
+            "LogCount": 1,
+            "LinePosition": null,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "c2e53f11-6417-429d-b47f-770f904dc0f0",
+            "Order": 0,
+            "Timestamp": 1772035629137,
+            "Stage": 1,
+            "ErrorType": 0,
+            "ErrorCode": "LP1030",
+            "Description": "TMP Font Asset uses unsupported 'Atlas Population Mode'",
+            "Details": [
+                "TMP Font Asset '{0}' uses Atlas Population Mode '{1}' which is not supported"
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [
+                "LiberationSans SDF - Fallback",
+                "Dynamic"
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "5030d818-b62a-4e72-a8cd-2910f92325c7",
+            "Order": 1,
+            "Timestamp": 1772035632669,
+            "Stage": 1,
+            "ErrorType": 0,
+            "ErrorCode": "LP1030",
+            "Description": "TMP Font Asset uses unsupported 'Atlas Population Mode'",
+            "Details": [
+                "TMP Font Asset '{0}' uses Atlas Population Mode '{1}' which is not supported"
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [
+                "NUNITO-BLACK SDF 1",
+                "Dynamic"
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "9988be92-3721-4524-a653-7e000f694fa3",
+            "Order": 2,
+            "Timestamp": 1772035633086,
+            "Stage": 1,
+            "ErrorType": 0,
+            "ErrorCode": "LP1030",
+            "Description": "TMP Font Asset uses unsupported 'Atlas Population Mode'",
+            "Details": [
+                "TMP Font Asset '{0}' uses Atlas Population Mode '{1}' which is not supported"
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [
+                "Sublima SDF",
+                "Dynamic"
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "f6702f84-1f32-4d8a-903f-3d9a0cf5c90a",
+            "Order": 3,
+            "Timestamp": 1772035633847,
+            "Stage": 1,
+            "ErrorType": 0,
+            "ErrorCode": "LP1030",
+            "Description": "TMP Font Asset uses unsupported 'Atlas Population Mode'",
+            "Details": [
+                "TMP Font Asset '{0}' uses Atlas Population Mode '{1}' which is not supported"
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [
+                "ARIAL SDF",
+                "Dynamic"
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "f5c859a3-3e81-40f0-abfa-784317f8d5d7",
+            "Order": 4,
+            "Timestamp": 1772035687221,
+            "Stage": 1,
+            "ErrorType": 2,
+            "ErrorCode": "LP1014",
+            "Description": "We recommend running Runtime Analysis to find and remove all unused code",
+            "Details": [
+                "Navigate to the Runtime Analysis → Code tab to enable code stripping. Before uploading the playable, please make sure to have played all scenario’s of the playable in a development build to make Runtime Analysis work properly."
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "0370abf5-0cc4-495c-828b-da3e6bb887c6",
+            "Order": 5,
+            "Timestamp": 1772035687222,
+            "Stage": 1,
+            "ErrorType": 2,
+            "ErrorCode": "LP1016",
+            "Description": "Extensive usage of ParticleSystem Component",
+            "Details": [
+                "There is extensive usage of the ParticleSystem component.\nExcessive usage of any component can be detrimental to performance on lower and in some cases higher end devices, consider reducing the amount the component is used.\nRecommended count: 10, current count 24."
+            ],
+            "DescriptionValues": [
+                "ParticleSystem"
+            ],
+            "DetailsValues": [
+                "ParticleSystem",
+                "10",
+                "24"
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "42dace24-fa7c-4e2f-aea7-7ff052a60d72",
+            "Order": 6,
+            "Timestamp": 1772035687478,
+            "Stage": 1,
+            "ErrorType": 0,
+            "ErrorCode": "LP1027",
+            "Description": "This DOTween version is not supported",
+            "Details": [
+                "The incorrect DOTween version for this Unity version is in use, please update or downgrade to the recommended version {0} in the package manager. Go to Window → Package Manager."
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [
+                "1.2.705"
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "72cf4da7-9874-4590-8b72-bcedc38fe0df",
+            "Order": 7,
+            "Timestamp": 1772035687478,
+            "Stage": 1,
+            "ErrorType": 0,
+            "ErrorCode": "LP1015",
+            "Description": "This TMP version is not fully supported",
+            "Details": [
+                "The incorrect Text Mesh Pro for this Unity version is in use, please update or downgrade to the recommended version {0} in the package manager. Go to Window → Package Manager"
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [
+                "3.0.6, 3.0.7"
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "0f5ad5f1-8129-4e2f-ae16-64324a54f419",
+            "Order": 8,
+            "Timestamp": 1772035687479,
+            "Stage": 1,
+            "ErrorType": 0,
+            "ErrorCode": "LP1032",
+            "Description": "Package(s) is not supported in Luna",
+            "Details": [
+                "Currently package(s) com.unity.timeline are not supported in Luna. We recommend you to remove it and workaround it's functionality."
+            ],
+            "DescriptionValues": [
+                "com.unity.timeline (1.8.9)"
+            ],
+            "DetailsValues": [
+                "com.unity.timeline"
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "E:/BlockMerge/Packages\\manifest.json",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "1ba01fae-60e8-4a2c-87aa-b3f01d35444b",
+            "Order": 9,
+            "Timestamp": 1772035687483,
+            "Stage": 1,
+            "ErrorType": 3,
+            "ErrorCode": "LP1002",
+            "Description": "Repeat wrap mode used on a texture with non power-of-two dimensions, this might not be rendered correctly.",
+            "Details": [
+                "Repeat wrap mode used on 'LiberationSans SDF Atlas' texture at 'Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset' with non power-of-two dimensions, this might not be rendered correctly."
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [
+                "LiberationSans SDF Atlas",
+                "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset"
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "e3c95330-4d25-443d-835c-51f5a5d044ae",
+            "Order": 10,
+            "Timestamp": 1772035687483,
+            "Stage": 1,
+            "ErrorType": 2,
+            "ErrorCode": "LP1010",
+            "Description": "Looks like a collider was scaled, this might affect performance.",
+            "Details": [
+                "Limit Line",
+                "Limit Line"
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [],
+            "LogCount": 2,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "386fa248-aac2-424b-b728-22517a35204f",
+            "Order": 11,
+            "Timestamp": 1772035759995,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0234",
+            "Description": "The type or namespace name 'AddressableAssets' does not exist in the namespace 'UnityEngine' (are you missing an assembly reference?)",
+            "Details": [
+                "using UnityEngine.AddressableAssets;"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 5,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Data\\LevelDataSO.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "fd008205-6795-49bd-9743-829468f7ea4c",
+            "Order": 12,
+            "Timestamp": 1772035759998,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0576",
+            "Description": "Namespace '<global namespace>' contains a definition conflicting with alias 'Outline'",
+            "Details": [
+                "public static TweenerCore<Color, Color, ColorOptions> DOFade(this Outline target, float endValue, float duration)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 183,
+            "FilePath": "E:\\BlockMerge\\Assets\\Plugins\\Demigiant\\DOTween\\Modules\\DOTweenModuleUI.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "7b243035-be5c-430b-8475-83069b33a728",
+            "Order": 13,
+            "Timestamp": 1772035759998,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0576",
+            "Description": "Namespace '<global namespace>' contains a definition conflicting with alias 'Outline'",
+            "Details": [
+                "public static TweenerCore<Color, Color, ColorOptions> DOColor(this Outline target, Color endValue, float duration)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 173,
+            "FilePath": "E:\\BlockMerge\\Assets\\Plugins\\Demigiant\\DOTween\\Modules\\DOTweenModuleUI.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "da960792-182e-4981-a76c-e05a36a8ffdd",
+            "Order": 14,
+            "Timestamp": 1772035759998,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0576",
+            "Description": "Namespace '<global namespace>' contains a definition conflicting with alias 'Outline'",
+            "Details": [
+                "public static TweenerCore<Vector2, Vector2, VectorOptions> DOScale(this Outline target, Vector2 endValue, float duration)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 193,
+            "FilePath": "E:\\BlockMerge\\Assets\\Plugins\\Demigiant\\DOTween\\Modules\\DOTweenModuleUI.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "299a47af-864f-40d2-b973-cd0755bf6e70",
+            "Order": 15,
+            "Timestamp": 1772035759998,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1729",
+            "Description": "'ShowIfAttribute' does not contain a constructor that takes 1 arguments",
+            "Details": [
+                "[ShowIf(\"@autoCheckRetry == true\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 14,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Templates\\UI\\ScriptBase\\PopupNoInternetBase.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "c824768c-0bb0-4bcb-a544-5a20d09f70a3",
+            "Order": 16,
+            "Timestamp": 1772035759998,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1729",
+            "Description": "'ShowIfAttribute' does not contain a constructor that takes 1 arguments",
+            "Details": [
+                "[ShowIf(\"@loadConfigFrom == LoadConfigFrom.Manual\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 11,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\ConfigManagement\\Config.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "4c4c7005-7df7-4340-bccd-9348b51edfb5",
+            "Order": 17,
+            "Timestamp": 1772035759998,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'AssetReference' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "public AssetReference blockShapeRef;"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 13,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Data\\LevelDataSO.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "89670854-0fde-4663-940c-040415f91b65",
+            "Order": 18,
+            "Timestamp": 1772035759998,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1729",
+            "Description": "'ShowIfAttribute' does not contain a constructor that takes 1 arguments",
+            "Details": [
+                "[ShowIf(\"playAudio\"), FoldoutGroup(\"Audio\", expanded: true)]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 100,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Helper\\SkeletonGraphicQueue.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "663ba685-5cd6-405f-be4f-f9eb70de54d8",
+            "Order": 19,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'order' of 'FoldoutGroupAttribute.FoldoutGroupAttribute(string, bool, float)'",
+            "Details": [
+                "[ShowIf(\"playAudio\"), FoldoutGroup(\"Audio\", expanded: true)]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 100,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Helper\\SkeletonGraphicQueue.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "c8fe188e-6302-4087-b565-1d230f8555f6",
+            "Order": 20,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'centerLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"SERVICES\", true)] [Required] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 23,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Feature\\Lives\\LivesService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "491f4b4a-0047-4a0f-ac51-98211d2de41e",
+            "Order": 21,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'centerLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"SERVICES\", true)] [Required] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 26,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Feature\\Lives\\LivesService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "159af7bf-bd2c-4aea-94b4-ecc12d9542c3",
+            "Order": 22,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'centerLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"SERVICES\", true)] [Required] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 29,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Feature\\Lives\\LivesService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "39283f95-c483-4ce2-8699-7ecf69fd4807",
+            "Order": 23,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'centerLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"CONFIGS\", true)] [Required] public LivesConfig config;"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 32,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Feature\\Lives\\LivesService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "a8fe0d08-7d16-49a6-a15b-4d856c6afc9e",
+            "Order": 24,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'centerLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"CONFIGS\", true)] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 34,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Feature\\Lives\\LivesService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "0af5df81-9fc3-479d-ac1e-ee6e03b9c79d",
+            "Order": 25,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1729",
+            "Description": "'ShowIfAttribute' does not contain a constructor that takes 1 arguments",
+            "Details": [
+                "[ShowIf(\"playAudio\"), FoldoutGroup(\"Audio\"), SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 103,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Helper\\SkeletonGraphicQueue.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "abc96733-10bc-4a16-86cc-f654da0e134b",
+            "Order": 26,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1729",
+            "Description": "'FoldoutGroupAttribute' does not contain a constructor that takes 1 arguments",
+            "Details": [
+                "[ShowIf(\"playAudio\"), FoldoutGroup(\"Audio\"), SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 103,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Helper\\SkeletonGraphicQueue.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "9eb96f62-50b9-4458-9ec3-3068080ef6bd",
+            "Order": 27,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1729",
+            "Description": "'ShowIfAttribute' does not contain a constructor that takes 1 arguments",
+            "Details": [
+                "[ShowIf(\"playAudio\"), FoldoutGroup(\"Audio\"), SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 106,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Helper\\SkeletonGraphicQueue.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "393a3343-f53e-4dae-b620-3d65cba28dfa",
+            "Order": 28,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1729",
+            "Description": "'FoldoutGroupAttribute' does not contain a constructor that takes 1 arguments",
+            "Details": [
+                "[ShowIf(\"playAudio\"), FoldoutGroup(\"Audio\"), SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 106,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Helper\\SkeletonGraphicQueue.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "eebb4a72-8ea9-43ac-a050-eefa4d0d3991",
+            "Order": 29,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'JsonConverter' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "public abstract T GetData<T>(string key, JsonConverter converter);"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 26,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\GameDataManagement\\DataService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "a5687166-485e-4517-b60f-edd0b3d28969",
+            "Order": 30,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'JsonConverter' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "public abstract void SetData<T>(string key, T data, JsonConverter converter);"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 28,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\GameDataManagement\\DataService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "8f709e94-458f-48a8-ad86-ecc0040972df",
+            "Order": 31,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'JsonConverter' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "public override T GetData<T>(string key, JsonConverter converter)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 69,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\GameDataManagement\\PlayerPrefsDataService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "1d016f19-1e09-42f5-baa6-723dc032f48a",
+            "Order": 32,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'JsonConverter' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "public override void SetData<T>(string key, T data, JsonConverter converter)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 83,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\GameDataManagement\\PlayerPrefsDataService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "7e3dca55-1fed-4df1-8ce3-d5f16207bff3",
+            "Order": 33,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"DRIVE CONFIG\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 21,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "bd71c124-532f-4801-adc6-3a3be61a383b",
+            "Order": 34,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"DRIVE CONFIG\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 17,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceAsync.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "47c8bd45-72a4-484f-801c-277cec38eb1c",
+            "Order": 35,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"GOOGLE SHEETS\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 20,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceAsync.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "7deb5ab1-fbf7-41a6-94b6-404b00285296",
+            "Order": 36,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"GOOGLE SHEETS\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 24,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "d5942844-52a5-4657-b282-fe6c102b5cf2",
+            "Order": 37,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"GOOGLE SHEETS\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 23,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceAsync.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "20ca9c1a-9f0d-48b6-ba30-1f63af554c36",
+            "Order": 38,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"GOOGLE SHEETS\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 27,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "d4007192-6dd0-4764-b399-36aa6284350f",
+            "Order": 39,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"GOOGLE SHEETS\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 26,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceAsync.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "c9f3c59e-cc98-4dd3-8846-6c57c9cbd7dd",
+            "Order": 40,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"GOOGLE SHEETS\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 30,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "7de2a14b-24d9-4ddf-a51b-1be5f64fbaba",
+            "Order": 41,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"DRIVE CONFIG\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 26,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolder.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "98351518-c706-4d98-8985-00333ca62d83",
+            "Order": 42,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"GOOGLE DRIVE FOLDER\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 29,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolder.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "d0581146-f4e2-4422-b8a4-87d15f9460e4",
+            "Order": 43,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"GOOGLE DRIVE FOLDER\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 32,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolder.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "df9fdaf6-42ce-4714-b587-4ee5308b0344",
+            "Order": 44,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"GOOGLE SHEET CONFIG\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 35,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolder.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "e88f62c0-e651-40cf-9222-a219dd3ebb38",
+            "Order": 45,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"GOOGLE SHEET CONFIG\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 38,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolder.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "46230292-d981-4851-9950-c7ab958d3c62",
+            "Order": 46,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'order' of 'FoldoutGroupAttribute.FoldoutGroupAttribute(string, bool, float)'",
+            "Details": [
+                "[FoldoutGroup(\"@gameResource\", expanded: false)] [HorizontalGroup(\"@gameResource/Row1\", width: 0.7f)] [LabelText(\"Resource\")] [LabelWidth(70)]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 14,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\InventoryManagement\\GameResources\\ResourceData.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "fd3009a8-c575-489d-9a80-3086cfa41b5d",
+            "Order": 47,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'marginLeft' of 'HorizontalGroupAttribute.HorizontalGroupAttribute(string, float, int, int, float)'",
+            "Details": [
+                "[FoldoutGroup(\"@gameResource\", expanded: false)] [HorizontalGroup(\"@gameResource/Row1\", width: 0.7f)] [LabelText(\"Resource\")] [LabelWidth(70)]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 14,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\InventoryManagement\\GameResources\\ResourceData.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "c977eebc-309b-4460-af73-77e2dd566751",
+            "Order": 48,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"FOLDER SELECTION\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 42,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolder.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "8c3669a4-3154-42e2-aee0-1298c53b09ec",
+            "Order": 49,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1729",
+            "Description": "'FoldoutGroupAttribute' does not contain a constructor that takes 1 arguments",
+            "Details": [
+                "[FoldoutGroup(\"@gameResource\")] [HorizontalGroup(\"@gameResource/Row1\", width: 0.3f)] [LabelText(\"ID\")] [LabelWidth(30)]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 17,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\InventoryManagement\\GameResources\\ResourceData.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "4635a642-77f9-400e-b553-c8bc792681a3",
+            "Order": 50,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'marginLeft' of 'HorizontalGroupAttribute.HorizontalGroupAttribute(string, float, int, int, float)'",
+            "Details": [
+                "[FoldoutGroup(\"@gameResource\")] [HorizontalGroup(\"@gameResource/Row1\", width: 0.3f)] [LabelText(\"ID\")] [LabelWidth(30)]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 17,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\InventoryManagement\\GameResources\\ResourceData.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "608c13cb-fecc-4136-97db-279b6890e7e5",
+            "Order": 51,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1729",
+            "Description": "'FoldoutGroupAttribute' does not contain a constructor that takes 1 arguments",
+            "Details": [
+                "[FoldoutGroup(\"@gameResource\")] public int quantity;"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 20,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\InventoryManagement\\GameResources\\ResourceData.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "1c4cc149-a9f8-4b81-95cf-bbf2eb38c812",
+            "Order": 52,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1729",
+            "Description": "'FoldoutGroupAttribute' does not contain a constructor that takes 1 arguments",
+            "Details": [
+                "[FoldoutGroup(\"@gameResource\")] public long seconds;"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 21,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\InventoryManagement\\GameResources\\ResourceData.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "283866e0-986e-4ef4-9146-622f5b15a4c7",
+            "Order": 53,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"DRIVE CONFIG\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 21,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolderAsync.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "a9091b45-86d2-462d-8bf3-85edb7ad5938",
+            "Order": 54,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"GOOGLE DRIVE FOLDER\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 24,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolderAsync.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "cdea9af0-4571-4d6c-858a-d539d0db4012",
+            "Order": 55,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"GOOGLE DRIVE FOLDER\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 27,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolderAsync.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "391c9c4d-13b5-4dbc-b736-3b664112e675",
+            "Order": 56,
+            "Timestamp": 1772035760005,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"GOOGLE SHEET CONFIG\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 30,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolderAsync.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "67d1d1e6-73cc-4d36-8129-251d71fff10e",
+            "Order": 57,
+            "Timestamp": 1772035760006,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"GOOGLE SHEET CONFIG\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 33,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolderAsync.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "23d346a7-08cc-4e5a-8d90-2452d236ade1",
+            "Order": 58,
+            "Timestamp": 1772035760006,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"FOLDER SELECTION\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 37,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolderAsync.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "b39be6bf-1dfa-4251-b0e9-cc56f0f215d6",
+            "Order": 59,
+            "Timestamp": 1772035760006,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"SERVICES\")]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 18,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\SonatLevelService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "019fa7aa-3d56-4c8a-96da-87a4cac908e9",
+            "Order": 60,
+            "Timestamp": 1772035760006,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"SERVICES\")]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 23,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\SonatLevelService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "52b82157-3040-4123-8b27-01a7796fc9c1",
+            "Order": 61,
+            "Timestamp": 1772035760006,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"CONFIGS\")]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 29,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\SonatLevelService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "861c0d71-9d6c-4635-bec5-2792669f9b06",
+            "Order": 62,
+            "Timestamp": 1772035760006,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"SERVICES\")]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 19,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\SonatLevelServiceAsync.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "498115fc-5838-42f2-8bf4-c87f3b4a2116",
+            "Order": 63,
+            "Timestamp": 1772035760006,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"SERVICES\")] [Required] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 15,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\SonatLevelServiceAsyncTool.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "291cc705-86b5-49ee-85b4-ee39a8ea2dd7",
+            "Order": 64,
+            "Timestamp": 1772035760006,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1729",
+            "Description": "'ShowIfAttribute' does not contain a constructor that takes 1 arguments",
+            "Details": [
+                "[ShowIf(\"@referenceType == ReferenceType.Manual\")]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 11,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\ServiceReference.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "ddc84da3-c5bc-4529-8cd4-d208e283c4df",
+            "Order": 65,
+            "Timestamp": 1772035760006,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1729",
+            "Description": "'ShowIfAttribute' does not contain a constructor that takes 1 arguments",
+            "Details": [
+                "[SerializeField] [ShowIf(\"@autoInit\")] protected float delayToInit = 0.5f;"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 18,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\SonatSystem.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "d207fd2f-cadf-45d2-9254-8ec2255596c9",
+            "Order": 66,
+            "Timestamp": 1772035760006,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'JsonConverterAttribute' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "[JsonConverter(typeof(GameResourceKeyConverter))]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 130,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\InventoryManagement\\GameResources\\ResourceData.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "38a91cfe-73b4-44e9-b403-4ec36bbb7b72",
+            "Order": 67,
+            "Timestamp": 1772035760006,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'JsonConverter' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "[JsonConverter(typeof(GameResourceKeyConverter))]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 130,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\InventoryManagement\\GameResources\\ResourceData.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "f21abc93-ad2a-4289-a6be-b8f07d2c60de",
+            "Order": 68,
+            "Timestamp": 1772035760006,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"SERVICES\")]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 20,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\BoosterManagement\\SonatBoosterService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "903e421f-294e-45ab-a420-77214ab2e9a9",
+            "Order": 69,
+            "Timestamp": 1772035760006,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"SERVICES\")]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 25,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\BoosterManagement\\SonatBoosterService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "167c2a5e-8293-49e0-ae2a-2ede332499a9",
+            "Order": 70,
+            "Timestamp": 1772035760006,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'centerLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"CONFIGS\", true)]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 34,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\BoosterManagement\\SonatBoosterService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "79cc9d3c-ac8c-4457-95fd-0a896c7ec48f",
+            "Order": 71,
+            "Timestamp": 1772035760007,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0115",
+            "Description": "'DOTweenAnimation.DOGotoAndPause(float)': no suitable method found to override",
+            "Details": [
+                "public override void DOGotoAndPause(float time)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 672,
+            "FilePath": "E:\\BlockMerge\\Assets\\Plugins\\Demigiant\\DOTweenPro\\DOTweenAnimation.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "90df2d39-af5b-4279-88d8-904c2bd4442f",
+            "Order": 72,
+            "Timestamp": 1772035760007,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0115",
+            "Description": "'DOTweenAnimation.DOGotoAndPlay(float)': no suitable method found to override",
+            "Details": [
+                "public override void DOGotoAndPlay(float time)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 678,
+            "FilePath": "E:\\BlockMerge\\Assets\\Plugins\\Demigiant\\DOTweenPro\\DOTweenAnimation.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "b4a8c3e6-21bf-4d81-b3ee-a2106bc9255f",
+            "Order": 73,
+            "Timestamp": 1772035760007,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'showLabel' of 'BoxGroupAttribute.BoxGroupAttribute(string, bool, bool, float)'",
+            "Details": [
+                "[BoxGroup(\"SERVICES\")] [SerializeField]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 29,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\UserData\\UserDataService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "32618399-9c67-4d09-a1b0-25006af17ba1",
+            "Order": 74,
+            "Timestamp": 1772035760007,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'JsonConverter<>' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "public class GameResourceKeyConverter : JsonConverter<GameResourceKey>"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 8,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Helper\\Converters\\GameResourceKeyConverter.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "9928add7-149e-4ceb-be79-dedc6c2272bf",
+            "Order": 75,
+            "Timestamp": 1772035760007,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'JsonConverter<>' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "public class GameResourceKeyDictionaryConverter<T> : JsonConverter<Dictionary<GameResourceKey, T>>"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 9,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Helper\\Converters\\GameResourceKeyDictionaryConverter.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "6c6deaea-26a3-4d3f-9eb3-0ba2c040a8b8",
+            "Order": 76,
+            "Timestamp": 1772035760007,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'JsonWriter' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "public override void WriteJson(JsonWriter writer, GameResourceKey value, JsonSerializer serializer)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 10,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Helper\\Converters\\GameResourceKeyConverter.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "71e894d7-862d-47fc-baf2-faa5f906dde4",
+            "Order": 77,
+            "Timestamp": 1772035760007,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'JsonSerializer' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "public override void WriteJson(JsonWriter writer, GameResourceKey value, JsonSerializer serializer)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 10,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Helper\\Converters\\GameResourceKeyConverter.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "42d90454-56ef-4a88-85d9-4e469f9925e8",
+            "Order": 78,
+            "Timestamp": 1772035760007,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'JsonReader' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "public override GameResourceKey ReadJson(JsonReader reader, Type objectType, GameResourceKey existingValue, bool hasExistingValue, JsonSerializer serializer)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 15,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Helper\\Converters\\GameResourceKeyConverter.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "c9276b4e-b914-499e-b039-54cd7010ac1f",
+            "Order": 79,
+            "Timestamp": 1772035760007,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'JsonSerializer' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "public override GameResourceKey ReadJson(JsonReader reader, Type objectType, GameResourceKey existingValue, bool hasExistingValue, JsonSerializer serializer)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 15,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Helper\\Converters\\GameResourceKeyConverter.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "07bbfc66-e15a-4148-ab17-d69b8244d50c",
+            "Order": 80,
+            "Timestamp": 1772035760007,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'JsonWriter' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "public override void WriteJson(JsonWriter writer,"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 11,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Helper\\Converters\\GameResourceKeyDictionaryConverter.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "9f5c53c8-2304-4518-a1af-b04a4e288343",
+            "Order": 81,
+            "Timestamp": 1772035760007,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'JsonSerializer' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "JsonSerializer serializer)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 13,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Helper\\Converters\\GameResourceKeyDictionaryConverter.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "39218d12-e505-4c53-8032-c9346e7e9701",
+            "Order": 82,
+            "Timestamp": 1772035760007,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'JsonReader' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "public override Dictionary<GameResourceKey, T> ReadJson(JsonReader reader,"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 28,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Helper\\Converters\\GameResourceKeyDictionaryConverter.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "bfed6c35-46ee-49b1-ba59-f54f0068c55a",
+            "Order": 83,
+            "Timestamp": 1772035760007,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'JsonSerializer' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "JsonSerializer serializer)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 32,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Helper\\Converters\\GameResourceKeyDictionaryConverter.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "c958d416-b70d-4a0a-ae02-236217e0ede3",
+            "Order": 84,
+            "Timestamp": 1772035760007,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1729",
+            "Description": "'ShowIfAttribute' does not contain a constructor that takes 1 arguments",
+            "Details": [
+                "[ShowIf(\r\n            \"@tweenType == UITweenType.Fade || tweenType == UITweenType.FadeGroup || tweenType == UITweenType.Scale\")]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 18,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\UIModule\\UITween\\TweenConfigSO.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "6c3baa16-307b-4a68-a627-4b2d5ec6f2e5",
+            "Order": 85,
+            "Timestamp": 1772035760007,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1729",
+            "Description": "'ShowIfAttribute' does not contain a constructor that takes 1 arguments",
+            "Details": [
+                "[ShowIf(\r\n            \"@tweenType == UITweenType.Fade || tweenType == UITweenType.FadeGroup || tweenType == UITweenType.Scale\")]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 22,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\UIModule\\UITween\\TweenConfigSO.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "9add0c5b-6439-4d13-8805-17af23e4e818",
+            "Order": 86,
+            "Timestamp": 1772035760007,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1729",
+            "Description": "'ShowIfAttribute' does not contain a constructor that takes 1 arguments",
+            "Details": [
+                "[ShowIf(\r\n            \"@tweenType == UITweenType.Move || tweenType == UITweenType.LocalMove || tweenType == UITweenType.RectLocalMove\")]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 26,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\UIModule\\UITween\\TweenConfigSO.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "5ce6d323-c4e6-4d25-ad71-93218509b994",
+            "Order": 87,
+            "Timestamp": 1772035760007,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1729",
+            "Description": "'ShowIfAttribute' does not contain a constructor that takes 1 arguments",
+            "Details": [
+                "[ShowIf(\r\n            \"@tweenType == UITweenType.Move || tweenType == UITweenType.LocalMove || tweenType == UITweenType.RectLocalMove\")]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 30,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\UIModule\\UITween\\TweenConfigSO.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "07f3a6f9-ec7b-486c-b487-dbfa714342bc",
+            "Order": 88,
+            "Timestamp": 1772035760007,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1729",
+            "Description": "'ShowIfAttribute' does not contain a constructor that takes 1 arguments",
+            "Details": [
+                "[ShowIf(\"@custom == false\")] [OnValueChanged(\"OnConfigSOValueChanged\")]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 15,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\UIModule\\UITween\\TweenData.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "b4998a16-252c-4301-ad34-36d4eff77e9e",
+            "Order": 89,
+            "Timestamp": 1772035760007,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS7036",
+            "Description": "There is no argument given that corresponds to the required formal parameter 'includeChildren' of 'OnValueChangedAttribute.OnValueChangedAttribute(string, bool)'",
+            "Details": [
+                "[ShowIf(\"@custom == false\")] [OnValueChanged(\"OnConfigSOValueChanged\")]"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 15,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\UIModule\\UITween\\TweenData.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "593a6996-96cb-4511-897f-d7da6cc944f3",
+            "Order": 90,
+            "Timestamp": 1772035760007,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1729",
+            "Description": "'ShowIfAttribute' does not contain a constructor that takes 1 arguments",
+            "Details": [
+                "[ShowIf(\"@custom\")] public TweenConfig config;"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 20,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\UIModule\\UITween\\TweenData.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "e969560a-86c6-4d0b-a515-269cc131e58a",
+            "Order": 91,
+            "Timestamp": 1772035760008,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1503",
+            "Description": "Argument 1: cannot convert from 'int' to 'string'",
+            "Details": [
+                "ShaderTime = Shader.GetGlobalVector(_Time).y;"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 73,
+            "FilePath": "E:\\BlockMerge\\Assets\\JMO Assets\\Toony Colors Pro\\Scripts\\TCP2_GetVertexWavesPosition.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "af4ed3c0-6a75-4d2c-ba4f-ab53f64b8153",
+            "Order": 92,
+            "Timestamp": 1772035760008,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'SortingLayer' does not contain a definition for 'IDToName'",
+            "Details": [
+                "Debug.LogFormat(\"LayerToName({0}) = {1}\", layerNumber0, SortingLayer.IDToName(layerNumber0));"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 20,
+            "FilePath": "E:\\BlockMerge\\Assets\\NaughtyAttributes\\Scripts\\Test\\SortingLayerTest.cs",
+            "ClassName": "SortingLayer",
+            "MemberName": "IDToName",
+            "Severity": 1
+        },
+        {
+            "LogID": "b99b520e-698e-4ced-8da5-2429637c16d5",
+            "Order": 93,
+            "Timestamp": 1772035760008,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1061",
+            "Description": "'MeshRenderer' does not contain a definition for 'allowOcclusionWhenDynamic' and no accessible extension method 'allowOcclusionWhenDynamic' accepting a first argument of type 'MeshRenderer' could be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "_meshRenderer.allowOcclusionWhenDynamic = false;"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 48,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Block\\Ghost\\GhostBlockController.cs",
+            "ClassName": "MeshRenderer",
+            "MemberName": "allowOcclusionWhenDynamic",
+            "Severity": 1
+        },
+        {
+            "LogID": "72a2496c-c8c7-4b66-968d-058e33be4285",
+            "Order": 94,
+            "Timestamp": 1772035760008,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'Task' does not contain a definition for 'Yield'",
+            "Details": [
+                "await Task.Yield();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 28,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Manager\\BoosterManager.cs",
+            "ClassName": "Task",
+            "MemberName": "Yield",
+            "Severity": 1
+        },
+        {
+            "LogID": "fa68344d-c5ce-4e2d-819d-f398659861c4",
+            "Order": 95,
+            "Timestamp": 1772035760008,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'GameResource' does not contain a definition for 'Hammer'",
+            "Details": [
+                "_strategies[GameResource.Hammer] = new HammerStrategy();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 46,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Manager\\BoosterManager.cs",
+            "ClassName": "GameResource",
+            "MemberName": "Hammer",
+            "Severity": 1
+        },
+        {
+            "LogID": "a7669738-3b79-4b23-b251-9f90dcee8dff",
+            "Order": 96,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'GameResource' does not contain a definition for 'Clock'",
+            "Details": [
+                "_strategies[GameResource.Clock] = new ClockStrategy(CLOCK_DURATION);"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 47,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Manager\\BoosterManager.cs",
+            "ClassName": "GameResource",
+            "MemberName": "Clock",
+            "Severity": 1
+        },
+        {
+            "LogID": "3fb54aaf-2405-4295-a9d3-f20d492905bc",
+            "Order": 97,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1503",
+            "Description": "Argument 1: cannot convert from 'int' to 'System.Collections.Generic.IEqualityComparer<int>'",
+            "Details": [
+                "AllBlockIDs = new HashSet<int>(floodBlockIDs.Count + 1) { originBlockID },"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 25,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Block\\BlockSpecial\\FloodGroupRegistry.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "e052b35b-3ec8-45d2-9648-4dcb858a28e4",
+            "Order": 98,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1061",
+            "Description": "'TweenerCore<Vector3, Vector3, VectorOptions>' does not contain a definition for 'AsyncWaitForCompletion' and no accessible extension method 'AsyncWaitForCompletion' accepting a first argument of type 'TweenerCore<Vector3, Vector3, VectorOptions>' could be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                ".AsyncWaitForCompletion();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 82,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Block\\Active\\ActiveBlockVisuals.cs",
+            "ClassName": "TweenerCore<Vector3, Vector3, VectorOptions>",
+            "MemberName": "AsyncWaitForCompletion",
+            "Severity": 1
+        },
+        {
+            "LogID": "d7254c83-fe64-4574-a981-6cb3f036acae",
+            "Order": 99,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0103",
+            "Description": "The name 'FindFirstObjectByType' does not exist in the current context",
+            "Details": [
+                "_tower = FindFirstObjectByType<TowerController>();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 48,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Manager\\InputManager.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "d0daaa65-ca18-4e20-9c4c-b6fe1501f350",
+            "Order": 100,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1729",
+            "Description": "'SortedDictionary<int, int>' does not contain a constructor that takes 1 arguments",
+            "Details": [
+                "var sorted = new SortedDictionary<int, int>(wrapper.data);"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 93,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Config\\GameRemoteConfig.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "ae825aba-6094-45b9-99a7-b2c7c9c23818",
+            "Order": 101,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0103",
+            "Description": "The name 'FindFirstObjectByType' does not exist in the current context",
+            "Details": [
+                "var existingBlock = FindFirstObjectByType<ActiveBlockController>();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 77,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Block\\Ghost\\GhostBlockController.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "7f0da4ed-b3fc-4a9c-8ab3-00071bc97e0a",
+            "Order": 102,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'GameState' does not contain a definition for 'LevelComplete'",
+            "Details": [
+                "if (e.gameState == GameState.GameOver || e.gameState == GameState.LevelComplete)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 90,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Tower\\TowerController.cs",
+            "ClassName": "GameState",
+            "MemberName": "LevelComplete",
+            "Severity": 1
+        },
+        {
+            "LogID": "654443cb-e2a2-4317-b46a-6e9ceb7e53e4",
+            "Order": 103,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'Task' does not contain a definition for 'Yield'",
+            "Details": [
+                "await Task.Yield();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 62,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Manager\\GameManager.cs",
+            "ClassName": "Task",
+            "MemberName": "Yield",
+            "Severity": 1
+        },
+        {
+            "LogID": "a14f65cb-e0cc-452a-b681-9962532c9f2a",
+            "Order": 104,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1061",
+            "Description": "'Mesh' does not contain a definition for 'CombineMeshes' and no accessible extension method 'CombineMeshes' accepting a first argument of type 'Mesh' could be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "finalMesh.CombineMeshes(combine, true, true);"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 310,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Block\\Ghost\\GhostBlockController.cs",
+            "ClassName": "Mesh",
+            "MemberName": "CombineMeshes",
+            "Severity": 1
+        },
+        {
+            "LogID": "af8de179-6423-4dc7-be9b-b3cfd38fe7cf",
+            "Order": 105,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1061",
+            "Description": "'Mesh' does not contain a definition for 'CombineMeshes' and no accessible extension method 'CombineMeshes' accepting a first argument of type 'Mesh' could be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "finalMesh.CombineMeshes(combine, true, true);"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 337,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Block\\Ghost\\GhostBlockController.cs",
+            "ClassName": "Mesh",
+            "MemberName": "CombineMeshes",
+            "Severity": 1
+        },
+        {
+            "LogID": "83017450-7ad3-4e0f-83ae-bec05555d6de",
+            "Order": 106,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1503",
+            "Description": "Argument 1: cannot convert from 'int' to 'System.Collections.Generic.IEqualityComparer<UnityEngine.Vector2Int>'",
+            "Details": [
+                "var allCells = new HashSet<Vector2Int>(blockCells.Count + floodCells.Count);"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 188,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Block\\BlockSpecial\\FloodFillExecutor.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "672364f3-bac9-4cc8-ad89-fbe1df6097f0",
+            "Order": 107,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0103",
+            "Description": "The name 'FindFirstObjectByType' does not exist in the current context",
+            "Details": [
+                "var tower = FindFirstObjectByType<TowerController>();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 80,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Manager\\GridManager.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "1d384f69-1411-4b0e-a756-e5297aadf715",
+            "Order": 108,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'Task' does not contain a definition for 'Yield'",
+            "Details": [
+                "await Task.Yield();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 329,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Manager\\InputManager.cs",
+            "ClassName": "Task",
+            "MemberName": "Yield",
+            "Severity": 1
+        },
+        {
+            "LogID": "a0f21ffa-9d2d-4141-be0e-84fbcb136118",
+            "Order": 109,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1061",
+            "Description": "'TweenerCore<Quaternion, Vector3, QuaternionOptions>' does not contain a definition for 'AsyncWaitForCompletion' and no accessible extension method 'AsyncWaitForCompletion' accepting a first argument of type 'TweenerCore<Quaternion, Vector3, QuaternionOptions>' could be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                ".AsyncWaitForCompletion();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 235,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Tower\\TowerRotator.cs",
+            "ClassName": "TweenerCore<Quaternion, Vector3, QuaternionOptions>",
+            "MemberName": "AsyncWaitForCompletion",
+            "Severity": 1
+        },
+        {
+            "LogID": "10accd3d-8a7a-4989-b00a-91606888d97d",
+            "Order": 110,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0103",
+            "Description": "The name 'SonatSdkManager' does not exist in the current context",
+            "Details": [
+                "SonatSdkManager.Initialize(() => _isSdkReady = true);"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 47,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Loading\\GameLoader.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "f7353411-436a-4e23-963d-2bccbef15f5c",
+            "Order": 111,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1061",
+            "Description": "'TweenerCore<float, float, FloatOptions>' does not contain a definition for 'AsyncWaitForCompletion' and no accessible extension method 'AsyncWaitForCompletion' accepting a first argument of type 'TweenerCore<float, float, FloatOptions>' could be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                ".AsyncWaitForCompletion();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 71,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Loading\\GameLoader.cs",
+            "ClassName": "TweenerCore<float, float, FloatOptions>",
+            "MemberName": "AsyncWaitForCompletion",
+            "Severity": 1
+        },
+        {
+            "LogID": "e23d7499-92fc-473b-88d9-4bb953018070",
+            "Order": 112,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1061",
+            "Description": "'TweenerCore<float, float, FloatOptions>' does not contain a definition for 'AsyncWaitForCompletion' and no accessible extension method 'AsyncWaitForCompletion' accepting a first argument of type 'TweenerCore<float, float, FloatOptions>' could be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                ".AsyncWaitForCompletion();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 126,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Loading\\GameLoader.cs",
+            "ClassName": "TweenerCore<float, float, FloatOptions>",
+            "MemberName": "AsyncWaitForCompletion",
+            "Severity": 1
+        },
+        {
+            "LogID": "66664890-a4da-4841-8355-f54f2fbea109",
+            "Order": 113,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'Task' does not contain a definition for 'Yield'",
+            "Details": [
+                "await Task.Yield();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 156,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Loading\\GameLoader.cs",
+            "ClassName": "Task",
+            "MemberName": "Yield",
+            "Severity": 1
+        },
+        {
+            "LogID": "d7884b25-094e-4890-934f-20326b695bd0",
+            "Order": 114,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'Task' does not contain a definition for 'Yield'",
+            "Details": [
+                "await Task.Yield();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 174,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Loading\\GameLoader.cs",
+            "ClassName": "Task",
+            "MemberName": "Yield",
+            "Severity": 1
+        },
+        {
+            "LogID": "d2f66f8f-6355-4abc-b8d4-ef270d7baeed",
+            "Order": 115,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0103",
+            "Description": "The name 'FindFirstObjectByType' does not exist in the current context",
+            "Details": [
+                "_tower = FindFirstObjectByType<TowerController>();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 13,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\UI\\RotateButtonHandler.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "0e15bd59-a759-4f19-a6fd-b59081caa74d",
+            "Order": 116,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1061",
+            "Description": "'Tween' does not contain a definition for 'AsyncWaitForCompletion' and no accessible extension method 'AsyncWaitForCompletion' accepting a first argument of type 'Tween' could be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "await spawnTween.AsyncWaitForCompletion();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 129,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Block\\Base\\BlockSpawner.cs",
+            "ClassName": "Tween",
+            "MemberName": "AsyncWaitForCompletion",
+            "Severity": 1
+        },
+        {
+            "LogID": "1f1d34b0-b35b-4f27-be35-fd3c5e584e4a",
+            "Order": 117,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1061",
+            "Description": "'TweenerCore<float, float, FloatOptions>' does not contain a definition for 'AsyncWaitForCompletion' and no accessible extension method 'AsyncWaitForCompletion' accepting a first argument of type 'TweenerCore<float, float, FloatOptions>' could be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                ".AsyncWaitForCompletion();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 82,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\UI\\TransitionOverlay.cs",
+            "ClassName": "TweenerCore<float, float, FloatOptions>",
+            "MemberName": "AsyncWaitForCompletion",
+            "Severity": 1
+        },
+        {
+            "LogID": "d87f2e86-cc57-41ec-8e10-5a3cb91e96d1",
+            "Order": 118,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'Task' does not contain a definition for 'Yield'",
+            "Details": [
+                "await Task.Yield();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 179,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Manager\\GameManager.cs",
+            "ClassName": "Task",
+            "MemberName": "Yield",
+            "Severity": 1
+        },
+        {
+            "LogID": "82985827-ce85-4d14-b32a-44bb04f3a004",
+            "Order": 119,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0103",
+            "Description": "The name 'FindFirstObjectByType' does not exist in the current context",
+            "Details": [
+                "FindFirstObjectByType<BlockSpawner>(),"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 74,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Manager\\BoosterManager.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "d1332d04-2d12-4265-964a-d009e4bcf54f",
+            "Order": 120,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0103",
+            "Description": "The name 'FindFirstObjectByType' does not exist in the current context",
+            "Details": [
+                "FindFirstObjectByType<TowerController>()?.towerContainer"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 75,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Manager\\BoosterManager.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "9842fe0b-735c-45e3-8e1b-4fd474126d4c",
+            "Order": 121,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'GameResource' does not contain a definition for 'Hammer'",
+            "Details": [
+                "public GameResource BoosterType => GameResource.Hammer;"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 12,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Booster\\Hammer\\HammerStrategy.cs",
+            "ClassName": "GameResource",
+            "MemberName": "Hammer",
+            "Severity": 1
+        },
+        {
+            "LogID": "0ca6d357-ec70-41c4-8c09-56a4388991c0",
+            "Order": 122,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0103",
+            "Description": "The name 'FindFirstObjectByType' does not exist in the current context",
+            "Details": [
+                "_cachedTower = FindFirstObjectByType<TowerController>();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 257,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Manager\\GameManager.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "250e6667-5ba2-4514-bcc1-03f216863a61",
+            "Order": 123,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'TutorialCompletedEvent' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "EventBus<TutorialCompletedEvent>.Raise("
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 39,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Tutorial\\TutorialPanelBase.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "6ed91eaf-d25d-4b25-b0b6-26fdad881528",
+            "Order": 124,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'TutorialCompletedEvent' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "new TutorialCompletedEvent { PanelKey = gameObject.name });"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 40,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Tutorial\\TutorialPanelBase.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "c1b411f1-4348-43d7-a697-51f7c5b3154a",
+            "Order": 125,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'GameState' does not contain a definition for 'LevelComplete'",
+            "Details": [
+                "SetGameState(GameState.LevelComplete);"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 326,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Manager\\GameManager.cs",
+            "ClassName": "GameState",
+            "MemberName": "LevelComplete",
+            "Severity": 1
+        },
+        {
+            "LogID": "b886ae79-d671-42f8-862a-6a6dbca04a36",
+            "Order": 126,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0103",
+            "Description": "The name 'FindFirstObjectByType' does not exist in the current context",
+            "Details": [
+                "if (_instance == null && Application.isPlaying) _instance = FindFirstObjectByType<T>();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 11,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Base\\Base.Singleton\\SingletonSimple.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "071643da-5ed5-4c61-8334-bc91f935d5e1",
+            "Order": 127,
+            "Timestamp": 1772035760010,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'Task' does not contain a definition for 'CompletedTask'",
+            "Details": [
+                "return Task.CompletedTask;"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 46,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Feature\\ChestRewardProgress\\ChestRewardService.cs",
+            "ClassName": "Task",
+            "MemberName": "CompletedTask",
+            "Severity": 1
+        },
+        {
+            "LogID": "623fa90c-7a9b-472f-8504-2b23700757d6",
+            "Order": 128,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0266",
+            "Description": "Cannot implicitly convert type 'System.Array' to 'UnityEngine.GameObject[]'. An explicit conversion exists (are you missing a cast?)",
+            "Details": [
+                "if (row < 0 || row >= config.height) return System.Array.Empty<GameObject>();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 235,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Utils\\GridVisualizer.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "6ef2de93-ea28-4c66-8cf7-be35390d9574",
+            "Order": 129,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0103",
+            "Description": "The name 'ObjectPoolManager' does not exist in the current context",
+            "Details": [
+                "if (ObjectPoolManager.Instance == null || blockObj == null) return;"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 233,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Booster\\Hammer\\HammerService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "ae7b0dc6-1658-4168-8a26-0c4da40cbe13",
+            "Order": 130,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0103",
+            "Description": "The name 'ObjectPoolManager' does not exist in the current context",
+            "Details": [
+                "GameObject vfx = ObjectPoolManager.Instance.SpawnSync("
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 239,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Booster\\Hammer\\HammerService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "33de33c9-80df-465f-8447-1340b5846ac6",
+            "Order": 131,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'GameResource' does not contain a definition for 'Flood'",
+            "Details": [
+                "public GameResource BoosterType => GameResource.Flood;"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 10,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Booster\\FloodBlock\\FloodBlockStrategy.cs",
+            "ClassName": "GameResource",
+            "MemberName": "Flood",
+            "Severity": 1
+        },
+        {
+            "LogID": "08a90d06-89e1-4e13-bae7-4511c787c106",
+            "Order": 132,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'GameResource' does not contain a definition for 'Clock'",
+            "Details": [
+                "public GameResource BoosterType => GameResource.Clock;"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 16,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Booster\\Clock\\ClockStrategy.cs",
+            "ClassName": "GameResource",
+            "MemberName": "Clock",
+            "Severity": 1
+        },
+        {
+            "LogID": "c5210b71-84f8-4071-bd79-bf90d87fe931",
+            "Order": 133,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'JsonSerializerSettings' does not contain a definition for 'Converters'",
+            "Details": [
+                "new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Auto, Converters = new JsonConverter[] { converter } });"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 74,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\GameDataManagement\\PlayerPrefsDataService.cs",
+            "ClassName": "JsonSerializerSettings",
+            "MemberName": "Converters",
+            "Severity": 1
+        },
+        {
+            "LogID": "e6623c3d-1400-4960-827a-9638cf42bacd",
+            "Order": 134,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'JsonConverter' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Auto, Converters = new JsonConverter[] { converter } });"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 74,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\GameDataManagement\\PlayerPrefsDataService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "3be89ff9-6ffd-41da-8a79-ec2e0a75268d",
+            "Order": 135,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1061",
+            "Description": "'Hash128' does not contain a definition for 'Append' and no accessible extension method 'Append' accepting a first argument of type 'Hash128' could be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "hash128.Append(levelRemoteConfigData.id);"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 126,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelRemoteServiceAsync.cs",
+            "ClassName": "Hash128",
+            "MemberName": "Append",
+            "Severity": 1
+        },
+        {
+            "LogID": "9f9b43ee-b2d9-4d37-a322-515e53bed2aa",
+            "Order": 136,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'DownloadHandlerAssetBundle' does not contain a definition for 'GetContent'",
+            "Details": [
+                "assetBundle = DownloadHandlerAssetBundle.GetContent(www);"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 140,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelRemoteServiceAsync.cs",
+            "ClassName": "DownloadHandlerAssetBundle",
+            "MemberName": "GetContent",
+            "Severity": 1
+        },
+        {
+            "LogID": "4bc7add2-0151-4ae8-b62a-fe9595f3654b",
+            "Order": 137,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'JsonSerializerSettings' does not contain a definition for 'Converters'",
+            "Details": [
+                "new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Auto, Converters = new JsonConverter[] { converter } });"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 86,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\GameDataManagement\\PlayerPrefsDataService.cs",
+            "ClassName": "JsonSerializerSettings",
+            "MemberName": "Converters",
+            "Severity": 1
+        },
+        {
+            "LogID": "52be75fd-85bb-491d-9224-ee3eb52cee52",
+            "Order": 138,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'JsonConverter' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Auto, Converters = new JsonConverter[] { converter } });"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 86,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\GameDataManagement\\PlayerPrefsDataService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "7fcae363-6865-4d02-8200-38b76503f7d9",
+            "Order": 139,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0266",
+            "Description": "Cannot implicitly convert type 'System.Array' to 'string[]'. An explicit conversion exists (are you missing a cast?)",
+            "Details": [
+                "public string[]         Languages = Array.Empty<string>();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 44,
+            "FilePath": "E:\\BlockMerge\\Assets\\I2\\Localization\\Scripts\\TermData.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "a4c9e1a5-1b31-4289-b4d2-9c4d2e91764a",
+            "Order": 140,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0266",
+            "Description": "Cannot implicitly convert type 'System.Array' to 'byte[]'. An explicit conversion exists (are you missing a cast?)",
+            "Details": [
+                "public byte[]\t\t\tFlags \t  = Array.Empty<byte>();  // flags for each translation"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 45,
+            "FilePath": "E:\\BlockMerge\\Assets\\I2\\Localization\\Scripts\\TermData.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "80598dec-5218-49d3-aadf-09bf8cda5937",
+            "Order": 141,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1061",
+            "Description": "'AssemblyName' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'AssemblyName' could be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "var assemblyType = GetAssemblyType(assemblies[i].GetName().Name);"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 63,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\EventBus\\PredefinedAssemblyUtil.cs",
+            "ClassName": "AssemblyName",
+            "MemberName": "Name",
+            "Severity": 1
+        },
+        {
+            "LogID": "d7ea81e8-139e-4d97-bbfa-3c1eb0a9549a",
+            "Order": 142,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1061",
+            "Description": "'Hash128' does not contain a definition for 'Append' and no accessible extension method 'Append' accepting a first argument of type 'Hash128' could be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "hash128.Append(levelRemoteConfigData.id);"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 138,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelRemoteService.cs",
+            "ClassName": "Hash128",
+            "MemberName": "Append",
+            "Severity": 1
+        },
+        {
+            "LogID": "68a1fae5-c9f3-4756-aba2-3fb70c1ad67b",
+            "Order": 143,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'DownloadHandlerAssetBundle' does not contain a definition for 'GetContent'",
+            "Details": [
+                "assetBundle = DownloadHandlerAssetBundle.GetContent(www);"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 152,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelRemoteService.cs",
+            "ClassName": "DownloadHandlerAssetBundle",
+            "MemberName": "GetContent",
+            "Severity": 1
+        },
+        {
+            "LogID": "87d9f876-0e30-409c-91bb-3f2baa42ef72",
+            "Order": 144,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'Task' does not contain a definition for 'Yield'",
+            "Details": [
+                "await Task.Yield();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 91,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolderAsync.cs",
+            "ClassName": "Task",
+            "MemberName": "Yield",
+            "Severity": 1
+        },
+        {
+            "LogID": "f6379589-dbe7-49ca-bb4c-16b89293082d",
+            "Order": 145,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'GameState' does not contain a definition for 'Menu'",
+            "Details": [
+                "if (e.gameState == GameState.Menu) ResetScore();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 91,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Manager\\ScoreManager.cs",
+            "ClassName": "GameState",
+            "MemberName": "Menu",
+            "Severity": 1
+        },
+        {
+            "LogID": "81e7cddd-958f-4123-94ba-0725b8b06ad3",
+            "Order": 146,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'Task' does not contain a definition for 'Yield'",
+            "Details": [
+                "await Task.Yield();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 250,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolderAsync.cs",
+            "ClassName": "Task",
+            "MemberName": "Yield",
+            "Severity": 1
+        },
+        {
+            "LogID": "b0a30a53-7780-440d-837c-5583496bfa7a",
+            "Order": 147,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1061",
+            "Description": "'Sequence' does not contain a definition for 'AsyncWaitForCompletion' and no accessible extension method 'AsyncWaitForCompletion' accepting a first argument of type 'Sequence' could be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "tasks.Add(seq.AsyncWaitForCompletion());"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 806,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Utils\\GridRowClearer.cs",
+            "ClassName": "Sequence",
+            "MemberName": "AsyncWaitForCompletion",
+            "Severity": 1
+        },
+        {
+            "LogID": "9b93b9ec-31ff-48c2-ac0c-7d8164d36f65",
+            "Order": 148,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1061",
+            "Description": "'Sequence' does not contain a definition for 'AsyncWaitForCompletion' and no accessible extension method 'AsyncWaitForCompletion' accepting a first argument of type 'Sequence' could be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "tasks.Add(seq.AsyncWaitForCompletion());"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 818,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Utils\\GridRowClearer.cs",
+            "ClassName": "Sequence",
+            "MemberName": "AsyncWaitForCompletion",
+            "Severity": 1
+        },
+        {
+            "LogID": "887666d7-f5f7-40bf-aed2-c05384214a5e",
+            "Order": 149,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'Task' does not contain a definition for 'Yield'",
+            "Details": [
+                "await Task.Yield();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 54,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveService.cs",
+            "ClassName": "Task",
+            "MemberName": "Yield",
+            "Severity": 1
+        },
+        {
+            "LogID": "6c99b962-a061-44f9-9999-96d21d4575c6",
+            "Order": 150,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1061",
+            "Description": "'StringBuilder' does not contain a definition for 'AppendJoin' and no accessible extension method 'AppendJoin' accepting a first argument of type 'StringBuilder' could be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "return res.AppendJoin(\":\", unit).ToString();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 206,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Utils\\SonatUtils.cs",
+            "ClassName": "StringBuilder",
+            "MemberName": "AppendJoin",
+            "Severity": 1
+        },
+        {
+            "LogID": "1fa68a10-1dd8-4a4f-b564-db08c4cf7884",
+            "Order": 151,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0308",
+            "Description": "The non-generic method 'Enum.Parse(Type, string)' cannot be used with type arguments",
+            "Details": [
+                "gameResource = Enum.Parse<GameResource>(parts[0]),"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 22,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Helper\\Converters\\GameResourceKeyConverter.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "ed0b7a14-8c55-4449-917c-d4cff83ca98f",
+            "Order": 152,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'Task' does not contain a definition for 'Yield'",
+            "Details": [
+                "await Task.Yield();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 50,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceAsync.cs",
+            "ClassName": "Task",
+            "MemberName": "Yield",
+            "Severity": 1
+        },
+        {
+            "LogID": "cb770811-f581-49e8-9d8e-35c34d002677",
+            "Order": 153,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0103",
+            "Description": "The name 'WebRequest' does not exist in the current context",
+            "Details": [
+                "using (var response = WebRequest.Create(\"https://www.google.com\").GetResponse())"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 85,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\TimeManagement\\SonatTimeService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "321ef842-467c-460e-9111-bbfda3b1445d",
+            "Order": 154,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'WebException' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "catch (WebException)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 94,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\TimeManagement\\SonatTimeService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "74c154de-2461-4edd-9ea9-2d82c8f77101",
+            "Order": 155,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'Task' does not contain a definition for 'Yield'",
+            "Details": [
+                "await Task.Yield();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 99,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceAsync.cs",
+            "ClassName": "Task",
+            "MemberName": "Yield",
+            "Severity": 1
+        },
+        {
+            "LogID": "e575b4d3-afc9-4cc2-bb70-ff6dea0db0fe",
+            "Order": 156,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'Task' does not contain a definition for 'Yield'",
+            "Details": [
+                "await Task.Yield();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 96,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolder.cs",
+            "ClassName": "Task",
+            "MemberName": "Yield",
+            "Severity": 1
+        },
+        {
+            "LogID": "c7f06855-7f73-4b0f-95dc-7febbb7bdece",
+            "Order": 157,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'ZipArchive' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "using (ZipArchive archive = new ZipArchive(zipStream, ZipArchiveMode.Read))"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 139,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceAsync.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "e2ba04b3-4008-4d20-8d1a-64b564dd220e",
+            "Order": 158,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'ZipArchive' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "using (ZipArchive archive = new ZipArchive(zipStream, ZipArchiveMode.Read))"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 139,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceAsync.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "cf41e3a3-5873-43a0-bf7a-0aca5462296c",
+            "Order": 159,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0103",
+            "Description": "The name 'ZipArchiveMode' does not exist in the current context",
+            "Details": [
+                "using (ZipArchive archive = new ZipArchive(zipStream, ZipArchiveMode.Read))"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 139,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceAsync.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "0073951c-bc9b-4437-9fcf-9f7c68e2f328",
+            "Order": 160,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'ZipArchiveEntry' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "foreach (ZipArchiveEntry entry in archive.Entries)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 141,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceAsync.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "4e67b5e6-6b26-400b-b668-bd45fca34f09",
+            "Order": 161,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'Task' does not contain a definition for 'Yield'",
+            "Details": [
+                "await Task.Yield();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 103,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveService.cs",
+            "ClassName": "Task",
+            "MemberName": "Yield",
+            "Severity": 1
+        },
+        {
+            "LogID": "ad47eb58-6685-4a42-ba3f-b7931439fdf0",
+            "Order": 162,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'Task' does not contain a definition for 'Yield'",
+            "Details": [
+                "await Task.Yield();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 255,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolder.cs",
+            "ClassName": "Task",
+            "MemberName": "Yield",
+            "Severity": 1
+        },
+        {
+            "LogID": "f3b9ae9f-465d-4084-ac3f-d88885699f23",
+            "Order": 163,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0103",
+            "Description": "The name 'JsonToken' does not exist in the current context",
+            "Details": [
+                "if (reader.TokenType == JsonToken.EndObject)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 38,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Helper\\Converters\\GameResourceKeyDictionaryConverter.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "625c2ea2-5b2c-4625-8314-b0916595321a",
+            "Order": 164,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0308",
+            "Description": "The non-generic method 'Enum.Parse(Type, string)' cannot be used with type arguments",
+            "Details": [
+                "gameResource = Enum.Parse<GameResource>(parts[0]),"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 46,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Helper\\Converters\\GameResourceKeyDictionaryConverter.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "b0f126fa-ea4e-42d1-ba8b-413bbc6497ce",
+            "Order": 165,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0103",
+            "Description": "The name 'ObjectPoolManager' does not exist in the current context",
+            "Details": [
+                "if (ObjectPoolManager.Instance != null)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 865,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Utils\\GridRowClearer.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "9e51fefc-081a-41f1-bff8-da8e3eb3c92b",
+            "Order": 166,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0103",
+            "Description": "The name 'ObjectPoolManager' does not exist in the current context",
+            "Details": [
+                "await ObjectPoolManager.Instance.PreloadAssetAsync(VFX_DUAL_KEY);"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 867,
+            "FilePath": "E:\\BlockMerge\\Assets\\Scripts\\Utils\\GridRowClearer.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "d851deb3-f26e-40de-a08b-c6d73674035d",
+            "Order": 167,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'ZipArchive' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "using (ZipArchive archive = new ZipArchive(zipStream, ZipArchiveMode.Read))"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 143,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "79466b7a-5f4d-4418-a822-e8df261a4074",
+            "Order": 168,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'ZipArchive' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "using (ZipArchive archive = new ZipArchive(zipStream, ZipArchiveMode.Read))"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 143,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "40db42ea-f6a6-45ca-bb1b-e1647efdb79c",
+            "Order": 169,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0103",
+            "Description": "The name 'ZipArchiveMode' does not exist in the current context",
+            "Details": [
+                "using (ZipArchive archive = new ZipArchive(zipStream, ZipArchiveMode.Read))"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 143,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "5e87bf25-35ac-4b15-bf9f-f99c8b73f338",
+            "Order": 170,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0246",
+            "Description": "The type or namespace name 'ZipArchiveEntry' could not be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "foreach (ZipArchiveEntry entry in archive.Entries)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 145,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveService.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "0a2220da-b3a1-462f-b2cb-048fd5f52f2b",
+            "Order": 171,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'Task' does not contain a definition for 'Yield'",
+            "Details": [
+                "await Task.Yield();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 459,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolderAsync.cs",
+            "ClassName": "Task",
+            "MemberName": "Yield",
+            "Severity": 1
+        },
+        {
+            "LogID": "07813c2b-bf4f-443d-bb81-8e3139ca0bbb",
+            "Order": 172,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'Task' does not contain a definition for 'Yield'",
+            "Details": [
+                "await Task.Yield();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 464,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolder.cs",
+            "ClassName": "Task",
+            "MemberName": "Yield",
+            "Severity": 1
+        },
+        {
+            "LogID": "8697d8e7-4a7e-4336-adfb-ac511e4c3e80",
+            "Order": 173,
+            "Timestamp": 1772035760013,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1061",
+            "Description": "'Thread' does not contain a definition for 'CurrentCulture' and no accessible extension method 'CurrentCulture' accepting a first argument of type 'Thread' could be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "Thread.CurrentThread.CurrentCulture = mCurrentCulture;"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 158,
+            "FilePath": "E:\\BlockMerge\\Assets\\I2\\Localization\\Scripts\\Manager\\LocalizationManager_Language.cs",
+            "ClassName": "Thread",
+            "MemberName": "CurrentCulture",
+            "Severity": 1
+        },
+        {
+            "LogID": "216004a3-843e-46bd-aec7-1f095628b711",
+            "Order": 174,
+            "Timestamp": 1772035760014,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'Task' does not contain a definition for 'Yield'",
+            "Details": [
+                "await Task.Yield();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 503,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolderAsync.cs",
+            "ClassName": "Task",
+            "MemberName": "Yield",
+            "Severity": 1
+        },
+        {
+            "LogID": "f11c08b2-73c5-4df2-905b-d0011145aa58",
+            "Order": 175,
+            "Timestamp": 1772035760014,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0411",
+            "Description": "The type arguments for method 'JsonConvert.DeserializeObject<T>(string)' cannot be inferred from the usage. Try specifying the type arguments explicitly.",
+            "Details": [
+                "JsonConvert.DeserializeObject(content);"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 512,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolderAsync.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "5623879d-6346-4cab-a609-c4788caa7f19",
+            "Order": 176,
+            "Timestamp": 1772035760014,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0117",
+            "Description": "'Task' does not contain a definition for 'Yield'",
+            "Details": [
+                "await Task.Yield();"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 508,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolder.cs",
+            "ClassName": "Task",
+            "MemberName": "Yield",
+            "Severity": 1
+        },
+        {
+            "LogID": "12db3e6c-82f0-47d5-8269-12a60f62a4f4",
+            "Order": 177,
+            "Timestamp": 1772035760014,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0411",
+            "Description": "The type arguments for method 'JsonConvert.DeserializeObject<T>(string)' cannot be inferred from the usage. Try specifying the type arguments explicitly.",
+            "Details": [
+                "JsonConvert.DeserializeObject(content);"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 517,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\LevelManagement\\LevelDriveServiceFolder.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "953a515f-040a-45df-9fc5-5b257b4911ac",
+            "Order": 178,
+            "Timestamp": 1772035760014,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1061",
+            "Description": "'FileInfo' does not contain a definition for 'Directory' and no accessible extension method 'Directory' accepting a first argument of type 'FileInfo' could be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "Directory.CreateDirectory(new FileInfo(aFileName).Directory.FullName);"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 449,
+            "FilePath": "E:\\BlockMerge\\Assets\\I2\\Localization\\Scripts\\Google\\SimpleJSON.cs",
+            "ClassName": "FileInfo",
+            "MemberName": "Directory",
+            "Severity": 1
+        },
+        {
+            "LogID": "bf7ba02d-9855-412a-a21a-2d201bfc3441",
+            "Order": 179,
+            "Timestamp": 1772035760014,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1061",
+            "Description": "'Queue<IPoolingObject>' does not contain a definition for 'TryDequeue' and no accessible extension method 'TryDequeue' accepting a first argument of type 'Queue<IPoolingObject>' could be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "if (queue.TryDequeue(out var obj) && !obj.transform.gameObject.activeSelf)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 24,
+            "FilePath": "E:\\BlockMerge\\Assets\\sonat-game-framework\\Scripts\\Systems\\ObjectPooling\\SonatPoolingService.cs",
+            "ClassName": "Queue<IPoolingObject>",
+            "MemberName": "TryDequeue",
+            "Severity": 1
+        },
+        {
+            "LogID": "377a85a5-849e-4b49-8376-3492fc16dcba",
+            "Order": 180,
+            "Timestamp": 1772035760014,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1061",
+            "Description": "'TextInfo' does not contain a definition for 'ToTitleCase' and no accessible extension method 'ToTitleCase' accepting a first argument of type 'TextInfo' could be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(s);"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 370,
+            "FilePath": "E:\\BlockMerge\\Assets\\I2\\Localization\\Scripts\\Google\\GoogleTranslation_Queries.cs",
+            "ClassName": "TextInfo",
+            "MemberName": "ToTitleCase",
+            "Severity": 1
+        }
+    ]
+}

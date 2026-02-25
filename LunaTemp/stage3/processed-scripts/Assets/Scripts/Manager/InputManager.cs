@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 using Base.Singleton;
 using Sonat.Enums;
 using SonatFramework.Systems.EventBus;
@@ -68,7 +67,7 @@ public class InputManager : SingletonSimple<InputManager>
 
     private void Update()
     {
-        if (!_canInput || Pointer.current == null) return;
+        if (!_canInput) return;
         HandleInput();
     }
 
@@ -97,12 +96,25 @@ public class InputManager : SingletonSimple<InputManager>
 
     private void HandleInput()
     {
-        Vector2 currentPos = Pointer.current.position.ReadValue();
-        var pointer = Pointer.current;
+        Vector2 currentPos = Input.mousePosition;
 
-        if (pointer.press.wasPressedThisFrame) HandlePressStart(currentPos);
-        if (pointer.press.isPressed && _isValidTouch) HandleDragging(currentPos);
-        if (pointer.press.wasReleasedThisFrame) HandleRelease();
+        // PRESS START
+        if (Input.GetMouseButtonDown(0))
+        {
+            HandlePressStart(currentPos);
+        }
+
+        // DRAGGING / HOLD
+        if (Input.GetMouseButton(0) && _isValidTouch)
+        {
+            HandleDragging(currentPos);
+        }
+
+        // RELEASE
+        if (Input.GetMouseButtonUp(0))
+        {
+            HandleRelease();
+        }
     }
 
     private void HandlePressStart([Bridge.Ref] Vector2 currentPos)
@@ -345,13 +357,13 @@ public class InputManager : SingletonSimple<InputManager>
 
     private GameObject GetUIObjectUnderPointer()
     {
-        if (EventSystem.current == null) return null;
+        if (EventSystem.current == null)
+            return null;
 
-        var pointerData = new PointerEventData(EventSystem.current)
-        {
-            position = Pointer.current.position.ReadValue()
-        };
-        var results = new List<RaycastResult>();
+        PointerEventData pointerData = new PointerEventData(EventSystem.current);
+        pointerData.position = Input.mousePosition;
+
+        List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(pointerData, results);
 
         return results.Count > 0 ? results[0].gameObject : null;

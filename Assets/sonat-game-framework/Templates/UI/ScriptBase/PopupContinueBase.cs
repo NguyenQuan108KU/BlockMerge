@@ -1,7 +1,7 @@
 using System;
 using Sirenix.OdinInspector;
 using Sonat.Enums;
-using SonatFramework.Scripts.Feature.Shop.UI;
+//using SonatFramework.Scripts.Feature.Shop.UI;
 using SonatFramework.Scripts.Gameplay;
 using SonatFramework.Scripts.SonatSDKAdapterModule;
 using SonatFramework.Scripts.UIModule;
@@ -108,7 +108,7 @@ public class PopupContinueBase : Panel
         else
         {
             PopupToast.Create("Not enough coin!");
-            PanelManager.Instance.OpenPanelByNameAsync<ShopPanelBase>("ShopPanel");
+            //PanelManager.Instance.OpenPanelByNameAsync<ShopPanelBase>("ShopPanel");
         }
     }
 

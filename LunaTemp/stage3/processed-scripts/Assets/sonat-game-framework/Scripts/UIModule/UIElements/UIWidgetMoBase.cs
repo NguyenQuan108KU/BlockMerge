@@ -1,5 +1,5 @@
 using Sonat.Enums;
-using SonatFramework.Scripts.Feature.Shop;
+//using SonatFramework.Scripts.Feature.Shop;
 using SonatFramework.Systems;
 using TMPro;
 using UnityEngine;
@@ -10,17 +10,17 @@ namespace SonatFramework.Scripts.UIModule.UIElements
     {
         [SerializeField] private ShopItemKey shopItemKey;
         [SerializeField] private TMP_Text txtContent;
-        protected readonly Service<ShopService> shopService = new Service<ShopService>();
+        //protected readonly Service<ShopService> shopService = new Service<ShopService>();
 
         // Start is called before the first frame update
         protected virtual void Start()
         {
-            shopService.Instance.OnBuySuccess += OnBoughtIAP;
+            //shopService.Instance.OnBuySuccess += OnBoughtIAP;
         }
 
         protected virtual void OnDestroy()
         {
-            shopService.Instance.OnBuySuccess -= OnBoughtIAP;
+            //shopService.Instance.OnBuySuccess -= OnBoughtIAP;
         }
 
         protected virtual void OnBoughtIAP(ShopItemKey key)
@@ -36,13 +36,13 @@ namespace SonatFramework.Scripts.UIModule.UIElements
 
         protected virtual bool Verify()
         {
-            return shopService.Instance.VerifyPack(shopItemKey);
+            return false;
         }
 
         protected virtual void Finish()
         {
             gameObject.SetActive(false);
-            shopService.Instance.OnBuySuccess -= OnBoughtIAP;
+            //shopService.Instance.OnBuySuccess -= OnBoughtIAP;
         }
 
         public abstract void OnClickWidget();

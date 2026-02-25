@@ -1,6 +1,5 @@
 ﻿using DG.Tweening;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class TutUndoPanel : TutorialPanelBase
 {
@@ -24,9 +23,8 @@ public class TutUndoPanel : TutorialPanelBase
     private void Update()
     {
         if (_completed) return;
-        if (Pointer.current == null) return;
 
-        if (Pointer.current.press.wasPressedThisFrame)
+        if (Input.GetMouseButtonDown(0))
         {
             _completed = true;
             CompleteTutorial();

@@ -1,7 +1,6 @@
 ﻿using DG.Tweening;
 using SonatFramework.Systems.EventBus;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class TutRotatePanel : TutorialPanelBase
 {
@@ -29,9 +28,8 @@ public class TutRotatePanel : TutorialPanelBase
     private void Update()
     {
         if (_completed) return;
-        if (Pointer.current == null) return;
 
-        if (Pointer.current.press.wasPressedThisFrame)
+        if (Input.GetMouseButtonDown(0))
         {
             _completed = true;
             CompleteTutorial();

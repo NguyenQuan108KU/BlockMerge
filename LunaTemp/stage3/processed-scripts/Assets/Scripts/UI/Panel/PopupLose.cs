@@ -11,7 +11,7 @@ public class PopupLose : LosePanelBase
 {
     public new class Data : LosePanelBase.Data
     {
-        public LoseReason reason;
+        //public LoseReason reason;
         public bool canContinue;
         public Action onContinueClick;
     }
@@ -42,22 +42,22 @@ public class PopupLose : LosePanelBase
 
         if (txtReason != null)
         {
-            txtReason.text = _data.reason switch
-            {
-                LoseReason.BlockOverflow => "Stack too high!",
-                LoseReason.TimeOut => "Time's up!",
-                _ => "Game Over!"
-            };
+            //txtReason.text = _data.reason switch
+            //{
+            //    LoseReason.BlockOverflow => "Stack too high!",
+            //    LoseReason.TimeOut => "Time's up!",
+            //    _ => "Game Over!"
+            //};
         }
 
         if (txtBtnAds != null)
         {
-            txtBtnAds.text = _data.reason switch
-            {
-                LoseReason.TimeOut => $"+{GameRemoteConfig.ContinueExtraTime} Seconds",
-                LoseReason.BlockOverflow => $"Undo {GameRemoteConfig.ContinueUndoSteps} Steps",
-                _ => "Watch Ad"
-            };
+            //txtBtnAds.text = _data.reason switch
+            //{
+            //    LoseReason.TimeOut => $"+{GameRemoteConfig.ContinueExtraTime} Seconds",
+            //    LoseReason.BlockOverflow => $"Undo {GameRemoteConfig.ContinueUndoSteps} Steps",
+            //    _ => "Watch Ad"
+            //};
         }
     }
 
@@ -91,7 +91,7 @@ public class PopupLose : LosePanelBase
     {
         EventBus<LevelContinueEvent>.Raise(new LevelContinueEvent
         {
-            by = _data.reason == LoseReason.TimeOut ? "rewarded_time" : "rewarded_undo"
+            //by = _data.reason == LoseReason.TimeOut ? "rewarded_time" : "rewarded_undo"
         });
 
         Close();

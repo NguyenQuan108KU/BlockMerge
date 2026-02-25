@@ -35,7 +35,7 @@ public class LimitLineController : MonoBehaviour
     private void OnEnable()
     {
         _ghostBinding = new EventBinding<GhostLandingUpdatedEvent>(OnGhostLandingUpdated);
-        _loseBinding = new EventBinding<GameLoseEvent>(OnGameLose);
+        //_loseBinding = new EventBinding<GameLoseEvent>(OnGameLose);
         _stateBinding = new EventBinding<GameStateChangeEvent>(OnGameStateChanged);
     }
 
@@ -61,13 +61,13 @@ public class LimitLineController : MonoBehaviour
             StopWarning();
     }
 
-    private void OnGameLose([Bridge.Ref] GameLoseEvent e)
-    {
-        if (e.reason == LoseReason.BlockOverflow)
-            ShowGameOverState();
-        else
-            StopWarning();
-    }
+    //private void OnGameLose(GameLoseEvent e)
+    //{
+    //    if (e.reason == LoseReason.BlockOverflow)
+    //        ShowGameOverState();
+    //    else
+    //        StopWarning();
+    //}
 
     private void OnGameStateChanged([Bridge.Ref] GameStateChangeEvent e)
     {

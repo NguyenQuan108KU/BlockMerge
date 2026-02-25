@@ -286,22 +286,22 @@ public class GameManager : Singleton<GameManager>
 
     public void HandleTimeUp()
     {
-        if (CurrentState == GameState.Playing && _isGameActive)
-            HandleLose(LoseReason.TimeOut);
+        //if (CurrentState == GameState.Playing && _isGameActive)
+        //    HandleLose(LoseReason.TimeOut);
     }
 
     public void HandleBlockOverflow()
     {
-        if (CurrentState != GameState.Playing || !_isGameActive) return;
-        HandleLose(LoseReason.BlockOverflow);
+        //if (CurrentState != GameState.Playing || !_isGameActive) return;
+        //HandleLose(LoseReason.BlockOverflow);
     }
 
     public void CheckGameOverCondition(int row)
     {
         if (CurrentState != GameState.Playing || !_isGameActive) return;
         if (GridManager.Instance == null) return;
-        if (row >= GridManager.Instance.config.maxHeight)
-            HandleLose(LoseReason.BlockOverflow);
+        //if (row >= GridManager.Instance.config.maxHeight)
+        //    HandleLose(LoseReason.BlockOverflow);
     }
 
     private async Task HandleWin()
@@ -339,52 +339,52 @@ public class GameManager : Singleton<GameManager>
         //PanelManager.Instance.OpenForget<PopupWin>(winData);
     }
 
-    private void HandleLose(LoseReason reason)
-    {
-        StopGameplay();
+    //private void HandleLose(LoseReason reason)
+    //{
+    //    StopGameplay();
 
-        EventBus<GameLoseEvent>.Raise(new GameLoseEvent
-        {
-            reason = reason
-        });
+    //    EventBus<GameLoseEvent>.Raise(new GameLoseEvent
+    //    {
+    //        //reason = reason
+    //    });
 
-        EventBus<LevelEndedEvent>.Raise(new LevelEndedEvent
-        {
-            success = false,
-            gameMode = CurrentLevelData?.gameMode ?? GameMode.Classic,
-            level = CurrentLevelIndex,
-            phase = 0
-        });
+    //    EventBus<LevelEndedEvent>.Raise(new LevelEndedEvent
+    //    {
+    //        success = false,
+    //        gameMode = CurrentLevelData?.gameMode ?? GameMode.Classic,
+    //        level = CurrentLevelIndex,
+    //        phase = 0
+    //    });
 
-        SetGameState(GameState.GameOver);
+    //    SetGameState(GameState.GameOver);
 
-        var loseData = new PopupLose.Data
-        {
-            reason = reason,
-            canContinue = !_continueUsed,
-            onRetryClick = RestartGame,
-            onContinueClick = () => ContinueGame(reason)
-        };
+    //    var loseData = new PopupLose.Data
+    //    {
+    //        //reason = reason,
+    //        canContinue = !_continueUsed,
+    //        onRetryClick = RestartGame,
+    //        onContinueClick = () => ContinueGame(reason)
+    //    };
 
-        PanelManager.Instance.OpenForget<PopupLose>(loseData);
-    }
+    //    PanelManager.Instance.OpenForget<PopupLose>(loseData);
+    //}
 
     #endregion
 
     #region Continue
 
-    private void ContinueGame(LoseReason reason)
-    {
-        _continueUsed = true;
+    //private void ContinueGame(LoseReason reason)
+    //{
+    //    _continueUsed = true;
 
-        if (reason == LoseReason.TimeOut)
-            ContinueFromTimeout();
-        else
-            ContinueFromOverflow();
+    //    if (reason == LoseReason.TimeOut)
+    //        ContinueFromTimeout();
+    //    else
+    //        ContinueFromOverflow();
 
-        _isGameActive = true;
-        SetGameState(GameState.Playing);
-    }
+    //    _isGameActive = true;
+    //    SetGameState(GameState.Playing);
+    //}
 
     private void ContinueFromTimeout()
     {

@@ -47,8 +47,6 @@ namespace Booster
         private void Update()
         {
             if (!_isActive) return;
-            if (Pointer.current == null) return;
-
             HandleInput();
         }
 
@@ -101,25 +99,24 @@ namespace Booster
 
         private void HandleInput()
         {
-            var pointer = Pointer.current;
-            Vector2 screenPos = pointer.position.ReadValue();
-
             if (IsPointerOverUI()) return;
 
+            Vector2 screenPos = Input.mousePosition;
+
             // PRESS START
-            if (pointer.press.wasPressedThisFrame)
+            if (Input.GetMouseButtonDown(0))
             {
                 HandlePressStart(screenPos);
             }
 
             // HOLDING
-            if (pointer.press.isPressed && _isHolding)
+            if (Input.GetMouseButton(0) && _isHolding)
             {
                 HandleHolding();
             }
 
             // RELEASE
-            if (pointer.press.wasReleasedThisFrame)
+            if (Input.GetMouseButtonUp(0))
             {
                 HandleRelease();
             }
@@ -167,14 +164,7 @@ namespace Booster
         {
             if (EventSystem.current == null) return false;
 
-            var pointerData = new PointerEventData(EventSystem.current)
-            {
-                position = Pointer.current.position.ReadValue()
-            };
-            var results = new List<RaycastResult>();
-            EventSystem.current.RaycastAll(pointerData, results);
-
-            return results.Count > 0;
+            return EventSystem.current.IsPointerOverGameObject();
         }
 
         // --- CORE LOGIC MỚI: RAYCAST PHYSICS ---

@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using DG.Tweening;
 using Sonat.Enums;
-using SonatFramework.Scripts.Feature.Shop.UI;
+//using SonatFramework.Scripts.Feature.Shop.UI;
 using SonatFramework.Scripts.Utils;
 using SonatFramework.Systems;
 using SonatFramework.Systems.AudioManagement;

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using DG.Tweening;
-using Sonat.TrackingModule;
+//using Sonat.TrackingModule;
 using SonatFramework.Scripts.Systems.ObjectPooling;
 using SonatFramework.Systems.LoadObject;
 using UnityEngine;

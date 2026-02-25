@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using JetBrains.Annotations;
 using Sonat.Enums;
 using SonatFramework.Scripts.Helper.Converters;
 using SonatFramework.Systems.EventBus;
@@ -44,7 +43,6 @@ namespace SonatFramework.Systems.InventoryManagement
     new Dictionary<string, Dictionary<GameResourceKey, ResourceData>>(StringComparer.Ordinal);
         }
 
-        [NotNull]
         public override ResourceData GetResource(GameResourceKey key)
         {
             if (resources.TryGetValue(key, out var data))

@@ -14,13 +14,13 @@ namespace SonatFramework.Systems.AudioManagement
     [CreateAssetMenu(fileName = "SonatAudioService", menuName = "Sonat Services/Audio Service")]
     public class SonatAudioService : AudioService, IServiceInitialize
     {
-        [BoxGroup("SERVICES", true)] [SerializeField]
+        //[BoxGroup("SERVICES", true)] [SerializeField]
         protected Service<DataService> dataService = new Service<DataService>();
 
-        [BoxGroup("SERVICES", true)] [SerializeField]
+        //[BoxGroup("SERVICES", true)] [SerializeField]
         protected Service<LoadObjectServiceAsync> loadServiceAsync = new Service<LoadObjectServiceAsync>();
 
-        [BoxGroup("CONFIGS", true)] [Range(0, 1)] [SerializeField]
+        //[BoxGroup("CONFIGS", true)] [Range(0, 1)] [SerializeField]
         private float volumeDefault = 1;
 
         protected readonly Dictionary<string, AudioClip> audioClips = new Dictionary<string, AudioClip>(StringComparer.Ordinal);

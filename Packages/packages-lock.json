@@ -179,6 +179,12 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.playworks.upp": {
+      "version": "file:D:/6.4.0/7.0.0.0/scripts",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.profiling.core": {
       "version": "1.0.2",
       "depth": 1,
@@ -334,12 +340,6 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
-    },
-    "uk.lunalabs.luna": {
-      "version": "file:D:/6.4.0/scripts",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {}
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
