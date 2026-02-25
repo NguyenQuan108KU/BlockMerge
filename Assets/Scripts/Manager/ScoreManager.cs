@@ -68,7 +68,7 @@ public class ScoreManager : SingletonSimple<ScoreManager>
     {
         if (rowsCount <= 0) return 0;
 
-        var config = ConfigHelper.Game;
+        var config = GameManager.Instance.gameConfig;
         if (!config.useMultiLineBonus) return rowsCount * config.pointsPerRow;
 
         switch (rowsCount)

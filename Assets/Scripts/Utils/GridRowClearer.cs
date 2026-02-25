@@ -13,6 +13,8 @@ public class GridRowClearer
     private readonly GridVisualizer visualizer;
 
     private const string VFX_DUAL_KEY = "VFX_BlockBreak_Dual";
+    private GameObject breakVfxPrefab;
+    private bool isPlayingEffect = false;
 
     #region Settings
 
@@ -65,11 +67,12 @@ public class GridRowClearer
 
     #region Constructor
 
-    public GridRowClearer(GameConfig config, GridData gridData, GridVisualizer visualizer, ClearSettings settings = null)
+    public GridRowClearer(GameConfig config, GridData gridData, GridVisualizer visualizer, GameObject breakVfxPrefab, ClearSettings settings = null)
     {
         this.config = config;
         this.gridData = gridData;
         this.visualizer = visualizer;
+        this.breakVfxPrefab = breakVfxPrefab;
         this.settings = settings ?? new ClearSettings();
 
         _virtualGrid = new int[config.Perimeter, config.height];
@@ -827,22 +830,34 @@ public class GridRowClearer
 
     private async UniTaskVoid SpawnBreakEffectAsync(GameObject blockObj)
     {
-        if (_vfxPooling.Instance == null) return;
+        if (breakVfxPrefab == null)
+        {
+            Debug.LogError("Break VFX Prefab is NULL!");
+            isPlayingEffect = false;
+            return;
+        }
 
         Vector3 pos = blockObj.transform.position;
-        Vector3 dir = pos.normalized;
 
-        var eff = await _vfxPooling.Instance.CreateAsync<DualDirectionEffect>(
-            VFX_DUAL_KEY,
-            pos + dir * 0.2f
-        );
-
-        if (eff != null)
+        GameObject vfx = GameObject.Instantiate(breakVfxPrefab, pos, Quaternion.identity);
+        if (!isPlayingEffect)
         {
-            eff.transform.rotation = Quaternion.LookRotation(dir);
-            var vis = blockObj.GetComponent<BlockVisual>();
-            if (vis != null) eff.SetupAndPlay(vis.CurrentMaterial);
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.merge);
+            isPlayingEffect = true;
         }
+
+        var effect = vfx.GetComponent<DualDirectionEffect>();
+        if (effect != null)
+        {
+            var vis = blockObj.GetComponent<BlockVisual>();
+            if (vis != null)
+                effect.SetupAndPlay(vis.CurrentMaterial);
+        }
+
+        GameObject.Destroy(vfx, 2f);
+
+        await UniTask.Delay(200); // delay nhỏ tránh spam
+        isPlayingEffect = false;
     }
 
     public static async UniTask PreloadEffects()

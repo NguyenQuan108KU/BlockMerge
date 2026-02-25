@@ -16,6 +16,11 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     private const string LEVEL_KEY_PREFIX = "Level_";
+    [Header("------ EC ------")]
+    public GameObject ecWin;
+    public GameObject ecLose;
+    [Header("------ Check win game ------")]
+    public bool isGameWin;
 
     #region Private Fields
 
@@ -36,14 +41,12 @@ public class GameManager : Singleton<GameManager>
 
     #region Properties
 
-    public LevelDataSO CurrentLevelData { get; private set; }
+    public LevelDataSO CurrentLevelData;
+    public LevelDataSO manualLevelData;
+    public GameConfig gameConfig;
     public GameState CurrentState { get; private set; }
 
-    public int CurrentLevelIndex
-    {
-        get => SonatSystem.GetService<UserDataService>()?.GetLevel(GameMode.Classic) ?? 1;
-        private set => SonatSystem.GetService<UserDataService>()?.SaveLevel(value, GameMode.Classic);
-    }
+    public int CurrentLevelIndex;
 
     #endregion
 
@@ -51,10 +54,22 @@ public class GameManager : Singleton<GameManager>
 
     protected override void OnAwake() { }
 
-    private void Start()
+    private async void Start()
     {
         _mainCamera = Camera.main;
-        PlayLevelByIndex(CurrentLevelIndex);
+
+        // Chờ 1 frame để SonatSystem init xong
+        await UniTask.Yield();
+
+        if (manualLevelData != null)
+        {
+            CurrentLevelData = manualLevelData;
+            await StartGame(CurrentLevelData);
+        }
+        else
+        {
+            PlayLevelByIndex(CurrentLevelIndex);
+        }
     }
 
     #endregion
@@ -85,7 +100,7 @@ public class GameManager : Singleton<GameManager>
     {
         CurrentLevelIndex = levelIndex;
         _continueUsed = false;
-        LoadAndStartGame(RemoteLevelOverride.GetLevelKey(levelIndex)).Forget();
+        //LoadAndStartGame(RemoteLevelOverride.GetLevelKey(levelIndex)).Forget();
     }
 
     public void PlayCurrentSavedLevel() => PlayLevelByIndex(CurrentLevelIndex);
@@ -202,13 +217,13 @@ public class GameManager : Singleton<GameManager>
     {
         DifficultyManager.Instance?.ResetLevel();
         ScoreManager.Instance?.SetupForLevel(data.targetGoal);
-        TimeManager.Instance?.StartTimer(data.timeLimit, waitForTouch: true);
+        //TimeManager.Instance?.StartTimer(data.timeLimit, waitForTouch: true);
 
         DifficultyManager.Instance?.SetupForLevel(
             data.difficultyConfig,
             data.shapePool,
             data.fixedStartSequence,
-            ConfigHelper.Game.maxHeight
+            9
         );
     }
 
@@ -260,7 +275,7 @@ public class GameManager : Singleton<GameManager>
     {
         _isGameActive = false;
         _cachedSpawner?.Stop();
-        TimeManager.Instance?.StopTimer();
+        //TimeManager.Instance?.StopTimer();
     }
 
     public void HandleScoreReached()
@@ -317,8 +332,11 @@ public class GameManager : Singleton<GameManager>
             level = CurrentLevelIndex,
             nextLevel = () => PlayNextLevel(nextLevel)
         };
-
-        PanelManager.Instance.OpenForget<PopupWin>(winData);
+        ecWin.SetActive(true);
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.gameWin);
+        isGameWin = true;
+        TimeManager.Instance.StopTimer();
+        //PanelManager.Instance.OpenForget<PopupWin>(winData);
     }
 
     private void HandleLose(LoseReason reason)
@@ -371,7 +389,7 @@ public class GameManager : Singleton<GameManager>
     private void ContinueFromTimeout()
     {
         float extraTime = GameRemoteConfig.ContinueExtraTime;
-        TimeManager.Instance?.AddTime(extraTime);
+        //TimeManager.Instance?.AddTime(extraTime);
     }
 
     private void ContinueFromOverflow()
@@ -408,7 +426,4 @@ public class GameManager : Singleton<GameManager>
     }
 
     #endregion
-
-
-
 }

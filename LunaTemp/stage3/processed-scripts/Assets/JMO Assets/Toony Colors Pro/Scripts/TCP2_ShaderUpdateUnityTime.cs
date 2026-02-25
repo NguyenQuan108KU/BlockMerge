@@ -1,0 +1,2 @@
+namespace ToonyColorsPro {}
+namespace Runtime {}

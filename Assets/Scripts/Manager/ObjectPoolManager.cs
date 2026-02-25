@@ -6,8 +6,8 @@ using Cysharp.Threading.Tasks;
 
 public class ObjectPoolManager : SingletonSimple<ObjectPoolManager>
 {
-    private Dictionary<string, Queue<GameObject>> pools = new();
-    private Dictionary<string, GameObject> loadedPrefabs = new();
+    public Dictionary<string, Queue<GameObject>> pools = new();
+    public Dictionary<string, GameObject> loadedPrefabs = new();
 
     protected override void OnAwake() { }
 

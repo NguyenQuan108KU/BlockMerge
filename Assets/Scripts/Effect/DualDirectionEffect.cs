@@ -11,7 +11,7 @@ public class DualDirectionEffect : MonoBehaviour, IPoolingObject
     private const string POOL_KEY = "VFX_BlockBreak_Dual";
 
     // [PERF] Cache renderer references — tránh GetComponent mỗi lần play
-    private ParticleSystemRenderer[] _renderers;
+    public ParticleSystemRenderer[] _renderers;
 
     private void Awake()
     {

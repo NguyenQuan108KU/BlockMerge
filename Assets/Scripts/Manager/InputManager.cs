@@ -93,6 +93,7 @@ public class InputManager : SingletonSimple<InputManager>
     #endregion
 
     #region Input Processing
+    public GameConfig gameConfig;
 
     private void HandleInput()
     {
@@ -129,7 +130,7 @@ public class InputManager : SingletonSimple<InputManager>
         EventBus<InputDragStartedEvent>.Raise(new InputDragStartedEvent());
         EventBus<GhostVisibilityEvent>.Raise(new GhostVisibilityEvent { IsVisible = true });
         if (_activeBlock != null) _activeBlock.IsCompensating = true;
-        TimeManager.Instance?.ResumeOnFirstTouch();
+        //TimeManager.Instance?.ResumeOnFirstTouch();
     }
 
     private void HandleDragging(Vector2 currentPos)
@@ -146,7 +147,7 @@ public class InputManager : SingletonSimple<InputManager>
 
     private void ProcessGameDrag(Vector2 currentPos)
     {
-        var config = ConfigHelper.Game;
+        var config = gameConfig;
         float screenW = Screen.width;
         float threshold = screenW * config.edgeScrollThreshold;
 
@@ -270,7 +271,7 @@ public class InputManager : SingletonSimple<InputManager>
                 return;
             }
 
-            var config = ConfigHelper.Game;
+            var config = gameConfig;
             if (Time.time - _pressStartTime >= config.dragHoldTime)
             {
                 TryDrop();

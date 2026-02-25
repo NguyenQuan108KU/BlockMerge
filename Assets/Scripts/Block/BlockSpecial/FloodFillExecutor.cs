@@ -211,7 +211,7 @@ public class FloodFillExecutor : IPostLandEffect
         Quaternion rotation = visualizer.GetRotationForFace(face);
         Transform parent = _towerContainer ?? _grid.transform.parent;
 
-        GameObject obj = await BlockFactory.Instance.CreateStaticBlockAsync(
+        GameObject obj =  BlockFactory.Instance.CreateStaticBlock(
             localPos, rotation, parent, _floodMaterial);
 
         if (obj == null) return;
