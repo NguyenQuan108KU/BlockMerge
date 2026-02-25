@@ -1,6 +1,5 @@
 using System;
 using System.Threading;
-using Cysharp.Threading.Tasks;
 using SonatFramework.Scripts.Utils;
 using SonatFramework.Systems.ObjectPooling;
 using UnityEngine;
@@ -46,7 +45,7 @@ namespace SonatFramework.Scripts.UIModule.UIElements
         public virtual void PlayEffect()
         {
             cts = new CancellationTokenSource();
-            SonatUtils.PlayTweens(tweenData, callback, cts.Token).Forget();
+            SonatUtils.PlayTweens(tweenData, callback, cts.Token);
         }
     }
 }

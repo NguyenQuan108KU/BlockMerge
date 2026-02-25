@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Base.Singleton;
-using Cysharp.Threading.Tasks;
 using Sonat.Enums;
 using SonatFramework.Scripts.Utils;
 using SonatFramework.Systems;
@@ -14,6 +13,7 @@ using SonatFramework.Systems.LoadObject;
 using SonatFramework.Systems.TrackingModule;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
+using System.Threading.Tasks;
 
 namespace SonatFramework.Scripts.UIModule
 {
@@ -49,7 +49,7 @@ namespace SonatFramework.Scripts.UIModule
         }
 #endif
 
-        public async UniTaskVoid OpenPanelAsync<T>(Action<T> onPanelCreated, UIData uiData = null, Transform container = null) where T : View
+        public async Task OpenPanelAsync<T>(Action<T> onPanelCreated, UIData uiData = null, Transform container = null) where T : View
         {
             var panelName = typeof(T).Name;
             var panel = await OpenPanelByNameAsync<T>(panelName, uiData, container);
@@ -58,11 +58,10 @@ namespace SonatFramework.Scripts.UIModule
 
         public void OpenForget<T>(UIData uiData = null, Transform container = null) where T : View
         {
-            OpenPanelAsync<T>(uiData, container)
-                .Forget();
+            OpenPanelAsync<T>(uiData, container);
         }
 
-        public async UniTask<T> OpenPanelByNameAsync<T>(string panelName, UIData uiData = null,
+        public async Task<T> OpenPanelByNameAsync<T>(string panelName, UIData uiData = null,
             Transform container = null) where T : View
         {
             // create panel async
@@ -87,13 +86,13 @@ namespace SonatFramework.Scripts.UIModule
             return (T)panel;
         }
 
-        public async UniTask<T> OpenPanelAsync<T>(UIData uiData = null, Transform container = null) where T : View
+        public async Task<T> OpenPanelAsync<T>(UIData uiData = null, Transform container = null) where T : View
         {
             var panelName = typeof(T).Name;
             return await OpenPanelByNameAsync<T>(panelName, uiData, container);
         }
 
-        public async UniTask ClosePanelAsync<T>(bool immediately = false, bool waitCloseCompleted = false)
+        public async Task ClosePanelAsync<T>(bool immediately = false, bool waitCloseCompleted = false)
             where T : View
         {
             var panelId = typeof(T).ToString();
@@ -106,8 +105,8 @@ namespace SonatFramework.Scripts.UIModule
                 panel.Close();
 
             // wait until close completed
-            if (waitCloseCompleted)
-                await UniTask.WaitUntil(() => panel == null);
+            //if (waitCloseCompleted)
+            //    await Task.WaitUntil(() => panel == null);
         }
 
 

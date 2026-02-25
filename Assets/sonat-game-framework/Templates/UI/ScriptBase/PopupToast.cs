@@ -19,7 +19,7 @@ public class PopupToast : Panel
             UIData uIData = new UIData();
             uIData.Add("content", content);
             uIData.Add("param", param);
-            PanelManager.Instance.OpenPanelAsync<PopupToast>(OnCreatedPopupToast, uIData).Forget();
+            PanelManager.Instance.OpenPanelAsync<PopupToast>(OnCreatedPopupToast, uIData);
         }
         else
         {

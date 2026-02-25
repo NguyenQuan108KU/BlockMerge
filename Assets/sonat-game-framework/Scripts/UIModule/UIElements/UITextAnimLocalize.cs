@@ -1,6 +1,6 @@
 using System;
 using System.Threading;
-using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 using DG.Tweening;
 using Sirenix.OdinInspector;
 using SonatFramework.Scripts.Helper;
@@ -124,7 +124,7 @@ public class UITextAnimLocalize : MonoBehaviour
         {
             foreach (var textMeshPro in textMeshPros)
             {
-                AnimateScaleSequence(textMeshPro, duration, delay, animationCancellation.Token).Forget();
+                AnimateScaleSequence(textMeshPro, duration, delay, animationCancellation.Token);
             }
         }
         catch (System.OperationCanceledException)
@@ -132,7 +132,7 @@ public class UITextAnimLocalize : MonoBehaviour
         }
     }
 
-    private async UniTaskVoid AnimateScaleSequence(TextMeshProUGUI textMeshPro, float duration, float delay, CancellationToken cancellationToken)
+    private async Task AnimateScaleSequence(TextMeshProUGUI textMeshPro, float duration, float delay, CancellationToken cancellationToken)
     {
         if (textMeshPros == null) return;
 
@@ -168,7 +168,7 @@ public class UITextAnimLocalize : MonoBehaviour
             if (charInfo.isVisible)
             {
                 AnimateCharacterScale(textMeshPro, charInfo.vertexIndex, duration);
-                if (delay > 0) await UniTask.Delay((int)(delay * 1000), cancellationToken: cancellationToken);
+                if (delay > 0) await Task.Delay((int)(delay * 1000), cancellationToken: cancellationToken);
             }
         }
     }

@@ -1,6 +1,6 @@
 using System;
 using System.Text;
-using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -18,32 +18,32 @@ namespace SonatFramework.Systems.NetworkManagement
             return Application.internetReachability != NetworkReachability.NotReachable;
         }
 
-        public override UniTask<T> Get<T>(string endpoint)
+        public override Task<T> Get<T>(string endpoint)
         {
             return SendRequest<T>(endpoint, "GET");
         }
 
-        public override UniTask<T> Post<T>(string endpoint, object payload)
+        public override Task<T> Post<T>(string endpoint, object payload)
         {
             return SendRequest<T>(endpoint, "POST", payload);
         }
 
-        public override UniTask<T> Patch<T>(string endpoint, object payload)
+        public override Task<T> Patch<T>(string endpoint, object payload)
         {
             return SendRequest<T>(endpoint, "PATCH", payload);
         }
 
-        public override UniTask<T> Put<T>(string endpoint, object payload)
+        public override Task<T> Put<T>(string endpoint, object payload)
         {
             return SendRequest<T>(endpoint, "PUT", payload);
         }
 
-        public override UniTask<T> Delete<T>(string endpoint, object payload)
+        public override Task<T> Delete<T>(string endpoint, object payload)
         {
             return SendRequest<T>(endpoint, "DELETE", payload);
         }
 
-        public override async UniTask<Texture> DownloadImage(string mediaUrl)
+        public override async Task<Texture> DownloadImage(string mediaUrl)
         {
             using(var request = UnityWebRequestTexture.GetTexture(mediaUrl)) {
             request.timeout = TIMEOUT_SECONDS;
@@ -51,7 +51,7 @@ namespace SonatFramework.Systems.NetworkManagement
             {
                 if (!string.IsNullOrEmpty(token))
                     request.SetRequestHeader("Authorization", $"Bearer {token}");
-                await request.SendWebRequest();
+                //await request.SendWebRequest();
                 ValidateResponse(request);
                 return ((DownloadHandlerTexture)request.downloadHandler).texture;
             }
@@ -62,13 +62,13 @@ namespace SonatFramework.Systems.NetworkManagement
 }
         }
 
-        private async UniTask<T> SendRequest<T>(string endpoint, string method, object payload = null)
+        private async Task<T> SendRequest<T>(string endpoint, string method, object payload = null)
         {
             using(var request = CreateRequest(endpoint, method, payload)) {
 
             try
             {
-                await request.SendWebRequest();
+                //await request.SendWebRequest();
                 ValidateResponse(request);
                 return DeserializeResponse<T>(request);
             }

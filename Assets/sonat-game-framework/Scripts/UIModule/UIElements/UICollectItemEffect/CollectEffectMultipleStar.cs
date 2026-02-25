@@ -1,5 +1,5 @@
 ﻿using System;
-using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 using Sonat.Enums;
 using SonatFramework.Scripts.UIModule;
 using SonatFramework.Systems;
@@ -13,13 +13,13 @@ public class CollectEffectMultipleStar : SonatCollectEffect
     public string collectEffectName = "CollectResourceMultipleStar";
     public float radius = 0.65f;
 
-    public override async UniTask Collect(GameResourceKey key, int quantity, Vector3 startPos, Vector3 endPos, Action<int> onFinishStep = null,
+    public override async Task Collect(GameResourceKey key, int quantity, Vector3 startPos, Vector3 endPos, Action<int> onFinishStep = null,
         Action callback = null)
     {
         await Spawn(key, quantity, startPos, endPos, onFinishStep, callback);
     }
 
-    private async UniTask Spawn(GameResourceKey key, int quantity, Vector3 startPos, Vector3 endPos, Action<int> onFinishStep, Action callback)
+    private async Task Spawn(GameResourceKey key, int quantity, Vector3 startPos, Vector3 endPos, Action<int> onFinishStep, Action callback)
     {
         for (int i = 0; i < quantity; i++)
         {

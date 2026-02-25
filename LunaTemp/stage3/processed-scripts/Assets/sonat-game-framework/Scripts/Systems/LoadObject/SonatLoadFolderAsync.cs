@@ -1,5 +1,5 @@
 ﻿using System.IO;
-using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -9,7 +9,7 @@ namespace SonatFramework.Systems.LoadObject
     public class SonatLoadFolderAsync : LoadObjectServiceAsync
     {
         [SerializeField] protected string extension = ".json";
-        public override async UniTask<T> LoadAsync<T>(string assetPath) where T : class
+        public override async Task<T> LoadAsync<T>(string assetPath) where T : class
         {
             string fullPath = $"{path}{assetPath}{extension}";
             var data = await File.ReadAllTextAsync(fullPath);

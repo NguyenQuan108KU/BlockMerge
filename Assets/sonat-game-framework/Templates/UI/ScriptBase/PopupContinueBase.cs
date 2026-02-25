@@ -1,5 +1,4 @@
 using System;
-using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
 using Sonat.Enums;
 using SonatFramework.Scripts.Feature.Shop.UI;
@@ -109,7 +108,7 @@ public class PopupContinueBase : Panel
         else
         {
             PopupToast.Create("Not enough coin!");
-            PanelManager.Instance.OpenPanelByNameAsync<ShopPanelBase>("ShopPanel").Forget();
+            PanelManager.Instance.OpenPanelByNameAsync<ShopPanelBase>("ShopPanel");
         }
     }
 

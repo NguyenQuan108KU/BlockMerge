@@ -1,5 +1,5 @@
 using System;
-using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 using DG.Tweening;
 using Sonat.Enums;
 using SonatFramework.Scripts.UIModule;
@@ -15,13 +15,13 @@ public class CollectEffectMultiple : SonatCollectEffect
     public int count = 10;
     public float radius = 1.25f;
 
-    public override async UniTask Collect(GameResourceKey key, int quantity, Vector3 startPos, Vector3 endPos, Action<int> onFinishStep = null,
+    public override async Task Collect(GameResourceKey key, int quantity, Vector3 startPos, Vector3 endPos, Action<int> onFinishStep = null,
         Action callback = null)
     {
-        Spawn(key, quantity, startPos, endPos, onFinishStep, callback).Forget();
+        Spawn(key, quantity, startPos, endPos, onFinishStep, callback);
     }
 
-    private async UniTaskVoid Spawn(GameResourceKey key, int quantity, Vector3 startPos, Vector3 endPos, Action<int> onFinishStep, Action callback)
+    private async Task Spawn(GameResourceKey key, int quantity, Vector3 startPos, Vector3 endPos, Action<int> onFinishStep, Action callback)
     {
         for (int i = 0; i < count; i++)
         {

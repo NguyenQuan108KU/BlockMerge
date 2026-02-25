@@ -1,6 +1,6 @@
 using System;
 using System.Threading;
-using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace SonatFramework.Scripts.UIModule
@@ -11,7 +11,7 @@ namespace SonatFramework.Scripts.UIModule
         public TweenData[] openTween;
         public TweenData[] closeTween;
         protected CanvasGroup panelCanvasGroup;
-        private UniTaskCompletionSource closeTask;
+        //private UniTaskCompletionSource closeTask;
         private CancellationTokenSource cts;
 
 
@@ -31,7 +31,7 @@ namespace SonatFramework.Scripts.UIModule
             gameObject.SetActive(true);
             if (panelCanvasGroup != null)
                 panelCanvasGroup.interactable = false;
-            PlayTweens(openTween, OnOpenCompleted).Forget();
+            PlayTweens(openTween, OnOpenCompleted);
         }
 
         public override void OnOpenCompleted()
@@ -46,7 +46,7 @@ namespace SonatFramework.Scripts.UIModule
             if (gameObject == null || !gameObject.activeInHierarchy) return;
             if (panelCanvasGroup != null)
                 panelCanvasGroup.interactable = false;
-            PlayTweens(closeTween, OnCloseCompleted).Forget();
+            PlayTweens(closeTween, OnCloseCompleted);
         }
 
         protected override void OnCloseCompleted()
@@ -54,11 +54,11 @@ namespace SonatFramework.Scripts.UIModule
             base.OnCloseCompleted();
             if (uiData != null && uiData.TryGet<Action>(UIDataKey.CallBackOnClose, out var callback))
                 callback?.Invoke();
-            if (closeTask != null)
-            {
-                closeTask?.TrySetResult();
-                closeTask = null;
-            }
+            //if (closeTask != null)
+            //{
+            //    closeTask?.TrySetResult();
+            //    closeTask = null;
+            //}
         }
 
         public override void OnFocus()
@@ -69,7 +69,7 @@ namespace SonatFramework.Scripts.UIModule
         {
         }
 
-        private async UniTask PlayTweens(TweenData[] tweenDatas, Action callback)
+        private async Task PlayTweens(TweenData[] tweenDatas, Action callback)
         {
             if (tweenDatas == null)
             {
@@ -86,14 +86,15 @@ namespace SonatFramework.Scripts.UIModule
                     maxTime = tweenDatas[i].config.delay + tweenDatas[i].config.duration;
             }
 
-            await UniTask.Delay(TimeSpan.FromSeconds(maxTime), cancellationToken: cts.Token);
+            await Task.Delay(TimeSpan.FromSeconds(maxTime), cancellationToken: cts.Token);
             callback?.Invoke();
         }
 
-        public UniTask WaitForClose()
+        public Task WaitForClose()
         {
-            closeTask = new UniTaskCompletionSource();
-            return closeTask.Task;
+            //closeTask = new UniTaskCompletionSource();
+            //return closeTask.Task;
+            return null;
         }
 
         protected virtual void OnDisable()

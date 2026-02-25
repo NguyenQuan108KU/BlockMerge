@@ -1,6 +1,6 @@
 using System;
+using System.Threading.Tasks;
 using Base.Singleton;
-using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,18 +30,18 @@ namespace SonatFramework.Scripts.UIModule
             darkImage.Fade(0f);
         }
 
-        private async UniTask FadeIn()
+        private async Task FadeIn()
         {
             gameObject.SetActive(true);
-            await darkImage.DOFade(1f, fadeDuration).ToUniTask();
+            //await darkImage.DOFade(1f, fadeDuration).ToUniTask();
         }
 
-        private async UniTask FadeOut()
+        private async Task FadeOut()
         {
-            await darkImage.DOFade(0f, fadeDuration).OnComplete(Hide).ToUniTask();
+            //await darkImage.DOFade(0f, fadeDuration).OnComplete(Hide).ToUniTask();
         }
 
-        public async void TransitionAsync(Func<UniTask> callBack)
+        public async void TransitionAsync(Func<Task> callBack)
         {
             await FadeIn();
             await callBack();

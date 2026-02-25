@@ -1,5 +1,5 @@
 using System;
-using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 using Sonat.Enums;
 using SonatFramework.Systems.EventBus;
 using UnityEngine;
@@ -22,13 +22,13 @@ namespace SonatFramework.Systems.SceneManagement
             if (newPlacement == currentPlacement && !force) return;
             EventBus<SwitchPlacementEvent>.Raise(
                 new SwitchPlacementEvent { from = currentPlacement, to = newPlacement });
-            LoadSceneAsync(newPlacement, callback).Forget();
+            LoadSceneAsync(newPlacement, callback);
         }
         
-        protected async UniTask LoadSceneAsync(GamePlacement newPlacement, Action callback = null)
+        protected async Task LoadSceneAsync(GamePlacement newPlacement, Action callback = null)
         {
             string sceneName = newPlacement.ToString();
-            await SceneManager.LoadSceneAsync(sceneName);
+            //await SceneManager.LoadSceneAsync(sceneName);
             currentPlacement = newPlacement;
             callback?.Invoke();
         }

@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Sonat.Enums;
 using SonatFramework.Scripts.Feature.Shop.UI;
@@ -130,7 +129,7 @@ namespace SonatFramework.Scripts.UIModule.UIElements
             if (blockClick) return;
             var uidata = new UIData();
             uidata.Add("OpenBy", "UICurrency");
-            PanelManager.Instance.OpenPanelByNameAsync<Panel>(openPanelName).Forget();
+            PanelManager.Instance.OpenPanelByNameAsync<Panel>(openPanelName);
         }
 
         public void PlayCollectEffect()

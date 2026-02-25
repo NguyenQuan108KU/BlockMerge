@@ -1,4 +1,4 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using UnityEngine;
 
 namespace SonatFramework.Scripts.UIModule
@@ -7,12 +7,12 @@ namespace SonatFramework.Scripts.UIModule
     {
         public void OpenForget<T>(UIData uiData = null, Transform container = null) where T : View;
 
-        public UniTask<T> OpenPanelByNameAsync<T>(string panelName, UIData uiData = null, Transform container = null)
+        public Task<T> OpenPanelByNameAsync<T>(string panelName, UIData uiData = null, Transform container = null)
             where T : View;
 
-        public UniTask<T> OpenPanelAsync<T>(UIData uiData = null, Transform container = null) where T : View;
+        public Task<T> OpenPanelAsync<T>(UIData uiData = null, Transform container = null) where T : View;
 
-        public UniTask ClosePanelAsync<T>(bool immediately = false, bool waitCloseCompleted = false) where T : View;
+        public Task ClosePanelAsync<T>(bool immediately = false, bool waitCloseCompleted = false) where T : View;
 
         public void ReleasePanel(View panelClosed);
     }

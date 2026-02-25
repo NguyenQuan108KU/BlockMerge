@@ -1,4 +1,3 @@
-using Cysharp.Threading.Tasks;
 using SonatFramework.Scripts.Feature.Shop.UI;
 using SonatFramework.Scripts.SonatSDKAdapterModule;
 using SonatFramework.Scripts.UIModule;
@@ -52,7 +51,7 @@ namespace SonatFramework.Templates.UI.ScriptBase
             else
             {
                 PopupToast.Create("Not enough coin!");
-                PanelManager.Instance.OpenPanelByNameAsync<ShopPanelBase>("ShopPanel").Forget();
+                PanelManager.Instance.OpenPanelByNameAsync<ShopPanelBase>("ShopPanel");
             }
         }
 

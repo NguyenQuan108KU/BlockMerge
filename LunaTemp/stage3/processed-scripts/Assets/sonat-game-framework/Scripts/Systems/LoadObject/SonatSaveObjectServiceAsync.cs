@@ -1,5 +1,5 @@
 ﻿using System.IO;
-using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 using UnityEditor;
 using UnityEngine;
@@ -16,7 +16,7 @@ namespace SonatFramework.Systems.LoadObject
         };
         [SerializeField] protected string extension = ".json";
 
-        public override async UniTask<T> SaveObject<T>(T data, string fileName)
+        public override async Task<T> SaveObject<T>(T data, string fileName)
         {
             var json = JsonConvert.SerializeObject(data, settings);
 

@@ -1,4 +1,3 @@
-using Cysharp.Threading.Tasks;
 using SonatFramework.Systems.EventBus;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,7 +26,7 @@ namespace SonatFramework.Scripts.UIModule.UIElements.Shortcut
 
         private void OpenPanel()
         {
-            PanelManager.Instance.OpenPanelByNameAsync<Panel>(panelOpenName).Forget();
+            PanelManager.Instance.OpenPanelByNameAsync<Panel>(panelOpenName);
         }
     }
 }

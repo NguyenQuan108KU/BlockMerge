@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using Cysharp.Threading.Tasks; // Cần namespace này
+using System.Threading.Tasks;
 using DG.Tweening;
 using Sonat.TrackingModule;
 using SonatFramework.Scripts.Systems.ObjectPooling;
@@ -18,29 +18,29 @@ namespace SonatFramework.Systems.ObjectPooling
 
         // THAY ĐỔI QUAN TRỌNG: Dùng AsyncLazy thay vì UniTask
         // AsyncLazy đảm bảo task chỉ chạy 1 lần và an toàn khi nhiều nơi cùng await
-        private readonly Dictionary<string, AsyncLazy<GameObject>> _loadingSharedTasks = new Dictionary<string, AsyncLazy<GameObject>>();
+        //private readonly Dictionary<string, AsyncLazy<GameObject>> _loadingSharedTasks = new Dictionary<string, AsyncLazy<GameObject>>();
 
         public override void Initialize()
         {
             base.Initialize();
-            //PreloadPoolingObjects().Forget();
+            PreloadPoolingObjects();
         }
 
-        private async UniTaskVoid PreloadPoolingObjects()
+        private async Task PreloadPoolingObjects()
         {
             if (preloadPoolingObjects == null || preloadPoolingObjects.objectsToPreload.Count == 0) return;
 
             // Đợi 1 chút để hệ thống ổn định
-            await UniTask.Delay(500);
+            await Task.Delay(500);
 
-            var tasks = new List<UniTask>();
+            var tasks = new List<Task>();
             foreach (var path in preloadPoolingObjects.objectsToPreload)
             {
                 if (string.IsNullOrEmpty(path)) continue;
-                tasks.Add(GetOrLoadPrefabAsync(path));
+                //tasks.Add(GetOrLoadPrefabAsync(path));
             }
 
-            await UniTask.WhenAll(tasks);
+            await Task.WhenAll(tasks);
         }
 
         public override void ReturnObj(IPoolingObject obj, bool keep = true)
@@ -69,14 +69,14 @@ namespace SonatFramework.Systems.ObjectPooling
             queue.Enqueue(obj);
         }
 
-        public override async UniTask<T> CreateAsync<T>(string objectName, [Bridge.Ref] Vector3 position, Transform parent = null, params object[] args)
+        public override async Task<T> CreateAsync<T>(string objectName, [Bridge.Ref] Vector3 position, Transform parent = null, params object[] args)
         {
             var res = await CreateAsync<T>(objectName, parent, args);
             if (res != null) res.transform.position = position;
             return res;
         }
 
-        public override async UniTask<T> CreateAsync<T>(string objectName, Transform parent = null, params object[] args)
+        public override async Task<T> CreateAsync<T>(string objectName, Transform parent = null, params object[] args)
         {
             // 1. Kiểm tra Pool (Fastest)
             if (Pool.TryGetValue(objectName, out var queue) && queue.Count > 0)
@@ -96,9 +96,9 @@ namespace SonatFramework.Systems.ObjectPooling
 
             // 2. Lấy Prefab (Load hoặc lấy từ Cache)
             // Gọi hàm mới đã tối ưu
-            GameObject prefab = await GetOrLoadPrefabAsync(objectName);
+            GameObject prefab = null;
 
-            if (prefab == null) return default(?);
+            if (prefab == null) return default(T);
 
             // 3. Instantiate
             var gameObj = Object.Instantiate(prefab, parent);
@@ -114,59 +114,59 @@ namespace SonatFramework.Systems.ObjectPooling
             {
                 Debug.LogError($"[Pooling] Object {objectName} missing component {typeof(T).Name}");
                 Object.Destroy(gameObj);
-                return default(?);
+                return default(T);
             }
         }
 
         // ========================================================================
         // CORE LOGIC ĐÃ SỬA: DÙNG ASYNC LAZY
         // ========================================================================
-        private async UniTask<GameObject> GetOrLoadPrefabAsync(string objectName)
-        {
-            // 1. Nếu đã load xong và có trong Dictionary Prefab -> Trả về luôn (Nhanh nhất)
-            if (ObjPrefs.TryGetValue(objectName, out var cachedPrefab) && cachedPrefab != null)
-            {
-                return cachedPrefab;
-            }
+        //private async Task<GameObject> GetOrLoadPrefabAsync(string objectName)
+        //{
+        //    // 1. Nếu đã load xong và có trong Dictionary Prefab -> Trả về luôn (Nhanh nhất)
+        //    if (ObjPrefs.TryGetValue(objectName, out var cachedPrefab) && cachedPrefab != null)
+        //    {
+        //        return cachedPrefab;
+        //    }
 
-            // 2. Kiểm tra xem có ai đang load cái này chưa
-            // Chúng ta dùng AsyncLazy để đảm bảo Task load chỉ được tạo ra 1 lần duy nhất
-            if (!_loadingSharedTasks.TryGetValue(objectName, out var lazyTask))
-            {
-                // Nếu chưa ai load, tạo một AsyncLazy mới.
-                // Logic load thực sự nằm trong hàm lambda `() => ...`
-                lazyTask = new AsyncLazy<GameObject>(() => LoadInternalAsync(objectName));
-                _loadingSharedTasks[objectName] = lazyTask;
-            }
+        //    // 2. Kiểm tra xem có ai đang load cái này chưa
+        //    // Chúng ta dùng AsyncLazy để đảm bảo Task load chỉ được tạo ra 1 lần duy nhất
+        //    if (!_loadingSharedTasks.TryGetValue(objectName, out var lazyTask))
+        //    {
+        //        // Nếu chưa ai load, tạo một AsyncLazy mới.
+        //        // Logic load thực sự nằm trong hàm lambda `() => ...`
+        //        //lazyTask = new Task<GameObject>(() => LoadInternalAsync(objectName));
+        //        _loadingSharedTasks[objectName] = lazyTask;
+        //    }
 
-            try
-            {
-                // 3. Await cái lazy task. 
-                // AsyncLazy cho phép 100 người await cùng lúc mà không bị lỗi "await twice"
-                GameObject result = await lazyTask.Task;
+        //    try
+        //    {
+        //        // 3. Await cái lazy task. 
+        //        // AsyncLazy cho phép 100 người await cùng lúc mà không bị lỗi "await twice"
+        //        GameObject result = await lazyTask.Task;
 
-                return result;
-            }
-            catch (Exception e)
-            {
-                // Nếu lỗi, xóa khỏi dictionary để lần sau thử load lại
-                _loadingSharedTasks.Remove(objectName);
-                Debug.LogError($"[Pooling] Error loading {objectName}: {e}");
-                throw;
-            }
-            finally
-            {
-                // OPTIONAL: Sau khi load xong thành công và đã đưa vào ObjPrefs (bên trong LoadInternalAsync),
-                // ta có thể xóa AsyncLazy đi để giải phóng bộ nhớ wrapper.
-                // Tuy nhiên, cần chắc chắn LoadInternalAsync đã Add vào ObjPrefs rồi.
-                if (ObjPrefs.ContainsKey(objectName))
-                {
-                    _loadingSharedTasks.Remove(objectName);
-                }
-            }
-        }
+        //        return result;
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        // Nếu lỗi, xóa khỏi dictionary để lần sau thử load lại
+        //        _loadingSharedTasks.Remove(objectName);
+        //        Debug.LogError($"[Pooling] Error loading {objectName}: {e}");
+        //        throw;
+        //    }
+        //    finally
+        //    {
+        //        // OPTIONAL: Sau khi load xong thành công và đã đưa vào ObjPrefs (bên trong LoadInternalAsync),
+        //        // ta có thể xóa AsyncLazy đi để giải phóng bộ nhớ wrapper.
+        //        // Tuy nhiên, cần chắc chắn LoadInternalAsync đã Add vào ObjPrefs rồi.
+        //        if (ObjPrefs.ContainsKey(objectName))
+        //        {
+        //            _loadingSharedTasks.Remove(objectName);
+        //        }
+        //    }
+        //}
 
-        private async UniTask<GameObject> LoadInternalAsync(string objectName)
+        private async Task<GameObject> LoadInternalAsync(string objectName)
         {
             // Hàm này sẽ được AsyncLazy gọi MỘT LẦN DUY NHẤT
             try

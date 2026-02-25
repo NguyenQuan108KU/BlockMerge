@@ -41,7 +41,7 @@ namespace SonatFramework.Scripts.Feature.CheckInternet
             {
                 if (forceInternet && popupNoInternet == null)
                 {
-                    popupNoInternet.CreateInstancePanelByName(popupNoInternetName).Forget();
+                    popupNoInternet.CreateInstancePanelByName(popupNoInternetName);
                 }
             }
             else

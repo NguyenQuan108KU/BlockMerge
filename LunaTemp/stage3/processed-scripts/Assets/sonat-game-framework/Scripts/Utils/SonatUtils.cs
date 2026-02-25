@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
-using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 using DG.Tweening;
 using DG.Tweening.Core;
 using DG.Tweening.Plugins.Options;
@@ -288,7 +288,7 @@ namespace SonatFramework.Scripts.Utils
             return cam2.ScreenToWorldPoint(v);
         }
 
-        public static async UniTask PlayTweens(TweenData[] tweenDatas, Action callback, [Bridge.Ref] CancellationToken ctk)
+        public static async Task PlayTweens(TweenData[] tweenDatas, Action callback, [Bridge.Ref] CancellationToken ctk)
         {
             if (tweenDatas == null)
             {
@@ -299,12 +299,12 @@ namespace SonatFramework.Scripts.Utils
             float maxTime = 0;
             for (var i = 0; i < tweenDatas.Length; i++)
             {
-                UITween.Play(tweenDatas[i], ctk).Forget();
+                UITween.Play(tweenDatas[i], ctk);
                 if (tweenDatas[i].config.delay + tweenDatas[i].config.duration > maxTime)
                     maxTime = tweenDatas[i].config.delay + tweenDatas[i].config.duration;
             }
 
-            await UniTask.Delay(TimeSpan.FromSeconds(maxTime));
+            await Task.Delay(TimeSpan.FromSeconds(maxTime));
             callback?.Invoke();
         }
 
@@ -318,12 +318,12 @@ namespace SonatFramework.Scripts.Utils
 
         public static void ExecuteNextFrame(Action action, int frameCount = 1)
         {
-            _ExecuteNextFrame(action, frameCount).Forget();
+            _ExecuteNextFrame(action, frameCount);
         }
 
-        private static async UniTaskVoid _ExecuteNextFrame(Action action, int frameCount = 1)
+        private static async Task _ExecuteNextFrame(Action action, int frameCount = 1)
         {
-            await UniTask.DelayFrame(frameCount);
+            //await Task.DelayFrame(frameCount);
             action?.Invoke();
         }
 

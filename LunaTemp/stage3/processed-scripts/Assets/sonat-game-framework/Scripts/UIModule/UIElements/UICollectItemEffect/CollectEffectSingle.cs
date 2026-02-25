@@ -1,5 +1,5 @@
 using System;
-using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 using SonatFramework.Systems;
 using SonatFramework.Systems.InventoryManagement.GameResources;
 using SonatFramework.Systems.ObjectPooling;
@@ -11,7 +11,7 @@ namespace SonatFramework.Scripts.UIModule.UIElements.UICollectItemEffect
     {
         public string collectEffectName = "CollectResourceSingleItem";
 
-        public override async UniTask Collect([Bridge.Ref] GameResourceKey key, int quantity, [Bridge.Ref] Vector3 startPos, [Bridge.Ref] Vector3 endPos, Action<int> onFinishStep, Action callback)
+        public override async Task Collect([Bridge.Ref] GameResourceKey key, int quantity, [Bridge.Ref] Vector3 startPos, [Bridge.Ref] Vector3 endPos, Action<int> onFinishStep, Action callback)
         {
             var collectEffectItem = await SonatSystem.GetService<PoolingServiceAsync>().CreateAsync<UICollectEffectItem>(collectEffectName,
                 PanelManager.Instance.transform);

@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
-using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Serialization;
+using System.Threading.Tasks;
+
 #if using_addressable
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -19,10 +20,10 @@ namespace SonatFramework.Systems.LoadObject
 
 #if using_addressable
         private readonly Dictionary<string, AsyncOperationHandle> _loadedHandles = new(StringComparer.Ordinal);
-        private readonly Dictionary<string, AsyncLazy<object>> _loadingTasks = new(StringComparer.Ordinal);
+        //private readonly Dictionary<string, AsyncLazy<object>> _loadingTasks = new(StringComparer.Ordinal);
 #endif
 
-        public override async UniTask<T> LoadAsync<T>(string assetName) where T : class
+        public override async Task<T> LoadAsync<T>(string assetName) where T : class
         {
 #if using_addressable
             string key = GetFormatKey(assetName);
@@ -36,22 +37,22 @@ namespace SonatFramework.Systems.LoadObject
 
             // 2. Xử lý Concurrency bằng AsyncLazy
             // Nếu chưa có task đang chạy cho key này, tạo mới
-            if (!_loadingTasks.TryGetValue(key, out var lazyTask))
-            {
-                // Tạo AsyncLazy: Chỉ khi nào được await nó mới chạy, và chỉ chạy 1 lần
-                lazyTask = new AsyncLazy<object>(async () => await LoadInternalAsync<T>(key));
+            //if (!_loadingTasks.TryGetValue(key, out var lazyTask))
+            //{
+            //    // Tạo AsyncLazy: Chỉ khi nào được await nó mới chạy, và chỉ chạy 1 lần
+            //    lazyTask = new AsyncLazy<object>(async () => await LoadInternalAsync<T>(key));
 
-                _loadingTasks[key] = lazyTask;
-            }
+            //    _loadingTasks[key] = lazyTask;
+            //}
 
 
             try
             {
                 // Await cái AsyncLazy (Dù 10 người gọi thì cũng chỉ await cùng 1 cái này)
                 // Attach timeout của request hiện tại vào việc CHỜ ĐỢI
-                var resultObj = await lazyTask.Task;
+                //var resultObj = await lazyTask.Task;
 
-                return resultObj as T;
+                return null;
             }
             catch (OperationCanceledException)
             {
@@ -64,7 +65,7 @@ namespace SonatFramework.Systems.LoadObject
                 // Lỗi từ bên trong task load gốc
                 Debug.LogError($"[LoadAddressable] Error {key}: {e.Message}");
                 // Nếu lỗi thật sự, xóa khỏi loading để lần sau thử lại
-                _loadingTasks.Remove(key);
+                //_loadingTasks.Remove(key);
                 return await TryFallback<T>(assetName);
             }
             // Không remove _loadingTasks trong Finally ngay lập tức nếu muốn cache kết quả Lazy
@@ -78,10 +79,10 @@ namespace SonatFramework.Systems.LoadObject
 
                 // *Gợi ý: Logic của bạn chuyển sang _loadedHandles khi thành công
                 // nên ta có thể remove Lazy sau khi await xong để Dictionary không phình to.*
-                if (_loadingTasks.ContainsKey(key) && lazyTask.Task.Status.IsCompleted())
-                {
-                    _loadingTasks.Remove(key);
-                }
+                //if (_loadingTasks.ContainsKey(key) && lazyTask.Task.Status.IsCompleted())
+                //{
+                //    _loadingTasks.Remove(key);
+                //}
             }
 #else
             return null;
@@ -89,50 +90,50 @@ namespace SonatFramework.Systems.LoadObject
         }
 
 #if using_addressable
-        private async UniTask<T> LoadInternalAsync<T>(string key) where T : class
-        {
-            // 1. Kiểm tra xem Key có tồn tại trong hệ thống Addressables không
-            var locations = await Addressables.LoadResourceLocationsAsync(key);
+        //private async Task<T> LoadInternalAsync<T>(string key) where T : class
+        //{
+        //    // 1. Kiểm tra xem Key có tồn tại trong hệ thống Addressables không
+        //    var locations = await Addressables.LoadResourceLocationsAsync(key);
 
-            if (locations == null || locations.Count == 0)
-            {
-                Debug.LogWarning($"[Addressables] Key not found: {key}. Skipping load.");
-                return null; // Trả về null thay vì để ném Exception
-            }
+        //    if (locations == null || locations.Count == 0)
+        //    {
+        //        Debug.LogWarning($"[Addressables] Key not found: {key}. Skipping load.");
+        //        return null; // Trả về null thay vì để ném Exception
+        //    }
 
-            // 2. Nếu tồn tại, tiến hành Load
-            var handle = Addressables.LoadAssetAsync<T>(key);
+        //    // 2. Nếu tồn tại, tiến hành Load
+        //    var handle = Addressables.LoadAssetAsync<T>(key);
 
-            try
-            {
-                T result = await handle;
+        //    try
+        //    {
+        //        T result = await handle;
 
-                if (handle.Status == AsyncOperationStatus.Succeeded)
-                {
-                    if (!_loadedHandles.ContainsKey(key))
-                    {
-                        _loadedHandles.Add(key, handle);
-                    }
+        //        if (handle.Status == AsyncOperationStatus.Succeeded)
+        //        {
+        //            if (!_loadedHandles.ContainsKey(key))
+        //            {
+        //                _loadedHandles.Add(key, handle);
+        //            }
 
-                    return result;
-                }
-                else
-                {
-                    Addressables.Release(handle);
-                    Debug.LogError($"Addressable load failed status: {handle.Status} for key: {key}");
-                    return null;
-                }
-            }
-            catch (System.Exception ex)
-            {
-                // Bắt các lỗi phát sinh trong quá trình chờ (cancellation hoặc lỗi runtime)
-                if (handle.IsValid()) Addressables.Release(handle);
-                Debug.LogWarning($"Ignored error while loading {key}: {ex.Message}");
-                return null;
-            }
-        }
+        //            return result;
+        //        }
+        //        else
+        //        {
+        //            Addressables.Release(handle);
+        //            Debug.LogError($"Addressable load failed status: {handle.Status} for key: {key}");
+        //            return null;
+        //        }
+        //    }
+        //    catch (System.Exception ex)
+        //    {
+        //        // Bắt các lỗi phát sinh trong quá trình chờ (cancellation hoặc lỗi runtime)
+        //        if (handle.IsValid()) Addressables.Release(handle);
+        //        Debug.LogWarning($"Ignored error while loading {key}: {ex.Message}");
+        //        return null;
+        //    }
+        //}
 
-        private async UniTask<T> TryFallback<T>(string assetName) where T : class
+        private async Task<T> TryFallback<T>(string assetName) where T : class
         {
             if (fallback != null)
                 return await fallback.LoadAsync<T>(assetName);
@@ -185,7 +186,7 @@ namespace SonatFramework.Systems.LoadObject
             }
 
             _loadedHandles.Clear();
-            _loadingTasks.Clear();
+            //_loadingTasks.Clear();
         }
 
         // Tự động cleanup khi ScriptableObject bị unload (Editor hoặc UnloadResources)

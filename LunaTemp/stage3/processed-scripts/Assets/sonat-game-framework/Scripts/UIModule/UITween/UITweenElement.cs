@@ -1,6 +1,5 @@
 using System;
 using System.Threading;
-using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace SonatFramework.Scripts.UIModule
@@ -31,7 +30,7 @@ namespace SonatFramework.Scripts.UIModule
         public void Play()
         {
             cts = new CancellationTokenSource();
-            UITween.Play(tweenData, cts.Token).Forget();
+            UITween.Play(tweenData, cts.Token);
         }
     }
 }

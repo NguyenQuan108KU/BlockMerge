@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using Cysharp.Threading.Tasks;
 using Sonat;
 using Sonat.Enums;
 using SonatFramework.Scripts.Feature.CheckInternet;
@@ -202,7 +201,7 @@ namespace SonatFramework.Templates.UI.ScriptBase
             if (!inventoryService.Instance.CanReduce(price))
             {
                 PopupToast.Create("Not enough coin!");
-                PanelManager.Instance.OpenPanelByNameAsync<ShopPanelBase>("ShopPanel").Forget();
+                PanelManager.Instance.OpenPanelByNameAsync<ShopPanelBase>("ShopPanel");
                 return;
             }
 

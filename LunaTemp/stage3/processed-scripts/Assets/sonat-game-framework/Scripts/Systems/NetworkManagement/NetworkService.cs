@@ -1,4 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
+﻿
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace SonatFramework.Systems.NetworkManagement
@@ -6,13 +7,13 @@ namespace SonatFramework.Systems.NetworkManagement
     public abstract class NetworkService : SonatServiceSo
     {
         public abstract bool IsInternetConnection();
-        public abstract UniTask<T> Get<T>(string endpoint);
-        public abstract UniTask<T> Post<T>(string endpoint, object payload);
-        public abstract UniTask<T> Patch<T>(string endpoint, object payload);
-        public abstract UniTask<T> Put<T>(string endpoint, object payload);
-        public abstract UniTask<T> Delete<T>(string endpoint, object payload);
+        public abstract Task<T> Get<T>(string endpoint);
+        public abstract Task<T> Post<T>(string endpoint, object payload);
+        public abstract Task<T> Patch<T>(string endpoint, object payload);
+        public abstract Task<T> Put<T>(string endpoint, object payload);
+        public abstract Task<T> Delete<T>(string endpoint, object payload);
 
-        public abstract UniTask<Texture> DownloadImage(string mediaUrl);
+        public abstract Task<Texture> DownloadImage(string mediaUrl);
     }
 
     public enum RequestType

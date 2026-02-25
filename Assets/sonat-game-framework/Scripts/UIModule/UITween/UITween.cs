@@ -1,5 +1,5 @@
 using System.Threading;
-using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 using DG.Tweening;
 using Spine.Unity;
 using UnityEngine;
@@ -9,7 +9,7 @@ namespace SonatFramework.Scripts.UIModule
 {
     public static class UITween
     {
-        public static async UniTask Play(TweenData tweenData, CancellationToken ctk)
+        public static async Task Play(TweenData tweenData, CancellationToken ctk)
         {
             tweenData.SetupData();
             if (tweenData.config == null) return;
@@ -42,50 +42,50 @@ namespace SonatFramework.Scripts.UIModule
             }
         }
 
-        private static async UniTask PlayTweenScale(TweenData tweenData, CancellationToken ctk)
+        private static async Task PlayTweenScale(TweenData tweenData, CancellationToken ctk)
         {
             var target = tweenData.target;
             target.localScale = Vector3.one * tweenData.config.from;
-            await target.DOScale(tweenData.config.to, tweenData.config.duration).SetEase(tweenData.config.curve)
-                .SetDelay(tweenData.config.delay).OnComplete(() => { tweenData.OnCompleted?.Invoke(); }).WithCancellation(ctk);
+            //await target.DOScale(tweenData.config.to, tweenData.config.duration).SetEase(tweenData.config.curve)
+            //    .SetDelay(tweenData.config.delay).OnComplete(() => { tweenData.OnCompleted?.Invoke(); }).WithCancellation(ctk);
         }
 
-        private static async UniTask PlayTweenFade(TweenData tweenData, CancellationToken ctk)
+        private static async Task PlayTweenFade(TweenData tweenData, CancellationToken ctk)
         {
             var target = tweenData.target.GetComponent<Graphic>();
             var color = target.color;
             color.a = tweenData.config.from;
             target.color = color;
-            await target.DOFade(tweenData.config.to, tweenData.config.duration).SetEase(tweenData.config.curve)
-                .SetDelay(tweenData.config.delay).OnComplete(() => { tweenData.OnCompleted?.Invoke(); }).WithCancellation(ctk);
+            //await target.DOFade(tweenData.config.to, tweenData.config.duration).SetEase(tweenData.config.curve)
+                //.SetDelay(tweenData.config.delay).OnComplete(() => { tweenData.OnCompleted?.Invoke(); }).WithCancellation(ctk);
         }
 
-        private static async UniTask PlayTweenMove(TweenData tweenData, CancellationToken ctk)
+        private static async Task PlayTweenMove(TweenData tweenData, CancellationToken ctk)
         {
             var target = tweenData.target;
             target.position = tweenData.config.mFrom;
-            await target.DOMove(tweenData.config.mTo, tweenData.config.duration).SetEase(tweenData.config.curve)
-                .SetDelay(tweenData.config.delay).OnComplete(() => { tweenData.OnCompleted?.Invoke(); }).WithCancellation(ctk);
+            //await target.DOMove(tweenData.config.mTo, tweenData.config.duration).SetEase(tweenData.config.curve)
+                //.SetDelay(tweenData.config.delay).OnComplete(() => { tweenData.OnCompleted?.Invoke(); }).WithCancellation(ctk);
         }
 
-        private static async UniTask PlayTweenLocalMove(TweenData tweenData, CancellationToken ctk)
+        private static async Task PlayTweenLocalMove(TweenData tweenData, CancellationToken ctk)
         {
             var target = tweenData.target;
             target.localPosition = tweenData.config.mFrom;
-            await target.DOLocalMove(tweenData.config.mTo, tweenData.config.duration).SetEase(tweenData.config.curve)
-                .SetDelay(tweenData.config.delay).OnComplete(() => { tweenData.OnCompleted?.Invoke(); }).WithCancellation(ctk);
+            //await target.DOLocalMove(tweenData.config.mTo, tweenData.config.duration).SetEase(tweenData.config.curve)
+                //.SetDelay(tweenData.config.delay).OnComplete(() => { tweenData.OnCompleted?.Invoke(); }).WithCancellation(ctk);
         }
 
-        private static async UniTask PlayTweenRectLocalMove(TweenData tweenData, CancellationToken ctk)
+        private static async Task PlayTweenRectLocalMove(TweenData tweenData, CancellationToken ctk)
         {
             var target = (RectTransform)tweenData.target;
             target.anchoredPosition = tweenData.config.mFrom;
-            await target.DOAnchorPos(tweenData.config.mTo, tweenData.config.duration).SetEase(tweenData.config.curve)
-                .SetDelay(tweenData.config.delay).OnComplete(() => { tweenData.OnCompleted?.Invoke(); }).WithCancellation(ctk);
+            //await target.DOAnchorPos(tweenData.config.mTo, tweenData.config.duration).SetEase(tweenData.config.curve)
+                //.SetDelay(tweenData.config.delay).OnComplete(() => { tweenData.OnCompleted?.Invoke(); }).WithCancellation(ctk);
         }
 
 
-        private static async UniTask PlayTweenFadeGroup(TweenData tweenData, CancellationToken ctk)
+        private static async Task PlayTweenFadeGroup(TweenData tweenData, CancellationToken ctk)
         {
             var target = tweenData.target.GetComponent<CanvasGroup>();
             target.alpha = tweenData.config.from;
@@ -99,19 +99,19 @@ namespace SonatFramework.Scripts.UIModule
             }
 
             sequence.SetDelay(tweenData.config.delay).OnComplete(() => { tweenData.OnCompleted?.Invoke(); });
-            await sequence.Play().WithCancellation(ctk);
+            //await sequence.Play().WithCancellation(ctk);
         }
 
-        private static async UniTask PlayTweenActive(TweenData tweenData, CancellationToken ctk)
+        private static async Task PlayTweenActive(TweenData tweenData, CancellationToken ctk)
         {
             tweenData.target.gameObject.SetActive(false);
-            await DOVirtual.DelayedCall(tweenData.config.delay, () => { tweenData.target.gameObject.SetActive(true); }).WithCancellation(ctk);
+            //await DOVirtual.DelayedCall(tweenData.config.delay, () => { tweenData.target.gameObject.SetActive(true); }).WithCancellation(ctk);
         }
 
-        private static async UniTask PlayTweenInActive(TweenData tweenData, CancellationToken ctk)
+        private static async Task PlayTweenInActive(TweenData tweenData, CancellationToken ctk)
         {
             tweenData.target.gameObject.SetActive(true);
-            await DOVirtual.DelayedCall(tweenData.config.delay, () => { tweenData.target.gameObject.SetActive(false); }).WithCancellation(ctk);
+            //await DOVirtual.DelayedCall(tweenData.config.delay, () => { tweenData.target.gameObject.SetActive(false); }).WithCancellation(ctk);
         }
     }
 

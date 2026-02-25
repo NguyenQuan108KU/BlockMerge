@@ -1,5 +1,6 @@
-﻿using Cysharp.Threading.Tasks;
+﻿
 using Newtonsoft.Json;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace SonatFramework.Systems.LoadObject
@@ -10,19 +11,20 @@ namespace SonatFramework.Systems.LoadObject
     {
         [SerializeField] private LoadObjectServiceAsync fallbackService;
 
-        public override async UniTask<T> LoadAsync<T>(string assetPath) where T : class
+        public override async Task<T> LoadAsync<T>(string assetPath) where T : class
         {
-            var fullPath = $"{path}{assetPath}";
-            var data = await Resources.LoadAsync(fullPath);
+            //var fullPath = $"{path}{assetPath}";
+            //var data = await Resources.LoadAsync(fullPath);
 
-            if (data == null)
-            {
-                if (fallbackService != null) return await fallbackService.LoadAsync<T>(assetPath);
-            }
+            //if (data == null)
+            //{
+            //    if (fallbackService != null) return await fallbackService.LoadAsync<T>(assetPath);
+            //}
 
-            if (data is TextAsset textAsset) return JsonConvert.DeserializeObject<T>(textAsset.text, Settings);
+            //if (data is TextAsset textAsset) return JsonConvert.DeserializeObject<T>(textAsset.text, Settings);
 
-            return data as T;
+            //return data as T;
+            return null;
         }
     }
 }
