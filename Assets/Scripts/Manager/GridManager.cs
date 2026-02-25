@@ -1,7 +1,7 @@
 ﻿// Không cần using Base.Singleton vì SingletonSimple nằm ở global namespace
-using Cysharp.Threading.Tasks;
 using SonatFramework.Systems.EventBus;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class GridManager : SingletonSimple<GridManager>
@@ -55,7 +55,7 @@ public class GridManager : SingletonSimple<GridManager>
         // GridManager sẽ ngồi im chờ GameManager gọi hàm Setup().
 
         // Chỉ preload effect (không ảnh hưởng logic)
-        GridRowClearer.PreloadEffects().Forget();
+        GridRowClearer.PreloadEffects();
     }
 
     #endregion
@@ -308,12 +308,12 @@ public class GridManager : SingletonSimple<GridManager>
 
     #region Row Operations
 
-    public async UniTask CheckAndClearRowsAsync(HashSet<int> rowsToCheck)
+    public async Task CheckAndClearRowsAsync(HashSet<int> rowsToCheck)
     {
         await rowClearer.CheckAndClearRowsAsync(rowsToCheck);
     }
 
-    public async UniTask ApplyGravityAsync()
+    public async Task ApplyGravityAsync()
     {
         await rowClearer.ApplyGravityPublic();
     }
@@ -322,7 +322,7 @@ public class GridManager : SingletonSimple<GridManager>
 
     #region Level Operations
 
-    public async UniTask SpawnLevelMap(List<PreplacedBlockData> mapData)
+    public async Task SpawnLevelMap(List<PreplacedBlockData> mapData)
     {
         // [TIER2] Dùng cached reference thay vì FindFirstObjectByType
         await levelSpawner.SpawnLevelMap(mapData, _cachedTowerContainer ?? transform);
@@ -393,7 +393,7 @@ public class GridManager : SingletonSimple<GridManager>
 
     #region Booster Support
 
-    public async UniTask ForceClearRow(int row)
+    public async Task ForceClearRow(int row)
     {
         if (rowClearer == null) return;
 

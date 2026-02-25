@@ -41,9 +41,9 @@ namespace SonatFramework.Templates.UI.ScriptBase
         public Button refillWithAdsBtn;
         public GameObject noInternetBuyLiveCoinBtn, noInternetFreeLiveBtn;
         public TMP_Text txtNoInternetCoinPrice;
-        protected readonly Service<LivesService> liveService = new();
+        protected readonly Service<LivesService> liveService = new Service<LivesService>();
 
-        protected readonly Service<InventoryService> inventoryService = new();
+        protected readonly Service<InventoryService> inventoryService = new Service<InventoryService>();
 
         //protected readonly Service<CheckInternetService> checkInternetService = new();
         protected ResourceData liveData;

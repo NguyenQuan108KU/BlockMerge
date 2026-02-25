@@ -1,9 +1,9 @@
-using Cysharp.Threading.Tasks;
-using DG.Tweening;
+﻿using DG.Tweening;
 using SonatFramework.Systems;
 using SonatFramework.Systems.EventBus;
 using SonatFramework.Systems.ObjectPooling;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class GridRowClearer
@@ -31,37 +31,37 @@ public class GridRowClearer
 
     #region Cached Collections (Zero GC)
 
-    private readonly List<int> _fullRowsCache = new System.Collections.Generic.List<int>();
-    private readonly HashSet<int> _fullRowSetCache = new System.Collections.Generic.HashSet<int>();
-    private readonly HashSet<int> _impactedBlockIDsCache = new System.Collections.Generic.HashSet<int>();
-    private readonly List<GameObject> _visualsToDieCache = new System.Collections.Generic.List<UnityEngine.GameObject>();
-    private readonly List<GameObject> _visualsToShakeCache = new System.Collections.Generic.List<UnityEngine.GameObject>();
-    private readonly HashSet<int> _dieVisualIDsCache = new System.Collections.Generic.HashSet<int>();
-    private readonly HashSet<int> _shakeVisualIDsCache = new System.Collections.Generic.HashSet<int>();
-    private readonly HashSet<int> _strippingBlockIDsCache = new System.Collections.Generic.HashSet<int>();
-    private readonly HashSet<int> _blocksLostCellsCache = new System.Collections.Generic.HashSet<int>();
-    private readonly List<Vector2Int> _cellsToProcessCache = new System.Collections.Generic.List<UnityEngine.Vector2Int>();
-    private readonly HashSet<int> _excludeRowSetCache = new System.Collections.Generic.HashSet<int>();
-    private readonly HashSet<int> _destroyedVisualIDsCache = new System.Collections.Generic.HashSet<int>();
+    private readonly List<int> _fullRowsCache = new List<int>();
+    private readonly HashSet<int> _fullRowSetCache = new HashSet<int>();
+    private readonly HashSet<int> _impactedBlockIDsCache = new HashSet<int>();
+    private readonly List<GameObject> _visualsToDieCache = new List<GameObject>();
+    private readonly List<GameObject> _visualsToShakeCache = new List<GameObject>();
+    private readonly HashSet<int> _dieVisualIDsCache = new HashSet<int>();
+    private readonly HashSet<int> _shakeVisualIDsCache = new HashSet<int>();
+    private readonly HashSet<int> _strippingBlockIDsCache = new HashSet<int>();
+    private readonly HashSet<int> _blocksLostCellsCache = new HashSet<int>();
+    private readonly List<Vector2Int> _cellsToProcessCache = new List<Vector2Int>();
+    private readonly HashSet<int> _excludeRowSetCache = new HashSet<int>();
+    private readonly HashSet<int> _destroyedVisualIDsCache = new HashSet<int>();
 
-    private readonly HashSet<(int, int)> _seenCanonicalCache = new System.Collections.Generic.HashSet<(int, int)>();
-    private readonly List<Vector2Int> _canonicalCellsCache = new System.Collections.Generic.List<UnityEngine.Vector2Int>();
-    private readonly List<HashSet<Vector2Int>> _componentsCache = new System.Collections.Generic.List<System.Collections.Generic.HashSet<UnityEngine.Vector2Int>>();
-    private readonly HashSet<Vector2Int> _visitedCache = new System.Collections.Generic.HashSet<UnityEngine.Vector2Int>();
-    private readonly HashSet<Vector2Int> _cellSetCache = new System.Collections.Generic.HashSet<UnityEngine.Vector2Int>();
-    private readonly Queue<Vector2Int> _bfsQueueCache = new System.Collections.Generic.Queue<UnityEngine.Vector2Int>();
+    private readonly HashSet<(int, int)> _seenCanonicalCache = new HashSet<(int, int)>();
+    private readonly List<Vector2Int> _canonicalCellsCache = new List<Vector2Int>();
+    private readonly List<HashSet<Vector2Int>> _componentsCache = new List<HashSet<Vector2Int>>();
+    private readonly HashSet<Vector2Int> _visitedCache = new HashSet<Vector2Int>();
+    private readonly HashSet<Vector2Int> _cellSetCache = new HashSet<Vector2Int>();
+    private readonly Queue<Vector2Int> _bfsQueueCache = new Queue<Vector2Int>();
 
     private int[,] _virtualGrid;
-    private readonly Dictionary<int, List<Vector2Int>> _virtualRegistryCache = new System.Collections.Generic.Dictionary<int, System.Collections.Generic.List<UnityEngine.Vector2Int>>();
-    private readonly Dictionary<int, int> _fallDistancesCache = new System.Collections.Generic.Dictionary<int, int>();
-    private readonly Dictionary<int, int> _finalPositionsCache = new System.Collections.Generic.Dictionary<int, int>();
-    private readonly List<(int x, int y, GameObject visual)> _pendingMovesCache = new System.Collections.Generic.List<(int x, int y, UnityEngine.GameObject visual)>();
-    private readonly List<(int x, int y)> _cellsToClearCache = new System.Collections.Generic.List<(int x, int y)>();
-    private readonly List<(int x, int y, int blockID)> _pendingWritesCache = new System.Collections.Generic.List<(int x, int y, int blockID)>();
-    private readonly HashSet<int> _animatedVisualIDsCache = new System.Collections.Generic.HashSet<int>();
-    private readonly List<(GameObject obj, Vector3 startPos, Vector3 endPos)> _animationsCache = new System.Collections.Generic.List<(UnityEngine.GameObject obj, UnityEngine.Vector3 startPos, UnityEngine.Vector3 endPos)>();
-    private readonly List<int> _sortedBlocksCache = new System.Collections.Generic.List<int>();
-    private readonly HashSet<int> _rowsToCheckCache = new System.Collections.Generic.HashSet<int>();
+    private readonly Dictionary<int, List<Vector2Int>> _virtualRegistryCache = new Dictionary<int, List<Vector2Int>>();
+    private readonly Dictionary<int, int> _fallDistancesCache = new Dictionary<int, int>();
+    private readonly Dictionary<int, int> _finalPositionsCache = new Dictionary<int, int>();
+    private readonly List<(int x, int y, GameObject visual)> _pendingMovesCache = new List<(int x, int y, GameObject visual)>();
+    private readonly List<(int x, int y)> _cellsToClearCache = new List<(int x, int y)>();
+    private readonly List<(int x, int y, int blockID)> _pendingWritesCache = new List<(int x, int y, int blockID)>();
+    private readonly HashSet<int> _animatedVisualIDsCache = new HashSet<int>();
+    private readonly List<(GameObject obj, Vector3 startPos, Vector3 endPos)> _animationsCache = new List<(GameObject obj, Vector3 startPos, Vector3 endPos)>();
+    private readonly List<int> _sortedBlocksCache = new List<int>();
+    private readonly HashSet<int> _rowsToCheckCache = new HashSet<int>();
 
     #endregion
 
@@ -82,7 +82,7 @@ public class GridRowClearer
 
     #region Main Logic
 
-    public async UniTask CheckAndClearRowsAsync(HashSet<int> initialRowsToCheck)
+    public async Task CheckAndClearRowsAsync(HashSet<int> initialRowsToCheck)
     {
         int safetyCounter = 0;
 
@@ -127,7 +127,7 @@ public class GridRowClearer
 
             safetyCounter++;
 
-            await UniTask.Delay(System.TimeSpan.FromSeconds(0.1f));
+            await Task.Delay(System.TimeSpan.FromSeconds(0.1f));
         }
 
         EventBus<GridStableEvent>.Raise(new GridStableEvent());
@@ -137,7 +137,7 @@ public class GridRowClearer
 
     #region Row Clearing Logic
 
-    private async UniTask ProcessRowClearing(List<int> fullRows, bool willWin = false)
+    private async Task ProcessRowClearing(List<int> fullRows, bool willWin = false)
     {
         CellMeshLibrary meshLibrary = GridManager.Instance?.meshLibrary;
 
@@ -319,7 +319,7 @@ public class GridRowClearer
 
         gridData.RecalculateHeights();
 
-        await UniTask.Delay(System.TimeSpan.FromSeconds(0.2f));
+        await Task.Delay(System.TimeSpan.FromSeconds(0.2f));
     }
 
     private void StripBlockOuterLayer(int blockID)
@@ -530,7 +530,7 @@ public class GridRowClearer
 
     #region Gravity & Effects
 
-    private async UniTask ApplyGravityUntilStable()
+    private async Task ApplyGravityUntilStable()
     {
         SimulateGravityToEnd();
         if (_finalPositionsCache.Count == 0) return;
@@ -626,7 +626,7 @@ public class GridRowClearer
             gridData.SetCellWithoutHeightUpdate(writeOp.x, writeOp.y, writeOp.blockID);
     }
 
-    private async UniTask AnimateMoves()
+    private async Task AnimateMoves()
     {
         _animatedVisualIDsCache.Clear();
         _animationsCache.Clear();
@@ -666,7 +666,7 @@ public class GridRowClearer
         }
 
         if (_animationsCache.Count > 0)
-            await UniTask.Delay(System.TimeSpan.FromSeconds(settings.fallDuration));
+            await Task.Delay(System.TimeSpan.FromSeconds(settings.fallDuration));
     }
 
     private void SimulateGravityToEnd()
@@ -785,7 +785,7 @@ public class GridRowClearer
         return minY;
     }
 
-    private async UniTask AnimatePreClear(List<GameObject> dyingVisuals, List<GameObject> affectedVisuals)
+    private async Task AnimatePreClear(List<GameObject> dyingVisuals, List<GameObject> affectedVisuals)
     {
         float swellDuration = 0.12f;
         float recoilDuration = 0.08f;
@@ -793,7 +793,7 @@ public class GridRowClearer
         float maxScale = 1.2f;
         float recoilScale = 1.15f;
 
-        List<UniTask> tasks = new List<UniTask>();
+        List<Task> tasks = new List<Task>();
 
         foreach (var vis in dyingVisuals)
         {
@@ -803,7 +803,7 @@ public class GridRowClearer
             Sequence seq = DOTween.Sequence();
             seq.Append(vis.transform.DOScale(maxScale, swellDuration).SetEase(Ease.OutQuad));
             seq.Append(vis.transform.DOScale(recoilScale, recoilDuration).SetEase(Ease.InQuad));
-            tasks.Add(seq.AsyncWaitForCompletion().AsUniTask());
+            tasks.Add(seq.AsyncWaitForCompletion());
         }
 
         foreach (var vis in affectedVisuals)
@@ -815,20 +815,20 @@ public class GridRowClearer
             seq.Append(vis.transform.DOScale(maxScale, swellDuration).SetEase(Ease.OutQuad));
             seq.Append(vis.transform.DOScale(recoilScale, recoilDuration).SetEase(Ease.InQuad));
             seq.Append(vis.transform.DOScale(1.0f, returnDuration).SetEase(Ease.OutBack));
-            tasks.Add(seq.AsyncWaitForCompletion().AsUniTask());
+            tasks.Add(seq.AsyncWaitForCompletion());
         }
 
-        if (tasks.Count > 0) await UniTask.WhenAll(tasks);
+        if (tasks.Count > 0) await Task.WhenAll(tasks);
     }
 
-    private static readonly Service<PoolingServiceAsync> _vfxPooling = new SonatFramework.Systems.Service<SonatFramework.Systems.ObjectPooling.PoolingServiceAsync>();
+    private static readonly Service<PoolingServiceAsync> _vfxPooling = new Service<PoolingServiceAsync>();
 
     private void SpawnBreakEffect(GameObject blockObj)
     {
-        SpawnBreakEffectAsync(blockObj).Forget();
+        SpawnBreakEffectAsync(blockObj);
     }
 
-    private async UniTaskVoid SpawnBreakEffectAsync(GameObject blockObj)
+    private async Task SpawnBreakEffectAsync(GameObject blockObj)
     {
         if (breakVfxPrefab == null)
         {
@@ -856,11 +856,11 @@ public class GridRowClearer
 
         GameObject.Destroy(vfx, 2f);
 
-        await UniTask.Delay(200); // delay nhỏ tránh spam
+        await Task.Delay(200); // delay nhỏ tránh spam
         isPlayingEffect = false;
     }
 
-    public static async UniTask PreloadEffects()
+    public static async Task PreloadEffects()
     {
         if (ObjectPoolManager.Instance != null)
         {
@@ -872,7 +872,7 @@ public class GridRowClearer
 
     #region Public Gravity API
 
-    public async UniTask ApplyGravityPublic()
+    public async Task ApplyGravityPublic()
     {
         await ApplyGravityUntilStable();
     }

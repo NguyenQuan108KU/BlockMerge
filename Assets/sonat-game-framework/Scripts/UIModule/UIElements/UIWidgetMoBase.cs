@@ -10,7 +10,7 @@ namespace SonatFramework.Scripts.UIModule.UIElements
     {
         [SerializeField] private ShopItemKey shopItemKey;
         [SerializeField] private TMP_Text txtContent;
-        protected readonly Service<ShopService> shopService = new();
+        protected readonly Service<ShopService> shopService = new Service<ShopService>();
 
         // Start is called before the first frame update
         protected virtual void Start()

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Booster
 {
@@ -78,7 +78,7 @@ namespace Booster
         /// <summary>
         /// [NÂNG CẤP] Xử lý phá hủy cho danh sách ô (có thể thuộc nhiều block khác nhau)
         /// </summary>
-        public async UniTask<bool> ExecuteDestroy(List<Vector2Int> cellsToProcess)
+        public async Task<bool> ExecuteDestroy(List<Vector2Int> cellsToProcess)
         {
             if (cellsToProcess == null || cellsToProcess.Count == 0) return false;
 
@@ -129,7 +129,7 @@ namespace Booster
 
         #region Internal Logic
 
-        private async UniTask<bool> ExecuteStripLayer(int blockID, List<Vector2Int> cells)
+        private async Task<bool> ExecuteStripLayer(int blockID, List<Vector2Int> cells)
         {
             HashSet<int> processedVisualIDs = new HashSet<int>();
 
@@ -151,11 +151,11 @@ namespace Booster
             }
 
             _grid.gridData.DecreaseBlockLayer(blockID);
-            await UniTask.Delay(50); // Delay nhỏ cho mượt
+            await Task.Delay(50); // Delay nhỏ cho mượt
             return true;
         }
 
-        private async UniTask<bool> ExecuteNormalDestroy(List<Vector2Int> cellsToDestroy)
+        private async Task<bool> ExecuteNormalDestroy(List<Vector2Int> cellsToDestroy)
         {
             HashSet<int> affectedRows = new HashSet<int>();
             HashSet<int> destroyedVisualIDs = new HashSet<int>();

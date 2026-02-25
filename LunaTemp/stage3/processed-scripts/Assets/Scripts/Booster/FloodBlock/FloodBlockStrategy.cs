@@ -1,5 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
-using Sonat.Enums;
+﻿using Sonat.Enums;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace Booster
@@ -13,7 +13,7 @@ namespace Booster
 
         public bool CanExecute() => false;
 
-        public async UniTask<bool> Execute()
+        public async Task<bool> Execute()
         {
             Debug.LogWarning("[FloodBlockStrategy] Deprecated. Flood is now auto-spawn.");
             return false;

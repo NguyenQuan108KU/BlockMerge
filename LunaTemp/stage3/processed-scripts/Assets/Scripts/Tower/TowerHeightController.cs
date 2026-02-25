@@ -1,9 +1,9 @@
 using UnityEngine;
 using DG.Tweening;
-using Cysharp.Threading.Tasks;
 using SonatFramework.Systems.EventBus;
 using Sonat.Enums;
 using System;
+using System.Threading.Tasks;
 
 public class TowerHeightController : MonoBehaviour
 {
@@ -83,7 +83,7 @@ public class TowerHeightController : MonoBehaviour
     private void OnRowsCleared([Bridge.Ref] RowsClearedEvent e)
     {
         if (_config == null) return;
-        RecalculateDelayed().Forget();
+        RecalculateDelayed();
     }
 
     private void OnGameStateChanged([Bridge.Ref] GameStateChangeEvent e)
@@ -123,9 +123,9 @@ public class TowerHeightController : MonoBehaviour
         AnimateToOffset(newOffset, duration);
     }
 
-    private async UniTaskVoid RecalculateDelayed()
+    private async Task RecalculateDelayed()
     {
-        await UniTask.Delay(TimeSpan.FromSeconds(GRAVITY_SETTLE_DELAY));
+        await Task.Delay(TimeSpan.FromSeconds(GRAVITY_SETTLE_DELAY));
         if (this == null || _config == null) return;
         Recalculate(_config.towerHeightSmoothDuration);
     }

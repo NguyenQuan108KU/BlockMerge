@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Sonat.Enums;
 using SonatFramework.Scripts.Helper;
 using SonatFramework.Systems.TimeManagement;
@@ -7,7 +7,7 @@ namespace SonatFramework.Systems.MOManagement
 {
     public class RemotePopupData
     {
-        private readonly Service<TimeService> timeService = new SonatFramework.Systems.Service<SonatFramework.Systems.TimeManagement.TimeService>();
+        private readonly Service<TimeService> timeService = new Service<TimeService>();
         public bool appOpen;
         public int daily = -1;
         public ShopItemKey iapKey;

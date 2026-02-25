@@ -10,6 +10,6 @@ namespace SonatFramework.Systems.ConfigManagement
         public ResourceData winReward;
         public ResourceData playOnPrice;
 
-        [ShowInInspector] public Dictionary<GameMode, int> totalLevel = new System.Collections.Generic.Dictionary<Sonat.Enums.GameMode, int>();
+        [ShowInInspector] public Dictionary<GameMode, int> totalLevel = new Dictionary<GameMode, int>();
     }
 }

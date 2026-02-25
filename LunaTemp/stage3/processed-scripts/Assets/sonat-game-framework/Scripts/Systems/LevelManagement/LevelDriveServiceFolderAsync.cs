@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Cysharp.Threading.Tasks;
@@ -13,7 +13,10 @@ namespace SonatFramework.Systems.LevelManagement
     [CreateAssetMenu(fileName = "LevelDriveServiceFolderAsync", menuName = "Sonat Services/Level Service/Level Drive Service Folder Async")]
     public class LevelDriveServiceFolderAsync : LevelServiceAsync
     {
-        protected static readonly JsonSerializerSettings Settings = new Newtonsoft.Json.JsonSerializerSettings() { TypeNameHandling = TypeNameHandling.Auto };
+        protected static readonly JsonSerializerSettings Settings = new JsonSerializerSettings()
+        {
+            TypeNameHandling = TypeNameHandling.Auto
+        };
 
         [BoxGroup("DRIVE CONFIG")] [SerializeField]
         private LevelServiceAsync levelServiceFallback;

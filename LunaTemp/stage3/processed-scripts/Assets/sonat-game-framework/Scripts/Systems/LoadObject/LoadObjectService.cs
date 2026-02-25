@@ -1,4 +1,4 @@
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Sirenix.OdinInspector;
 using UnityEditor;
@@ -8,7 +8,10 @@ namespace SonatFramework.Systems.LoadObject
 {
     public abstract class LoadObjectService : SonatServiceSo
     {
-        protected static readonly JsonSerializerSettings Settings = new Newtonsoft.Json.JsonSerializerSettings() { TypeNameHandling = TypeNameHandling.Auto };
+        protected static readonly JsonSerializerSettings Settings = new JsonSerializerSettings()
+        {
+            TypeNameHandling = TypeNameHandling.Auto
+        };
 #if UNITY_EDITOR
         [OnValueChanged(nameof(OnPathChanged))]
 #endif

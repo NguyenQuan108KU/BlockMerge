@@ -1,1 +1,0 @@
-namespace sonat_sdk_v2.FirebaseModule.RemoteConfig {}

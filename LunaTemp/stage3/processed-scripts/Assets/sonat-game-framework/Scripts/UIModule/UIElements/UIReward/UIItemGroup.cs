@@ -15,8 +15,8 @@ namespace SonatFramework.Scripts.UIModule.UIElements
         [SerializeField] private List<GameResource> resources;
         public int maxSlot = 1;
         public int order;
-        private readonly Service<PoolingContainerService> poolingService = new SonatFramework.Systems.Service<SonatFramework.Systems.ObjectPooling.PoolingContainerService>();
-        private readonly List<ResourceData> resourceDatas = new System.Collections.Generic.List<SonatFramework.Systems.InventoryManagement.GameResources.ResourceData>();
+        private readonly Service<PoolingContainerService> poolingService = new Service<PoolingContainerService>();
+        private readonly List<ResourceData> resourceDatas = new List<ResourceData>();
 
         public void CleanContainer()
         {

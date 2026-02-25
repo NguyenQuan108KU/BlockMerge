@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Newtonsoft.Json;
@@ -15,18 +15,27 @@ namespace SonatFramework.Systems.LevelManagement
     {
         [SerializeField] private string path = "Level";
 
-        [BoxGroup("SERVICES")] [Required] [SerializeField]
-        private Service<LoadObjectService> loadObjectService = new SonatFramework.Systems.Service<SonatFramework.Systems.LoadObject.LoadObjectService>();
+        [BoxGroup("SERVICES")]
+        [Required]
+        [SerializeField]
+        private Service<LoadObjectService> loadObjectService = new Service<LoadObjectService>();
 
-        [BoxGroup("SERVICES")] [Required] [SerializeField]
-        private Service<SaveObjectService> saveObjectService = new SonatFramework.Systems.Service<SonatFramework.Systems.LoadObject.SaveObjectService>();
+        [BoxGroup("SERVICES")]
+        [Required]
+        [SerializeField]
+        private Service<SaveObjectService> saveObjectService = new Service<SaveObjectService>();
 
 
-        [BoxGroup("CONFIGS")] [SerializeField] protected LevelConfig config;
+        [BoxGroup("CONFIGS")]
+        [SerializeField]
+        protected LevelConfig config;
 
         protected LevelData levelCache;
-        [SerializeField] private List<GameModeLevel> gameModeLevels = new System.Collections.Generic.List<SonatFramework.Systems.LevelManagement.GameModeLevel>();
-        private Dictionary<GameMode, int> levelsByGameMode = new System.Collections.Generic.Dictionary<Sonat.Enums.GameMode, int>();
+
+        [SerializeField]
+        private List<GameModeLevel> gameModeLevels = new List<GameModeLevel>();
+
+        private Dictionary<GameMode, int> levelsByGameMode = new Dictionary<GameMode, int>();
 
         public void Initialize()
         {

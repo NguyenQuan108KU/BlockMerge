@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using Cysharp.Threading.Tasks;
 using TMPro;
 using DG.Tweening;
+using System.Threading.Tasks;
 
 public class TimeManager : SingletonSimple<TimeManager>
 {
@@ -39,11 +39,11 @@ public class TimeManager : SingletonSimple<TimeManager>
         if (!hasStarted && Input.GetMouseButtonDown(0))
         {
             hasStarted = true;
-            StartCountdown().Forget();
+            StartCountdown();
         }
     }
 
-    public async UniTaskVoid StartCountdown()
+    public async Task StartCountdown()
     {
         isCounting = true;
         currentTime = startTime;
@@ -58,7 +58,7 @@ public class TimeManager : SingletonSimple<TimeManager>
                 AudioManager.Instance.PlaySFX(AudioManager.Instance.warning);
             }
 
-            await UniTask.Delay(1000);
+            await Task.Delay(1000);
             currentTime--;
         }
         if (!isCounting)

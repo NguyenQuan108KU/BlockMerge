@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
-using Cysharp.Threading.Tasks;
 using System.Threading;
 using System.Collections.Generic;
 using SonatFramework.Systems.EventBus;
+using System.Threading.Tasks;
 
 [RequireComponent(typeof(MeshFilter))]
 [RequireComponent(typeof(MeshRenderer))]
@@ -207,7 +207,7 @@ public class GhostBlockController : BaseBlock
         }
 
         _cts = new CancellationTokenSource();
-        InitializeGhostSafeAsync(_cts.Token, overrideShape).Forget();
+        InitializeGhostSafeAsync(_cts.Token, overrideShape);
     }
 
     /// <summary>
@@ -242,28 +242,37 @@ public class GhostBlockController : BaseBlock
         }
     }
 
-    private async UniTaskVoid InitializeGhostSafeAsync(CancellationToken token, BlockShapeSO overrideShape = null)
+    private async Task InitializeGhostSafeAsync(
+        CancellationToken token,
+        BlockShapeSO overrideShape = null)
     {
         float timeout = 2.0f;
         float timer = 0f;
 
         while (true)
         {
-            if (token.IsCancellationRequested) return;
+            if (token.IsCancellationRequested)
+                return;
 
             BlockShapeSO targetShape = overrideShape ?? _targetBlock?.CurrentShape;
-            if (targetShape != null && targetShape.structuralOffsets.Count > 0)
+
+            if (targetShape != null &&
+                targetShape.structuralOffsets != null &&
+                targetShape.structuralOffsets.Count > 0)
                 break;
 
             timer += Time.deltaTime;
-            if (timer > timeout) return;
-            await UniTask.Yield(token);
+
+            if (timer > timeout)
+                return;
+            await Task.Delay(16, token);
         }
 
-        BlockShapeSO shapeToUse = overrideShape ?? _targetBlock.CurrentShape;
-        if (shapeToUse == null) return;
+        BlockShapeSO shapeToUse = overrideShape ?? _targetBlock?.CurrentShape;
 
-        // [FIX] Dùng InitializeGhostImmediate thay vì duplicate code
+        if (shapeToUse == null)
+            return;
+
         InitializeGhostImmediate(shapeToUse);
     }
 

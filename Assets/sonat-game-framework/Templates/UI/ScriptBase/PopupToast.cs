@@ -7,7 +7,7 @@ using UnityEngine;
 public class PopupToast : Panel
 {
     private static PopupToast popupToast;
-    private readonly Service<PoolingContainerService> poolingContainer = new();
+    private readonly Service<PoolingContainerService> poolingContainer = new Service<PoolingContainerService>();
     private static bool isCreatingPopupToast;
 
     public static void Create(string content, string param = null)

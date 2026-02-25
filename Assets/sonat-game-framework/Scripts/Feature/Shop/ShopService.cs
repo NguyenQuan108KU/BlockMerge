@@ -21,7 +21,7 @@ namespace SonatFramework.Scripts.Feature.Shop
     public class ShopService : SonatServiceSo, IServiceInitialize
     {
         [BoxGroup("SERVICES", true)] [Required] [SerializeField]
-        private Service<InventoryService> inventory = new();
+        private Service<InventoryService> inventory = new Service<InventoryService>();
 
         [BoxGroup("CONFIG", true)] [Required] [SerializeField]
         private Config<ShopConfig> shopConfig;
@@ -55,7 +55,8 @@ namespace SonatFramework.Scripts.Feature.Shop
         public void CheckPendingPack()
         {
             List<int> pendingPacks = SonatSDKAdapter.GetPacksPendingReward();
-            if (pendingPacks is { Count: > 0 })
+
+            if (pendingPacks != null && pendingPacks.Count > 0)
             {
                 foreach (var pendingPack in pendingPacks)
                 {
@@ -131,7 +132,10 @@ namespace SonatFramework.Scripts.Feature.Shop
         {
             var packData = GetPackData(key);
             if (packData == null) return;
-            if (packData.packData is { resourceUnits: { Count: > 0 } })
+            if (packData != null &&
+    packData.packData != null &&
+    packData.packData.resourceUnits != null &&
+    packData.packData.resourceUnits.Count > 0)
             {
                 var logData = new EarnResourceLogData
                 {
@@ -140,7 +144,11 @@ namespace SonatFramework.Scripts.Feature.Shop
                     isFirstBuy = isFistBuyPack,
                     source = "iap"
                 };
-                inventory.Instance.AddPendingReward(key.ToString(), packData.packData.GetRewardData(), logData);
+
+                inventory.Instance.AddPendingReward(
+                    key.ToString(),
+                    packData.packData.GetRewardData(),
+                    logData);
             }
 #if sonat_sdk
             SonatIap.OnPackRewarded((int)key);
@@ -197,8 +205,10 @@ namespace SonatFramework.Scripts.Feature.Shop
 
         private bool IsNoAdsAvailable()
         {
-            var noAdsItem = inventory.Instance.GetResource(GameResource.NoAds.ToGameResourceKey());
-            if (noAdsItem is { quantity: > 0 })
+            var noAdsItem = inventory.Instance.GetResource(
+                GameResource.NoAds.ToGameResourceKey());
+
+            if (noAdsItem != null && noAdsItem.quantity > 0)
             {
 #if sonat_sdk
                 UserData.IsNoads.BoolValue = true;
@@ -206,8 +216,12 @@ namespace SonatFramework.Scripts.Feature.Shop
                 return true;
             }
 
-            var noAdsLimited = inventory.Instance.GetResource(GameResource.NoAdsLimited.ToGameResourceKey());
-            if (noAdsLimited != null && noAdsLimited.CanReduce()) return true;
+            var noAdsLimited = inventory.Instance.GetResource(
+                GameResource.NoAdsLimited.ToGameResourceKey());
+
+            if (noAdsLimited != null && noAdsLimited.CanReduce())
+                return true;
+
             return false;
         }
     }

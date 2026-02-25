@@ -24,8 +24,8 @@ namespace SonatFramework.Scripts.UIModule
         [SerializeField] private bool Logging; // Conform to screen safe area on Y-axis (default true, disable to ignore)
 
         private ScreenOrientation LastOrientation = ScreenOrientation.AutoRotation;
-        private Rect LastSafeArea = new UnityEngine.Rect(0, 0, 0, 0);
-        private Vector2Int LastScreenSize = new UnityEngine.Vector2Int(0, 0);
+        private Rect LastSafeArea = new Rect(0, 0, 0, 0);
+        private Vector2Int LastScreenSize = new Vector2Int(0, 0);
 
         private RectTransform Panel;
 
@@ -205,9 +205,9 @@ namespace SonatFramework.Scripts.UIModule
         /// </summary>
         private readonly Rect[] NSA_iPhoneX =
         {
-            new UnityEngine.Rect(0f, 102f / 2436f, 1f, 2202f / 2436f), // Portrait
-            new UnityEngine.Rect(132f / 2436f, 63f / 1125f, 2172f / 2436f, 1062f / 1125f) // Landscape
-        };
+    new Rect(0f, 102f / 2436f, 1f, 2202f / 2436f), // Portrait
+    new Rect(132f / 2436f, 63f / 1125f, 2172f / 2436f, 1062f / 1125f) // Landscape
+};
 
         /// <summary>
         ///     Normalised safe areas for iPhone Xs Max with Home indicator (ratios are identical to XR, 11, 11 Pro Max). Absolute
@@ -220,8 +220,8 @@ namespace SonatFramework.Scripts.UIModule
         /// </summary>
         private readonly Rect[] NSA_iPhoneXsMax =
         {
-            new UnityEngine.Rect(0f, 102f / 2688f, 1f, 2454f / 2688f), // Portrait
-            new UnityEngine.Rect(132f / 2688f, 63f / 1242f, 2424f / 2688f, 1179f / 1242f) // Landscape
+            new Rect(0f, 102f / 2688f, 1f, 2454f / 2688f), // Portrait
+            new Rect(132f / 2688f, 63f / 1242f, 2424f / 2688f, 1179f / 1242f) // Landscape
         };
 
         /// <summary>
@@ -234,8 +234,8 @@ namespace SonatFramework.Scripts.UIModule
         /// </summary>
         private readonly Rect[] NSA_Pixel3XL_LSL =
         {
-            new UnityEngine.Rect(0f, 0f, 1f, 2789f / 2960f), // Portrait
-            new UnityEngine.Rect(0f, 0f, 2789f / 2960f, 1f) // Landscape
+            new Rect(0f, 0f, 1f, 2789f / 2960f), // Portrait
+            new Rect(0f, 0f, 2789f / 2960f, 1f) // Landscape
         };
 
         /// <summary>
@@ -243,8 +243,8 @@ namespace SonatFramework.Scripts.UIModule
         /// </summary>
         private readonly Rect[] NSA_Pixel3XL_LSR =
         {
-            new UnityEngine.Rect(0f, 0f, 1f, 2789f / 2960f), // Portrait
-            new UnityEngine.Rect(171f / 2960f, 0f, 2789f / 2960f, 1f) // Landscape
+            new Rect(0f, 0f, 1f, 2789f / 2960f), // Portrait
+            new Rect(171f / 2960f, 0f, 2789f / 2960f, 1f) // Landscape
         };
 
         #endregion

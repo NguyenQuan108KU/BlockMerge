@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using Cysharp.Threading.Tasks;
 using Newtonsoft.Json;
 using Sonat.Enums;
@@ -29,8 +29,8 @@ namespace SonatFramework.Systems.LevelManagement
 
         public void Initialize()
         {
-            lastId = new SonatFramework.Scripts.Helper.StringDataPref("LAST_REMOTE_LEVEL_DATA_ID", "");
-            cachedRemoteValue = new SonatFramework.Scripts.Helper.StringDataPref("CACHED_REMOTE_VALUE", "");
+            lastId = new StringDataPref("LAST_REMOTE_LEVEL_DATA_ID", "");
+            cachedRemoteValue = new StringDataPref("CACHED_REMOTE_VALUE", "");
             levelServiceFallback = Instantiate(levelServiceFallback);
         }
 

@@ -1,5 +1,5 @@
-using Cysharp.Threading.Tasks;
 using SonatFramework.Systems;
+using System.Threading.Tasks;
 
 namespace SonatFramework.Scripts.Feature
 {
@@ -9,14 +9,14 @@ namespace SonatFramework.Scripts.Feature
         public TData data;
 
 
-        public virtual async UniTaskVoid InitializeAsync()
+        public virtual async Task InitializeAsync()
         {
             await LoadConfig();
             await LoadData();
         }
 
-        protected abstract UniTask LoadConfig();
-        protected abstract UniTask LoadData();
+        protected abstract Task LoadConfig();
+        protected abstract Task LoadData();
 
         protected abstract void SaveData();
     }

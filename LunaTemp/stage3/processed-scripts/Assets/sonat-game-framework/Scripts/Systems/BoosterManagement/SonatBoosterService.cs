@@ -17,25 +17,30 @@ namespace SonatFramework.Systems.BoosterManagement
     {
         #region Services
 
-        [BoxGroup("SERVICES")] [Required] [SerializeField]
-        private Service<InventoryService> inventoryService = new SonatFramework.Systems.Service<SonatFramework.Systems.InventoryManagement.InventoryService>();
+        [BoxGroup("SERVICES")]
+        [Required]
+        [SerializeField]
+        private Service<InventoryService> inventoryService = new Service<InventoryService>();
 
-        [BoxGroup("SERVICES")] [Required] [SerializeField]
-        private Service<DataService> dataService = new SonatFramework.Systems.Service<SonatFramework.Systems.GameDataManagement.DataService>();
+        [BoxGroup("SERVICES")]
+        [Required]
+        [SerializeField]
+        private Service<DataService> dataService = new Service<DataService>();
 
-        private Service<UserDataService> userDataService = new SonatFramework.Systems.Service<SonatFramework.Systems.UserData.UserDataService>();
+        private Service<UserDataService> userDataService = new Service<UserDataService>();
 
         #endregion
 
-        [BoxGroup("CONFIGS", true)] [SerializeField]
+        [BoxGroup("CONFIGS", true)]
+        [SerializeField]
         private BoostersConfig boostersConfig;
 
-        private readonly Dictionary<GameResource, BoosterData> boostersData = new System.Collections.Generic.Dictionary<Sonat.Enums.GameResource, SonatFramework.Systems.BoosterManagement.BoosterData>();
+        private readonly Dictionary<GameResource, BoosterData> boostersData = new Dictionary<GameResource, BoosterData>();
 
         private string configKey;
         private bool allBoosterUnlocked = false;
 
-        private readonly Dictionary<GameResource, BoosterConfig> configs = new System.Collections.Generic.Dictionary<Sonat.Enums.GameResource, SonatFramework.Systems.BoosterManagement.BoosterConfig>();
+        private readonly Dictionary<GameResource, BoosterConfig> configs = new Dictionary<GameResource, BoosterConfig>();
 
 
         public void OnSonatSDKInitialize()

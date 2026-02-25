@@ -1,9 +1,9 @@
-﻿using Cysharp.Threading.Tasks;
-using DG.Tweening;
+﻿using DG.Tweening;
 using Sonat;
 using Sonat.Enums;
 using SonatFramework.Systems;
 using SonatFramework.Systems.SceneManagement;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,7 +32,7 @@ public class GameLoader : MonoBehaviour
 
     #region Private Fields
 
-    private readonly Service<SceneService> _sceneService = new();
+    private readonly Service<SceneService> _sceneService = new Service<SceneService>();
     private bool _isSdkReady;
 
     #endregion
@@ -45,14 +45,14 @@ public class GameLoader : MonoBehaviour
         QualitySettings.vSyncCount = 0;
 
         SonatSdkManager.Initialize(() => _isSdkReady = true);
-        RunLoadingSequence().Forget();
+        RunLoadingSequence();
     }
 
     #endregion
 
     #region Main Sequence
 
-    private async UniTaskVoid RunLoadingSequence()
+    private async Task RunLoadingSequence()
     {
         // ── Init panels ──
         SetCanvasGroup(panelGameLoading, 0f);
@@ -73,7 +73,7 @@ public class GameLoader : MonoBehaviour
         var loadingBar = new SmoothProgress(loadingFillImage);
 
         // SDK init (Remote Config tự fetch bên trong)
-        await UniTask.WaitUntil(() => _isSdkReady);
+        //await Task.WaitUntil(() => _isSdkReady);
         loadingBar.Target = 0.25f;
 
         // Preload game assets
@@ -97,10 +97,10 @@ public class GameLoader : MonoBehaviour
             .DOFade(1f, crossfadeDuration)
             .SetEase(Ease.OutCubic);
 
-        await UniTask.WhenAll(
-            fadeOut.AsyncWaitForCompletion().AsUniTask(),
-            fadeIn.AsyncWaitForCompletion().AsUniTask()
-        );
+        //await UniTask.WhenAll(
+        //    fadeOut.AsyncWaitForCompletion().AsUniTask(),
+        //    fadeIn.AsyncWaitForCompletion().AsUniTask()
+        //);
 
         panelGameLoading.gameObject.SetActive(false);
 
@@ -113,7 +113,7 @@ public class GameLoader : MonoBehaviour
         {
             elapsed += Time.deltaTime;
             splashBar.Target = Mathf.Clamp01(elapsed / splashHoldDuration);
-            await UniTask.Yield();
+            //await UniTask.Yield();
         }
 
         splashBar.Target = 1f;
@@ -145,15 +145,15 @@ public class GameLoader : MonoBehaviour
             _fillImage = fillImage;
             _display = 0f;
             Target = 0f;
-            RunLoop().Forget();
+            RunLoop();
         }
 
-        private async UniTaskVoid RunLoop()
+        private async Task RunLoop()
         {
             while (_display < 1f)
             {
                 Tick();
-                await UniTask.Yield();
+                await Task.Yield();
             }
         }
 
@@ -168,10 +168,10 @@ public class GameLoader : MonoBehaviour
                 _fillImage.fillAmount = _display;
         }
 
-        public async UniTask WaitUntilFull()
+        public async Task WaitUntilFull()
         {
             while (_display < 0.99f)
-                await UniTask.Yield();
+                await Task.Yield();
         }
     }
 

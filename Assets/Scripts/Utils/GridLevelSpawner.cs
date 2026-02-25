@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
-using Cysharp.Threading.Tasks;
 
 public class GridLevelSpawner
 {
@@ -23,7 +23,7 @@ public class GridLevelSpawner
 
     #region Spawn Level Map
 
-    public async UniTask SpawnLevelMap(List<PreplacedBlockData> mapData, Transform towerContainer)
+    public async Task SpawnLevelMap(List<PreplacedBlockData> mapData, Transform towerContainer)
     {
         if (mapData == null || mapData.Count == 0) return;
 
@@ -43,7 +43,7 @@ public class GridLevelSpawner
         }
     }
 
-    private async UniTask SpawnElement(
+    private async Task SpawnElement(
         PreplacedBlockData data,
         int elementIndex,
         Transform towerContainer,
@@ -80,7 +80,7 @@ public class GridLevelSpawner
         }
     }
 
-    private async UniTask SpawnCell(
+    private async Task SpawnCell(
         PreplacedBlockData data,
         int elementIndex,
         int pivotX,
@@ -158,7 +158,7 @@ public class GridLevelSpawner
 
     #region Helpers
 
-    private async UniTask<BlockShapeSO> LoadShape(PreplacedBlockData data, int elementIndex)
+    private async Task<BlockShapeSO> LoadShape(PreplacedBlockData data, int elementIndex)
     {
         if (data.blockShapeRef == null) return null;
 

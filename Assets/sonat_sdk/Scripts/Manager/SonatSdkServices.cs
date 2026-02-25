@@ -20,16 +20,16 @@ namespace Sonat
 
         public void Initialize()
         {
-            serviceDictionary = new();
+            serviceDictionary = new Dictionary<Type, SonatService>();
 #if UNITY_EDITOR
             var firebaseService = Instantiate(sonatFirebase);
 #else
             var firebaseService = sonatFirebase;
 #endif
             serviceDictionary.Add(typeof(SonatFirebase), firebaseService);
-            serviceInProcess = new();
+            serviceInProcess = new List<ISonatService>();
 
-            servicesInstance = new();
+            servicesInstance = new List<SonatService>();
 
             foreach (var _service in services)
             {

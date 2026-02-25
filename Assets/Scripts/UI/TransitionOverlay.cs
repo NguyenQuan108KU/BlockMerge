@@ -1,5 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
-using DG.Tweening;
+﻿using DG.Tweening;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -58,10 +58,10 @@ public class TransitionOverlay : MonoBehaviour
 
     public void FadeOut()
     {
-        FadeOutAsync().Forget();
+        FadeOutAsync();
     }
 
-    public async UniTask FadeOutAsync()
+    public async Task FadeOutAsync()
     {
         if (_material == null) return;
 

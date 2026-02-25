@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "TutorialConfig", menuName = "Game/Tutorial Config")]
 public class TutorialConfigSO : ScriptableObject
 {
-    public List<TutorialEntry> entries = new();
+    public List<TutorialEntry> entries = new List<TutorialEntry>();
 
     public List<TutorialEntry> GetEntriesForLevel(int level)
     {

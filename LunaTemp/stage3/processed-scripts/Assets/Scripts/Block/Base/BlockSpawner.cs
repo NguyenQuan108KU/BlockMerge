@@ -1,8 +1,8 @@
-using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Difficulty;
 using SonatFramework.Systems.EventBus;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class BlockSpawner : MonoBehaviour
@@ -58,7 +58,7 @@ public class BlockSpawner : MonoBehaviour
     {
         spawnBag = new List<BlockShapeSO>(newBag);
         currentBagIndex = 0;
-        PrepareNextBlockData().Forget();
+        PrepareNextBlockData();
     }
 
     public void Reset()
@@ -82,9 +82,12 @@ public class BlockSpawner : MonoBehaviour
 
     #region Spawning
 
-    public void SpawnNextBlock() => SpawnNextBlockAsync().Forget();
+    public void SpawnNextBlock()
+    {
+        _ = SpawnNextBlockAsync();
+    }
 
-    private async UniTaskVoid SpawnNextBlockAsync()
+    private async Task SpawnNextBlockAsync()
     {
         try
         {
@@ -127,7 +130,7 @@ public class BlockSpawner : MonoBehaviour
 
             activeBlock.transform.localScale = Vector3.one;
             isSpawning = false;
-            PrepareNextBlockData().Forget();
+            PrepareNextBlockData();
         }
         catch (System.Exception e)
         {
@@ -140,7 +143,7 @@ public class BlockSpawner : MonoBehaviour
 
     #region Data Preparation
 
-    private async UniTask PrepareNextBlockData()
+    private async Task PrepareNextBlockData()
     {
         var config = GridManager.Instance.config;
 
@@ -228,7 +231,7 @@ public class BlockSpawner : MonoBehaviour
             .SetEase(Ease.OutBack);
     }
 
-    public void SwapNextShape() => PrepareNextBlockData().Forget();
+    public void SwapNextShape() => PrepareNextBlockData();
 
     #endregion
 

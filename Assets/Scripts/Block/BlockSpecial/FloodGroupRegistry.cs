@@ -11,7 +11,7 @@ public class FloodGroupRegistry
         public GroupState State;
     }
 
-    private readonly Dictionary<int, GroupData> _blockToGroup = new();
+    private readonly Dictionary<int, GroupData> _blockToGroup = new Dictionary<int, GroupData>();
 
     #region Registration
 

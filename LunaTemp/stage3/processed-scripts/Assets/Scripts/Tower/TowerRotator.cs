@@ -1,7 +1,7 @@
-﻿using Cysharp.Threading.Tasks;
-using DG.Tweening;
+﻿using DG.Tweening;
 using UnityEngine;
 using SonatFramework.Systems.EventBus;
+using System.Threading.Tasks;
 
 public class TowerRotator : MonoBehaviour
 {
@@ -200,7 +200,7 @@ public class TowerRotator : MonoBehaviour
         _isAnimatingStep = false;
     }
 
-    public async UniTask SnapToNearestAsync()
+    public async Task SnapToNearestAsync()
     {
         if (_cachedConfig == null || _towerContainer == null) return;
 

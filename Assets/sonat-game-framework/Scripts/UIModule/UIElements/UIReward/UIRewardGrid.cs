@@ -10,7 +10,7 @@ namespace SonatFramework.Scripts.UIModule.UIElements
     public class UIRewardGrid : MonoBehaviour
     {
         [SerializeField] private Transform container;
-        private readonly Service<PoolingContainerService> poolingService = new();
+        private readonly Service<PoolingContainerService> poolingService = new Service<PoolingContainerService>();
         private RewardData rewardData;
         private UIItemGroup uiItemGroup;
 

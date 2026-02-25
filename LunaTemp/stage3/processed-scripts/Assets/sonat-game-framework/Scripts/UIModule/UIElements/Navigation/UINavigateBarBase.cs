@@ -38,7 +38,7 @@ public abstract class UINavigateBarBase : MonoBehaviour
             item.InitData(this);
             items.Add(item.type, item);
         }
-        EventBus<UpdateScreenEvent>.Raise(new SonatFramework.Systems.EventBus.UpdateScreenEvent(){screen = "H"});
+        EventBus<UpdateScreenEvent>.Raise(new UpdateScreenEvent() { screen = "H" });
 
     }
 

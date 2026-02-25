@@ -26,7 +26,7 @@ namespace SonatFramework.Scripts.Feature.Shop.UI
         [SerializeField] protected UIRewardGroup uiRewardGroup;
         [SerializeField] protected UnityEvent<ShopItemKey> onBuySuccess;
 
-        protected readonly Service<ShopService> shopService = new();
+        protected readonly Service<ShopService> shopService = new Service<ShopService>();
 
         protected ShopPack shopPack;
 

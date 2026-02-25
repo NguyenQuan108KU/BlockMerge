@@ -2,21 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SonatFramework.Systems;
-using Cysharp.Threading.Tasks;
 using SonatFramework.Scripts.Feature;
 using SonatFramework.Systems.EventBus;
 using System;
 using SonatFramework.Systems.InventoryManagement;
 using SonatFramework.Systems.GameDataManagement;
 using Sonat.Enums;
+using System.Threading.Tasks;
 
 [CreateAssetMenu(fileName = "ChestRewardService", menuName = "Sonat Services/Chest Reward Service")]
 public class ChestRewardService : SonatServiceSo, IServiceInitializeAsync
 {
     public ChestRewardProgressConfig configs;
     public ChestRewardProgressData data;
-    private readonly Service<InventoryService> inventory = new SonatFramework.Systems.Service<SonatFramework.Systems.InventoryManagement.InventoryService>();
-    private readonly Service<DataService> dataService = new SonatFramework.Systems.Service<SonatFramework.Systems.GameDataManagement.DataService>();
+    private readonly Service<InventoryService> inventory = new Service<InventoryService>();
+    private readonly Service<DataService> dataService = new Service<DataService>();
     private string dataKey = "ChestRewardService_Data";
     private string configKey = "ChestRewardService_Config";
 
@@ -26,14 +26,14 @@ public class ChestRewardService : SonatServiceSo, IServiceInitializeAsync
     private ChestConfig chestConfig;
     private bool canStartChest;
 
-    public async UniTaskVoid InitializeAsync()
+    public async Task InitializeAsync()
     {
         await LoadData();
         await LoadConfig();
         var onlevelEndEvent = new EventBinding<LevelEndedEvent>(OnLevelEnd);
     }
 
-    protected UniTask LoadData()
+    protected Task LoadData()
     {
         data = dataService.Instance.GetData<ChestRewardProgressData>(dataKey);
         if (data == null)
@@ -43,10 +43,10 @@ public class ChestRewardService : SonatServiceSo, IServiceInitializeAsync
             data.currentProgress = 0;
         }
 
-        return UniTask.CompletedTask;
+        return Task.CompletedTask;
     }
 
-    protected async UniTask LoadConfig()
+    protected async Task LoadConfig()
     {
         //configs = await loadObjectServiceAsync.LoadAsync<ChestRewardProgressConfig>(configKey);
         chestConfig = configs.GetChestRewardData(data.currentChestIndex);

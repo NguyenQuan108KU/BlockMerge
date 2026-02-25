@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Sonat.Enums;
-using Cysharp.Threading.Tasks;
 
 public class RotateButtonHandler : MonoBehaviour, IPointerDownHandler
 {

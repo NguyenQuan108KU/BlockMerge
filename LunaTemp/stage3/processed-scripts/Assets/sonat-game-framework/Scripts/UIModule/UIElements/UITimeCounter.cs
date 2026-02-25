@@ -12,7 +12,7 @@ namespace SonatFramework.Scripts.UIModule.UIElements
         public TMP_Text txtTime;
         public TxtTimeFormat timeFomat;
         public MonoBehaviour go;
-        private readonly Service<TimeService> timeService = new SonatFramework.Systems.Service<SonatFramework.Systems.TimeManagement.TimeService>();
+        private readonly Service<TimeService> timeService = new Service<TimeService>();
         private Action callback;
         private Coroutine coroutine;
 

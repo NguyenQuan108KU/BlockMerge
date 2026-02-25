@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
-using Cysharp.Threading.Tasks;
 using SonatFramework.Systems;
 using SonatFramework.Systems.ObjectPooling;
+using System.Threading.Tasks;
 
 public class DualDirectionEffect : MonoBehaviour, IPoolingObject
 {
     [SerializeField] private ParticleSystem[] particleSystems;
 
-    private static readonly Service<PoolingServiceAsync> _pooling = new();
+    private static readonly Service<PoolingServiceAsync> _pooling = new Service<PoolingServiceAsync>();
     private const string POOL_KEY = "VFX_BlockBreak_Dual";
 
     // [PERF] Cache renderer references — tránh GetComponent mỗi lần play
@@ -72,19 +72,19 @@ public class DualDirectionEffect : MonoBehaviour, IPoolingObject
             particleSystems[i].Play();
         }
 
-        ReturnAfterDelay(1.5f).Forget();
+        //ReturnAfterDelay(1.5f);
     }
 
-    private async UniTaskVoid ReturnAfterDelay(float delay)
-    {
-        var token = this.GetCancellationTokenOnDestroy();
-        await UniTask.Delay(System.TimeSpan.FromSeconds(delay), cancellationToken: token);
+    //private async Task ReturnAfterDelay(float delay)
+    //{
+    //    var token = this.GetCancellationTokenOnDestroy();
+    //    await Task.Delay(System.TimeSpan.FromSeconds(delay), cancellationToken: token);
 
-        if (!token.IsCancellationRequested)
-        {
-            _pooling.Instance?.ReturnObj(this);
-        }
-    }
+    //    if (!token.IsCancellationRequested)
+    //    {
+    //        _pooling.Instance?.ReturnObj(this);
+    //    }
+    //}
 
     #endregion
 }

@@ -1,5 +1,4 @@
 ﻿using Base.Singleton;
-using Cysharp.Threading.Tasks;
 using Newtonsoft.Json;
 using Sonat.AdsModule;
 using Sonat.Enums;
@@ -11,6 +10,7 @@ using SonatFramework.Systems.InventoryManagement.GameResources;
 using SonatFramework.Systems.UserData;
 using System;
 using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class CheatManager : Singleton<CheatManager>
@@ -104,7 +104,7 @@ public class CheatManager : Singleton<CheatManager>
         GameManager.Instance?.PlayLevelByIndex(level);
     }
 
-    private static async UniTaskVoid PlayLevel()
+    private static async Task PlayLevel()
     {
         //await GameplayController.instance.CloseTower();
         //GameplayController.instance.Play();

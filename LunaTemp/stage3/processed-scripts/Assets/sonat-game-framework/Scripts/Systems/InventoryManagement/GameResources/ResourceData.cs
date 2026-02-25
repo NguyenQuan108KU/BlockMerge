@@ -22,7 +22,12 @@ namespace SonatFramework.Systems.InventoryManagement.GameResources
         [HideInInspector] public long timestamp = 0;
         [JsonIgnore] public Action onUpdate;
 
-        [JsonIgnore] public GameResourceKey Key => new SonatFramework.Systems.InventoryManagement.GameResources.GameResourceKey() { gameResource = this.gameResource, id = this.id };
+        [JsonIgnore]
+        public GameResourceKey Key => new GameResourceKey()
+        {
+            gameResource = this.gameResource,
+            id = this.id
+        };
 
         public ResourceData()
         {

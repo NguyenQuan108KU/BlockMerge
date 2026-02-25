@@ -16,7 +16,7 @@ namespace SonatFramework.Systems
         [SerializeField] [Searchable] [ListDrawerSettings(ShowPaging = false)]
         private List<SonatServiceSo> servicesObject;
 
-        private readonly Dictionary<Type, object> services = new System.Collections.Generic.Dictionary<System.Type, object>();
+        private readonly Dictionary<Type, object> services = new Dictionary<Type, object>();
 
 
         public void Resolve()

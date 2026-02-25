@@ -1,8 +1,8 @@
-using Cysharp.Threading.Tasks;
 using Difficulty;
 using UnityEngine;
 using SonatFramework.Systems.EventBus;
 using Sonat.Enums;
+using System.Threading.Tasks;
 
 public class TowerController : MonoBehaviour
 {
@@ -45,7 +45,7 @@ public class TowerController : MonoBehaviour
     private void Start()
     {
         _isSystemReady = false;
-        InitializeSystemsAsync().Forget();
+        InitializeSystemsAsync();
     }
 
     private void Update()
@@ -59,10 +59,10 @@ public class TowerController : MonoBehaviour
 
     #region Initialization
 
-    private async UniTaskVoid InitializeSystemsAsync()
+    private async Task InitializeSystemsAsync()
     {
-        var token = this.GetCancellationTokenOnDestroy();
-        await UniTask.WaitUntil(() => GridManager.Instance != null && GridManager.Instance.config != null, cancellationToken: token);
+        //var token = this.GetCancellationTokenOnDestroy();
+        //await Task.WaitUntil(() => GridManager.Instance != null && GridManager.Instance.config != null, cancellationToken: token);
 
         if (spawner != null) spawner.Initialize(activeBlock, towerContainer, rotator);
         if (rotator != null) rotator.Initialize(activeBlock, towerContainer);
@@ -117,7 +117,7 @@ public class TowerController : MonoBehaviour
         rotator?.RotateStep(direction);
     }
 
-    public async UniTask SnapRotationAsync()
+    public async Task SnapRotationAsync()
     {
         if (rotator != null) await rotator.SnapToNearestAsync();
     }

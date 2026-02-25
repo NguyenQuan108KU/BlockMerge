@@ -27,9 +27,9 @@ namespace SonatFramework.Systems.UserData
 
 
         [BoxGroup("SERVICES")] [SerializeField]
-        private Service<DataService> dataService = new();
+        private Service<DataService> dataService = new Service<DataService>();
 
-        private Service<TimeService> timeService = new();
+        private Service<TimeService> timeService = new Service<TimeService>();
 
         public void Initialize()
         {

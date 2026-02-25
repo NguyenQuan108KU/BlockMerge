@@ -8,7 +8,7 @@ namespace SonatFramework.Systems.ObjectPooling
     [CreateAssetMenu(fileName = "SonatPoolingService", menuName = "Sonat Services/Pooling/Pooling Service")]
     public class SonatPoolingService : PoolingService
     {
-        [SerializeField] private Service<LoadObjectService> loadObjectService = new();
+        [SerializeField] private Service<LoadObjectService> loadObjectService = new Service<LoadObjectService>();
 
         public override T Create<T>(string objectName, Vector3 position, Transform parent = null, params object[] args)
         {

@@ -1,8 +1,8 @@
-﻿using Cysharp.Threading.Tasks;
-using Sirenix.OdinInspector;
+﻿using Sirenix.OdinInspector;
 using SonatFramework.Systems;
 using SonatFramework.Systems.GameDataManagement;
 using SonatFramework.Systems.LoadObject;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace SonatFramework.Systems.LevelManagement
@@ -12,11 +12,11 @@ namespace SonatFramework.Systems.LevelManagement
     {
         [BoxGroup("SERVICES", true)]
         [SerializeField]
-        protected Service<LoadObjectServiceAsync> loadServiceAsync = new();
+        protected Service<LoadObjectServiceAsync> loadServiceAsync = new Service<LoadObjectServiceAsync>();
 
         [BoxGroup("SERVICES", true)]
         [SerializeField]
-        protected Service<DataService> dataService = new();
+        protected Service<DataService> dataService = new Service<DataService>();
 
         [BoxGroup("CONFIGS", true)]
         [SerializeField]
@@ -38,7 +38,7 @@ namespace SonatFramework.Systems.LevelManagement
             return dataService.Instance.GetInt(prefCurrentLevel, 1);
         }
 
-        public async UniTask<LevelDataSO> LoadLevelAsync(int levelIndex)
+        public async Task<LevelDataSO> LoadLevelAsync(int levelIndex)
         {
             string key = $"{levelKeyPrefix}{levelIndex:D2}";
 

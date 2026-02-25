@@ -29,7 +29,7 @@ public class PopupContinueBase : Panel
     protected Data data;
     protected int maxReviveWithAds;
     public GameObject playOnWithAdsBtn;
-    protected readonly Service<InventoryService> inventoryService = new();
+    protected readonly Service<InventoryService> inventoryService = new Service<InventoryService>();
 
     [SerializeField] protected bool showNative;
     [SerializeField] protected TMP_Text txtPlayonPrice;

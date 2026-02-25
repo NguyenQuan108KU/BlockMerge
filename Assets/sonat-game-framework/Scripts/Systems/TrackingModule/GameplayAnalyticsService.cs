@@ -10,11 +10,11 @@ namespace SonatFramework.Systems.TrackingModule
     [CreateAssetMenu(fileName = "GameplayAnalyticsService", menuName = "Sonat Services/Gameplay Analytics")]
     public class GameplayAnalyticsService : SonatServiceSo, IServiceInitialize
     {
-        protected readonly Service<UserDataService> userDataService = new();
+        protected readonly Service<UserDataService> userDataService = new Service<UserDataService>();
 
-        protected readonly IntDataPref lastLevelPlay = new("LastLevelPlay");
-        protected readonly IntDataPref startCount = new("StartCount");
-        public LevelPlayData levelPlayData = new();
+        protected readonly IntDataPref lastLevelPlay = new IntDataPref("LastLevelPlay");
+        protected readonly IntDataPref startCount = new IntDataPref("StartCount");
+        public LevelPlayData levelPlayData = new LevelPlayData();
         public int levelStartCount => startCount.Value;
 
         public virtual void Initialize()
@@ -128,7 +128,7 @@ namespace SonatFramework.Systems.TrackingModule
         public int startCount;
         public int reviveByRwd;
         public int buyBoosterByRwd;
-        public Dictionary<string, object> otherData = new();
+        public Dictionary<string, object> otherData = new Dictionary<string, object>();
 
         public bool TryGet(string key, out object value)
         {

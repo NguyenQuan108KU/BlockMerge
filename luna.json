@@ -11,6 +11,13 @@
         "environmentID": 1144181396,
         "scripts": {
             "excludes": [
+                "Assets/MaxSdk/",
+                "Assets/Scripts/Data/LevelDataJson.cs",
+                "Assets/Scripts/Manager/ObjectPoolManager.cs",
+                "Assets/Scripts/Tutorial/TutorialConfigSO.cs",
+                "Assets/Scripts/UI/Panel/BtnNoAds.cs",
+                "Assets/Scripts/UI/Panel/PopupSettings.cs",
+                "Assets/sonat_sdk/",
                 "**/Editor/",
                 "**/Luna/RuntimeScripts/",
                 "**/FacebookSDK/",
@@ -168,7 +175,38 @@
         "genericCheck": true,
         "disableAntiAliasing": true,
         "forceStableRandomSeed": false,
-        "unusedModules": [],
+        "unusedModules": [
+            {
+                "name": "physics3d",
+                "excluded": false,
+                "forceIncluded": false
+            },
+            {
+                "name": "physics2d",
+                "excluded": false,
+                "forceIncluded": false
+            },
+            {
+                "name": "particle-system",
+                "excluded": false,
+                "forceIncluded": false
+            },
+            {
+                "name": "reflection",
+                "excluded": false,
+                "forceIncluded": false
+            },
+            {
+                "name": "prefabs",
+                "excluded": false,
+                "forceIncluded": false
+            },
+            {
+                "name": "mecanim-wasm",
+                "excluded": false,
+                "forceIncluded": false
+            }
+        ],
         "disableRuntimeAnalysisForCode": true,
         "disableRuntimeAnalysisForShaders": false,
         "useShadersCache": true,

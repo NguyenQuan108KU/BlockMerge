@@ -33,9 +33,9 @@ namespace Sonat.FirebaseModule
 
         public SonatFirebaseConfig config;
 
-        public static readonly SonatFirebaseRemoteConfig remote = new();
-        public static readonly SonatFirebaseMessage message = new();
-        public static readonly SonatFirebaseAnalytic analytic = new();
+        public static readonly SonatFirebaseRemoteConfig remote = new SonatFirebaseRemoteConfig();
+        public static readonly SonatFirebaseMessage message = new SonatFirebaseMessage();
+        public static readonly SonatFirebaseAnalytic analytic = new SonatFirebaseAnalytic();
 #if using_firebase_installation
         private static FirebaseInstallations installations;
 #endif

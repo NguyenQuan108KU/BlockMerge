@@ -1,5 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
-using SonatFramework.Systems.EventBus;
+﻿using SonatFramework.Systems.EventBus;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class UIBoosterUndo : UIBoosterIAABase
@@ -66,7 +66,7 @@ public class UIBoosterUndo : UIBoosterIAABase
 
     protected override void OnCannotExecute() { }
 
-    protected override async UniTask<bool> ExecuteBooster()
+    protected override async Task<bool> ExecuteBooster()
     {
         var history = GameHistorySystem.Instance;
         if (history == null) return false;
@@ -86,7 +86,7 @@ public class UIBoosterUndo : UIBoosterIAABase
         });
 
         _hasUsedThisTurn = true;
-        return await UniTask.FromResult(true);
+        return await Task.FromResult(true);
     }
 
     #endregion

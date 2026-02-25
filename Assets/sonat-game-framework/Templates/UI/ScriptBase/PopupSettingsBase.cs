@@ -16,7 +16,7 @@ public class PopupSettingsBase : Panel
     [SerializeField] protected RectTransform panel;
     [SerializeField] protected int levelCanGoHome = 0;
     [SerializeField] protected GameObject[] gameplayOnlyObjs;
-    protected readonly Service<SceneService> sceneService = new();
+    protected readonly Service<SceneService> sceneService = new Service<SceneService>();
     protected bool clicked = false;
     [SerializeField] protected float sizeFull = 1385f;
     [SerializeField] protected float sizeSmall = 1024f;

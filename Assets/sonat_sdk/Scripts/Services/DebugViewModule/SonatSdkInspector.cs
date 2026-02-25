@@ -73,7 +73,7 @@ namespace Sonat.DebugViewModule
     public class SonatSdkInspector
     {
         private static SonatSdkInspector _sInstance;
-        static readonly object _sLock = new();
+        static readonly object _sLock = new object();
 
         private List<LibRequiredData> requiredData;
 
@@ -97,7 +97,7 @@ namespace Sonat.DebugViewModule
 
         public async Task<List<LibRequiredDataValidateResult>> Validate()
         {
-            List<LibRequiredDataValidateResult> results = new();
+            List<LibRequiredDataValidateResult> results = new List<LibRequiredDataValidateResult>();
 
             var firebaseBuildResult = await GetFirebaseOptions();
             results.Add(firebaseBuildResult);
@@ -173,7 +173,7 @@ namespace Sonat.DebugViewModule
 
         private LibRequiredDataValidateResult validateRequireLib(LibRequiredData lib)
         {
-            LibRequiredDataValidateResult result = new()
+            LibRequiredDataValidateResult result = new LibRequiredDataValidateResult()
             {
                 Name = lib.name,
                 IsValid = false,
@@ -693,7 +693,7 @@ namespace Sonat.DebugViewModule
 
         public List<SignatureInfo> GetSignatureInfos()
         {
-            List<SignatureInfo> results = new();
+            List<SignatureInfo> results = new List<SignatureInfo>();
             try
             {
                 int apiLevel = this.GetAndroidApiLevel();

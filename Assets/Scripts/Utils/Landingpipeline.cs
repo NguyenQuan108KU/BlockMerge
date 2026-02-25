@@ -1,5 +1,4 @@
-﻿using Cysharp.Threading.Tasks;
-using SonatFramework.Systems.EventBus;
+﻿using SonatFramework.Systems.EventBus;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,9 +25,9 @@ public class LandingPipeline
     private readonly GridManager _grid;
 
     // [PERF] Reuse mỗi drop — không new mỗi lần
-    private readonly List<GameObject> _objsCache = new();
-    private readonly List<Vector2Int> _coordsCache = new();
-    private readonly HashSet<int> _affectedRowsCache = new();
+    private readonly List<GameObject> _objsCache = new List<GameObject>();
+    private readonly List<Vector2Int> _coordsCache = new List<Vector2Int>();
+    private readonly HashSet<int> _affectedRowsCache = new HashSet<int>();
 
     public LandingPipeline(GridManager grid)
     {
@@ -86,7 +85,7 @@ public class LandingPipeline
 
         if (hasFullRows)
         {
-            _grid.CheckAndClearRowsAsync(_affectedRowsCache).Forget();
+            _grid.CheckAndClearRowsAsync(_affectedRowsCache);
         }
         else
         {

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using DG.Tweening;
 using Sirenix.OdinInspector;
@@ -24,7 +24,7 @@ namespace SonatFramework.Scripts.Feature.ChestRewardProgress
 
         [Header("Block")] [SerializeField] private GameObject objBlock;
 
-        private readonly Service<ChestRewardService> chestRewardService = new SonatFramework.Systems.Service<ChestRewardService>();
+        private readonly Service<ChestRewardService> chestRewardService = new Service<ChestRewardService>();
         private ChestConfig chestClaimed;
         private ChestConfig chestConfig;
         private ChestRewardProgressData data;

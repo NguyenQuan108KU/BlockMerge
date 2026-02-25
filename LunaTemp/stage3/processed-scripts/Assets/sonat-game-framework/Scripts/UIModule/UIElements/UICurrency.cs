@@ -30,7 +30,7 @@ namespace SonatFramework.Scripts.UIModule.UIElements
         public float scaleMax = 1.15f;
         [SerializeField] protected bool blockClick;
         public GameObject plusObj;
-        protected readonly Service<InventoryService> inventoryService = new SonatFramework.Systems.Service<SonatFramework.Systems.InventoryManagement.InventoryService>();
+        protected readonly Service<InventoryService> inventoryService = new Service<InventoryService>();
         [SerializeField] protected ParticleSystem blastEffect;
         //[SerializeField] private SonatCollectEffect collectEffect;
 

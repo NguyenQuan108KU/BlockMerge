@@ -10,7 +10,7 @@ namespace SonatFramework.Systems.AudioManagement
         [Range(0f, 1f)] [SerializeField] private float volume = 1;
         [SerializeField] private bool loop = true;
         [SerializeField] private bool backToLastMusic = false;
-        [SerializeField] private Service<AudioService> audioService = new();
+        [SerializeField] private Service<AudioService> audioService = new Service<AudioService>();
         private string lastMusic;
 
         private void OnEnable()

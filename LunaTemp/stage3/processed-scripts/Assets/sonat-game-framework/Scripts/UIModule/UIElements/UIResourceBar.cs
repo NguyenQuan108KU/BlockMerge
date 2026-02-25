@@ -7,7 +7,7 @@ namespace SonatFramework.Scripts.UIModule.UIElements
 {
     public class UIResourceBar : MonoBehaviour
     {
-        private static readonly List<UIResourceBar> resourceBars = new System.Collections.Generic.List<SonatFramework.Scripts.UIModule.UIElements.UIResourceBar>();
+        private static readonly List<UIResourceBar> resourceBars = new List<UIResourceBar>();
         [SerializeField] private Transform container;
         [SerializeField] private List<UICurrency> uiCurrencies;
         [SerializeField] private bool hideOnLostFocus = true;

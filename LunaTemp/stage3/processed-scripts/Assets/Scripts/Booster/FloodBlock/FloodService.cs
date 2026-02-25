@@ -1,8 +1,8 @@
-﻿using Cysharp.Threading.Tasks;
-using DG.Tweening;
+﻿using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine;
 using SonatFramework.Systems.EventBus;
+using System.Threading.Tasks;
 
 namespace Booster
 {
@@ -32,7 +32,7 @@ namespace Booster
         /// <summary>
         /// Thực hiện flood fill từ vị trí seed
         /// </summary>
-        public async UniTask ExecuteFlood(int seedX, int seedTopY, Material floodMaterial)
+        public async Task ExecuteFlood(int seedX, int seedTopY, Material floodMaterial)
         {
             if (_grid == null || _grid.gridData == null || _grid.visualizer == null)
             {
@@ -62,7 +62,7 @@ namespace Booster
             await SpawnFloodBlocksWithWaveEffect(cellsToFill, seedX, seedTopY, floodMaterial);
 
             // 4. Đợi animation hoàn thành
-            await UniTask.Delay((int)(SPAWN_SCALE_DURATION * 1000) + 100);
+            await Task.Delay((int)(SPAWN_SCALE_DURATION * 1000) + 100);
 
             // 5. Check và clear rows
             HashSet<int> rowsToCheck = new HashSet<int>();
@@ -144,7 +144,7 @@ namespace Booster
         /// <summary>
         /// Spawn các flood blocks với hiệu ứng wave từ seed ra 2 bên
         /// </summary>
-        private async UniTask SpawnFloodBlocksWithWaveEffect(List<Vector2Int> cells, int seedX, int seedY, Material mat)
+        private async Task SpawnFloodBlocksWithWaveEffect(List<Vector2Int> cells, int seedX, int seedY, Material mat)
         {
             if (cells.Count == 0) return;
 
@@ -157,7 +157,7 @@ namespace Booster
             });
 
             int lastDistance = -1;
-            List<UniTask> currentWaveTasks = new List<UniTask>();
+            List<Task> currentWaveTasks = new List<Task>();
 
             foreach (var cell in cells)
             {
@@ -165,9 +165,9 @@ namespace Booster
 
                 if (distance != lastDistance && currentWaveTasks.Count > 0)
                 {
-                    await UniTask.WhenAll(currentWaveTasks);
+                    await Task.WhenAll(currentWaveTasks);
                     currentWaveTasks.Clear();
-                    await UniTask.Delay((int)WAVE_DELAY_MS);
+                    await Task.Delay((int)WAVE_DELAY_MS);
                 }
 
                 lastDistance = distance;
@@ -176,14 +176,14 @@ namespace Booster
 
             if (currentWaveTasks.Count > 0)
             {
-                await UniTask.WhenAll(currentWaveTasks);
+                await Task.WhenAll(currentWaveTasks);
             }
         }
 
         /// <summary>
         /// Spawn 1 flood block tại vị trí (x, y)
         /// </summary>
-        private async UniTask SpawnSingleFloodBlock(int x, int y, Material mat)
+        private async Task SpawnSingleFloodBlock(int x, int y, Material mat)
         {
             if (_grid.gridData.HasBlock(x, y))
             {

@@ -6,7 +6,7 @@ namespace SonatFramework.Systems.EventBus
 {
     public static class EventBus<T> where T : IEvent
     {
-        private static readonly HashSet<IEventBinding<T>> bindings = new();
+        private static readonly HashSet<IEventBinding<T>> bindings = new HashSet<IEventBinding<T>>();
         public static T lastEvent;
 
         public static void Register(IEventBinding<T> binding, bool getLastData = false)

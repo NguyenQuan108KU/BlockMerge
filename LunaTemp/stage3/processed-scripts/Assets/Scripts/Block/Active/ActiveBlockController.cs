@@ -1,7 +1,7 @@
-using Cysharp.Threading.Tasks;
 using SonatFramework.Systems.EventBus;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class ActiveBlockController : BaseBlock
@@ -52,7 +52,7 @@ public class ActiveBlockController : BaseBlock
     private float _dropLocalX;
 
     private EventBinding<InputMoveEvent> moveInputBinding;
-    private readonly List<GameObject> _specialIconObjects = new System.Collections.Generic.List<UnityEngine.GameObject>();
+    private readonly List<GameObject> _specialIconObjects = new List<GameObject>();
 
     #endregion
 
@@ -357,7 +357,7 @@ public class ActiveBlockController : BaseBlock
 
     #region Drop
 
-    public async UniTask Drop()
+    public async Task Drop()
     {
         if (!data.isReady || data.isDropping || grid == null || CurrentShape == null) return;
 
@@ -447,7 +447,7 @@ public class ActiveBlockController : BaseBlock
 
     #region Grid Registration
 
-    private readonly List<GameObject> _childBlocksCache = new System.Collections.Generic.List<UnityEngine.GameObject>();
+    private readonly List<GameObject> _childBlocksCache = new List<GameObject>();
 
     private List<GameObject> CollectChildBlocks()
     {

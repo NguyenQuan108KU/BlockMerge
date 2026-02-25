@@ -9,7 +9,10 @@ namespace SonatFramework.Systems.LoadObject
         menuName = "Sonat Services/Save Service/Save Folder")]
     public class SonatSaveObjectFolderService : SaveObjectService
     {
-        private readonly JsonSerializerSettings settings = new() { TypeNameHandling = TypeNameHandling.Auto };
+        private readonly JsonSerializerSettings settings = new JsonSerializerSettings()
+        {
+            TypeNameHandling = TypeNameHandling.Auto
+        };
         [SerializeField] protected string extension = ".json";
 
         public override void SaveObject<T>(T data, string fileName)

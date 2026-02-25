@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
-using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
 using System.Threading;
 using SonatFramework.Systems.EventBus;
+using System.Threading.Tasks;
 
 namespace Booster
 {
@@ -30,7 +30,7 @@ namespace Booster
         private Vector2Int _holdingCell = new Vector2Int(-1, -1);
 
         // Completion
-        private UniTaskCompletionSource<HammerResult> _completionSource;
+        private TaskCompletionSource<HammerResult> _completionSource;
         private CancellationTokenSource _cts;
 
         private HammerService _hammerService;
@@ -67,10 +67,10 @@ namespace Booster
             _hammerService = service;
         }
 
-        public async UniTask<HammerResult> WaitForSelection(CancellationToken token = default(System.Threading.CancellationToken))
+        public async Task<HammerResult> WaitForSelection(CancellationToken token = default(System.Threading.CancellationToken))
         {
             _isActive = true;
-            _completionSource = new UniTaskCompletionSource<HammerResult>();
+            _completionSource = new TaskCompletionSource<HammerResult>();
             _cts = CancellationTokenSource.CreateLinkedTokenSource(token);
 
             _cts.Token.Register(() =>

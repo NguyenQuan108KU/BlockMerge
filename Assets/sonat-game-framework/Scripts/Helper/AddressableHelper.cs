@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public static class AddressableHelper
 {
 #if using_addressable
-    public static AddressableLoader<Sprite> spriteLoader = new();
+    public static AddressableLoader<Sprite> spriteLoader = new AddressableLoader<Sprite>();
 #endif
 
     public static async UniTask SetSpriteAsync(this SpriteRenderer spriteRenderer, string address)

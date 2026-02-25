@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using SonatFramework.Systems.LoadObject;
 using UnityEngine;
@@ -8,9 +8,9 @@ namespace SonatFramework.Systems.ConfigManagement
     [CreateAssetMenu(fileName = "SonatConfigService", menuName = "Sonat Services/Config Service")]
     public class SonatConfigService : ConfigService, IServiceInitialize
     {
-        [SerializeField] Service<LoadObjectService> loadObjectService = new SonatFramework.Systems.Service<SonatFramework.Systems.LoadObject.LoadObjectService>();
+        [SerializeField] Service<LoadObjectService> loadObjectService = new Service<LoadObjectService>();
         [SerializeField] private List<ConfigSo> configsSo;
-        private readonly Dictionary<Type, object> configs = new System.Collections.Generic.Dictionary<System.Type, object>();
+        private readonly Dictionary<Type, object> configs = new Dictionary<Type, object>();
 
 
         public void Initialize()

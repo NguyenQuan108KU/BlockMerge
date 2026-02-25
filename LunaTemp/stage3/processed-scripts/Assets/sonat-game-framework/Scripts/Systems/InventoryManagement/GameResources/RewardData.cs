@@ -14,7 +14,7 @@ namespace SonatFramework.Systems.InventoryManagement.GameResources
 
         public void AddReward(ResourceData resourceUnit)
         {
-            if (resourceUnits == null) resourceUnits = new System.Collections.Generic.List<SonatFramework.Systems.InventoryManagement.GameResources.ResourceData>();
+            if (resourceUnits == null) resourceUnits = new List<ResourceData>();
             int index = resourceUnits.FindIndex(e => e.Key == resourceUnit.Key);
             if (index < 0) resourceUnits.Add(resourceUnit);
             else resourceUnits[index].Add(resourceUnit);

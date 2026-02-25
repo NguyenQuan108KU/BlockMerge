@@ -9,7 +9,7 @@ namespace SonatFramework.Scripts.Helper
 {
     public class IntDataPref
     {
-        private static readonly Service<DataService> DataService = new();
+        private static readonly Service<DataService> DataService = new Service<DataService>();
 
         private readonly string _name;
         public Action<int> onChanged;
@@ -60,7 +60,7 @@ namespace SonatFramework.Scripts.Helper
 
     public class LongDataPref
     {
-        private static readonly Service<DataService> DataService = new();
+        private static readonly Service<DataService> DataService = new Service<DataService>();
 
 
         private readonly string _name;
@@ -102,7 +102,7 @@ namespace SonatFramework.Scripts.Helper
 
     public class StringDataPref
     {
-        private static readonly Service<DataService> DataService = new();
+        private static readonly Service<DataService> DataService = new Service<DataService>();
 
         private readonly string _name;
 
@@ -135,7 +135,7 @@ namespace SonatFramework.Scripts.Helper
 
     public class ListDataPref<T>
     {
-        private static readonly Service<DataService> DataService = new();
+        private static readonly Service<DataService> DataService = new Service<DataService>();
 
         private readonly string _name;
         private List<T> _current;
@@ -199,7 +199,7 @@ namespace SonatFramework.Scripts.Helper
 
     public class ClassDataPref<T> where T : class, new()
     {
-        private static readonly Service<DataService> DataService = new();
+        private static readonly Service<DataService> DataService = new Service<DataService>();
         private readonly string _name;
         private readonly T _default;
         private T _cache;

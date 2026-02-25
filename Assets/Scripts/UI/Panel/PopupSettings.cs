@@ -19,9 +19,9 @@ public class PopupSettings : Panel
     [SerializeField] private Button btnClose;
     [SerializeField] private Button btnRestart;
 
-    private readonly Service<AudioService> _audioService = new();
-    private readonly Service<VibrationService> _vibrationService = new();
-    private readonly Service<DataService> _dataService = new();
+    private readonly Service<AudioService> _audioService = new Service<AudioService>();
+    private readonly Service<VibrationService> _vibrationService = new Service<VibrationService>();
+    private readonly Service<DataService> _dataService = new Service<DataService>();
 
     private Toggle _toggleSound;
     private Toggle _toggleMusic;

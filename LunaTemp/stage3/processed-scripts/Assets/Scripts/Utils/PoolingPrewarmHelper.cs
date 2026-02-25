@@ -1,13 +1,13 @@
-using Cysharp.Threading.Tasks;
-using SonatFramework.Systems;
+﻿using SonatFramework.Systems;
 using SonatFramework.Systems.ObjectPooling;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 public static class PoolingPrewarmHelper
 {
-    private static readonly Service<PoolingServiceAsync> _pooling = new SonatFramework.Systems.Service<SonatFramework.Systems.ObjectPooling.PoolingServiceAsync>();
+    private static readonly Service<PoolingServiceAsync> _pooling = new Service<PoolingServiceAsync>();
 
-    public static async UniTask PrewarmAsync<T>(string assetKey, int count, UnityEngine.Transform tempParent = null)
+    public static async Task PrewarmAsync<T>(string assetKey, int count, UnityEngine.Transform tempParent = null)
         where T : IPoolingObject
     {
         if (count <= 0) return;
@@ -38,7 +38,7 @@ public static class PoolingPrewarmHelper
         UnityEngine.Debug.Log($"[PrewarmHelper] Prewarmed {prewarmed.Count} instances of '{assetKey}'");
     }
 
-    public static async UniTask PreloadOnlyAsync<T>(string assetKey) where T : IPoolingObject
+    public static async Task PreloadOnlyAsync<T>(string assetKey) where T : IPoolingObject
     {
         if (_pooling.Instance == null) return;
 

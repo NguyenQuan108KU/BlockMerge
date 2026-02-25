@@ -1,5 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
-using Sonat.Enums;
+﻿using Sonat.Enums;
+using System.Threading.Tasks;
 
 namespace Booster
 {
@@ -40,12 +40,12 @@ namespace Booster
         //    return _service.CanFreeze();
         //}
 
-        public async UniTask<bool> Execute()
+        public async Task<bool> Execute()
         {
             EnsureServiceInitialized();
 
             bool result = _service.ExecuteFreeze();
-            return await UniTask.FromResult(result);
+            return await Task.FromResult(result);
         }
 
         public void Cleanup()

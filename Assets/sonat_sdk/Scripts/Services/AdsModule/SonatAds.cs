@@ -37,11 +37,11 @@ namespace Sonat.AdsModule
         public List<SonatMediation> mediations;
         public SonatAdsConfig config;
         public static SonatAdsConfig Config => instance.config;
-        private Dictionary<AdPlacement, List<AdUnit>> adUnits = new();
+        private Dictionary<AdPlacement, List<AdUnit>> adUnits = new Dictionary<AdPlacement, List<AdUnit>>();
 
-        private readonly Dictionary<AdPlacement, float> lastTimeShowAds = new();
+        private readonly Dictionary<AdPlacement, float> lastTimeShowAds = new Dictionary<AdPlacement, float>();
 
-        public readonly Dictionary<AdPlacement, string> adShowPlacement = new();
+        public readonly Dictionary<AdPlacement, string> adShowPlacement = new Dictionary<AdPlacement, string>();
 
         private SonatAdsEvents adsEvents;
         private int mediationInited = 0;

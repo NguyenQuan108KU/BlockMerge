@@ -5,7 +5,7 @@ namespace Sonat.FirebaseModule.RemoteConfig
 {
     public class RemoteDataByLevel
     {
-        public Dictionary<int, object> data = new();
+        public Dictionary<int, object> data = new Dictionary<int, object>();
 
         public T GetValueByLevel<T>(int level, T defaultValue)
         {

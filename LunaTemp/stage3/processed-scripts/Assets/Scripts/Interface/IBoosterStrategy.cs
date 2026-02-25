@@ -1,5 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
-using Sonat.Enums;
+﻿using Sonat.Enums;
+using System.Threading.Tasks;
 
 namespace Booster
 {
@@ -8,7 +8,7 @@ namespace Booster
         GameResource BoosterType { get; }
         void Initialize(BoosterContext context);
         bool CanExecute();
-        UniTask<bool> Execute();
+        Task<bool> Execute();
         void Cleanup();
     }
 }

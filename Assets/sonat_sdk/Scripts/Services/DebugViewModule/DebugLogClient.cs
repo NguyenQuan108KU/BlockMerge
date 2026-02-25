@@ -22,7 +22,7 @@ namespace Sonat.DebugViewModule
         private bool connected = false;
         private bool disconnected;
         private bool lostFocus;
-        private List<EventLogData> logWaitQueue = new();
+        private List<EventLogData> logWaitQueue = new List<EventLogData>();
 
         // Start is called before the first frame update
         void Start()

@@ -8,7 +8,7 @@ namespace Sonat.AdsModule
     public class AdsConfig
     {
         public string appId;
-        public List<AdUnitId> adUnitIds = new();
+        public List<AdUnitId> adUnitIds = new List<AdUnitId>();
 
         public AdUnitId GetAdUnitId(AdType adType)
         {

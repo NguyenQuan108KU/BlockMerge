@@ -24,7 +24,7 @@ namespace SonatFramework.Scripts.Feature.ChestRewardProgress
 
         [Header("Block")] [SerializeField] private GameObject objBlock;
 
-        private readonly Service<ChestRewardService> chestRewardService = new();
+        private readonly Service<ChestRewardService> chestRewardService = new Service<ChestRewardService>();
         private ChestConfig chestClaimed;
         private ChestConfig chestConfig;
         private ChestRewardProgressData data;

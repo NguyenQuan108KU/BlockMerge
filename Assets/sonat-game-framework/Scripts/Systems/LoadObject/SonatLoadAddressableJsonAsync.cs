@@ -11,7 +11,7 @@ using UnityEngine.AddressableAssets;
     fileName = "Load Addressable Json Async")]
 public class SonatLoadAddressableJsonAsync : LoadObjectServiceAsync
 {
-    private readonly TimeoutController timeoutController = new();
+    private readonly TimeoutController timeoutController = new TimeoutController();
     [SerializeField] private float timeout = 3;
     [SerializeField] private LoadObjectServiceAsync fallback;
 

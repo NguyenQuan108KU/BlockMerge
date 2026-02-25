@@ -12,9 +12,9 @@ namespace SonatFramework.Systems.SettingsManagement
         [SerializeField] private Toggle soundToggle;
         [SerializeField] private Toggle vibrateToggle;
 
-        [SerializeField] private Service<AudioService> audioService = new SonatFramework.Systems.Service<SonatFramework.Systems.AudioManagement.AudioService>();
-        [SerializeField] private Service<VibrationService> vibrationService = new SonatFramework.Systems.Service<SonatFramework.Systems.SettingsManagement.Vibation.VibrationService>();
-        
+        [SerializeField] private Service<AudioService> audioService = new Service<AudioService>();
+        [SerializeField] private Service<VibrationService> vibrationService = new Service<VibrationService>();
+
 
         public void Start()
         {

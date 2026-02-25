@@ -21,13 +21,13 @@ namespace SonatFramework.Scripts.Feature.Lives
         public long timeRemainToRefill;
 
         [BoxGroup("SERVICES", true)] [Required] [SerializeField]
-        private Service<InventoryService> inventoryService = new SonatFramework.Systems.Service<SonatFramework.Systems.InventoryManagement.InventoryService>();
+        private Service<InventoryService> inventoryService = new Service<InventoryService>();
 
         [BoxGroup("SERVICES", true)] [Required] [SerializeField]
-        private Service<TimeService> timeService = new SonatFramework.Systems.Service<SonatFramework.Systems.TimeManagement.TimeService>();
+        private Service<TimeService> timeService = new Service<TimeService>();
 
         [BoxGroup("SERVICES", true)] [Required] [SerializeField]
-        private Service<DataService> dataService = new SonatFramework.Systems.Service<SonatFramework.Systems.GameDataManagement.DataService>();
+        private Service<DataService> dataService = new Service<DataService>();
 
         [BoxGroup("CONFIGS", true)] [Required] public LivesConfig config;
 

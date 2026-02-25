@@ -9,7 +9,7 @@ namespace SonatFramework.Systems.AudioManagement
     public class AudioGroup : ScriptableObject
     {
         public List<AudioConfig> audioConfigs;
-        [SerializeField] private Service<AudioService> audioService = new SonatFramework.Systems.Service<SonatFramework.Systems.AudioManagement.AudioService>();
+        [SerializeField] private Service<AudioService> audioService = new Service<AudioService>();
 
         public void PlayAudio(AudioId audioId, AudioTracks tracks = AudioTracks.Sound)
         {

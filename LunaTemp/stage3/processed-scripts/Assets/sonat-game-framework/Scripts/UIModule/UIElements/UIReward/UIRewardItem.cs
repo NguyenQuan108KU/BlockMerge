@@ -48,7 +48,7 @@ namespace SonatFramework.Scripts.UIModule.UIElements
 
         public virtual void CollectVisual(SonatCollectEffect collectEffect)
         {
-            EventBus<AddResourceVisualEvent>.Raise(new SonatFramework.Systems.EventBus.AddResourceVisualEvent()
+            EventBus<AddResourceVisualEvent>.Raise(new AddResourceVisualEvent()
             {
                 key = resourceData.Key,
                 position = transform.position,

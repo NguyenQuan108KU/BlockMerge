@@ -1,5 +1,4 @@
-using Base.Singleton;
-using Cysharp.Threading.Tasks;
+﻿using Base.Singleton;
 using DG.Tweening;
 using Difficulty;
 using Sonat.Enums;
@@ -11,6 +10,7 @@ using SonatFramework.Systems.GameDataManagement;
 using SonatFramework.Systems.LoadObject;
 using SonatFramework.Systems.SceneManagement;
 using SonatFramework.Systems.UserData;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
@@ -24,9 +24,9 @@ public class GameManager : Singleton<GameManager>
 
     #region Private Fields
 
-    private readonly Service<LoadObjectServiceAsync> _loadService = new SonatFramework.Systems.Service<SonatFramework.Systems.LoadObject.LoadObjectServiceAsync>();
-    private readonly Service<DataService> _dataService = new SonatFramework.Systems.Service<SonatFramework.Systems.GameDataManagement.DataService>();
-    private readonly Service<SceneService> _sceneService = new SonatFramework.Systems.Service<SonatFramework.Systems.SceneManagement.SceneService>();
+    private readonly Service<LoadObjectServiceAsync> _loadService = new Service<LoadObjectServiceAsync>();
+    private readonly Service<DataService> _dataService = new Service<DataService>();
+    private readonly Service<SceneService> _sceneService = new Service<SceneService>();
 
     private bool _isGameActive;
     private bool _continueUsed;
@@ -59,7 +59,7 @@ public class GameManager : Singleton<GameManager>
         _mainCamera = Camera.main;
 
         // Chờ 1 frame để SonatSystem init xong
-        await UniTask.Yield();
+        await Task.Yield();
 
         if (manualLevelData != null)
         {
@@ -126,7 +126,7 @@ public class GameManager : Singleton<GameManager>
 
     #region Level Loading
 
-    private async UniTaskVoid LoadAndStartGame(string levelKey)
+    private async Task LoadAndStartGame(string levelKey)
     {
         // Camera OFF ngay — màn hình đen tuyệt đối
         SetCameraEnabled(false);
@@ -155,7 +155,7 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    private async UniTask StartGame(LevelDataSO data)
+    private async Task StartGame(LevelDataSO data)
     {
         if (GridManager.Instance == null)
         {
@@ -176,7 +176,7 @@ public class GameManager : Singleton<GameManager>
         SetCameraEnabled(true);
 
         // Chờ 1 frame đảm bảo camera + overlay đã render
-        await UniTask.Yield(PlayerLoopTiming.Update);
+        await Task.Yield();
 
         _isGameActive = true;
         SetGameState(GameState.Playing);
@@ -207,7 +207,7 @@ public class GameManager : Singleton<GameManager>
         SetupEnvironment(data);
     }
 
-    private async UniTask SetupMap(LevelDataSO data)
+    private async Task SetupMap(LevelDataSO data)
     {
         if (data.mapData != null && data.mapData.Count > 0)
             await GridManager.Instance.SpawnLevelMap(data.mapData);
@@ -281,7 +281,7 @@ public class GameManager : Singleton<GameManager>
     public void HandleScoreReached()
     {
         if (CurrentState == GameState.Playing && _isGameActive)
-            HandleWin().Forget();
+            HandleWin();
     }
 
     public void HandleTimeUp()
@@ -304,7 +304,7 @@ public class GameManager : Singleton<GameManager>
             HandleLose(LoseReason.BlockOverflow);
     }
 
-    private async UniTaskVoid HandleWin()
+    private async Task HandleWin()
     {
         StopGameplay();
 
@@ -325,7 +325,7 @@ public class GameManager : Singleton<GameManager>
 
         SetGameState(GameState.LevelComplete);
 
-        await UniTask.Delay(System.TimeSpan.FromSeconds(1.0f), ignoreTimeScale: true);
+        //await Task.Delay(System.TimeSpan.FromSeconds(1.0f), ignoreTimeScale: true);
 
         var winData = new PopupWin.Data
         {

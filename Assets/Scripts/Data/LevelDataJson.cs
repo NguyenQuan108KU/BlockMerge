@@ -22,8 +22,8 @@ namespace TowerStack.LevelManagement
         public string difficultyConfigKey;
         public string shapePoolKey;
 
-        public List<BlockPlacement> mapData = new();
-        public List<string> fixedStartSequenceKeys = new();
+        public List<BlockPlacement> mapData = new List<BlockPlacement>();
+        public List<string> fixedStartSequenceKeys = new List<string>();
     }
 
     [Serializable]

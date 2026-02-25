@@ -14,12 +14,12 @@ namespace SonatFramework.Systems.InventoryManagement
     [CreateAssetMenu(fileName = "SonatInventoryService", menuName = "Sonat Services/Inventory Service")]
     public class SonatInventoryService : InventoryService, IServiceInitialize
     {
-        protected readonly Dictionary<GameResourceKey, ResourceData> resources = new();
+        protected readonly Dictionary<GameResourceKey, ResourceData> resources = new Dictionary<GameResourceKey, ResourceData>();
         protected Dictionary<string, Dictionary<GameResourceKey, ResourceData>> pendingResources;
 
         private const string GAME_RESOURCE_PREFIX_KEY = "Game_Resource";
         private const string PENDING_RESOURCE_KEY = "Pending_Resources";
-        [SerializeField] private Service<DataService> dataService = new();
+        [SerializeField] private Service<DataService> dataService = new Service<DataService>();
 
 
         public void Initialize()
@@ -40,7 +40,8 @@ namespace SonatFramework.Systems.InventoryManagement
                 dataService.Instance.DeleteKey(PENDING_RESOURCE_KEY);
             }
 
-            pendingResources = new(StringComparer.Ordinal);
+            pendingResources =
+    new Dictionary<string, Dictionary<GameResourceKey, ResourceData>>(StringComparer.Ordinal);
         }
 
         [NotNull]

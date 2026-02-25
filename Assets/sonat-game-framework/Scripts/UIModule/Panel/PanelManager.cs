@@ -21,8 +21,8 @@ namespace SonatFramework.Scripts.UIModule
     {
         //[SerializeField] private Service<LoadObjectService> loadObjectService;
         [SerializeField] private Service<LoadObjectServiceAsync> loadObjectServiceAsync;
-        private readonly Dictionary<string, View> _cache = new();
-        private readonly List<View> _stackPanels = new();
+        private readonly Dictionary<string, View> _cache = new Dictionary<string, View>();
+        private readonly List<View> _stackPanels = new List<View>();
         public Action OnPanelsUpdated;
 
         private GameState gameState;

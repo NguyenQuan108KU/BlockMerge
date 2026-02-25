@@ -12,7 +12,7 @@ public class UIResourceItem : MonoBehaviour
     [SerializeField] private FixedImageRatio icon;
     [SerializeField] private TMP_Text txtQuantity;
 
-    [SerializeField] private Service<SpriteAtlasService> spriteAtlasService = new SonatFramework.Systems.Service<SonatFramework.Scripts.UIModule.SpriteService.SpriteAtlasService>();
+    [SerializeField] private Service<SpriteAtlasService> spriteAtlasService = new Service<SpriteAtlasService>();
     private GameResourceKey resourceKey;
     public Transform Transform => transform;
 

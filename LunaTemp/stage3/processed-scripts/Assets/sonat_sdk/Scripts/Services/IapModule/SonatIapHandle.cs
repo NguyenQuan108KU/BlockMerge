@@ -1,1 +1,0 @@
-namespace Sonat.IapModule {}

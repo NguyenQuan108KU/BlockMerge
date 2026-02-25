@@ -24,7 +24,7 @@ namespace SonatFramework.Systems.BoosterManagement
         public GameObject priceObj;
         public TMP_Text txtPrice;
 
-        [SerializeField] protected readonly Service<BoosterService> boosterService = new SonatFramework.Systems.Service<SonatFramework.Systems.BoosterManagement.BoosterService>();
+        [SerializeField] protected readonly Service<BoosterService> boosterService = new Service<BoosterService>();
         protected BoosterData boosterData;
         protected BoosterConfig config;
 

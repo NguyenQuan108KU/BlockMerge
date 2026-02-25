@@ -54,9 +54,16 @@ public class UITabBase : MonoBehaviour
         
         // Fade in animation
         FadeIn();
-        EventBus<UpdateScreenEvent>.Raise(new (){screen = screenName});
-        EventBus<UpdatePlacementEvent>.Raise(new(){placement = placement});
-        
+        EventBus<UpdateScreenEvent>.Raise(new UpdateScreenEvent()
+        {
+            screen = screenName
+        });
+
+        EventBus<UpdatePlacementEvent>.Raise(new UpdatePlacementEvent()
+        {
+            placement = placement
+        });
+
         SonatSystem.GetService<TrackingService>().TrackingScreenView();
     }
     

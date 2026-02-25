@@ -13,7 +13,7 @@ namespace Sonat
         public int timeout = 10;
         
         public string iapKeyEnum = "ShopItemKey";
-        public List<SonatDebugType> logTypes = new() { SonatDebugType.All };
+        public List<SonatDebugType> logTypes = new List<SonatDebugType>() { SonatDebugType.All };
         public bool internetConnection = true;
     }
 }

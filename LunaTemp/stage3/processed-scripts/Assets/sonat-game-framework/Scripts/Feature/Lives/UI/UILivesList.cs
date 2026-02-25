@@ -12,9 +12,9 @@ namespace SonatFramework.Scripts.Feature.Lives.UI
     public class UILivesList : MonoBehaviour
     {
         public Transform liveContainer;
-        private readonly Service<InventoryService> inventoryService = new SonatFramework.Systems.Service<SonatFramework.Systems.InventoryManagement.InventoryService>();
-        private readonly Service<LivesService> livesService = new SonatFramework.Systems.Service<SonatFramework.Scripts.Feature.Lives.LivesService>();
-        private readonly Service<PoolingContainerService> poolingService = new SonatFramework.Systems.Service<SonatFramework.Systems.ObjectPooling.PoolingContainerService>();
+        private readonly Service<InventoryService> inventoryService = new Service<InventoryService>();
+        private readonly Service<LivesService> livesService = new Service<LivesService>();
+        private readonly Service<PoolingContainerService> poolingService = new Service<PoolingContainerService>();
         private readonly GameResource resource = GameResource.Live;
         private List<Transform> liveItems;
         private ResourceData livesResource;

@@ -27,7 +27,7 @@ namespace Sonat.IapModule
         public override SonatServiceType ServiceType => SonatServiceType.IapService;
         public override bool Ready { get; set; }
 
-        private readonly Dictionary<string, BuyIapContent> buyIapContents = new();
+        private readonly Dictionary<string, BuyIapContent> buyIapContents = new Dictionary<string, BuyIapContent>();
         public List<StoreProductDescriptor> StoreProductDescriptors = new List<StoreProductDescriptor>();
 
         public static event Action<float> OnLtvIapAdded;

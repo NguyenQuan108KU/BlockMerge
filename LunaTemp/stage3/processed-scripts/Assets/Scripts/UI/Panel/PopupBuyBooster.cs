@@ -1,5 +1,4 @@
-﻿using Cysharp.Threading.Tasks;
-using Sonat.Enums;
+﻿using Sonat.Enums;
 using SonatFramework.Scripts.Feature.Shop.UI;
 using SonatFramework.Scripts.UIModule;
 using SonatFramework.Systems;
@@ -22,7 +21,7 @@ public class PopupBuyBooster : PopupBuyBoosterBase
         }
         else
         {
-            PanelManager.Instance.OpenPanelByNameAsync<ShopPanelBase>("ShopPanel").Forget();
+            PanelManager.Instance.OpenPanelByNameAsync<ShopPanelBase>("ShopPanel");
         }
     }
 }

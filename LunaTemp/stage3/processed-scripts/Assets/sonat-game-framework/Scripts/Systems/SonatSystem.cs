@@ -13,7 +13,7 @@ namespace SonatFramework.Systems
     public class SonatSystem : SingletonSimple<SonatSystem>
     {
         [SerializeField] protected SonatServicesManager serviceManager;
-        [SerializeField] protected Service<ConfigService> configService = new SonatFramework.Systems.Service<SonatFramework.Systems.ConfigManagement.ConfigService>();
+        [SerializeField] protected Service<ConfigService> configService = new Service<ConfigService>();
         [SerializeField] protected bool autoInit = true;
         [SerializeField] [ShowIf("@autoInit")] protected float delayToInit = 0.5f;
 

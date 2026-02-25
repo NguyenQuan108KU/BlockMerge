@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Cysharp.Threading.Tasks;
@@ -16,12 +16,17 @@ namespace SonatFramework.Systems.LevelManagement
     [CreateAssetMenu(fileName = "SonatLevelServiceAsync", menuName = "Sonat Services/Level Service/Sonat Level Service Async")]
     public class SonatLevelServiceAsync : LevelServiceAsync, IServiceInitialize, IServiceWaitingRemoteConfig
     {
-        [BoxGroup("SERVICES")] [Required] [SerializeField]
-        protected Service<LoadObjectServiceAsync> loadObjectServiceAsync = new SonatFramework.Systems.Service<SonatFramework.Systems.LoadObject.LoadObjectServiceAsync>();
+        [BoxGroup("SERVICES")]
+        [Required]
+        [SerializeField]
+        protected Service<LoadObjectServiceAsync> loadObjectServiceAsync = new Service<LoadObjectServiceAsync>();
 
         protected LevelData levelCache;
-        [SerializeField] private List<GameModeLevel> gameModeLevels = new System.Collections.Generic.List<SonatFramework.Systems.LevelManagement.GameModeLevel>();
-        protected Dictionary<GameMode, int> levelsByGameMode = new System.Collections.Generic.Dictionary<Sonat.Enums.GameMode, int>();
+
+        [SerializeField]
+        private List<GameModeLevel> gameModeLevels = new List<GameModeLevel>();
+
+        protected Dictionary<GameMode, int> levelsByGameMode = new Dictionary<GameMode, int>();
 
         public void Initialize()
         {

@@ -8,9 +8,9 @@ namespace SonatFramework.Systems.ConfigManagement
     [CreateAssetMenu(fileName = "SonatConfigService", menuName = "Sonat Services/Config Service")]
     public class SonatConfigService : ConfigService, IServiceInitialize
     {
-        [SerializeField] Service<LoadObjectService> loadObjectService = new();
+        [SerializeField] Service<LoadObjectService> loadObjectService = new Service<LoadObjectService>();
         [SerializeField] private List<ConfigSo> configsSo;
-        private readonly Dictionary<Type, object> configs = new();
+        private readonly Dictionary<Type, object> configs = new Dictionary<Type, object>();
 
 
         public void Initialize()

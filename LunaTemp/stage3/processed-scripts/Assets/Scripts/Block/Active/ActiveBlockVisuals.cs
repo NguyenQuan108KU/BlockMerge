@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using DG.Tweening;
-using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 
 /// <summary>
 /// Xử lý visual và animation của Active Block
@@ -72,7 +72,7 @@ public class ActiveBlockVisuals
     /// <summary>
     /// Animation drop xuống vị trí landing
     /// </summary>
-    public async UniTask AnimateDrop(float landingY)
+    public async Task AnimateDrop(float landingY)
     {
         float duration = grid?.config?.dropDuration ?? DropDuration;
 

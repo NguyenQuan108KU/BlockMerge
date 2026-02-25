@@ -29,8 +29,8 @@ namespace SonatFramework.Systems.LevelManagement
 
         public void Initialize()
         {
-            lastId = new("LAST_REMOTE_LEVEL_DATA_ID", "");
-            cachedRemoteValue = new("CACHED_REMOTE_VALUE", "");
+            lastId = new StringDataPref("LAST_REMOTE_LEVEL_DATA_ID", "");
+            cachedRemoteValue = new StringDataPref("CACHED_REMOTE_VALUE", "");
             levelServiceFallback = Instantiate(levelServiceFallback);
         }
 

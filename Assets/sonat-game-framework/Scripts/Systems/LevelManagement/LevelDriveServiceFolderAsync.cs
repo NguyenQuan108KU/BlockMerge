@@ -13,7 +13,10 @@ namespace SonatFramework.Systems.LevelManagement
     [CreateAssetMenu(fileName = "LevelDriveServiceFolderAsync", menuName = "Sonat Services/Level Service/Level Drive Service Folder Async")]
     public class LevelDriveServiceFolderAsync : LevelServiceAsync
     {
-        protected static readonly JsonSerializerSettings Settings = new() { TypeNameHandling = TypeNameHandling.Auto };
+        protected static readonly JsonSerializerSettings Settings = new JsonSerializerSettings()
+        {
+            TypeNameHandling = TypeNameHandling.Auto
+        };
 
         [BoxGroup("DRIVE CONFIG")] [SerializeField]
         private LevelServiceAsync levelServiceFallback;

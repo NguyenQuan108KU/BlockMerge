@@ -1,5 +1,4 @@
 using System;
-using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Sonat.Enums;
 using SonatFramework.Scripts.UIModule;
@@ -22,7 +21,7 @@ namespace SonatFramework.Scripts.Feature.Lives.UI
         [SerializeField] private TMP_Text txtFullLives;
         [SerializeField] private GameObject normalLives, unlimitedLives;
 
-        private readonly Service<LivesService> liveService = new SonatFramework.Systems.Service<SonatFramework.Scripts.Feature.Lives.LivesService>();
+        private readonly Service<LivesService> liveService = new Service<LivesService>();
         private bool orgBlockClick;
         private ResourceData liveData;
         private ResourceData unlimitedLiveData;

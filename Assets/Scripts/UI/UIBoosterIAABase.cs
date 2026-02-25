@@ -1,7 +1,7 @@
-﻿using Cysharp.Threading.Tasks;
-using Sonat.Enums;
+﻿using Sonat.Enums;
 using SonatFramework.Scripts.SonatSDKAdapterModule;
 using SonatFramework.Systems.EventBus;
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -104,12 +104,12 @@ public abstract class UIBoosterIAABase : MonoBehaviour
         }
 
         if (remainingCount > 0)
-            DoExecute().Forget();
+            DoExecute();
         else
             RequestAd();
     }
 
-    private async UniTaskVoid DoExecute()
+    private async Task DoExecute()
     {
         isExecuting = true;
 
@@ -143,7 +143,7 @@ public abstract class UIBoosterIAABase : MonoBehaviour
 
     #region Abstract / Virtual
 
-    protected abstract UniTask<bool> ExecuteBooster();
+    protected abstract Task<bool> ExecuteBooster();
 
     protected virtual bool CanExecute() => true;
 

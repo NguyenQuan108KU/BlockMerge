@@ -16,7 +16,7 @@ namespace SonatFramework.Systems.TrackingModule
     [CreateAssetMenu(fileName = "SonatTrackingService", menuName = "Sonat Services/Tracking Service")]
     public class SonatTrackingService : TrackingService, IServiceInitialize
     {
-        [SerializeField] protected Service<GameplayAnalyticsService> gameplayAnalytics = new SonatFramework.Systems.Service<SonatFramework.Systems.TrackingModule.GameplayAnalyticsService>();
+        [SerializeField] protected Service<GameplayAnalyticsService> gameplayAnalytics = new Service<GameplayAnalyticsService>();
 
         public virtual void Initialize()
         {

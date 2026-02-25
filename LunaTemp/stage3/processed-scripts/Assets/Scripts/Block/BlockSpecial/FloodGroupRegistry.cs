@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 public class FloodGroupRegistry
 {
@@ -11,7 +11,7 @@ public class FloodGroupRegistry
         public GroupState State;
     }
 
-    private readonly Dictionary<int, GroupData> _blockToGroup = new System.Collections.Generic.Dictionary<int, FloodGroupRegistry.GroupData>();
+    private readonly Dictionary<int, GroupData> _blockToGroup = new Dictionary<int, GroupData>();
 
     #region Registration
 

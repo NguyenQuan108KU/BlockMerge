@@ -10,7 +10,10 @@ namespace SonatFramework.Systems.LoadObject
         menuName = "Sonat Services/Save Service/Sonat Save Folder Async")]
     public class SonatSaveObjectServiceAsync : SaveObjectServiceAsync
     {
-        private readonly JsonSerializerSettings settings = new() { TypeNameHandling = TypeNameHandling.Auto };
+        private readonly JsonSerializerSettings settings = new JsonSerializerSettings()
+        {
+            TypeNameHandling = TypeNameHandling.Auto
+        };
         [SerializeField] protected string extension = ".json";
 
         public override async UniTask<T> SaveObject<T>(T data, string fileName)

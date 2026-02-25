@@ -3,9 +3,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using Base.Singleton;
-using Cysharp.Threading.Tasks;
 using Sonat.Enums;
 using SonatFramework.Systems.EventBus;
+using System.Threading.Tasks;
 
 public class InputManager : SingletonSimple<InputManager>
 {
@@ -293,10 +293,10 @@ public class InputManager : SingletonSimple<InputManager>
         if (!_tower.activeBlock.IsReady || _tower.activeBlock.IsDropping) return;
         if (IsBoosterBlocking()) return;
 
-        HandleDropSequence().Forget();
+        HandleDropSequence();
     }
 
-    private async UniTaskVoid HandleDropSequence()
+    private async Task HandleDropSequence()
     {
         if (_isProcessingDrop) return;
         if (_tower == null || _tower.activeBlock == null) return;
@@ -314,7 +314,7 @@ public class InputManager : SingletonSimple<InputManager>
             float waitTime = 0f;
             while (_spawner.IsSpawning && waitTime < 0.5f)
             {
-                await UniTask.Yield();
+                await Task.Yield();
                 waitTime += Time.deltaTime;
             }
         }

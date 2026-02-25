@@ -18,7 +18,7 @@ namespace SonatFramework.Scripts.UIModule.CollectEffect
         [SerializeField] private float duration;
         [SerializeField] private float timeGap = 0.15f;
         [SerializeField] private AnimationCurve xCurve, yCurve;
-        [SerializeField] private Service<PoolingServiceAsync> poolingService = new();
+        [SerializeField] private Service<PoolingServiceAsync> poolingService = new Service<PoolingServiceAsync>();
         [SerializeField] private string collectItemName = "UICollectCurveStreamItem";
 
         public async UniTaskVoid CreateEffect(GameResourceKey resourceKey, Vector3 startPos, Vector3 endPos, int number, Action onFinishStep = null,

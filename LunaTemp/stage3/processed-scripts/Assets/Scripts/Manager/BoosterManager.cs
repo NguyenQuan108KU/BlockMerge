@@ -1,10 +1,10 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Base.Singleton;
-using Cysharp.Threading.Tasks;
 using Sonat.Enums;
 using SonatFramework.Systems;
 using SonatFramework.Systems.BoosterManagement;
+using System.Threading.Tasks;
 
 namespace Booster
 {
@@ -14,20 +14,20 @@ namespace Booster
         private const float CLOCK_DURATION = 20f;
 
         private BoosterContext _context;
-        private Dictionary<GameResource, IBoosterStrategy> _strategies = new System.Collections.Generic.Dictionary<Sonat.Enums.GameResource, Booster.IBoosterStrategy>();
+        private Dictionary<GameResource, IBoosterStrategy> _strategies = new Dictionary<GameResource, IBoosterStrategy>();
         private bool _isInitialized;
 
         public bool IsBoosterActive { get; private set; }
 
         protected override void OnAwake() { }
 
-        private void Start() => InitializeWithDelay().Forget();
+        private void Start() => InitializeWithDelay();
 
-        private async UniTaskVoid InitializeWithDelay()
+        private async Task InitializeWithDelay()
         {
-            await UniTask.Yield();
-            await UniTask.WaitUntil(() => SonatSystem.Instance != null);
-            await UniTask.WaitUntil(() => FindFirstObjectByType<BlockSpawner>() != null);
+            await Task.Yield();
+            //await Task.WaitUntil(() => SonatSystem.Instance != null);
+            //await Task.WaitUntil(() => FindFirstObjectByType<BlockSpawner>() != null);
             InitializeSystem();
         }
 
@@ -50,7 +50,7 @@ namespace Booster
                 s.Initialize(_context);
         }
 
-        public async UniTask<bool> ExecuteBoosterLogic(GameResource type)
+        public async Task<bool> ExecuteBoosterLogic(GameResource type)
         {
             if (!_isInitialized || IsBoosterActive) return false;
             if (!_strategies.TryGetValue(type, out var strategy)) return false;

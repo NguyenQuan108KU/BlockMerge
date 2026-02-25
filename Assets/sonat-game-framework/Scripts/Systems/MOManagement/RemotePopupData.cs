@@ -7,7 +7,7 @@ namespace SonatFramework.Systems.MOManagement
 {
     public class RemotePopupData
     {
-        private readonly Service<TimeService> timeService = new();
+        private readonly Service<TimeService> timeService = new Service<TimeService>();
         public bool appOpen;
         public int daily = -1;
         public ShopItemKey iapKey;

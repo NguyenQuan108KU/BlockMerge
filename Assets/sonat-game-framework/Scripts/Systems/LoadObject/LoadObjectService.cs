@@ -8,7 +8,10 @@ namespace SonatFramework.Systems.LoadObject
 {
     public abstract class LoadObjectService : SonatServiceSo
     {
-        protected static readonly JsonSerializerSettings Settings = new() { TypeNameHandling = TypeNameHandling.Auto };
+        protected static readonly JsonSerializerSettings Settings = new JsonSerializerSettings()
+        {
+            TypeNameHandling = TypeNameHandling.Auto
+        };
 #if UNITY_EDITOR
         [OnValueChanged(nameof(OnPathChanged))]
 #endif

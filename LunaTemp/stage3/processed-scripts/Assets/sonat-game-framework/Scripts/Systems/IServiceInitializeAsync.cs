@@ -1,9 +1,10 @@
-﻿using Cysharp.Threading.Tasks;
+﻿
+using System.Threading.Tasks;
 
 namespace SonatFramework.Systems
 {
     public interface IServiceInitializeAsync
     {
-        public UniTaskVoid InitializeAsync();
+        public Task InitializeAsync();
     }
 }

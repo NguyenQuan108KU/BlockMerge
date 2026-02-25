@@ -26,8 +26,8 @@ namespace Sonat.FirebaseModule
         protected static FirebaseRemoteConfig firebaseRemote => FirebaseRemoteConfig.DefaultInstance;
 #endif
 
-        private Dictionary<string, RemoteDataByLevel> remoteDataByLevels = new();
-        private Dictionary<string, Dictionary<string, RemoteDataByLevel>> remoteDataByLevelsSegment = new();
+        private Dictionary<string, RemoteDataByLevel> remoteDataByLevels = new Dictionary<string, RemoteDataByLevel>();
+        private Dictionary<string, Dictionary<string, RemoteDataByLevel>> remoteDataByLevelsSegment = new Dictionary<string, Dictionary<string, RemoteDataByLevel>>();
 
         //[SerializeField] private DefaultRemoteDatabase defaultRemoteDatabase;
 
@@ -35,7 +35,7 @@ namespace Sonat.FirebaseModule
         //public List<RemoteConfigDefaultByKey> defaultConfigs = new List<RemoteConfigDefaultByKey>();
 
         //[ArrayElementTitleSonatSdk(nameof(RemoteConfigDefaultByKey.key))] [SerializeField]
-        public List<RemoteConfigDefaultByString> defaultConfigs = new();
+        public List<RemoteConfigDefaultByString> defaultConfigs = new List<RemoteConfigDefaultByString> ();
 
         private List<BaseRemoteConfigDefault> _allDefaultConfigs;
         private SonatFirebase sonatFirebase;

@@ -13,12 +13,12 @@ namespace SonatFramework.Systems.ObjectPooling
     [CreateAssetMenu(fileName = "SonatPoolingServiceAsync", menuName = "Sonat Services/Pooling/Pooling Service Async")]
     public class SonatPoolingServiceAsync : PoolingServiceAsync
     {
-        [SerializeField] private Service<LoadObjectServiceAsync> loadObjectService = new SonatFramework.Systems.Service<SonatFramework.Systems.LoadObject.LoadObjectServiceAsync>();
+        [SerializeField] private Service<LoadObjectServiceAsync> loadObjectService = new Service<LoadObjectServiceAsync>();
         [SerializeField] private PreloadPoolingObjects preloadPoolingObjects;
 
         // THAY ĐỔI QUAN TRỌNG: Dùng AsyncLazy thay vì UniTask
         // AsyncLazy đảm bảo task chỉ chạy 1 lần và an toàn khi nhiều nơi cùng await
-        private readonly Dictionary<string, AsyncLazy<GameObject>> _loadingSharedTasks = new System.Collections.Generic.Dictionary<string, AsyncLazy<UnityEngine.GameObject>>();
+        private readonly Dictionary<string, AsyncLazy<GameObject>> _loadingSharedTasks = new Dictionary<string, AsyncLazy<GameObject>>();
 
         public override void Initialize()
         {

@@ -39,13 +39,16 @@ SpriteAtlas:
     isAtlasV2: 0
     cachedData: {fileID: 0}
     packedSpriteRenderDataKeys:
+    - a2111011feb9ee44188234a5f38080e9: 21300000
     - 16584a0cb9e311045b4d317a523969d3: 21300000
     - aa1a336e326fdc74982b7634f9ca4e17: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: a2111011feb9ee44188234a5f38080e9, type: 2}
   - {fileID: 21300000, guid: 16584a0cb9e311045b4d317a523969d3, type: 3}
   - {fileID: 21300000, guid: aa1a336e326fdc74982b7634f9ca4e17, type: 3}
   m_PackedSpriteNamesToIndex:
+  - ico_Clock
   - ico_Undo
   - ico_Hammer
   m_RenderDataMap: {}

@@ -25,8 +25,8 @@ namespace SonatFramework.Templates.UI.ScriptBase
         [SerializeField] protected string iconNamePattern = "ico_{0}";
         protected UIBoosterBase uIBooster;
         protected BoosterConfig boosterConfig;
-        protected readonly Service<BoosterService> boosterService = new SonatFramework.Systems.Service<SonatFramework.Systems.BoosterManagement.BoosterService>();
-        protected readonly Service<SpriteAtlasService> spriteService = new SonatFramework.Systems.Service<SonatFramework.Scripts.UIModule.SpriteService.SpriteAtlasService>();
+        protected readonly Service<BoosterService> boosterService = new Service<BoosterService>();
+        protected readonly Service<SpriteAtlasService> spriteService = new Service<SpriteAtlasService>();
         [SerializeField] protected GameObject buyWithRwdButton;
 
         public override void Open(UIData uiData)

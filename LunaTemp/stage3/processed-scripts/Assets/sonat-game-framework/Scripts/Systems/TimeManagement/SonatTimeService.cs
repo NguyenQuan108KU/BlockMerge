@@ -12,7 +12,7 @@ namespace SonatFramework.Systems.TimeManagement
     [CreateAssetMenu(fileName = "SonatTimeService", menuName = "Sonat Services/Time Service")]
     public class SonatTimeService : TimeService, IServiceInitialize
     {
-        [SerializeField] private Service<DataService> dataService = new SonatFramework.Systems.Service<SonatFramework.Systems.GameDataManagement.DataService>();
+        [SerializeField] private Service<DataService> dataService = new Service<DataService>();
 
         //private static bool usingLocalTime = true;
         private bool getNetTimeSuccess;

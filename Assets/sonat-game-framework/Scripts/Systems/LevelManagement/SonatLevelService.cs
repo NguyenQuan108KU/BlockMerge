@@ -15,18 +15,27 @@ namespace SonatFramework.Systems.LevelManagement
     {
         [SerializeField] private string path = "Level";
 
-        [BoxGroup("SERVICES")] [Required] [SerializeField]
-        private Service<LoadObjectService> loadObjectService = new();
+        [BoxGroup("SERVICES")]
+        [Required]
+        [SerializeField]
+        private Service<LoadObjectService> loadObjectService = new Service<LoadObjectService>();
 
-        [BoxGroup("SERVICES")] [Required] [SerializeField]
-        private Service<SaveObjectService> saveObjectService = new();
+        [BoxGroup("SERVICES")]
+        [Required]
+        [SerializeField]
+        private Service<SaveObjectService> saveObjectService = new Service<SaveObjectService>();
 
 
-        [BoxGroup("CONFIGS")] [SerializeField] protected LevelConfig config;
+        [BoxGroup("CONFIGS")]
+        [SerializeField]
+        protected LevelConfig config;
 
         protected LevelData levelCache;
-        [SerializeField] private List<GameModeLevel> gameModeLevels = new();
-        private Dictionary<GameMode, int> levelsByGameMode = new();
+
+        [SerializeField]
+        private List<GameModeLevel> gameModeLevels = new List<GameModeLevel>();
+
+        private Dictionary<GameMode, int> levelsByGameMode = new Dictionary<GameMode, int>();
 
         public void Initialize()
         {

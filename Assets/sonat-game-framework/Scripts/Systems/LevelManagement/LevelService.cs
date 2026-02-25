@@ -5,7 +5,10 @@ namespace SonatFramework.Systems.LevelManagement
 {
     public abstract class LevelService : SonatServiceSo
     {
-        public static readonly JsonSerializerSettings Settings = new() { TypeNameHandling = TypeNameHandling.Auto };
+        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings()
+        {
+            TypeNameHandling = TypeNameHandling.Auto
+        };
         public abstract T GetLevelData<T>(int level, GameMode gameMode, bool force = false,
             bool loop = true, int category = 0) where T : LevelData;
 

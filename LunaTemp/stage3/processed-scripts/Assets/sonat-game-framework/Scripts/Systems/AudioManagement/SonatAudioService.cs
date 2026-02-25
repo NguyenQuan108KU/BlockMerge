@@ -15,16 +15,16 @@ namespace SonatFramework.Systems.AudioManagement
     public class SonatAudioService : AudioService, IServiceInitialize
     {
         [BoxGroup("SERVICES", true)] [SerializeField]
-        protected Service<DataService> dataService = new SonatFramework.Systems.Service<SonatFramework.Systems.GameDataManagement.DataService>();
+        protected Service<DataService> dataService = new Service<DataService>();
 
         [BoxGroup("SERVICES", true)] [SerializeField]
-        protected Service<LoadObjectServiceAsync> loadServiceAsync = new SonatFramework.Systems.Service<SonatFramework.Systems.LoadObject.LoadObjectServiceAsync>();
+        protected Service<LoadObjectServiceAsync> loadServiceAsync = new Service<LoadObjectServiceAsync>();
 
         [BoxGroup("CONFIGS", true)] [Range(0, 1)] [SerializeField]
         private float volumeDefault = 1;
 
-        protected readonly Dictionary<string, AudioClip> audioClips = new System.Collections.Generic.Dictionary<string, UnityEngine.AudioClip>(StringComparer.Ordinal);
-        protected readonly Dictionary<AudioTracks, float> audioStates = new System.Collections.Generic.Dictionary<SonatFramework.Systems.AudioManagement.AudioTracks, float>();
+        protected readonly Dictionary<string, AudioClip> audioClips = new Dictionary<string, AudioClip>(StringComparer.Ordinal);
+        protected readonly Dictionary<AudioTracks, float> audioStates = new Dictionary<AudioTracks, float>();
         protected string currentMusic;
         protected AudioSource musicAudioSource;
         protected AudioSource soundAudioSource;
@@ -73,7 +73,7 @@ namespace SonatFramework.Systems.AudioManagement
             }
         }
 
-        private readonly HashSet<string> _currentLoadSound = new System.Collections.Generic.HashSet<string>();
+        private readonly HashSet<string> _currentLoadSound = new HashSet<string>(); 
 
         public override async UniTask<AudioClip> LoadAudioAsync(string soundName)
         {

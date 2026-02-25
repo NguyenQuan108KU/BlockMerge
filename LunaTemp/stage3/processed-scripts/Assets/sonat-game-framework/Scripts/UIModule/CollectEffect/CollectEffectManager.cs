@@ -7,7 +7,7 @@ namespace SonatFramework.Scripts.UIModule.CollectEffect
     public class CollectEffectManager : SingletonSimple<CollectEffectManager>
     {
         [SerializeField] private List<CollectEffectControllerBase> collectEffects;
-        private readonly Dictionary<Type, CollectEffectControllerBase> collectEffectsDictionary = new System.Collections.Generic.Dictionary<System.Type, SonatFramework.Scripts.UIModule.CollectEffect.CollectEffectControllerBase>();
+        private readonly Dictionary<Type, CollectEffectControllerBase> collectEffectsDictionary = new Dictionary<Type, CollectEffectControllerBase>();
 
         public T GetICollectEffectType<T>() where T : CollectEffectControllerBase
         {

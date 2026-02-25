@@ -25,11 +25,11 @@ namespace SonatFramework.Scripts.SonatSDKAdapterModule
 {
     public static class SonatSDKAdapter
     {
-        private static readonly Service<TrackingService> trackingService = new SonatFramework.Systems.Service<SonatFramework.Systems.TrackingModule.TrackingService>();
-        private static readonly Service<GameplayAnalyticsService> gameplayAnalytics = new SonatFramework.Systems.Service<SonatFramework.Systems.TrackingModule.GameplayAnalyticsService>();
-        private static readonly Service<UserDataService> userDataService = new SonatFramework.Systems.Service<SonatFramework.Systems.UserData.UserDataService>();
-        private static readonly Service<DataService> dataService = new SonatFramework.Systems.Service<SonatFramework.Systems.GameDataManagement.DataService>();
-        private static LevelShowInterDaily levelShowInterDaily = new SonatFramework.Scripts.SonatSDKAdapterModule.LevelShowInterDaily();
+        private static readonly Service<TrackingService> trackingService = new Service<TrackingService>();
+        private static readonly Service<GameplayAnalyticsService> gameplayAnalytics = new Service<GameplayAnalyticsService>();
+        private static readonly Service<UserDataService> userDataService = new Service<UserDataService>();
+        private static readonly Service<DataService> dataService = new Service<DataService>();
+        private static LevelShowInterDaily levelShowInterDaily = new LevelShowInterDaily();
 
         public static bool IsInternetConnection()
         {

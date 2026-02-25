@@ -9,9 +9,9 @@ namespace SonatFramework.Systems.MOManagement
 {
     public class PopupMoService
     {
-        private readonly Dictionary<string, RemotePopupData> remotePopupDatas = new System.Collections.Generic.Dictionary<string, SonatFramework.Systems.MOManagement.RemotePopupData>();
-        private readonly Service<ShopService> shopService = new SonatFramework.Systems.Service<SonatFramework.Scripts.Feature.Shop.ShopService>();
-        private readonly Service<TimeService> timeService = new SonatFramework.Systems.Service<SonatFramework.Systems.TimeManagement.TimeService>();
+        private readonly Dictionary<string, RemotePopupData> remotePopupDatas = new Dictionary<string, RemotePopupData>();
+        private readonly Service<ShopService> shopService = new Service<ShopService>();
+        private readonly Service<TimeService> timeService = new Service<TimeService>();
 
         public RemotePopupData GetData(string popupName, ShopItemKey iapKey = ShopItemKey.None,
             int dfLevelStart = 999999, int dfOrder = 0, bool dfAppOpen = true, int intervalDf = 0)

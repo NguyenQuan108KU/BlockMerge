@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class BtnNoAds : MonoBehaviour
 {
-    private readonly Service<ShopService> shopService = new();
+    private readonly Service<ShopService> shopService = new Service<ShopService>();
     private Button button;
 
     private void Awake()

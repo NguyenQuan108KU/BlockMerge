@@ -1,5 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
-using Sonat.Enums;
+﻿using Sonat.Enums;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace Booster
@@ -27,7 +27,7 @@ namespace Booster
             return grid.gridData.GetMaxHeight() > 0;
         }
 
-        public async UniTask<bool> Execute()
+        public async Task<bool> Execute()
         {
             // Ensure service initialized
             EnsureServiceInitialized();
