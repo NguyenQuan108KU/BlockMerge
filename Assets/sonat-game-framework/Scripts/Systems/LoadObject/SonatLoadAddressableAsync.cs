@@ -4,6 +4,8 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Serialization;
+using System.Threading.Tasks;
+
 #if using_addressable
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -22,7 +24,7 @@ namespace SonatFramework.Systems.LoadObject
         private readonly Dictionary<string, AsyncLazy<object>> _loadingTasks = new(StringComparer.Ordinal);
 #endif
 
-        public override async UniTask<T> LoadAsync<T>(string assetName) where T : class
+        public override async Task<T> LoadAsync<T>(string assetName) where T : class
         {
 #if using_addressable
             string key = GetFormatKey(assetName);

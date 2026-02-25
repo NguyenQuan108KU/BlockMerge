@@ -1,12 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Sirenix.OdinInspector;
 using Sonat.Enums;
 using SonatFramework.Systems.GameDataManagement;
 using SonatFramework.Systems.LoadObject;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace SonatFramework.Systems.AudioManagement
@@ -75,12 +75,12 @@ namespace SonatFramework.Systems.AudioManagement
 
         private readonly HashSet<string> _currentLoadSound = new HashSet<string>(); 
 
-        public override async UniTask<AudioClip> LoadAudioAsync(string soundName)
+        public override async Task<AudioClip> LoadAudioAsync(string soundName)
         {
             if (audioClips.TryGetValue(soundName, out var audio)) return audio;
             if (_currentLoadSound.Contains(soundName))
             {
-                await UniTask.WaitWhile(() => _currentLoadSound.Contains(soundName));
+                //await Task.WaitWhile(() => _currentLoadSound.Contains(soundName));
                 if (audioClips.TryGetValue(soundName, out var newAudioCache)) return newAudioCache;
             }
 
@@ -98,12 +98,12 @@ namespace SonatFramework.Systems.AudioManagement
 
         public override void PlayMusic(AudioId music, bool loop = true, float volume = 1)
         {
-            PlayMusic(music.ToString(), loop, volume).Forget();
+            PlayMusic(music.ToString(), loop, volume);
         }
 
         public override void PlaySound(AudioId soundName, float volume = 1)
         {
-            PlaySound(soundName.ToString(), volume).Forget();
+            PlaySound(soundName.ToString(), volume);
         }
 
         public override void PlayAudio(AudioId audioId, AudioClip audioClip, float volume = 1,
@@ -112,7 +112,7 @@ namespace SonatFramework.Systems.AudioManagement
             PlayAudio(audioId.ToString(), audioClip, volume, audioTrack);
         }
 
-        public override async UniTaskVoid PlayMusic(string music, bool loop = true, float volume = 1)
+        public override async Task PlayMusic(string music, bool loop = true, float volume = 1)
         {
             float fadeDuration = 0;
             if (musicAudioSource.clip != null && musicAudioSource.isPlaying) fadeDuration = 0.5f;
@@ -131,7 +131,7 @@ namespace SonatFramework.Systems.AudioManagement
             };
         }
 
-        public override async UniTaskVoid PlaySound(string soundName, float volume = 1)
+        public override async Task PlaySound(string soundName, float volume = 1)
         {
             if (IsMuted(AudioTracks.Sound)) return;
             var audio = await LoadAudioAsync(soundName);
@@ -194,7 +194,7 @@ namespace SonatFramework.Systems.AudioManagement
         public override void ResumeMusic()
         {
             if (string.IsNullOrEmpty(currentMusic)) return;
-            PlayMusic(currentMusic).Forget();
+            PlayMusic(currentMusic);
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using System.IO;
-using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 using Sirenix.OdinInspector;
 using Sonat.Enums;
 using SonatFramework.Systems.LoadObject;
@@ -20,13 +20,13 @@ namespace SonatFramework.Systems.LevelManagement
             path = folder;
         }
 
-        public override async UniTask<T> GetLevelData<T>(int level, GameMode gameMode, bool force = false,
+        public override async Task<T> GetLevelData<T>(int level, GameMode gameMode, bool force = false,
             bool loop = false, int category = 0)
         {
             return await GetLevel<T>(level, gameMode, category);
         }
 
-        protected override async UniTask<T> GetLevel<T>(int level, GameMode gameMode, int category = 0)
+        protected override async Task<T> GetLevel<T>(int level, GameMode gameMode, int category = 0)
         {
             string mergePath = category == 0 ? $"{path}{level}" : $"{path}{level}.{category}";
             var levelData = await loadObjectServiceAsync.Instance.LoadAsync<T>(mergePath);

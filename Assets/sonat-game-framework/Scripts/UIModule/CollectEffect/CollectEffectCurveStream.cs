@@ -1,5 +1,5 @@
 using System;
-using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 using DG.Tweening;
 using Sonat.Enums;
 using SonatFramework.Scripts.Helper;
@@ -21,7 +21,7 @@ namespace SonatFramework.Scripts.UIModule.CollectEffect
         [SerializeField] private Service<PoolingServiceAsync> poolingService = new Service<PoolingServiceAsync>();
         [SerializeField] private string collectItemName = "UICollectCurveStreamItem";
 
-        public async UniTaskVoid CreateEffect(GameResourceKey resourceKey, Vector3 startPos, Vector3 endPos, int number, Action onFinishStep = null,
+        public async Task CreateEffect(GameResourceKey resourceKey, Vector3 startPos, Vector3 endPos, int number, Action onFinishStep = null,
             Action callback = null)
         {
             for (var i = 0; i < number; i++)
@@ -38,10 +38,10 @@ namespace SonatFramework.Scripts.UIModule.CollectEffect
                         onFinishStep?.Invoke();
                         poolingService.Instance.ReturnObj(effectItem);
                     };
-                await UniTask.Delay(TimeSpan.FromSeconds(timeGap));
+                await Task.Delay(TimeSpan.FromSeconds(timeGap));
             }
 
-            await UniTask.Delay(TimeSpan.FromSeconds(duration));
+            await Task.Delay(TimeSpan.FromSeconds(duration));
             //Service<InventoryService>.Get().NotiUpdateResource(gameResource);
             callback?.Invoke();
         }

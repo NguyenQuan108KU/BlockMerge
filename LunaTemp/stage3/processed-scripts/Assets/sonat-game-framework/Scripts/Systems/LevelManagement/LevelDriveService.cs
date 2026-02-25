@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Cysharp.Threading.Tasks;
 using Newtonsoft.Json;
 using Sirenix.OdinInspector;
 using Sonat.Enums;
@@ -12,6 +11,7 @@ using UnityEngine.Networking;
 using System.IO;
 using System.IO.Compression;
 using UnityEngine.Serialization;
+using System.Threading.Tasks;
 
 namespace SonatFramework.Systems.LevelManagement
 {
@@ -35,7 +35,7 @@ namespace SonatFramework.Systems.LevelManagement
         private bool isInitialized = false;
         private int linkRowIndex = 0;
 
-        public async UniTaskVoid DownloadData(int linkRow, Action<bool> onComplete)
+        public async Task DownloadData(int linkRow, Action<bool> onComplete)
         {
             this.linkRowIndex = linkRow;
             try
@@ -51,7 +51,7 @@ namespace SonatFramework.Systems.LevelManagement
 
                     while (!operation.isDone)
                     {
-                        await UniTask.Yield();
+                        await Task.Yield();
                     }
 
                     if (request.result == UnityWebRequest.Result.Success)
@@ -84,7 +84,7 @@ namespace SonatFramework.Systems.LevelManagement
             }
         }
 
-        private async UniTask DownloadAndExtractZipFile(Action<bool> onComplete)
+        private async Task DownloadAndExtractZipFile(Action<bool> onComplete)
         {
             try
             {
@@ -100,7 +100,7 @@ namespace SonatFramework.Systems.LevelManagement
 
                     while (!operation.isDone)
                     {
-                        await UniTask.Yield();
+                        await Task.Yield();
                     }
 
                     if (request.result == UnityWebRequest.Result.Success)
@@ -125,7 +125,7 @@ namespace SonatFramework.Systems.LevelManagement
             }
         }
 
-        private async UniTask ExtractZipFile(byte[] zipData)
+        private async Task ExtractZipFile(byte[] zipData)
         {
             try
             {

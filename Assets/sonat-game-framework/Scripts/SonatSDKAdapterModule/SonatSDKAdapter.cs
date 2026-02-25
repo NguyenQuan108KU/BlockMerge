@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Cysharp.Threading.Tasks;
 using Sonat.Enums;
 using SonatFramework.Scripts.Utils;
 using SonatFramework.Systems;
@@ -9,6 +8,8 @@ using SonatFramework.Systems.LevelManagement;
 using SonatFramework.Systems.TrackingModule;
 using SonatFramework.Systems.UserData;
 using UnityEngine;
+using System.Threading.Tasks;
+
 #if sonat_sdk
 using Sonat;
 using Sonat.AdsModule;
@@ -167,7 +168,7 @@ namespace SonatFramework.Scripts.SonatSDKAdapterModule
 #endif
         }
 
-        public static async UniTaskVoid BuyPack(ShopItemKey iapKey, string item_type)
+        public static async Task BuyPack(ShopItemKey iapKey, string item_type)
         {
             if (!IsPurchaserInited()) return;
 

@@ -1,6 +1,6 @@
-﻿using System;
-using Cysharp.Threading.Tasks;
-using Sonat.Enums;
+﻿using Sonat.Enums;
+using System;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace SonatFramework.Systems.AudioManagement
@@ -15,7 +15,7 @@ namespace SonatFramework.Systems.AudioManagement
 
         public abstract bool IsMuted(AudioTracks audioTracks);
 
-        public abstract UniTask<AudioClip> LoadAudioAsync(string soundName);
+        public abstract Task<AudioClip> LoadAudioAsync(string soundName);
 
         public abstract void PlayMusic(AudioId music, bool loop = true, float volume = 1);
 
@@ -24,9 +24,9 @@ namespace SonatFramework.Systems.AudioManagement
         public abstract void PlayAudio(AudioId audioId, AudioClip audioClip, float volume = 1,
             AudioTracks audioTrack = AudioTracks.Sound);
 
-        public abstract UniTaskVoid PlayMusic(string music, bool loop = true, float volume = 1);
+        public abstract Task PlayMusic(string music, bool loop = true, float volume = 1);
 
-        public abstract UniTaskVoid PlaySound(string soundName, float volume = 1);
+        public abstract Task PlaySound(string soundName, float volume = 1);
 
         public abstract void PlayAudio(string audioId, AudioClip audioClip, float volume = 1,
             AudioTracks audioTrack = AudioTracks.Sound);

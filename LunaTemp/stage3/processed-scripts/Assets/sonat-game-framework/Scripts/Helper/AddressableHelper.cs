@@ -1,8 +1,8 @@
-using Cysharp.Threading.Tasks;
 #if using_addressable
 using Helper;
 #endif
 using SonatFramework.Scripts.UIModule.UIElements;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +12,7 @@ public static class AddressableHelper
     public static AddressableLoader<Sprite> spriteLoader = new AddressableLoader<Sprite>();
 #endif
 
-    public static async UniTask SetSpriteAsync(this SpriteRenderer spriteRenderer, string address)
+    public static async Task SetSpriteAsync(this SpriteRenderer spriteRenderer, string address)
     {
 #if using_addressable
         Sprite sprite = await spriteLoader.LoadAssetAsync(address);
@@ -21,7 +21,7 @@ public static class AddressableHelper
 #endif
     }
 
-    public static async UniTask SetSpriteAsync(this Image image, string address)
+    public static async Task SetSpriteAsync(this Image image, string address)
     {
 #if using_addressable
         Sprite sprite = await spriteLoader.LoadAssetAsync(address);
@@ -30,7 +30,7 @@ public static class AddressableHelper
 #endif
     }
 
-    public static async UniTask SetSpriteAsync(this FixedImageRatio image, string address)
+    public static async Task SetSpriteAsync(this FixedImageRatio image, string address)
     {
 #if using_addressable
         Sprite sprite = await spriteLoader.LoadAssetAsync(address);

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 using Sirenix.OdinInspector;
 using Sonat.Enums;
 using SonatFramework.Scripts.SonatSDKAdapterModule;
@@ -48,7 +48,7 @@ namespace SonatFramework.Systems.LevelManagement
             }
         }
 
-        public override async UniTask<T> GetLevelData<T>(int level, GameMode gameMode, bool force = false,
+        public override async Task<T> GetLevelData<T>(int level, GameMode gameMode, bool force = false,
             bool loop = true, int category = 0)
         {
             if (!force && levelCache != null && levelCache.gameMode == gameMode && levelCache.level == level && levelCache.category == category)
@@ -64,7 +64,7 @@ namespace SonatFramework.Systems.LevelManagement
             return await GetLevel<T>(level, gameMode, category);
         }
 
-        protected override async UniTask<T> GetLevel<T>(int level, GameMode gameMode, int category = 0)
+        protected override async Task<T> GetLevel<T>(int level, GameMode gameMode, int category = 0)
         {
             string fileName = category == 0 ? $"{gameMode}/{level}" : $"{gameMode}/{level}.{category}";
             var levelData = await loadObjectServiceAsync.Instance.LoadAsync<T>(fileName);

@@ -1,5 +1,5 @@
 ﻿using System.Text.RegularExpressions;
-using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Sirenix.OdinInspector;
 using UnityEditor;
@@ -17,7 +17,7 @@ namespace SonatFramework.Systems.LoadObject
 #endif
         public string path;
 
-        public abstract UniTask<T> LoadAsync<T>(string assetName) where T : class;
+        public abstract Task<T> LoadAsync<T>(string assetName) where T : class;
 
         public virtual void ReleaseAsset(string assetName)
         {

@@ -1,5 +1,4 @@
 using System;
-using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Sonat.Enums;
 using SonatFramework.Scripts.UIModule;
@@ -150,7 +149,7 @@ namespace SonatFramework.Systems.BoosterManagement
         {
             UIData uiData = new UIData();
             uiData.Add("booster_config", config);
-            PanelManager.Instance.OpenPanelByNameAsync<PopupBuyBoosterBase>("PopupBuyBooster", uiData).Forget();
+            PanelManager.Instance.OpenPanelByNameAsync<PopupBuyBoosterBase>("PopupBuyBooster", uiData);
         }
 
         public virtual void UseBooster()

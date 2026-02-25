@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Threading;
-using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 using Sirenix.OdinInspector;
 using Sonat.Enums;
 using SonatFramework.Scripts.SonatSDKAdapterModule;
@@ -87,7 +87,7 @@ namespace SonatFramework.Systems.AdsBreakManagement
             ready = true;
             countDone = false;
             cts = new CancellationTokenSource();
-            WaitForAdsBreak().Forget();
+            WaitForAdsBreak();
         }
 
         public void StopWaitAdBreak()
@@ -116,9 +116,9 @@ namespace SonatFramework.Systems.AdsBreakManagement
             StartWaitAdBreak();
         }
 
-        protected virtual async UniTaskVoid WaitForAdsBreak()
+        protected virtual async Task WaitForAdsBreak()
         {
-            await UniTask.Delay(TimeSpan.FromSeconds(time - 1), cancellationToken: cts.Token);
+            await Task.Delay(TimeSpan.FromSeconds(time - 1), cancellationToken: cts.Token);
             if (!SonatSDKAdapter.CanShowInterAds())
             {
                 StartWaitAdBreak();
@@ -126,12 +126,12 @@ namespace SonatFramework.Systems.AdsBreakManagement
             }
 
             popupWaitAdBreak = await PanelManager.Instance.OpenPanelByNameAsync<PopupWaitAdsBreakBase>("PopupWaitAdsBreak");
-            await UniTask.Delay(TimeSpan.FromSeconds(5), cancellationToken: cts.Token);
+            await Task.Delay(TimeSpan.FromSeconds(5), cancellationToken: cts.Token);
             countDone = true;
 
-            await UniTask.Delay(TimeSpan.FromSeconds(0.3f), cancellationToken: cts.Token);
-            await UniTask.WaitUntil(() => ready == true, cancellationToken: cts.Token);
-            await UniTask.Delay(TimeSpan.FromSeconds(0.55f), cancellationToken: cts.Token);
+            await Task.Delay(TimeSpan.FromSeconds(0.3f), cancellationToken: cts.Token);
+            //await Task.WaitUntil(() => ready == true, cancellationToken: cts.Token);
+            await Task.Delay(TimeSpan.FromSeconds(0.55f), cancellationToken: cts.Token);
 
             popupWaitAdBreak.Close();
             popupWaitAdBreak = null;
@@ -139,7 +139,7 @@ namespace SonatFramework.Systems.AdsBreakManagement
 
             _popupAdBreakBase = await PanelManager.Instance.OpenPanelByNameAsync<PopupAdsBreakBase>("PopupAdsBreak");
 
-            await UniTask.Delay(TimeSpan.FromSeconds(1.5f), cancellationToken: cts.Token);
+            await Task.Delay(TimeSpan.FromSeconds(1.5f), cancellationToken: cts.Token);
 
             SonatSDKAdapter.ShowInterAds("ad_break", OnShowAdsDone);
         }

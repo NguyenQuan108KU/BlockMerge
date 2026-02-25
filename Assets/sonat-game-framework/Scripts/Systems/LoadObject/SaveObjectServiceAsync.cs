@@ -1,5 +1,5 @@
 ﻿using System.Text.RegularExpressions;
-using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 using Sirenix.OdinInspector;
 using UnityEditor;
 
@@ -12,7 +12,7 @@ namespace SonatFramework.Systems.LoadObject
 #endif
         public string path;
 
-        public abstract UniTask<T> SaveObject<T>(T data, string fileName);
+        public abstract Task<T> SaveObject<T>(T data, string fileName);
 
 #if UNITY_EDITOR
         private void OnPathChanged()

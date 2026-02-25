@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Sonat.Enums;
 #if sonat_sdk
@@ -46,14 +46,14 @@ namespace SonatFramework.Systems.LevelManagement
             GetRemoteData();
         }
 
-        public override async UniTask<T> GetLevelData<T>(int level, GameMode gameMode, bool force = false, bool loop = true, int category = 0)
+        public override async Task<T> GetLevelData<T>(int level, GameMode gameMode, bool force = false, bool loop = true, int category = 0)
         {
             if (!force && levelCache != null && levelCache.gameMode == gameMode && levelCache.level == level && levelCache.category == category)
                 return levelCache as T;
             return await GetLevel<T>(level, gameMode, category);
         }
 
-        protected override async UniTask<T> GetLevel<T>(int level, GameMode gameMode, int category)
+        protected override async Task<T> GetLevel<T>(int level, GameMode gameMode, int category)
         {
             if (!outOfSegment && assetBundle != null)
             {

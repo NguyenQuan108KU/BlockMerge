@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Sirenix.OdinInspector;
 using Sonat.Enums;
@@ -45,7 +45,7 @@ namespace SonatFramework.Systems.LevelManagement
         // private string lastLevelDataDownloaded;
         private LevelData levelDataCache;
 
-        public async UniTask DownloadData(Action<bool> onComplete)
+        public async Task DownloadData(Action<bool> onComplete)
         {
             try
             {
@@ -73,7 +73,7 @@ namespace SonatFramework.Systems.LevelManagement
             }
         }
 
-        private async UniTask GetSubfolderInfoFromSheet()
+        private async Task GetSubfolderInfoFromSheet()
         {
             try
             {
@@ -88,7 +88,7 @@ namespace SonatFramework.Systems.LevelManagement
 
                     while (!operation.isDone)
                     {
-                        await UniTask.Yield();
+                        await Task.Yield();
                     }
 
                     if (request.result == UnityWebRequest.Result.Success)
@@ -233,7 +233,7 @@ namespace SonatFramework.Systems.LevelManagement
             return null;
         }
 
-        private async UniTask<bool> DownloadSingleFile<T>(string folderName, string fileName, string fileId) where T : LevelData
+        private async Task<bool> DownloadSingleFile<T>(string folderName, string fileName, string fileId) where T : LevelData
         {
             try
             {
@@ -247,7 +247,7 @@ namespace SonatFramework.Systems.LevelManagement
 
                     while (!operation.isDone)
                     {
-                        await UniTask.Yield();
+                        await Task.Yield();
                     }
 
                     if (request.result == UnityWebRequest.Result.Success)
@@ -282,12 +282,12 @@ namespace SonatFramework.Systems.LevelManagement
             }
         }
 
-        public override async UniTask<T> GetLevelData<T>(int level, GameMode gameMode, bool force = false, bool loop = true, int category = 0)
+        public override async Task<T> GetLevelData<T>(int level, GameMode gameMode, bool force = false, bool loop = true, int category = 0)
         {
             return await GetLevel<T>(level, gameMode, category);
         }
 
-        protected override async UniTask<T> GetLevel<T>(int level, GameMode gameMode, int category)
+        protected override async Task<T> GetLevel<T>(int level, GameMode gameMode, int category)
         {
             if (levelDataCache != null && levelDataCache.level == level && levelDataCache.gameMode == gameMode && levelDataCache.category == category)
             {
@@ -324,7 +324,7 @@ namespace SonatFramework.Systems.LevelManagement
 
 
         // Helper method to refresh the folder contents
-        public async UniTaskVoid RefreshFolderContents(Action<bool> onComplete)
+        public async Task RefreshFolderContents(Action<bool> onComplete)
         {
             subfolderIdMap.Clear();
             folderFileIdMap.Clear();
@@ -368,7 +368,7 @@ namespace SonatFramework.Systems.LevelManagement
         }
 
         // Method to get level data from a specific subfolder (on-demand download)
-        public async UniTask<bool> GetLevelInSubfolder<T>(string subfolder, int level, GameMode gameMode) where T : LevelData
+        public async Task<bool> GetLevelInSubfolder<T>(string subfolder, int level, GameMode gameMode) where T : LevelData
         {
             try
             {
@@ -396,7 +396,7 @@ namespace SonatFramework.Systems.LevelManagement
         }
 
         // Method to download a specific level from a subfolder
-        private async UniTask<bool> DownloadLevelFromSubfolder<T>(string subfolder, int level) where T : LevelData
+        private async Task<bool> DownloadLevelFromSubfolder<T>(string subfolder, int level) where T : LevelData
         {
             try
             {
@@ -444,7 +444,7 @@ namespace SonatFramework.Systems.LevelManagement
         }
 
 
-        private async UniTask<string> FindFileIdFromHTML(string subfolderId, string fileName)
+        private async Task<string> FindFileIdFromHTML(string subfolderId, string fileName)
         {
             try
             {
@@ -456,7 +456,7 @@ namespace SonatFramework.Systems.LevelManagement
 
                     while (!operation.isDone)
                     {
-                        await UniTask.Yield();
+                        await Task.Yield();
                     }
 
                     if (request.result == UnityWebRequest.Result.Success)
@@ -478,7 +478,7 @@ namespace SonatFramework.Systems.LevelManagement
             }
         }
 
-        private async UniTask<string> TryDirectDownload(string subfolderId, string fileName)
+        private async Task<string> TryDirectDownload(string subfolderId, string fileName)
         {
             // Try some common file ID patterns that might work
             // This is a fallback method when HTML parsing fails
@@ -500,7 +500,7 @@ namespace SonatFramework.Systems.LevelManagement
                         var operation = request.SendWebRequest();
                         while (!operation.isDone)
                         {
-                            await UniTask.Yield();
+                            await Task.Yield();
                         }
 
                         if (request.result == UnityWebRequest.Result.Success)
@@ -699,7 +699,7 @@ namespace SonatFramework.Systems.LevelManagement
         }
 
         // Method to clear and re-discover subfolders
-        public async UniTaskVoid RediscoverSubfolders(Action<bool> onComplete)
+        public async Task RediscoverSubfolders(Action<bool> onComplete)
         {
             subfolderIdMap.Clear();
             isInitialized = false;
