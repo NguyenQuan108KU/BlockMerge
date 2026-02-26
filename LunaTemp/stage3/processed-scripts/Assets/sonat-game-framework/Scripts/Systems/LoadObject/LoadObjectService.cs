@@ -17,7 +17,7 @@ namespace SonatFramework.Systems.LoadObject
 #endif
         public string path;
 
-        public abstract T LoadObject<T>(string assetName) where T : class;
+        public abstract T LoadObject<T>(string assetName);
 
 #if UNITY_EDITOR
         private void OnPathChanged()

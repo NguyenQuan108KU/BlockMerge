@@ -85,7 +85,10 @@ namespace Sonat.DebugViewModule
         {
             lock (_sLock)
             {
-                _sInstance ??= new SonatSdkInspector();
+                if (_sInstance == null)
+                {
+                    _sInstance = new SonatSdkInspector();
+                }
                 return _sInstance;
             }
         }

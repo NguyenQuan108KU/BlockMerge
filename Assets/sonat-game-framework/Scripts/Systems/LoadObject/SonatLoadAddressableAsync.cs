@@ -23,7 +23,7 @@ namespace SonatFramework.Systems.LoadObject
         //private readonly Dictionary<string, AsyncLazy<object>> _loadingTasks = new(StringComparer.Ordinal);
 #endif
 
-        public override async Task<T> LoadAsync<T>(string assetName) where T : class
+        public override async Task<T> LoadAsync<T>(string assetName)
         {
 #if using_addressable
             string key = GetFormatKey(assetName);
@@ -52,7 +52,7 @@ namespace SonatFramework.Systems.LoadObject
                 // Attach timeout của request hiện tại vào việc CHỜ ĐỢI
                 //var resultObj = await lazyTask.Task;
 
-                return null;
+                return default(T);
             }
             catch (OperationCanceledException)
             {
@@ -85,7 +85,7 @@ namespace SonatFramework.Systems.LoadObject
                 //}
             }
 #else
-            return null;
+            return default(T);
 #endif
         }
 
@@ -133,11 +133,14 @@ namespace SonatFramework.Systems.LoadObject
         //    }
         //}
 
-        private async Task<T> TryFallback<T>(string assetName) where T : class
+        private async Task<T> TryFallback<T>(string assetName)
         {
-            if (fallback != null)
-                return await fallback.LoadAsync<T>(assetName);
-            return null;
+            //if (fallback != null)
+            //{
+            //    return await fallback.LoadAsync<T>(assetName);
+            //}
+
+            return default(T);
         }
 
         private void LogFirebaseError(string type, string assetName, Exception e = null)

@@ -5,6 +5,6 @@ namespace SonatFramework.Systems
 {
     public interface IServiceInitializeAsync
     {
-        public Task InitializeAsync();
+        Task InitializeAsync();
     }
 }

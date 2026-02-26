@@ -43,7 +43,8 @@ public class ComboServiceTime : SonatServiceSo, IServiceInitialize
 
     public int GetComboTime()
     {
-        if (combo >= comboTime.Count) return comboTime[^1];
+        if (combo >= comboTime.Count)
+            return comboTime[comboTime.Count - 1];
         return comboTime[combo];
     }
 

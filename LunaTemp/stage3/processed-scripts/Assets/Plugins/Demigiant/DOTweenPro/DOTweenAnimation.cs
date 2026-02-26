@@ -900,12 +900,14 @@ namespace DG.Tweening
 
         public override void DOGotoAndPause(float time)
         {
-            throw new NotImplementedException();
+            if (tween == null) return;
+            tween.Goto(time, false);
         }
 
         public override void DOGotoAndPlay(float time)
         {
-            throw new NotImplementedException();
+            if (tween == null) return;
+            tween.Goto(time, true);
         }
 
         #endregion

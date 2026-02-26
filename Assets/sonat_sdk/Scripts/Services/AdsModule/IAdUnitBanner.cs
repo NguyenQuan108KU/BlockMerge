@@ -2,6 +2,6 @@
 {
     public interface IAdUnitBanner
     {
-        public float GetBannerHeight();
+         float GetBannerHeight();
     }
 }

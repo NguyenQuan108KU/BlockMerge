@@ -305,9 +305,9 @@ public class GhostBlockController : BaseBlock
             );
         }
 
-        UnityEngine.Mesh finalMesh = new UnityEngine.Mesh();
+        Mesh finalMesh = new Mesh();
         finalMesh.name = "Ghost_Smart";
-        finalMesh.CombineMeshes(combine, true, true);
+        //finalMesh.CombineMeshes(combine);
         _meshFilter.mesh = finalMesh;
     }
 
@@ -332,9 +332,9 @@ public class GhostBlockController : BaseBlock
             combine[i].transform = Matrix4x4.TRS(localPos, Quaternion.identity, Vector3.one);
         }
 
-        UnityEngine.Mesh finalMesh = new UnityEngine.Mesh();
+        Mesh finalMesh = new Mesh();
         finalMesh.name = "Ghost_Fallback";
-        finalMesh.CombineMeshes(combine, true, true);
+        //finalMesh.CombineMeshes(combine, true, true);
         _meshFilter.mesh = finalMesh;
     }
 

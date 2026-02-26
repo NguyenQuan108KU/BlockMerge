@@ -15,7 +15,7 @@ public class SonatLoadAddressableJsonAsync : LoadObjectServiceAsync
     [SerializeField] private float timeout = 3;
     [SerializeField] private LoadObjectServiceAsync fallback;
 
-    public override async Task<T> LoadAsync<T>(string assetName) where T : class
+    public override async Task<T> LoadAsync<T>(string assetName)
     {
         //#if using_addressable
         //        try
@@ -36,6 +36,6 @@ public class SonatLoadAddressableJsonAsync : LoadObjectServiceAsync
         //            }
         //        }
         //#endif
-        return null;
+         return default(T);
     }
 }

@@ -9,7 +9,7 @@ namespace SonatFramework.Systems.LoadObject
     public class SonatLoadFolderAsync : LoadObjectServiceAsync
     {
         [SerializeField] protected string extension = ".json";
-        public override async Task<T> LoadAsync<T>(string assetPath) where T : class
+        public override async Task<T> LoadAsync<T>(string assetPath)
         {
             string fullPath = $"{path}{assetPath}{extension}";
             var data = await File.ReadAllTextAsync(fullPath);

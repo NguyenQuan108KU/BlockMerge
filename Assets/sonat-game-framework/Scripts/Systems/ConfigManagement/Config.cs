@@ -12,7 +12,23 @@ namespace SonatFramework.Systems.ConfigManagement
         private T manualConfig;
 
         private static T configCache;
-        public T config => loadConfigFrom == LoadConfigFrom.Manual ? manualConfig : configCache ??= SonatSystem.GetConfig<T>();
+        public T config
+        {
+            get
+            {
+                if (loadConfigFrom == LoadConfigFrom.Manual)
+                {
+                    return manualConfig;
+                }
+
+                if (configCache == null)
+                {
+                    configCache = SonatSystem.GetConfig<T>();
+                }
+
+                return configCache;
+            }
+        }
     }
 
     public enum LoadConfigFrom : byte

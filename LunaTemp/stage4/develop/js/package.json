@@ -1,0 +1,1 @@
+{"requires":["Newtonsoft.Json"],"source_packages":[{"name":"com.esotericsoftware.spine.spine-csharp","version":"4.1.0","path":"Assets\\Spine\\Runtime\\spine-csharp"}]}

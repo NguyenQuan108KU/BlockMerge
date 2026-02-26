@@ -2,11 +2,11 @@
 {
     public interface IServiceInitialize
     {
-        public void Initialize();
+        void Initialize();
     }
-    
+
     public interface IServiceActionOnFocus
     {
-        public void OnApplicationFocus(bool focus);
+        void OnApplicationFocus(bool focus);
     }
 }

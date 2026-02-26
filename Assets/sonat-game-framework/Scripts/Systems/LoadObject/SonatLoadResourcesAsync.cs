@@ -11,7 +11,7 @@ namespace SonatFramework.Systems.LoadObject
     {
         [SerializeField] private LoadObjectServiceAsync fallbackService;
 
-        public override async Task<T> LoadAsync<T>(string assetPath) where T : class
+        public override async Task<T> LoadAsync<T>(string assetPath)
         {
             //var fullPath = $"{path}{assetPath}";
             //var data = await Resources.LoadAsync(fullPath);
@@ -24,7 +24,7 @@ namespace SonatFramework.Systems.LoadObject
             //if (data is TextAsset textAsset) return JsonConvert.DeserializeObject<T>(textAsset.text, Settings);
 
             //return data as T;
-            return null;
+            return default(T);
         }
     }
 }

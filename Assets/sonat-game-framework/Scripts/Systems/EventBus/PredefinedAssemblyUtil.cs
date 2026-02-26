@@ -21,14 +21,23 @@ namespace SonatFramework.Systems.EventBus
         /// <returns>AssemblyType corresponding to the assembly name, null if no match.</returns>
         private static AssemblyType? GetAssemblyType(string assemblyName)
         {
-            return assemblyName switch
+            switch (assemblyName)
             {
-                "Assembly-CSharp" => AssemblyType.AssemblyCSharp,
-                "Assembly-CSharp-Editor" => AssemblyType.AssemblyCSharpEditor,
-                "Assembly-CSharp-Editor-firstpass" => AssemblyType.AssemblyCSharpEditorFirstPass,
-                "Assembly-CSharp-firstpass" => AssemblyType.AssemblyCSharpFirstPass,
-                _ => null
-            };
+                case "Assembly-CSharp":
+                    return AssemblyType.AssemblyCSharp;
+
+                case "Assembly-CSharp-Editor":
+                    return AssemblyType.AssemblyCSharpEditor;
+
+                case "Assembly-CSharp-Editor-firstpass":
+                    return AssemblyType.AssemblyCSharpEditorFirstPass;
+
+                case "Assembly-CSharp-firstpass":
+                    return AssemblyType.AssemblyCSharpFirstPass;
+
+                default:
+                    return null;
+            }
         }
 
         /// <summary>

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Sirenix.OdinInspector;
 
 namespace SonatFramework.Systems
@@ -12,15 +12,28 @@ namespace SonatFramework.Systems
         public T reference;
 
         private static T instance;
-        public T Instance => referenceType == ReferenceType.Manual
-            ? reference
-            : instance ??= SonatSystem.GetService<T>();
+        public T Instance
+        {
+            get
+            {
+                if (referenceType == ReferenceType.Manual)
+                    return reference;
+
+                if (instance == null)
+                    instance = SonatSystem.GetService<T>();
+
+                return instance;
+            }
+        }
 
         public static T Get()
         {
-            return instance = instance ?? SonatSystem.GetService<T>();
+            if (instance == null)
+                instance = SonatSystem.GetService<T>();
+
+            return instance;
         }
-        
+
         public Service()
         {
             

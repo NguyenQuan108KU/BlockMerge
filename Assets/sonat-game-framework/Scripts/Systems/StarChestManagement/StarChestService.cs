@@ -44,7 +44,10 @@ public class StarChestService : SonatServiceSo, IServiceInitialize
 
     public int StarByCombo()
     {
-        if (combo - 1 >= starByCombo.Count) return starByCombo[^1];
+        if (combo - 1 >= starByCombo.Count)
+        {
+            return starByCombo[starByCombo.Count - 1];
+        }
         return starByCombo[combo - 1];
     }
 

@@ -65,7 +65,10 @@ namespace SonatFramework.Scripts.UIModule
             Transform container = null) where T : View
         {
             // create panel async
-            container ??= transform;
+            if (container == null)
+            {
+                container = transform;
+            }
             if (_cache.TryGetValue(panelName, out var panel))
             {
                 panel.transform.SetParent(container);
@@ -96,7 +99,7 @@ namespace SonatFramework.Scripts.UIModule
             where T : View
         {
             var panelId = typeof(T).ToString();
-            var panel = _stackPanels.Find(panel => panel.id.Equals(panelId));
+            var panel = _stackPanels.Find(p => p.id.Equals(panelId));
             if (panel == null) return;
             // play close animation (if not immediately)
             if (immediately)
@@ -184,14 +187,14 @@ namespace SonatFramework.Scripts.UIModule
 
         public T GetPanel<T>() where T : View
         {
-            return (T)_stackPanels.Find(panel => panel.GetType()
+            return (T)_stackPanels.Find(p => p.GetType()
                 .ToString()
                 .Equals(typeof(T).ToString()));
         }
 
         public T GetPanelByName<T>(string panelName) where T : View
         {
-            return (T)_stackPanels.Find(panel => panel.gameObject.name.Equals(panelName));
+            return (T)_stackPanels.Find(p => p.gameObject.name.Equals(panelName));
         }
 
 
@@ -233,7 +236,7 @@ namespace SonatFramework.Scripts.UIModule
 
         public void ClosePanel(string panelId, bool immediately = false)
         {
-            var panel = _stackPanels.Find(panel => panel.id.Equals(panelId));
+            var panel = _stackPanels.Find(p => p.id.Equals(panelId));
             if (panel == null) return;
 
             // play close animation (if not immediately)
@@ -336,7 +339,7 @@ namespace SonatFramework.Scripts.UIModule
         public bool HasAnyPopupPauseGame()
         {
             if (_stackPanels == null || _stackPanels.Count == 0) return false;
-            return _stackPanels.Any(panel => panel.pauseGame && panel.gameObject.activeInHierarchy);
+            return _stackPanels.Any(p => p.pauseGame && p.gameObject.activeInHierarchy);
         }
 
         public int PopupCount()

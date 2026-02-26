@@ -4,10 +4,10 @@ using UnityEngine;
 
 public interface IServiceWaitingSDKInitialize
 {
-    public void OnSonatSDKInitialize();
+    void OnSonatSDKInitialize();
 }
 
 public interface IServiceWaitingRemoteConfig
 {
-    public void OnRemoteConfigReady();
+    void OnRemoteConfigReady();
 }

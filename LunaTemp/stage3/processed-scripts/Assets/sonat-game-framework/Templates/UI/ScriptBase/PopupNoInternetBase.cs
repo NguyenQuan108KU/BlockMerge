@@ -4,7 +4,7 @@ using Sirenix.OdinInspector;
 using SonatFramework.Scripts.Feature.CheckInternet;
 using SonatFramework.Scripts.UIModule;
 using SonatFramework.Systems;
-using SonatFramework.Systems.NetworkManagement;
+//using SonatFramework.Systems.NetworkManagement;
 using UnityEngine;
 
 public class PopupNoInternetBase : Panel

@@ -4,8 +4,8 @@ namespace SonatFramework.Systems.EventBus
 {
     public interface IEventBinding<T>
     {
-        public Action<T> OnEvent { get; set; }
-        public Action OnEventNoArgs { get; set; }
+         Action<T> OnEvent { get; set; }
+         Action OnEventNoArgs { get; set; }
     }
 
     public class EventBinding<T> : IEventBinding<T> where T : IEvent

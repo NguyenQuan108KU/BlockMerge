@@ -5,10 +5,10 @@ namespace SonatFramework.Systems.ObjectPooling
 {
     public interface IPoolingObject
     {
-        public Transform transform { get; }
+         Transform transform { get; }
 
-        public void Setup();
-        public void OnCreateObj(params object[] args);
-        public void OnReturnObj();
+         void Setup();
+         void OnCreateObj(params object[] args);
+         void OnReturnObj();
     }
 }

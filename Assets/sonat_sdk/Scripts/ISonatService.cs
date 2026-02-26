@@ -4,14 +4,14 @@ namespace Sonat
 {
     public interface ISonatService
     {
-        public SonatServiceType ServiceType { get;}
-        public bool Ready { get; set; }
+         SonatServiceType ServiceType { get;}
+         bool Ready { get; set; }
         
-        public void Initialize(Action<ISonatService> onInitialized);
+         void Initialize(Action<ISonatService> onInitialized);
         
-        public void OnApplicationFocus(bool focus);
-        public void OnApplicationPause(bool pause);
-        public void OnApplicationQuit();
+         void OnApplicationFocus(bool focus);
+         void OnApplicationPause(bool pause);
+         void OnApplicationQuit();
     }
 
     public enum SonatServiceType: byte

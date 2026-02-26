@@ -111,7 +111,22 @@ namespace SonatFramework.Scripts.UIModule.UIElements
 
             if (value == oldvalue) return;
             if (gameObject.activeInHierarchy && doCounter)
-                txtValue.DOCounter(oldvalue, value, counterDuration, addThousandsSeparator: false);
+            {
+                int currentValue = oldvalue;
+
+                DOTween.To(
+                    () => currentValue,
+                    x =>
+                    {
+                        currentValue = x;
+
+                        // v� addThousandsSeparator: false
+                        txtValue.text = currentValue.ToString();
+                    },
+                    value,
+                    counterDuration
+                );
+            }
             else
                 txtValue.text = value.ToString();
         }

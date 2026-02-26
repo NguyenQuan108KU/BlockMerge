@@ -13,7 +13,7 @@ using SonatFramework.Systems;
 using SonatFramework.Systems.EventBus;
 using SonatFramework.Systems.InventoryManagement;
 using SonatFramework.Systems.InventoryManagement.GameResources;
-using SonatFramework.Systems.NetworkManagement;
+//using SonatFramework.Systems.NetworkManagement;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;

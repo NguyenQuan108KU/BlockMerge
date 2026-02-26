@@ -22,7 +22,7 @@ namespace SonatFramework.Systems.ConfigManagement
             }
         }
 
-        public override T Get<T>() where T : class
+        public override T Get<T>()
         {
             if (configs.TryGetValue(typeof(T), out var config))
             {

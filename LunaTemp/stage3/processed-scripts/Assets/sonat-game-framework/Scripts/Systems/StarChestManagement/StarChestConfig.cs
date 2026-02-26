@@ -16,7 +16,7 @@ public class StarChestConfig : ConfigSo
     {
         if (milestone >= starChests.Count)
         {
-            return starChests[^1];
+            return starChests[starChests.Count - 1];
         }
         return starChests[milestone];
     }

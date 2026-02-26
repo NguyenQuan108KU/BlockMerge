@@ -9,11 +9,11 @@ namespace SonatFramework.Systems.LoadObject
     {
         [SerializeField] protected string extension = ".json";
 
-        public override T LoadObject<T>(string assetPath) where T : class
+        public override T LoadObject<T>(string assetPath)
         {
             var fullPath = $"{path}{assetPath}{extension}";
             var data = File.ReadAllText(fullPath);
-            if (string.IsNullOrEmpty(data)) return null;
+            //if (string.IsNullOrEmpty(data)) return null;
             return JsonConvert.DeserializeObject<T>(data, Settings);
         }
     }

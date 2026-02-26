@@ -78,13 +78,26 @@ namespace Difficulty
             for (int i = 0; i < rescueShapes.Count; i++)
             {
                 // Phân bổ weight dựa vào index và config
-                int weight = i switch
+                int weight;
+
+                switch (i)
                 {
-                    0 => config.rescueWeight_1x1,  // 1x1
-                    1 => config.rescueWeight_1x2,  // 1x2
-                    2 => config.rescueWeight_2x1,  // 2x1
-                    _ => 10  // Default cho shapes khác
-                };
+                    case 0:
+                        weight = config.rescueWeight_1x1; // 1x1
+                        break;
+
+                    case 1:
+                        weight = config.rescueWeight_1x2; // 1x2
+                        break;
+
+                    case 2:
+                        weight = config.rescueWeight_2x1; // 2x1
+                        break;
+
+                    default:
+                        weight = 10; // Default cho shapes khác
+                        break;
+                }
 
                 rescueWeights[i] = weight;
                 totalRescueWeight += weight;

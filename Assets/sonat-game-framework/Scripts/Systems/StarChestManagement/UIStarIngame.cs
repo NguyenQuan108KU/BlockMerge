@@ -52,7 +52,18 @@ public class UIStarIngame : MonoBehaviour
     {
         txtValue.DOKill(true);
         int oldValue = this.value;
-        txtValue.DOCounter(oldValue, value, duration).SetDelay(delay);
+        int currentValue = oldValue;
+
+        DOTween.To(
+            () => currentValue,
+            x =>
+            {
+                currentValue = x;
+                txtValue.text = currentValue.ToString();
+            },
+            value,
+            duration
+        ).SetDelay(delay);
         this.value = value;
     }
 

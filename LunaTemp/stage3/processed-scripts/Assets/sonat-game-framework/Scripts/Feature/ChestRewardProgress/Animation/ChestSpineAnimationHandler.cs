@@ -61,9 +61,14 @@ namespace SonatFramework.Scripts.Feature.ChestRewardProgress
             {
                 SetChestState(ChestState.Opening);
                 var trackEntry = skeletonGraphic.AnimationState.SetAnimation(0, openAnimation, false);
-                trackEntry.Complete += trackEntry =>
+
+                trackEntry.Complete += entry =>
                 {
-                    onComplete?.Invoke();
+                    if (onComplete != null)
+                    {
+                        onComplete();
+                    }
+
                     PlayIdleOpenAnimation();
                 };
             }
@@ -73,13 +78,26 @@ namespace SonatFramework.Scripts.Feature.ChestRewardProgress
         {
             if (skeletonGraphic == null || state == ChestState.None) return;
 
-            var targetSkin = state switch
+            string targetSkin;
+
+            switch (state)
             {
-                ChestState.Locked => lockedSkin,
-                ChestState.Opening => openingSkin,
-                ChestState.Opened => openedSkin,
-                _ => lockedSkin
-            };
+                case ChestState.Locked:
+                    targetSkin = lockedSkin;
+                    break;
+
+                case ChestState.Opening:
+                    targetSkin = openingSkin;
+                    break;
+
+                case ChestState.Opened:
+                    targetSkin = openedSkin;
+                    break;
+
+                default:
+                    targetSkin = lockedSkin;
+                    break;
+            }
 
             skeletonGraphic.Skeleton.SetSkin(targetSkin);
             skeletonGraphic.Skeleton.SetToSetupPose();

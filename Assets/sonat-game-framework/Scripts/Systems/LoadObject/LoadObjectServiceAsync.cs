@@ -17,7 +17,7 @@ namespace SonatFramework.Systems.LoadObject
 #endif
         public string path;
 
-        public abstract Task<T> LoadAsync<T>(string assetName) where T : class;
+        public abstract Task<T> LoadAsync<T>(string assetName);
 
         public virtual void ReleaseAsset(string assetName)
         {
