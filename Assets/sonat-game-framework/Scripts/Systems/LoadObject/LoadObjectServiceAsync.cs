@@ -12,9 +12,7 @@ namespace SonatFramework.Systems.LoadObject
         {
             TypeNameHandling = TypeNameHandling.Auto
         };
-#if UNITY_EDITOR
-        [OnValueChanged(nameof(OnPathChanged))]
-#endif
+        //[OnValueChanged(nameof(OnPathChanged))]
         public string path;
 
         public abstract Task<T> LoadAsync<T>(string assetName);

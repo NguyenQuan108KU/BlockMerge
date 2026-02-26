@@ -22,7 +22,8 @@ public class GridRowClearer
     public class ClearSettings
     {
         public float fallDuration = 0.25f;
-        public Ease fallEase = Ease.InQuad;
+        //public Ease fallEase = Ease.InQuad;
+        public int fallEase = 5;
     }
 
     private readonly ClearSettings settings;
@@ -662,7 +663,7 @@ public class GridRowClearer
         foreach (var anim in _animationsCache)
         {
             anim.obj.transform.DOKill();
-            anim.obj.transform.DOLocalMove(anim.endPos, settings.fallDuration).SetEase(settings.fallEase);
+            anim.obj.transform.DOLocalMove(anim.endPos, settings.fallDuration).SetEase((Ease)settings.fallEase);
         }
 
         if (_animationsCache.Count > 0)

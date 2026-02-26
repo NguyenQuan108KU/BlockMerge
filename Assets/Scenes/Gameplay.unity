@@ -4928,7 +4928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridManager
   config: {fileID: 11400000, guid: 27be30d4856668f408f0a972d666a08f, type: 2}
-  breakEffectPrefab: {fileID: 0}
+  breakEffectPrefab: {fileID: 120302609968108341, guid: ff10764be180ec24c908c8a1b0ee99f9, type: 3}
   meshLibrary: {fileID: 11400000, guid: 589521d09276ea348a70208d71b31ac4, type: 2}
   vfx: {fileID: 1492608404066359753, guid: ff10764be180ec24c908c8a1b0ee99f9, type: 3}
 --- !u!1001 &2030171117

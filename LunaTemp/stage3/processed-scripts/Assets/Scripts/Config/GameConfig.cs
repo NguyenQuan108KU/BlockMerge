@@ -24,7 +24,8 @@ public class GameConfig : GameConfigBase
     public float towerHeightSmoothDuration = 0.15f;
 
     [Tooltip("Ease nâng/hạ tower")]
-    public Ease towerHeightEase = Ease.OutQuad;
+    //public Ease towerHeightEase = Ease.OutQuad;
+    public int towerHeightEase = 6;
 
     [Range(0.1f, 1f)]
     [Tooltip("Thời gian chờ trước khi bắt đầu edge scroll (giây)")]
@@ -76,14 +77,16 @@ public class GameConfig : GameConfigBase
     public float buttonRotateDuration = 0.5f;
 
     [Tooltip("Ease xoay button")]
-    public Ease buttonRotateEase = Ease.OutQuad;
+    //public Ease buttonRotateEase = Ease.OutQuad;
+    public int buttonRotateEase = 1; // 1 = OutQuad
 
     [Header("Tower Snap")]
     [Tooltip("Duration snap tower")]
     public float towerSnapDuration = 0.3f;
 
     [Tooltip("Ease snap tower")]
-    public Ease towerSnapEase = Ease.OutBack;
+    //public Ease towerSnapEase = Ease.OutBack;
+    public int towerSnapEase = 27;
 
     #endregion
 
@@ -94,7 +97,8 @@ public class GameConfig : GameConfigBase
     public float dropDuration = 0.3f;
 
     [Tooltip("Ease drop block")]
-    public Ease dropEase = Ease.InQuad;
+    //public Ease dropEase = Ease.InQuad;
+    public int dropEase = 5;
 
     [Tooltip("Palette chứa materials cho block")]
     public BlockPaletteSO blockPalette;

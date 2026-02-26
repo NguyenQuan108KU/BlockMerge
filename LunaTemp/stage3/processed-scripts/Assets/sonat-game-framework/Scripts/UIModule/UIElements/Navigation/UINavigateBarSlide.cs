@@ -9,7 +9,8 @@ public class UINavigateBarSlide : UINavigateBarBase
 {
     private RectTransform[] tabRectTransforms;
     [SerializeField] private float animationDuration = 0.3f;
-    [SerializeField] private Ease animationEase = Ease.OutQuad;
+    //[SerializeField] private Ease animationEase = Ease.OutQuad;
+    [SerializeField] private int animationEase = 6;
 
     private Vector2[] tabOriginalPositions;
     private Vector2 centerPosition;
@@ -110,7 +111,7 @@ public class UINavigateBarSlide : UINavigateBarBase
 
                 // Animate the tab out
                 tabRectTransforms[prevIndex].DOAnchorPos(targetPosition, animationDuration)
-                    .SetEase(animationEase)
+                    .SetEase((Ease)animationEase)
                     .OnComplete(() => { tabs[lastTab].OnHide(); });
             }
         }
@@ -163,7 +164,7 @@ public class UINavigateBarSlide : UINavigateBarBase
 
             // Animate to center
             tabRectTransforms[newIndex].DOAnchorPos(centerPosition, animationDuration)
-                .SetEase(animationEase);
+                .SetEase((Ease)animationEase);
         }
 
         DOVirtual.DelayedCall(animationDuration, () =>

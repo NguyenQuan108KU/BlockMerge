@@ -158,7 +158,7 @@ public class TowerRotator : MonoBehaviour
                     _animatedAngle = val;
                     _towerContainer.localRotation = Quaternion.Euler(0, val, 0);
                 })
-            .SetEase(_cachedConfig.buttonRotateEase)
+            .SetEase((Ease)_cachedConfig.buttonRotateEase)
             .OnComplete(OnRotateComplete);
 
         if (_activeBlock != null)
@@ -231,7 +231,7 @@ public class TowerRotator : MonoBehaviour
 
          _towerContainer
             .DOLocalRotate(new Vector3(0, snapTarget, 0), _cachedConfig.towerSnapDuration)
-            .SetEase(_cachedConfig.towerSnapEase);
+            .SetEase((Ease)_cachedConfig.towerSnapEase);
 
         if (Mathf.Abs(Mathf.DeltaAngle(_targetAngle, snapTarget)) < 1f)
         {

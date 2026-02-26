@@ -46,8 +46,10 @@ public class SlideExecutor : IPostLandEffect
     // Animation settings
     private const float SLIDE_DURATION_PER_CELL = 0.06f;
     private const float FALL_DURATION = 0.15f;
-    private static readonly Ease SLIDE_EASE = Ease.Linear;
-    private static readonly Ease FALL_EASE = Ease.InQuad;
+    private static readonly int SLIDE_EASE = 1;
+    //private static readonly Ease SLIDE_EASE = Ease.Linear;
+    //private static readonly Ease FALL_EASE = Ease.InQuad;
+    private static readonly int FALL_EASE = 5;
 
     public SlideExecutor(Vector2Int direction)
     {
@@ -317,8 +319,8 @@ public class SlideExecutor : IPostLandEffect
             float slideDuration = (slidePath.Count - 1) * SLIDE_DURATION_PER_CELL;
             Sequence seq = DOTween.Sequence();
             if (slideDuration > 0)
-                seq.Append(vis.transform.DOLocalMove(slideEndPos, slideDuration).SetEase(SLIDE_EASE));
-            seq.Append(vis.transform.DOLocalMove(finalPos, FALL_DURATION).SetEase(FALL_EASE));
+                seq.Append(vis.transform.DOLocalMove(slideEndPos, slideDuration).SetEase((Ease)SLIDE_EASE));
+            seq.Append(vis.transform.DOLocalMove(finalPos, FALL_DURATION).SetEase((Ease)FALL_EASE));
         }
     }
 
@@ -355,7 +357,7 @@ public class SlideExecutor : IPostLandEffect
             vis.transform.DOKill();
 
             float slideDuration = (slidePath.Count - 1) * SLIDE_DURATION_PER_CELL;
-            vis.transform.DOLocalMove(finalPos, slideDuration).SetEase(SLIDE_EASE);
+            vis.transform.DOLocalMove(finalPos, slideDuration).SetEase((Ease)SLIDE_EASE);
         }
     }
 

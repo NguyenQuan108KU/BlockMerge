@@ -19,7 +19,6 @@ namespace SonatFramework.Systems.LoadObject
 
         public abstract T LoadObject<T>(string assetName);
 
-#if UNITY_EDITOR
         private void OnPathChanged()
         {
             string preName = this.name;
@@ -34,8 +33,7 @@ namespace SonatFramework.Systems.LoadObject
                 newName = preName + (string.IsNullOrEmpty(subName) ? "" : $" {subName}");
             }
 
-            AssetDatabase.RenameAsset(AssetDatabase.GetAssetPath(this), newName);
+            //AssetDatabase.RenameAsset(AssetDatabase.GetAssetPath(this), newName);
         }
-#endif
     }
 }

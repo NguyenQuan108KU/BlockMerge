@@ -139,7 +139,7 @@ public class TowerHeightController : MonoBehaviour
         KillTween();
         _towerContainer
             .DOLocalMoveY(targetY, duration)
-            .SetEase(_config.towerHeightEase)
+            .SetEase((Ease)_config.towerHeightEase)
             .SetId(_tweenId);
     }
 

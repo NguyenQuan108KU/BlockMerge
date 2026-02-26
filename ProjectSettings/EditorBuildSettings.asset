@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Main1.unity
     guid: 37514fc5cc8ff6843a9da8ef7de20fab
+  - enabled: 1
+    path: Assets/Scenes/New Scene.unity
+    guid: 0c9a97638c82c01409107315d86bedd4
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: d2be0fc804c0f334d9ea2c98a0b59040, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}

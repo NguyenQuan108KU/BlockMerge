@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: sonat
+  companyName: DefaultCompany
   productName: Block Merge 360
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -97,7 +97,7 @@ PlayerSettings:
   resizableWindow: 0
   useMacAppStoreValidation: 0
   macAppStoreCategory: public.app-category.games
-  gpuSkinning: 1
+  gpuSkinning: 0
   xboxPIXTextureCapture: 0
   xboxEnableAvatar: 0
   xboxEnableKinect: 0
@@ -141,7 +141,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.1
+  bundleVersion: 1.0
   preloadedAssets:
   - {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   - {fileID: 11400000, guid: 2e392f6e42905dd42af39f24a68960cf, type: 2}
@@ -426,7 +426,7 @@ PlayerSettings:
   - m_BuildTarget: iOSSupport
     m_GraphicsJobs: 0
   - m_BuildTarget: WindowsStandaloneSupport
-    m_GraphicsJobs: 1
+    m_GraphicsJobs: 0
   - m_BuildTarget: XboxOnePlayer
     m_GraphicsJobs: 1
   - m_BuildTarget: LuminSupport
@@ -452,6 +452,12 @@ PlayerSettings:
     m_Automatic: 1
   - m_BuildTarget: WebGLSupport
     m_APIs: 0b000000
+    m_Automatic: 1
+  - m_BuildTarget: WindowsStandaloneSupport
+    m_APIs: 02000000
+    m_Automatic: 1
+  - m_BuildTarget: MacStandaloneSupport
+    m_APIs: 10000000
     m_Automatic: 1
   m_BuildTargetVRSettings:
   - m_BuildTarget: Standalone
@@ -748,25 +754,25 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: DOTWEEN;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3;TextMeshPro;UNITASK_DOTWEEN_SUPPORT;sonat_sdk;sonat_sdk_v2;using_newtonsoft;CUSTOM_ENUM;using_addressable;using_admob;FIREBASE;using_max;using_facebook;using_appsflyer;appsflyer_6_16_or_older;using_iap;using_firebase_analytics;using_firebase_installation;using_firebase_crashlytics;using_firebase_remote;using_firebase_message
-    EmbeddedLinux: DOTWEEN;TextMeshPro
-    GameCoreScarlett: DOTWEEN;TextMeshPro
-    GameCoreXboxOne: DOTWEEN;TextMeshPro
+    Android: ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3;TextMeshPro;UNITASK_DOTWEEN_SUPPORT;sonat_sdk;sonat_sdk_v2;using_newtonsoft;CUSTOM_ENUM;using_addressable;using_admob;FIREBASE;using_max;using_facebook;using_appsflyer;appsflyer_6_16_or_older;using_iap;using_firebase_analytics;using_firebase_installation;using_firebase_crashlytics;using_firebase_remote;using_firebase_message;DOTWEEN
+    EmbeddedLinux: TextMeshPro;DOTWEEN
+    GameCoreScarlett: TextMeshPro;DOTWEEN
+    GameCoreXboxOne: TextMeshPro;DOTWEEN
     Kepler: DOTWEEN;TextMeshPro
-    LinuxHeadlessSimulation: DOTWEEN;TextMeshPro
-    Nintendo Switch: DOTWEEN;TextMeshPro
+    LinuxHeadlessSimulation: TextMeshPro;DOTWEEN
+    Nintendo Switch: TextMeshPro;DOTWEEN
     Nintendo Switch 2: DOTWEEN;TextMeshPro
-    PS4: DOTWEEN;TextMeshPro
-    PS5: DOTWEEN;TextMeshPro
-    QNX: DOTWEEN;TextMeshPro
-    Stadia: TextMeshPro
-    Standalone: DOTWEEN;TextMeshPro;using_newtonsoft;CUSTOM_ENUM;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3;UNITASK_DOTWEEN_SUPPORT;using_addressable;sonat_sdk_v2;sonat_sdk
-    VisionOS: DOTWEEN;TextMeshPro
-    WebGL: DOTWEEN;TextMeshPro
+    PS4: TextMeshPro;DOTWEEN
+    PS5: TextMeshPro;DOTWEEN
+    QNX: TextMeshPro;DOTWEEN
+    Stadia: TextMeshPro;DOTWEEN
+    Standalone: TextMeshPro;using_newtonsoft;CUSTOM_ENUM;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3;UNITASK_DOTWEEN_SUPPORT;using_addressable;sonat_sdk_v2;sonat_sdk;DOTWEEN
+    VisionOS: TextMeshPro;DOTWEEN
+    WebGL: TextMeshPro;DOTWEEN;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3
     Windows Store Apps: DOTWEEN
-    XboxOne: DOTWEEN;TextMeshPro
-    iPhone: DOTWEEN;TextMeshPro;using_newtonsoft;CUSTOM_ENUM
-    tvOS: DOTWEEN;TextMeshPro
+    XboxOne: TextMeshPro;DOTWEEN
+    iPhone: TextMeshPro;using_newtonsoft;CUSTOM_ENUM;DOTWEEN
+    tvOS: TextMeshPro;DOTWEEN
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:

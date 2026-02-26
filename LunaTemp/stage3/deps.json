@@ -1,15 +1,11 @@
 {
   "ignores": [
-    "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/Utility/EColor.cs",
     "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs",
     "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs",
     "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs",
     "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs",
     "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs",
     "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs",
-    "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTweenPro/DOTweenAnimation.cs",
-    "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTweenPro/DOTweenProShortcuts.cs",
-    "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTweenPro/DOTweenTextMeshPro.cs",
     "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Scripts/Events/EventExtensions.cs",
     "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/sonat-game-framework/Scripts/Base/Base.Extensions/FadeExtensions.cs",
     "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/sonat-game-framework/Scripts/Base/Base.Extensions/ListExtensions.cs",
@@ -40,90 +36,6 @@
       "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Art/Emojis/Scripts/ParentFitter.cs"
     ],
     [
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes_SpecialCase/ButtonAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/AnimatorParamTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/AnimatorParamAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/DrawerAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/AllowNestingAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/DisableIfTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/EnumFlagsAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/EnableIfTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/MetaAttributes/EnableIfAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/MetaAttributes/EnableIfAttributeBase.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/MetaAttributes/DisableIfAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/Utility/EConditionOperator.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/MetaAttributes/HideIfAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/HideIfTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes_SpecialCase/ReorderableListAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/ReorderableListTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/ShowIfTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/MetaAttributes/ShowIfAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/MetaAttributes/ShowIfAttributeBase.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/MetaAttributes/MetaAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/MetaAttributes/BoxGroupAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/BoxGroupTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/MinMaxSliderAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/_TestScriptableObjectB.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/_TestScriptableObjectA.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/_NaughtyScriptableObject.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/Expandable.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/ExpandableTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/FoldoutTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/MetaAttributes/FoldoutAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/MetaAttributes/IGroupAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/LabelTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/MetaAttributes/LabelAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/MinMaxSliderTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/MetaAttributes/OnValueChangedAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/OnValueChangedTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/MetaAttributes/ReadOnlyAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/ReadOnlyTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/INaughtyAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes_SpecialCase/SpecialCaseDrawerAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes_SpecialCase/ShowNativePropertyAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/ShowNativePropertyTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes_SpecialCase/ShowNonSerializedFieldAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/ShowNonSerializedFieldTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/ValidatorAttributes/ValidatorAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/ValidatorAttributes/MaxValueAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/MinMaxValueTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/ValidatorAttributes/MinValueAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/ValidatorAttributes/RequiredAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/RequiredTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/ValidatorAttributes/ValidateInputAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/ValidateInputTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/EnumFlagsTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/CurveRangeAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/CurveRangeTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/Utility/EColor.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/HorizontalLineAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/HorizontalLineTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/ProgressBarAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/ProgressBarTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/DropdownAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/DropdownTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/InfoBoxAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/InfoBoxTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/InputAxisAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/InputAxisTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/LayerAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/LayerTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/ResizableTextAreaAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/ResizableTextAreaTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/SceneAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/SceneTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/ShowAssetPreviewAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/ShowAssetPreviewTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/SortingLayerAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/SortingLayerTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/TagAttribute.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/TagTest.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/ButtonTest.cs"
-    ],
-    [
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/NaughtyAttributes/Scripts/Test/_NaughtyComponent.cs"
-    ],
-    [
       "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs"
     ],
     [
@@ -139,32 +51,13 @@
       "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs"
     ],
     [
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs",
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTweenPro/DOTweenAnimation.cs"
+      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs"
     ],
     [
       "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs"
     ],
     [
       "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs"
-    ],
-    [
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTweenPro/DOTweenDeAudio.cs"
-    ],
-    [
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTweenPro/DOTweenDeUnityExtended.cs"
-    ],
-    [
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTweenPro/DOTweenProShortcuts.cs"
-    ],
-    [
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTweenPro/DOTweenTextMeshPro.cs"
-    ],
-    [
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Plugins/Demigiant/DOTweenPro/DOTweenTk2d.cs"
-    ],
-    [
-      "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/QuickOutline/Scripts/Outline.cs"
     ],
     [
       "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Scripts/Ads/GameAdsController.cs",
@@ -784,13 +677,13 @@
       "G:/BM/BlockMerge/LunaTemp/stage3/processed-scripts/Assets/Spine/Runtime/spine-unity/Utility/YieldInstructions/WaitForSpineTrackEntryEnd.cs"
     ],
     [
-      "G:/7.0.0/pipeline/templates/LunaCompiler/Scripts/Properties/AssemblyInfo.cs"
+      "G:/6.4.0/pipeline/templates/LunaCompiler/Scripts/Properties/AssemblyInfo.cs"
     ],
     [
-      "G:/7.0.0/pipeline/templates/LunaCompiler/Scripts/Sources/OtherDummyScript.cs"
+      "G:/6.4.0/pipeline/templates/LunaCompiler/Scripts/Sources/OtherDummyScript.cs"
     ],
     [
-      "G:/7.0.0/pipeline/templates/LunaCompiler/Scripts/obj/Debug/.NETFramework,Version=v4.7.AssemblyAttributes.cs"
+      "G:/6.4.0/pipeline/templates/LunaCompiler/Scripts/obj/Debug/.NETFramework,Version=v4.7.AssemblyAttributes.cs"
     ]
   ]
 }
