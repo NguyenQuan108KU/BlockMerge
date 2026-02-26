@@ -10,7 +10,7 @@ public class RotateButtonHandler : MonoBehaviour, IPointerDownHandler
 
     private void Start()
     {
-        _tower = FindFirstObjectByType<TowerController>();
+        _tower = Object.FindObjectOfType<TowerController>();
     }
 
     public void OnPointerDown(PointerEventData eventData)

@@ -6,54 +6,54 @@ using SonatFramework.Systems.InventoryManagement.GameResources;
 
 namespace SonatFramework.Scripts.Helper.Converters
 {
-    public class GameResourceKeyDictionaryConverter<T> : JsonConverter<Dictionary<GameResourceKey, T>>
+    public class GameResourceKeyDictionaryConverter<T> 
     {
-        public override void WriteJson(JsonWriter writer,
-            Dictionary<GameResourceKey, T> value,
-            JsonSerializer serializer)
-        {
-            writer.WriteStartObject();
+        //public override void WriteJson(JsonWriter writer,
+        //    Dictionary<GameResourceKey, T> value,
+        //    JsonSerializer serializer)
+        //{
+        //    writer.WriteStartObject();
 
-            foreach (var kv in value)
-            {
-                var keyString = $"{kv.Key.gameResource}_{kv.Key.id}";
-                writer.WritePropertyName(keyString);
+        //    foreach (var kv in value)
+        //    {
+        //        var keyString = $"{kv.Key.gameResource}_{kv.Key.id}";
+        //        writer.WritePropertyName(keyString);
 
-                serializer.Serialize(writer, kv.Value);
-            }
+        //        serializer.Serialize(writer, kv.Value);
+        //    }
 
-            writer.WriteEndObject();
-        }
+        //    writer.WriteEndObject();
+        //}
 
-        public override Dictionary<GameResourceKey, T> ReadJson(JsonReader reader,
-            Type objectType,
-            Dictionary<GameResourceKey, T> existingValue,
-            bool hasExistingValue,
-            JsonSerializer serializer)
-        {
-            var dict = new Dictionary<GameResourceKey, T>();
+        //public override Dictionary<GameResourceKey, T> ReadJson(JsonReader reader,
+        //    Type objectType,
+        //    Dictionary<GameResourceKey, T> existingValue,
+        //    bool hasExistingValue,
+        //    JsonSerializer serializer)
+        //{
+        //    var dict = new Dictionary<GameResourceKey, T>();
 
-            while (reader.Read())
-            {
-                if (reader.TokenType == JsonToken.EndObject)
-                    break;
+        //    while (reader.Read())
+        //    {
+        //        if (reader.TokenType == JsonToken.EndObject)
+        //            break;
 
-                string keyString = (string)reader.Value;
-                var parts = keyString.Split('_');
+        //        string keyString = (string)reader.Value;
+        //        var parts = keyString.Split('_');
 
-                var key = new GameResourceKey
-                {
-                    gameResource = Enum.Parse<GameResource>(parts[0]),
-                    id = int.Parse(parts[1])
-                };
+        //        var key = new GameResourceKey
+        //        {
+        //            gameResource = Enum.Parse<GameResource>(parts[0]),
+        //            id = int.Parse(parts[1])
+        //        };
 
-                reader.Read(); // move to value
-                T value = serializer.Deserialize<T>(reader);
+        //        reader.Read(); // move to value
+        //        T value = serializer.Deserialize<T>(reader);
 
-                dict[key] = value;
-            }
+        //        dict[key] = value;
+        //    }
 
-            return dict;
-        }
+        //    return dict;
+        //}
     }
 }

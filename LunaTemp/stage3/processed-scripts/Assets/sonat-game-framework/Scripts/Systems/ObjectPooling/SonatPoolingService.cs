@@ -20,27 +20,27 @@ namespace SonatFramework.Systems.ObjectPooling
 
         public override T Create<T>(string objectName, Transform parent = null, params object[] args)
         {
-            if (Pool.TryGetValue(objectName, out var queue))
-                if (queue.TryDequeue(out var obj) && !obj.transform.gameObject.activeSelf)
-                {
-                    obj.transform.gameObject.SetActive(true);
-                    obj.transform.SetParent(parent);
-                    obj.OnCreateObj(args);
-                    return (T)obj;
-                }
+            //if (Pool.TryGetValue(objectName, out var queue))
+            //    if (queue.TryDequeue(out var obj) && !obj.transform.gameObject.activeSelf)
+            //    {
+            //        obj.transform.gameObject.SetActive(true);
+            //        obj.transform.SetParent(parent);
+            //        obj.OnCreateObj(args);
+            //        return (T)obj;
+            //    }
 
-            if (!ObjPrefs.TryGetValue(objectName, out var objPref))
-            {
-                objPref = loadObjectService.Instance.LoadObject<GameObject>(objectName);
-                ObjPrefs.Add(objectName, objPref);
-            }
+            //if (!ObjPrefs.TryGetValue(objectName, out var objPref))
+            //{
+            //    objPref = loadObjectService.Instance.LoadObject<GameObject>(objectName);
+            //    ObjPrefs.Add(objectName, objPref);
+            //}
 
-            var gameObj = Object.Instantiate(objPref, parent);
-            gameObj.name = objectName;
-            var res2 = gameObj.GetComponent<T>();
-            res2.Setup();
-            res2.OnCreateObj(args);
-            return res2;
+            //var gameObj = Object.Instantiate(objPref, parent);
+            //gameObj.name = objectName;
+            //var res2 = gameObj.GetComponent<T>();
+            //res2.Setup();
+            //res2.OnCreateObj(args);
+            return default(T);
         }
 
         public override void ReturnObj(IPoolingObject obj, bool keep = true)

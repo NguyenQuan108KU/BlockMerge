@@ -88,7 +88,7 @@ public class ScoreManager : SingletonSimple<ScoreManager>
 
     private void OnGameStateChanged([Bridge.Ref] GameStateChangeEvent e)
     {
-        if (e.gameState == GameState.Menu) ResetScore();
+        //if (e.gameState == GameState.Menu) ResetScore();
     }
 
     private void OnRowsCleared([Bridge.Ref] RowsClearedEvent e)

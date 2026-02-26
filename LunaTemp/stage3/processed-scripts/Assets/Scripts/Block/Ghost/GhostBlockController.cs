@@ -35,6 +35,7 @@ public class GhostBlockController : BaseBlock
     private EventBinding<GhostVisibilityEvent> visibilityBinding;
     private EventBinding<UndoPerformedEvent> undoBinding;
 
+    public ActiveBlockController existingBlock;
     #region Unity Lifecycle
 
     protected override void Awake()
@@ -45,7 +46,7 @@ public class GhostBlockController : BaseBlock
 
         _meshRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
         _meshRenderer.receiveShadows = false;
-        _meshRenderer.allowOcclusionWhenDynamic = false;
+        //_meshRenderer.allowOcclusionWhenDynamic = false;
         _meshRenderer.enabled = false;
     }
 
@@ -74,7 +75,6 @@ public class GhostBlockController : BaseBlock
 
     private void Start()
     {
-        var existingBlock = FindFirstObjectByType<ActiveBlockController>();
         if (existingBlock != null && existingBlock.IsReady)
         {
             HandleSpawn(existingBlock);
@@ -305,7 +305,7 @@ public class GhostBlockController : BaseBlock
             );
         }
 
-        Mesh finalMesh = new Mesh();
+        UnityEngine.Mesh finalMesh = new UnityEngine.Mesh();
         finalMesh.name = "Ghost_Smart";
         finalMesh.CombineMeshes(combine, true, true);
         _meshFilter.mesh = finalMesh;
@@ -332,7 +332,7 @@ public class GhostBlockController : BaseBlock
             combine[i].transform = Matrix4x4.TRS(localPos, Quaternion.identity, Vector3.one);
         }
 
-        Mesh finalMesh = new Mesh();
+        UnityEngine.Mesh finalMesh = new UnityEngine.Mesh();
         finalMesh.name = "Ghost_Fallback";
         finalMesh.CombineMeshes(combine, true, true);
         _meshFilter.mesh = finalMesh;

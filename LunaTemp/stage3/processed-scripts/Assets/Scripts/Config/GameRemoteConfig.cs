@@ -90,8 +90,9 @@ public static class GameRemoteConfig
         {
             var wrapper = JsonConvert.DeserializeObject<TimeGapWrapper>(json);
             if (wrapper?.data == null) return null;
-            var sorted = new SortedDictionary<int, int>(wrapper.data);
-            return new Dictionary<int, int>(sorted);
+            //var sorted = new SortedDictionary<int, int>(wrapper.data);
+            //return new Dictionary<int, int>(sorted);
+            return null;
         }
         catch (System.Exception e)
         {

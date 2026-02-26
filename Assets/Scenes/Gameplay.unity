@@ -1581,6 +1581,7 @@ MonoBehaviour:
   meshLibrary: {fileID: 11400000, guid: 589521d09276ea348a70208d71b31ac4, type: 2}
   blockVisuals: []
   palette: {fileID: 11400000, guid: 73b03fc7ac9f6b6469aa7c8badf4dbde, type: 2}
+  existingBlock: {fileID: 1975328099}
 --- !u!23 &770337531
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9168,8 +9169,8 @@ RectTransform:
   - {fileID: 261913585}
   m_Father: {fileID: 1647731726492181037}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.03671706}
-  m_AnchorMax: {x: 1, y: 0.9492441}
+  m_AnchorMin: {x: 0, y: 0.04028436}
+  m_AnchorMax: {x: 1, y: 0.9443128}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -62,7 +62,7 @@ public class PopupSettingsBase : Panel
 
     public virtual void PolicyClick()
     {
-        Application.OpenURL("https://sites.google.com/view/privacy-policy-sonat-game");
+        //Application.OpenURL("https://sites.google.com/view/privacy-policy-sonat-game");
     }
 
     public virtual void HomeClick()

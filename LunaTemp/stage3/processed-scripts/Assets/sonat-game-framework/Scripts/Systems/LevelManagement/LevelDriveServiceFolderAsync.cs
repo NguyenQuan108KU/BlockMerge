@@ -18,23 +18,23 @@ namespace SonatFramework.Systems.LevelManagement
             TypeNameHandling = TypeNameHandling.Auto
         };
 
-        [BoxGroup("DRIVE CONFIG")] [SerializeField]
+        //[BoxGroup("DRIVE CONFIG")] [SerializeField]
         private LevelServiceAsync levelServiceFallback;
 
-        [BoxGroup("GOOGLE DRIVE FOLDER")] [SerializeField]
+        //[BoxGroup("GOOGLE DRIVE FOLDER")] [SerializeField]
         private string driveFolderId = "1mmFs5iomYipkqNDgOjJZ7gikAMOwpfwf";
 
-        [BoxGroup("GOOGLE DRIVE FOLDER")] [SerializeField]
+        //[BoxGroup("GOOGLE DRIVE FOLDER")] [SerializeField]
         private string folderName = "Levels";
 
-        [BoxGroup("GOOGLE SHEET CONFIG")] [SerializeField]
+        //[BoxGroup("GOOGLE SHEET CONFIG")] [SerializeField]
         private string googleSheetId = "1GSELr26XpnIOwMfkQaiBO4RXVv-BLpQI37hiJiBLqro";
 
-        [BoxGroup("GOOGLE SHEET CONFIG")] [SerializeField]
+        //[BoxGroup("GOOGLE SHEET CONFIG")] [SerializeField]
         private string sheetName = "Sheet1";
 
 
-        [BoxGroup("FOLDER SELECTION")] [SerializeField]
+        //[BoxGroup("FOLDER SELECTION")] [SerializeField]
         private string selectedSubfolder = "Hue Anh"; // Default subfolder
 
         private Dictionary<string, string> subfolderIdMap = new Dictionary<string, string>();
@@ -88,7 +88,7 @@ namespace SonatFramework.Systems.LevelManagement
 
                     while (!operation.isDone)
                     {
-                        await Task.Yield();
+                      //  await Task.Yield();
                     }
 
                     if (request.result == UnityWebRequest.Result.Success)
@@ -247,7 +247,7 @@ namespace SonatFramework.Systems.LevelManagement
 
                     while (!operation.isDone)
                     {
-                        await Task.Yield();
+                      //  await Task.Yield();
                     }
 
                     if (request.result == UnityWebRequest.Result.Success)
@@ -456,7 +456,7 @@ namespace SonatFramework.Systems.LevelManagement
 
                     while (!operation.isDone)
                     {
-                        await Task.Yield();
+                     //   await Task.Yield();
                     }
 
                     if (request.result == UnityWebRequest.Result.Success)
@@ -500,7 +500,7 @@ namespace SonatFramework.Systems.LevelManagement
                         var operation = request.SendWebRequest();
                         while (!operation.isDone)
                         {
-                            await Task.Yield();
+                           // await Task.Yield();
                         }
 
                         if (request.result == UnityWebRequest.Result.Success)
@@ -509,7 +509,7 @@ namespace SonatFramework.Systems.LevelManagement
                             // Check if it's valid JSON
                             try
                             {
-                                JsonConvert.DeserializeObject(content);
+                                //JsonConvert.DeserializeObject(content);
                                 Debug.Log($"Found working file ID: {pattern}");
                                 return pattern;
                             }

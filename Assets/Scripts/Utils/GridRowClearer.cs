@@ -803,7 +803,7 @@ public class GridRowClearer
             Sequence seq = DOTween.Sequence();
             seq.Append(vis.transform.DOScale(maxScale, swellDuration).SetEase(Ease.OutQuad));
             seq.Append(vis.transform.DOScale(recoilScale, recoilDuration).SetEase(Ease.InQuad));
-            tasks.Add(seq.AsyncWaitForCompletion());
+            //tasks.Add(seq.AsyncWaitForCompletion());
         }
 
         foreach (var vis in affectedVisuals)
@@ -815,7 +815,7 @@ public class GridRowClearer
             seq.Append(vis.transform.DOScale(maxScale, swellDuration).SetEase(Ease.OutQuad));
             seq.Append(vis.transform.DOScale(recoilScale, recoilDuration).SetEase(Ease.InQuad));
             seq.Append(vis.transform.DOScale(1.0f, returnDuration).SetEase(Ease.OutBack));
-            tasks.Add(seq.AsyncWaitForCompletion());
+            //tasks.Add(seq.AsyncWaitForCompletion());
         }
 
         if (tasks.Count > 0) await Task.WhenAll(tasks);
@@ -862,10 +862,10 @@ public class GridRowClearer
 
     public static async Task PreloadEffects()
     {
-        if (ObjectPoolManager.Instance != null)
-        {
-            await ObjectPoolManager.Instance.PreloadAssetAsync(VFX_DUAL_KEY);
-        }
+        //if (ObjectPoolManager.Instance != null)
+        //{
+        //    await ObjectPoolManager.Instance.PreloadAssetAsync(VFX_DUAL_KEY);
+        //}
     }
 
     #endregion

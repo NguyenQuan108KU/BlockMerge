@@ -44,7 +44,7 @@ public class GameLoader : MonoBehaviour
         Application.targetFrameRate = 60;
         QualitySettings.vSyncCount = 0;
 
-        SonatSdkManager.Initialize(() => _isSdkReady = true);
+        //SonatSdkManager.Initialize(() => _isSdkReady = true);
         RunLoadingSequence();
     }
 
@@ -65,10 +65,10 @@ public class GameLoader : MonoBehaviour
         panelGameLoading.gameObject.SetActive(true);
         panelSplash.gameObject.SetActive(false);
 
-        await panelGameLoading
-            .DOFade(1f, 0.3f)
-            .SetEase(Ease.OutCubic)
-            .AsyncWaitForCompletion();
+        //await panelGameLoading
+        //    .DOFade(1f, 0.3f)
+        //    .SetEase(Ease.OutCubic)
+        //    .AsyncWaitForCompletion();
 
         var loadingBar = new SmoothProgress(loadingFillImage);
 
@@ -120,10 +120,9 @@ public class GameLoader : MonoBehaviour
         await splashBar.WaitUntilFull();
 
         //  TRANSITION → Gameplay
-        await panelSplash
+        panelSplash
             .DOFade(0f, fadeOutDuration)
-            .SetEase(Ease.InCubic)
-            .AsyncWaitForCompletion();
+            .SetEase(Ease.InCubic);
 
         DOTween.KillAll();
         _sceneService.Instance.SwitchScene(GamePlacement.Gameplay);
@@ -150,11 +149,11 @@ public class GameLoader : MonoBehaviour
 
         private async Task RunLoop()
         {
-            while (_display < 1f)
-            {
-                Tick();
-                await Task.Yield();
-            }
+            //while (_display < 1f)
+            //{
+            //    Tick();
+            //    await Task.Yield();
+            //}
         }
 
         private void Tick()
@@ -170,8 +169,8 @@ public class GameLoader : MonoBehaviour
 
         public async Task WaitUntilFull()
         {
-            while (_display < 0.99f)
-                await Task.Yield();
+            //while (_display < 0.99f)
+            //    await Task.Yield();
         }
     }
 

@@ -5,7 +5,7 @@ namespace Booster
 {
     public interface IBoosterStrategy
     {
-        GameResource BoosterType { get; }
+        //GameResource BoosterType { get; }
         void Initialize(BoosterContext context);
         bool CanExecute();
         Task<bool> Execute();

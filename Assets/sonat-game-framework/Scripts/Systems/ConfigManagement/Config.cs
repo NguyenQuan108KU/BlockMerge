@@ -8,7 +8,7 @@ namespace SonatFramework.Systems.ConfigManagement
     public class Config<T> where T : class
     {
         [EnumToggleButtons] public LoadConfigFrom loadConfigFrom = LoadConfigFrom.Automatic;
-        [ShowIf("@loadConfigFrom == LoadConfigFrom.Manual")] [SerializeField]
+        //[ShowIf("@loadConfigFrom == LoadConfigFrom.Manual")] [SerializeField]
         private T manualConfig;
 
         private static T configCache;

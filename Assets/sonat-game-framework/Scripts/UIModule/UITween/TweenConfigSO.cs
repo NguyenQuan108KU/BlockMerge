@@ -15,20 +15,20 @@ namespace SonatFramework.Scripts.UIModule
     {
         public UITweenType tweenType;
 
-        [ShowIf(
-            "@tweenType == UITweenType.Fade || tweenType == UITweenType.FadeGroup || tweenType == UITweenType.Scale")]
+        //[ShowIf(
+        //    "@tweenType == UITweenType.Fade || tweenType == UITweenType.FadeGroup || tweenType == UITweenType.Scale")]
         public float from;
 
-        [ShowIf(
-            "@tweenType == UITweenType.Fade || tweenType == UITweenType.FadeGroup || tweenType == UITweenType.Scale")]
+        //[ShowIf(
+        //    "@tweenType == UITweenType.Fade || tweenType == UITweenType.FadeGroup || tweenType == UITweenType.Scale")]
         public float to = 1;
 
-        [ShowIf(
-            "@tweenType == UITweenType.Move || tweenType == UITweenType.LocalMove || tweenType == UITweenType.RectLocalMove")]
+        //[ShowIf(
+        //    "@tweenType == UITweenType.Move || tweenType == UITweenType.LocalMove || tweenType == UITweenType.RectLocalMove")]
         public Vector3 mFrom;
 
-        [ShowIf(
-            "@tweenType == UITweenType.Move || tweenType == UITweenType.LocalMove || tweenType == UITweenType.RectLocalMove")]
+        //[ShowIf(
+        //    "@tweenType == UITweenType.Move || tweenType == UITweenType.LocalMove || tweenType == UITweenType.RectLocalMove")]
         public Vector3 mTo;
 
         public float duration;

@@ -230,27 +230,27 @@ namespace Booster
 
         private void SpawnDestroyEffect(GameObject blockObj)
         {
-            if (ObjectPoolManager.Instance == null || blockObj == null) return;
+            //if (ObjectPoolManager.Instance == null || blockObj == null) return;
 
             Vector3 pos = blockObj.transform.position;
             Vector3 dir = pos.normalized;
 
             // Dùng tên string cứng hoặc hằng số
-            GameObject vfx = ObjectPoolManager.Instance.SpawnSync(
-                "VFX_BlockBreak_Dual",
-                pos + dir * 0.2f,
-                Quaternion.LookRotation(dir)
-            );
+            //GameObject vfx = ObjectPoolManager.Instance.SpawnSync(
+            //    "VFX_BlockBreak_Dual",
+            //    pos + dir * 0.2f,
+            //    Quaternion.LookRotation(dir)
+            //);
 
-            if (vfx != null)
-            {
-                var vis = blockObj.GetComponent<BlockVisual>();
-                var eff = vfx.GetComponent<DualDirectionEffect>();
-                if (vis != null && eff != null)
-                {
-                    //eff.SetupAndPlay(vis.CurrentColor);
-                }
-            }
+            //if (vfx != null)
+            //{
+            //    var vis = blockObj.GetComponent<BlockVisual>();
+            //    var eff = vfx.GetComponent<DualDirectionEffect>();
+            //    if (vis != null && eff != null)
+            //    {
+            //        //eff.SetupAndPlay(vis.CurrentColor);
+            //    }
+            //}
         }
 
         #endregion

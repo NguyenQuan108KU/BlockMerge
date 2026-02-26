@@ -321,7 +321,7 @@ public class CheatPanel : Panel
 
     private void SwitchLocalTime(bool state)
     {
-        SonatSystem.GetService<SonatTimeService>().SetUsingLocalTime(state);
+        //SonatSystem.GetService<SonatTimeService>().SetUsingLocalTime(state);
     }
 
     public void OnOffCheat()

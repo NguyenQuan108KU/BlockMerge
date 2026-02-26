@@ -135,7 +135,7 @@ namespace SonatFramework.Systems.LevelManagement
         {
             Debug.Log("DownloadLevelManager: start load remote level data");
             Hash128 hash128 = new Hash128();
-            hash128.Append(levelRemoteConfigData.id);
+            //hash128.Append(levelRemoteConfigData.id);
             CachedAssetBundle cached = new CachedAssetBundle(levelRemoteConfigData.id, hash128);
             LogDownLoadPhase("start", levelRemoteConfigData.id);
             using (UnityWebRequest www = UnityWebRequestAssetBundle.GetAssetBundle(levelRemoteConfigData.url, cached, 0))
@@ -149,7 +149,7 @@ namespace SonatFramework.Systems.LevelManagement
                 else
                 {
                     Debug.Log("DownloadLevelManager: download success!");
-                    assetBundle = DownloadHandlerAssetBundle.GetContent(www);
+                    //assetBundle = DownloadHandlerAssetBundle.GetContent(www);
                     if (assetBundle != null)
                         lastId.Value = levelRemoteConfigData.id;
                     yield return new WaitForSeconds(0.1f);

@@ -77,7 +77,7 @@ public class GridManager : SingletonSimple<GridManager>
         // 2. [TIER2] Tìm Tower 1 lần, cache lại — tránh FindFirstObjectByType mỗi lần gọi
         if (_cachedTowerContainer == null)
         {
-            var tower = FindFirstObjectByType<TowerController>();
+            var tower = Object.FindObjectOfType<TowerController>();
             _cachedTowerContainer = tower != null ? tower.towerContainer : transform;
         }
         Transform towerContainer = _cachedTowerContainer;

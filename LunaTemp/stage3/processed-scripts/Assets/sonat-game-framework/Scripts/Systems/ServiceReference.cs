@@ -8,7 +8,7 @@ namespace SonatFramework.Systems
     {
         [EnumToggleButtons] public ReferenceType referenceType = ReferenceType.Automatic;
 
-        [ShowIf("@referenceType == ReferenceType.Manual")]
+        //[ShowIf("@referenceType == ReferenceType.Manual")]
         public T reference;
 
         private static T instance;

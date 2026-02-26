@@ -229,10 +229,9 @@ public class TowerRotator : MonoBehaviour
         _targetAngle = snapTarget;
         _animatedAngle = snapTarget;
 
-        await _towerContainer
+         _towerContainer
             .DOLocalRotate(new Vector3(0, snapTarget, 0), _cachedConfig.towerSnapDuration)
-            .SetEase(_cachedConfig.towerSnapEase)
-            .AsyncWaitForCompletion();
+            .SetEase(_cachedConfig.towerSnapEase);
 
         if (Mathf.Abs(Mathf.DeltaAngle(_targetAngle, snapTarget)) < 1f)
         {

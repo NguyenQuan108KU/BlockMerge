@@ -20,18 +20,18 @@ namespace SonatFramework.Scripts.Feature.Lives
     {
         public long timeRemainToRefill;
 
-        [BoxGroup("SERVICES", true)] [Required] [SerializeField]
+        //[BoxGroup("SERVICES", true)] [Required] [SerializeField]
         private Service<InventoryService> inventoryService = new Service<InventoryService>();
 
-        [BoxGroup("SERVICES", true)] [Required] [SerializeField]
+        //[BoxGroup("SERVICES", true)] [Required] [SerializeField]
         private Service<TimeService> timeService = new Service<TimeService>();
 
-        [BoxGroup("SERVICES", true)] [Required] [SerializeField]
+        //[BoxGroup("SERVICES", true)] [Required] [SerializeField]
         private Service<DataService> dataService = new Service<DataService>();
 
-        [BoxGroup("CONFIGS", true)] [Required] public LivesConfig config;
+        public LivesConfig config;
 
-        [BoxGroup("CONFIGS", true)] [SerializeField]
+        //[BoxGroup("CONFIGS", true)] [SerializeField]
         private bool ignoreLives = false;
 
         private Coroutine countUnlimitedLives;

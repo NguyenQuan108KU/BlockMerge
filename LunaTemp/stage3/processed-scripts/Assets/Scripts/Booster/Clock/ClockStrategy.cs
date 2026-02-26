@@ -13,7 +13,7 @@ namespace Booster
     /// </summary>
     public class ClockStrategy : IBoosterStrategy
     {
-        public GameResource BoosterType => GameResource.Clock;
+       // public GameResource BoosterType => GameResource.Clock;
 
         private BoosterContext _context;
         private ClockService _service;

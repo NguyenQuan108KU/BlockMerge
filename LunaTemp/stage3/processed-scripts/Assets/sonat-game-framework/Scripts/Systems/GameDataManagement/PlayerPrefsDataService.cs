@@ -66,13 +66,13 @@ namespace SonatFramework.Systems.GameDataManagement
             return JsonConvert.DeserializeObject<T>(json);
         }
 
-        public override T GetData<T>(string key, JsonConverter converter)
-        {
-            var json = PlayerPrefs.GetString(key);
-            if (string.IsNullOrEmpty(json)) return default(T);
-            return JsonConvert.DeserializeObject<T>(json,
-                new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Auto, Converters = new JsonConverter[] { converter } });
-        }
+        //public override T GetData<T>(string key, JsonConverter converter)
+        //{
+        //    var json = PlayerPrefs.GetString(key);
+        //    if (string.IsNullOrEmpty(json)) return default;
+        //    return JsonConvert.DeserializeObject<T>(json,
+        //        new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Auto, Converters = new JsonConverter[] { converter } });
+        //}
 
         public override void SetData<T>(string key, T data)
         {
@@ -80,12 +80,12 @@ namespace SonatFramework.Systems.GameDataManagement
             PlayerPrefs.SetString(key, json);
         }
 
-        public override void SetData<T>(string key, T data, JsonConverter converter)
-        {
-            var json = JsonConvert.SerializeObject(data,
-                new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Auto, Converters = new JsonConverter[] { converter } });
-            PlayerPrefs.SetString(key, json);
-        }
+        //public override void SetData<T>(string key, T data, JsonConverter converter)
+        //{
+        //    var json = JsonConvert.SerializeObject(data,
+        //        new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Auto, Converters = new JsonConverter[] { converter } });
+        //    PlayerPrefs.SetString(key, json);
+        //}
 
         public override void SaveData()
         {

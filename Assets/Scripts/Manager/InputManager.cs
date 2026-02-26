@@ -45,7 +45,7 @@ public class InputManager : SingletonSimple<InputManager>
 
     private void Start()
     {
-        _tower = FindFirstObjectByType<TowerController>();
+        _tower = Object.FindObjectOfType<TowerController>();
         if (_tower != null)
         {
             _spawner = _tower.spawner;
@@ -326,7 +326,7 @@ public class InputManager : SingletonSimple<InputManager>
             float waitTime = 0f;
             while (_spawner.IsSpawning && waitTime < 0.5f)
             {
-                await Task.Yield();
+                //await Task.Yield();
                 waitTime += Time.deltaTime;
             }
         }

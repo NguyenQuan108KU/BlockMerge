@@ -1,0 +1,369 @@
+{
+    "BuildID": "aa4475dc-ee29-4022-9365-971dc4a3dcad",
+    "Command": "project:build",
+    "ProjectID": "15d5b0607dad2fe46bcff63b1ecfccbc",
+    "ProjectStateHash": "01d6f93b30aec64c8d23388e42c03ce152afd562dbf902dbe77bbffc4bc9bc98",
+    "StageCompletedAt": 3,
+    "EarliestFatalError": 3,
+    "StartTime": 1772079996695,
+    "EndTime": 1772080046250,
+    "PlaygroundUserID": 30374,
+    "OperatingSystem": "win32",
+    "UnityPackageID": null,
+    "TargetPlatform": "develop",
+    "UnityVersion": "2022.3.62f3\r",
+    "LunaVersion": "7.0.0",
+    "LogCount": 15,
+    "Logs": [
+        {
+            "LogID": "3377e87f-8929-42e6-a198-b4c72795c321",
+            "Order": 12,
+            "Timestamp": 1772080047386,
+            "Stage": 3,
+            "ErrorType": 1,
+            "ErrorCode": "LP3006",
+            "Description": "You are not using the Luna API: Playable.InstallFullGame",
+            "Details": [
+                "You are not using the Luna API: Playable.InstallFullGame. Some ad networks require these calls. Please add these calls to ensure your playable works on all ad networks. Check documentation for more information."
+            ],
+            "DescriptionValues": [
+                "Playable",
+                "InstallFullGame"
+            ],
+            "DetailsValues": [
+                "Playable",
+                "InstallFullGame"
+            ],
+            "LogCount": 1,
+            "LinePosition": null,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "6ad667bb-0e11-4544-ba57-077e0deae3d9",
+            "Order": 12,
+            "Timestamp": 1772080047386,
+            "Stage": 3,
+            "ErrorType": 1,
+            "ErrorCode": "LP3015",
+            "Description": "You are not the Game Ended API: LifeCycle.GameEnded",
+            "Details": [
+                "You are not using the Game Ended API: LifeCycle.GameEnded. Some ad networks require this call, please add the event to avoid the ad being rejected."
+            ],
+            "DescriptionValues": [
+                "LifeCycle",
+                "GameEnded"
+            ],
+            "DetailsValues": [
+                "LifeCycle",
+                "GameEnded"
+            ],
+            "LogCount": 1,
+            "LinePosition": null,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "bae30f25-bb29-4cbc-9bb2-ff4cf16cb787",
+            "Order": 12,
+            "Timestamp": 1772080047386,
+            "Stage": 3,
+            "ErrorType": 3,
+            "ErrorCode": "LP3007",
+            "Description": "You are not using any custom events",
+            "Details": [
+                "You are not using any custom events. It is recommended to use custom events to have a better understanding of the playable."
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": null,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "36ff514c-010a-4f56-9459-5eb7bb8d4a1b",
+            "Order": 12,
+            "Timestamp": 1772080047388,
+            "Stage": 3,
+            "ErrorType": 3,
+            "ErrorCode": "LP3011",
+            "Description": "You are not using any LunaPlaygroundFields attributes.",
+            "Details": [
+                "You are not using any LunaPlaygroundFields attributes, it allows you to configure your playable to different concepts to find the best variation, which can drastically improve playable performance on all ad networks."
+            ],
+            "DescriptionValues": null,
+            "DetailsValues": null,
+            "LogCount": 1,
+            "LinePosition": null,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "40c3a9a2-7367-4ec9-b0ab-a33c8a4c5a66",
+            "Order": 0,
+            "Timestamp": 1772080021650,
+            "Stage": 1,
+            "ErrorType": 2,
+            "ErrorCode": "LP1014",
+            "Description": "We recommend running Runtime Analysis to find and remove all unused code",
+            "Details": [
+                "Navigate to the Runtime Analysis → Code tab to enable code stripping. Before uploading the playable, please make sure to have played all scenario’s of the playable in a development build to make Runtime Analysis work properly."
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "9bc55bf9-1e42-4a34-8985-409c1b26b6dd",
+            "Order": 1,
+            "Timestamp": 1772080021651,
+            "Stage": 1,
+            "ErrorType": 2,
+            "ErrorCode": "LP1016",
+            "Description": "Extensive usage of ParticleSystem Component",
+            "Details": [
+                "There is extensive usage of the ParticleSystem component.\nExcessive usage of any component can be detrimental to performance on lower and in some cases higher end devices, consider reducing the amount the component is used.\nRecommended count: 10, current count 24."
+            ],
+            "DescriptionValues": [
+                "ParticleSystem"
+            ],
+            "DetailsValues": [
+                "ParticleSystem",
+                "10",
+                "24"
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "d8a0d449-319c-4a5c-b183-a6ec998d3b45",
+            "Order": 2,
+            "Timestamp": 1772080021673,
+            "Stage": 1,
+            "ErrorType": 0,
+            "ErrorCode": "LP1027",
+            "Description": "This DOTween version is not supported",
+            "Details": [
+                "The incorrect DOTween version for this Unity version is in use, please update or downgrade to the recommended version {0} in the package manager. Go to Window → Package Manager."
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [
+                "1.2.705"
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "4c85ad37-6246-4d69-8778-e0c66b30d4d5",
+            "Order": 3,
+            "Timestamp": 1772080021673,
+            "Stage": 1,
+            "ErrorType": 0,
+            "ErrorCode": "LP1015",
+            "Description": "This TMP version is not fully supported",
+            "Details": [
+                "The incorrect Text Mesh Pro for this Unity version is in use, please update or downgrade to the recommended version {0} in the package manager. Go to Window → Package Manager"
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [
+                "3.0.6, 3.0.7"
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "c7eaa3ea-6b63-4999-b652-7a1fc7615cce",
+            "Order": 4,
+            "Timestamp": 1772080021673,
+            "Stage": 1,
+            "ErrorType": 0,
+            "ErrorCode": "LP1032",
+            "Description": "Package(s) is not supported in Luna",
+            "Details": [
+                "Currently package(s) com.unity.timeline are not supported in Luna. We recommend you to remove it and workaround it's functionality."
+            ],
+            "DescriptionValues": [
+                "com.unity.timeline (1.8.9)"
+            ],
+            "DetailsValues": [
+                "com.unity.timeline"
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "G:/BM/BlockMerge/Packages\\manifest.json",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "4b127b0b-5af4-4fc4-b666-c53caf06c99c",
+            "Order": 5,
+            "Timestamp": 1772080021674,
+            "Stage": 1,
+            "ErrorType": 3,
+            "ErrorCode": "LP1002",
+            "Description": "Repeat wrap mode used on a texture with non power-of-two dimensions, this might not be rendered correctly.",
+            "Details": [
+                "Repeat wrap mode used on 'LiberationSans SDF Atlas' texture at 'Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset' with non power-of-two dimensions, this might not be rendered correctly."
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [
+                "LiberationSans SDF Atlas",
+                "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset"
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "530e312b-9ae3-4909-976b-0722c4dc03c6",
+            "Order": 6,
+            "Timestamp": 1772080021674,
+            "Stage": 1,
+            "ErrorType": 2,
+            "ErrorCode": "LP1010",
+            "Description": "Looks like a collider was scaled, this might affect performance.",
+            "Details": [
+                "Limit Line",
+                "Limit Line"
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [],
+            "LogCount": 2,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "0eb4e117-32e7-41d1-b5b4-2455b3f2d4d4",
+            "Order": 7,
+            "Timestamp": 1772080046248,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0115",
+            "Description": "'DOTweenAnimation.DOGotoAndPause(float)': no suitable method found to override",
+            "Details": [
+                "public override void DOGotoAndPause(float time)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 901,
+            "FilePath": "G:\\BM\\BlockMerge\\Assets\\Plugins\\Demigiant\\DOTweenPro\\DOTweenAnimation.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "3201e7e7-d3e6-4a14-bc92-dd68688fb34e",
+            "Order": 8,
+            "Timestamp": 1772080046249,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS0115",
+            "Description": "'DOTweenAnimation.DOGotoAndPlay(float)': no suitable method found to override",
+            "Details": [
+                "public override void DOGotoAndPlay(float time)"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 906,
+            "FilePath": "G:\\BM\\BlockMerge\\Assets\\Plugins\\Demigiant\\DOTweenPro\\DOTweenAnimation.cs",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 1
+        },
+        {
+            "LogID": "8f3e353f-0fd7-40f0-b11e-36916f293274",
+            "Order": 9,
+            "Timestamp": 1772080046249,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1061",
+            "Description": "'Mesh' does not contain a definition for 'CombineMeshes' and no accessible extension method 'CombineMeshes' accepting a first argument of type 'Mesh' could be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "finalMesh.CombineMeshes(combine, true, true);"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 310,
+            "FilePath": "G:\\BM\\BlockMerge\\Assets\\Scripts\\Block\\Ghost\\GhostBlockController.cs",
+            "ClassName": "Mesh",
+            "MemberName": "CombineMeshes",
+            "Severity": 1
+        },
+        {
+            "LogID": "e6dcc24a-c3ed-4a08-af0c-4f1cef65d6c8",
+            "Order": 10,
+            "Timestamp": 1772080046250,
+            "Stage": 3,
+            "ErrorType": 0,
+            "ErrorCode": "CS1061",
+            "Description": "'Mesh' does not contain a definition for 'CombineMeshes' and no accessible extension method 'CombineMeshes' accepting a first argument of type 'Mesh' could be found (are you missing a using directive or an assembly reference?)",
+            "Details": [
+                "finalMesh.CombineMeshes(combine, true, true);"
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 337,
+            "FilePath": "G:\\BM\\BlockMerge\\Assets\\Scripts\\Block\\Ghost\\GhostBlockController.cs",
+            "ClassName": "Mesh",
+            "MemberName": "CombineMeshes",
+            "Severity": 1
+        }
+    ]
+}

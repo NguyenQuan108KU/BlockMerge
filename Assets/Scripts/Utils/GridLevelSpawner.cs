@@ -50,7 +50,7 @@ public class GridLevelSpawner
         HashSet<Vector2Int> occupiedCells,
         SpawnStats stats)
     {
-        BlockShapeSO shapeSO = await LoadShape(data, elementIndex);
+        BlockShapeSO shapeSO = LoadShape(data, elementIndex);
         if (shapeSO == null) return;
 
         int uniqueMapBlockID = GridManager.GetNextBlockID();
@@ -158,22 +158,15 @@ public class GridLevelSpawner
 
     #region Helpers
 
-    private async Task<BlockShapeSO> LoadShape(PreplacedBlockData data, int elementIndex)
+    private BlockShapeSO LoadShape(PreplacedBlockData data, int elementIndex)
     {
-        if (data.blockShapeRef == null) return null;
-
-        BlockShapeSO shapeSO = null;
-
-        if (data.blockShapeRef.Asset != null)
+        if (data.blockShapeRef == null)
         {
-            shapeSO = data.blockShapeRef.Asset as BlockShapeSO;
-        }
-        else if (data.blockShapeRef.RuntimeKeyIsValid())
-        {
-            shapeSO = await data.blockShapeRef.LoadAssetAsync<BlockShapeSO>().Task;
+            Debug.LogError($"[LevelData] Element {elementIndex}: BlockShape chưa được gán!");
+            return null;
         }
 
-        return shapeSO;
+        return data.blockShapeRef;
     }
 
     private Material GetBlockMaterial(int colorIndex)

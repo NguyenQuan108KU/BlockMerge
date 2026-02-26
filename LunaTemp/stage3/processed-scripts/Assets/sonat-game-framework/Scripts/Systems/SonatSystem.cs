@@ -15,7 +15,8 @@ namespace SonatFramework.Systems
         [SerializeField] protected SonatServicesManager serviceManager;
         [SerializeField] protected Service<ConfigService> configService = new Service<ConfigService>();
         [SerializeField] protected bool autoInit = true;
-        [SerializeField] [ShowIf("@autoInit")] protected float delayToInit = 0.5f;
+        //[SerializeField] [ShowIf("@autoInit")] 
+        protected float delayToInit = 0.5f;
 
         protected override void OnAwake()
         {

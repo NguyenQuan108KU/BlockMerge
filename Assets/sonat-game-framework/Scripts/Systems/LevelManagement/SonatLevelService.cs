@@ -15,18 +15,18 @@ namespace SonatFramework.Systems.LevelManagement
     {
         [SerializeField] private string path = "Level";
 
-        [BoxGroup("SERVICES")]
+        //[BoxGroup("SERVICES")]
         [Required]
         [SerializeField]
         private Service<LoadObjectService> loadObjectService = new Service<LoadObjectService>();
 
-        [BoxGroup("SERVICES")]
+        //[BoxGroup("SERVICES")]
         [Required]
         [SerializeField]
         private Service<SaveObjectService> saveObjectService = new Service<SaveObjectService>();
 
 
-        [BoxGroup("CONFIGS")]
+        //[BoxGroup("CONFIGS")]
         [SerializeField]
         protected LevelConfig config;
 

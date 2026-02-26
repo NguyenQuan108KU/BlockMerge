@@ -17,12 +17,12 @@ namespace SonatFramework.Systems.BoosterManagement
     {
         #region Services
 
-        [BoxGroup("SERVICES")]
+        //[BoxGroup("SERVICES")]
         [Required]
         [SerializeField]
         private Service<InventoryService> inventoryService = new Service<InventoryService>();
 
-        [BoxGroup("SERVICES")]
+        //[BoxGroup("SERVICES")]
         [Required]
         [SerializeField]
         private Service<DataService> dataService = new Service<DataService>();
@@ -31,7 +31,7 @@ namespace SonatFramework.Systems.BoosterManagement
 
         #endregion
 
-        [BoxGroup("CONFIGS", true)]
+        //[BoxGroup("CONFIGS", true)]
         [SerializeField]
         private BoostersConfig boostersConfig;
 

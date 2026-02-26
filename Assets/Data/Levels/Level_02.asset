@@ -27,82 +27,42 @@ MonoBehaviour:
   - faceIndex: 0
     localX: 0
     y: 0
-    blockShapeRef:
-      m_AssetGUID: 69370d32d396cc74baae77ae397e96a5
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 0}
     colorIndex: 0
   - faceIndex: 0
     localX: 4
     y: 0
-    blockShapeRef:
-      m_AssetGUID: 36cc00af6cfd6e043afacbaaa0a44c2a
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 0}
     colorIndex: 2
   - faceIndex: 1
     localX: 1
     y: 0
-    blockShapeRef:
-      m_AssetGUID: 69370d32d396cc74baae77ae397e96a5
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 0}
     colorIndex: 2
   - faceIndex: 1
     localX: 5
     y: 0
-    blockShapeRef:
-      m_AssetGUID: 4c5836c4f835ffd4eafd02ad5ff2eb41
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 0}
     colorIndex: 1
   - faceIndex: 2
     localX: 1
     y: 0
-    blockShapeRef:
-      m_AssetGUID: 36cc00af6cfd6e043afacbaaa0a44c2a
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 0}
     colorIndex: 3
   - faceIndex: 2
     localX: 4
     y: 0
-    blockShapeRef:
-      m_AssetGUID: 36cc00af6cfd6e043afacbaaa0a44c2a
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 0}
     colorIndex: 0
   - faceIndex: 3
     localX: 1
     y: 0
-    blockShapeRef:
-      m_AssetGUID: 4c5836c4f835ffd4eafd02ad5ff2eb41
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 0}
     colorIndex: 1
   - faceIndex: 3
     localX: 2
     y: 0
-    blockShapeRef:
-      m_AssetGUID: 36cc00af6cfd6e043afacbaaa0a44c2a
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 0}
     colorIndex: 5
   difficultyConfig: {fileID: 11400000, guid: eaa4ccbb339d282419b1dc3981ac3cbf, type: 2}
   shapePool: {fileID: 11400000, guid: a6ae101740905c34cafb4239cf25c7b2, type: 2}

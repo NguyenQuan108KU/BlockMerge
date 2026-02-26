@@ -43,7 +43,7 @@ public class ChestRewardService : SonatServiceSo, IServiceInitializeAsync
             data.currentProgress = 0;
         }
 
-        return Task.CompletedTask;
+        return Task.FromResult(0);
     }
 
     protected async Task LoadConfig()

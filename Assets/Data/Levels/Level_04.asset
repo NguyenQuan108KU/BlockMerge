@@ -27,252 +27,127 @@ MonoBehaviour:
   - faceIndex: 0
     localX: 0
     y: 0
-    blockShapeRef:
-      m_AssetGUID: 36cc00af6cfd6e043afacbaaa0a44c2a
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: 36cc00af6cfd6e043afacbaaa0a44c2a, type: 2}
     colorIndex: 0
   - faceIndex: 0
     localX: 0
     y: 2
-    blockShapeRef:
-      m_AssetGUID: 69370d32d396cc74baae77ae397e96a5
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: 69370d32d396cc74baae77ae397e96a5, type: 2}
     colorIndex: 1
   - faceIndex: 0
     localX: 1
     y: 3
-    blockShapeRef:
-      m_AssetGUID: 4c5836c4f835ffd4eafd02ad5ff2eb41
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: 4c5836c4f835ffd4eafd02ad5ff2eb41, type: 2}
     colorIndex: 5
   - faceIndex: 0
     localX: 2
     y: 1
-    blockShapeRef:
-      m_AssetGUID: 69370d32d396cc74baae77ae397e96a5
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: 69370d32d396cc74baae77ae397e96a5, type: 2}
     colorIndex: 1
   - faceIndex: 0
     localX: 3
     y: 2
-    blockShapeRef:
-      m_AssetGUID: e5ba09d26899f39478439f7a066e8e55
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: e5ba09d26899f39478439f7a066e8e55, type: 2}
     colorIndex: 5
   - faceIndex: 0
     localX: 4
     y: 0
-    blockShapeRef:
-      m_AssetGUID: 4c5836c4f835ffd4eafd02ad5ff2eb41
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: 4c5836c4f835ffd4eafd02ad5ff2eb41, type: 2}
     colorIndex: 0
   - faceIndex: 1
     localX: 0
     y: 1
-    blockShapeRef:
-      m_AssetGUID: 69370d32d396cc74baae77ae397e96a5
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: 69370d32d396cc74baae77ae397e96a5, type: 2}
     colorIndex: 1
   - faceIndex: 1
     localX: 0
     y: 2
-    blockShapeRef:
-      m_AssetGUID: 4c5836c4f835ffd4eafd02ad5ff2eb41
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: 4c5836c4f835ffd4eafd02ad5ff2eb41, type: 2}
     colorIndex: 5
   - faceIndex: 1
     localX: 1
     y: 0
-    blockShapeRef:
-      m_AssetGUID: 69370d32d396cc74baae77ae397e96a5
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: 69370d32d396cc74baae77ae397e96a5, type: 2}
     colorIndex: 1
   - faceIndex: 1
     localX: 1
     y: 2
-    blockShapeRef:
-      m_AssetGUID: 69370d32d396cc74baae77ae397e96a5
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: 69370d32d396cc74baae77ae397e96a5, type: 2}
     colorIndex: 1
   - faceIndex: 1
     localX: 3
     y: 1
-    blockShapeRef:
-      m_AssetGUID: 69370d32d396cc74baae77ae397e96a5
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: 69370d32d396cc74baae77ae397e96a5, type: 2}
     colorIndex: 1
   - faceIndex: 1
     localX: 4
     y: 2
-    blockShapeRef:
-      m_AssetGUID: e5ba09d26899f39478439f7a066e8e55
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: e5ba09d26899f39478439f7a066e8e55, type: 2}
     colorIndex: 5
   - faceIndex: 2
     localX: 0
     y: 0
-    blockShapeRef:
-      m_AssetGUID: 36cc00af6cfd6e043afacbaaa0a44c2a
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: 36cc00af6cfd6e043afacbaaa0a44c2a, type: 2}
     colorIndex: 0
   - faceIndex: 2
     localX: 0
     y: 2
-    blockShapeRef:
-      m_AssetGUID: 36cc00af6cfd6e043afacbaaa0a44c2a
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: 36cc00af6cfd6e043afacbaaa0a44c2a, type: 2}
     colorIndex: 0
   - faceIndex: 2
     localX: 1
     y: 1
-    blockShapeRef:
-      m_AssetGUID: 69370d32d396cc74baae77ae397e96a5
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: 69370d32d396cc74baae77ae397e96a5, type: 2}
     colorIndex: 1
   - faceIndex: 2
     localX: 2
     y: 2
-    blockShapeRef:
-      m_AssetGUID: e5ba09d26899f39478439f7a066e8e55
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: e5ba09d26899f39478439f7a066e8e55, type: 2}
     colorIndex: 5
   - faceIndex: 2
     localX: 4
     y: 0
-    blockShapeRef:
-      m_AssetGUID: 36cc00af6cfd6e043afacbaaa0a44c2a
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: 36cc00af6cfd6e043afacbaaa0a44c2a, type: 2}
     colorIndex: 0
   - faceIndex: 2
     localX: 4
     y: 1
-    blockShapeRef:
-      m_AssetGUID: 4c5836c4f835ffd4eafd02ad5ff2eb41
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: 4c5836c4f835ffd4eafd02ad5ff2eb41, type: 2}
     colorIndex: 5
   - faceIndex: 2
     localX: 3
     y: 2
-    blockShapeRef:
-      m_AssetGUID: 69370d32d396cc74baae77ae397e96a5
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: 69370d32d396cc74baae77ae397e96a5, type: 2}
     colorIndex: 1
   - faceIndex: 3
     localX: 1
     y: 0
-    blockShapeRef:
-      m_AssetGUID: 36cc00af6cfd6e043afacbaaa0a44c2a
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: 36cc00af6cfd6e043afacbaaa0a44c2a, type: 2}
     colorIndex: 0
   - faceIndex: 3
     localX: 0
     y: 1
-    blockShapeRef:
-      m_AssetGUID: 69370d32d396cc74baae77ae397e96a5
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: 69370d32d396cc74baae77ae397e96a5, type: 2}
     colorIndex: 1
   - faceIndex: 3
     localX: 1
     y: 2
-    blockShapeRef:
-      m_AssetGUID: 69370d32d396cc74baae77ae397e96a5
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: 69370d32d396cc74baae77ae397e96a5, type: 2}
     colorIndex: 1
   - faceIndex: 3
     localX: 3
     y: 1
-    blockShapeRef:
-      m_AssetGUID: 69370d32d396cc74baae77ae397e96a5
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: 69370d32d396cc74baae77ae397e96a5, type: 2}
     colorIndex: 1
   - faceIndex: 3
     localX: 4
     y: 2
-    blockShapeRef:
-      m_AssetGUID: e5ba09d26899f39478439f7a066e8e55
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: e5ba09d26899f39478439f7a066e8e55, type: 2}
     colorIndex: 5
   - faceIndex: 0
     localX: 2
     y: 3
-    blockShapeRef:
-      m_AssetGUID: e5ba09d26899f39478439f7a066e8e55
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
+    blockShapeRef: {fileID: 11400000, guid: e5ba09d26899f39478439f7a066e8e55, type: 2}
     colorIndex: 0
   difficultyConfig: {fileID: 11400000, guid: eaa4ccbb339d282419b1dc3981ac3cbf, type: 2}
   shapePool: {fileID: 11400000, guid: a6ae101740905c34cafb4239cf25c7b2, type: 2}

@@ -232,7 +232,8 @@ public class GridVisualizer
 
     public GameObject[] GetRowVisuals(int row)
     {
-        if (row < 0 || row >= config.height) return System.Array.Empty<GameObject>();
+        if (row < 0 || row >= config.height)
+            return new GameObject[0];
 
         // [PERF] Reuse array — kích thước cố định = Perimeter
         if (_rowVisualsCache == null || _rowVisualsCache.Length != config.Perimeter)

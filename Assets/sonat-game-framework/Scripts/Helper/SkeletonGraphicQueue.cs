@@ -97,13 +97,13 @@ public class AnimTrack
 
     public bool playAudio = false;
 
-    [ShowIf("playAudio"), FoldoutGroup("Audio", expanded: true)]
+    //[ShowIf("playAudio"), FoldoutGroup("Audio", expanded: true)]
     public float delayAudio = 0;
 
-    [ShowIf("playAudio"), FoldoutGroup("Audio"), SerializeField]
+    //[ShowIf("playAudio"), FoldoutGroup("Audio"), SerializeField]
     private AudioId audioId;
     
-    [ShowIf("playAudio"), FoldoutGroup("Audio"), SerializeField]
+    //[ShowIf("playAudio"), FoldoutGroup("Audio"), SerializeField]
     private string audioName;
     
     public string AudioName => audioId == AudioId.None? audioName : audioId.ToString();

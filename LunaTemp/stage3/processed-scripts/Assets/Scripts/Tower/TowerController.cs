@@ -87,8 +87,8 @@ public class TowerController : MonoBehaviour
     private void OnGameStateChanged([Bridge.Ref] GameStateChangeEvent e)
     {
         if (!_isSystemReady) return;
-        if (e.gameState == GameState.GameOver || e.gameState == GameState.LevelComplete)
-            rotator?.StopRotation();
+        //if (e.gameState == GameState.GameOver || e.gameState == GameState.LevelComplete)
+        //    rotator?.StopRotation();
     }
 
     #endregion

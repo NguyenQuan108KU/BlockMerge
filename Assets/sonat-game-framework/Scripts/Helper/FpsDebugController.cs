@@ -108,18 +108,18 @@ public class FpsDebugController : MonoBehaviour
     public static string message = "null";
     public static string message2 = "null";
 
-    void OnGUI()
-    {
-        //   GUI.Label(_rect, string.Format("{0:0.0} ms ({1:0.} fps)" + message, _deltaTime * 1000.0f, 1.0f / _deltaTime), Style);
-        GUI.Label(_rect3,
-            string.Format(
-                "{0:0.0} ms ({1:0.} fps)\n" +
-                $"targetFR = {Application.targetFrameRate}\nvSyncCount = {QualitySettings.vSyncCount} \nRefresh-rate = " +
-                Screen.currentResolution.refreshRate, _deltaTime * 1000.0f, 1.0f / _deltaTime), Style);
-        //    GUI.Label(_rect, $"{message}", Style);
-        //   GUI.Label(_rect2, $"{Camera.main.orthographicSize}", Style);
-        //    GUI.Label(_rect3, $"{Camera.main.pixelWidth}/{Camera.main.pixelHeight}={Camera.main.pixelWidth * 1f / Camera.main.pixelHeight}", Style);
-    }
+    //void OnGUI()
+    //{
+    //    //   GUI.Label(_rect, string.Format("{0:0.0} ms ({1:0.} fps)" + message, _deltaTime * 1000.0f, 1.0f / _deltaTime), Style);
+    //    GUI.Label(_rect3,
+    //        string.Format(
+    //            "{0:0.0} ms ({1:0.} fps)\n" +
+    //            $"targetFR = {Application.targetFrameRate}\nvSyncCount = {QualitySettings.vSyncCount} \nRefresh-rate = " +
+    //            Screen.currentResolution.refreshRate, _deltaTime * 1000.0f, 1.0f / _deltaTime), Style);
+    //    //    GUI.Label(_rect, $"{message}", Style);
+    //    //   GUI.Label(_rect2, $"{Camera.main.orthographicSize}", Style);
+    //    //    GUI.Label(_rect3, $"{Camera.main.pixelWidth}/{Camera.main.pixelHeight}={Camera.main.pixelWidth * 1f / Camera.main.pixelHeight}", Style);
+    //}
 
     public void TestAspect()
     {

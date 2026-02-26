@@ -4,7 +4,6 @@ using System.Text.RegularExpressions;
 using DG.Tweening;
 using DG.Tweening.Core;
 using DG.Tweening.Plugins.Options;
-using I2.Loc;
 using Sonat.Enums;
 using SonatFramework.Scripts.Utils;
 using SonatFramework.Systems;
@@ -47,26 +46,26 @@ namespace SonatFramework.Scripts.Helper
 
         public static void SetLocalize(this TMP_Text target, string term)
         {
-            if (target.TryGetComponent<Localize>(out var localize) && LocalizationManager.GetTermData(term) != null)
-            {
-                localize.SetTerm(term);
-            }
-            else
-            {
-                target.text = SplitByUppercase(term);
-            }
+            //if (target.TryGetComponent<Localize>(out var localize) && LocalizationManager.GetTermData(term) != null)
+            //{
+            //    localize.SetTerm(term);
+            //}
+            //else
+            //{
+            //    target.text = SplitByUppercase(term);
+            //}
         }
 
         public static void SetLocalizeParam(this TMP_Text target, string param, string value)
         {
-            if (target.TryGetComponent<LocalizationParamsManager>(out var localize))
-            {
-                localize.SetParameterValue(param, value);
-            }
-            else
-            {
-                target.text = param.Replace("{[VALUE]}", value);
-            }
+            //if (target.TryGetComponent<LocalizationParamsManager>(out var localize))
+            //{
+            //    localize.SetParameterValue(param, value);
+            //}
+            //else
+            //{
+            //    target.text = param.Replace("{[VALUE]}", value);
+            //}
         }
 
         public static string SplitByUppercase(string input)

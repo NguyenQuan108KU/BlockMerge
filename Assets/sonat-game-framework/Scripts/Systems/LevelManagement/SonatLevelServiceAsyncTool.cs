@@ -12,7 +12,7 @@ namespace SonatFramework.Systems.LevelManagement
     {
         [SerializeField] protected string path = "";
 
-        [BoxGroup("SERVICES")] [Required] [SerializeField]
+        //[BoxGroup("SERVICES")] [Required] [SerializeField]
         protected Service<SaveObjectServiceAsync> saveObjectServiceAsync = new Service<SaveObjectServiceAsync>();
 
         public void SetFolder(string folder)

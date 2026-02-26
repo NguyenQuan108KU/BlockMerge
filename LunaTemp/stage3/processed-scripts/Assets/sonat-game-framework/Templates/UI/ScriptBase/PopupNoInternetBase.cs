@@ -11,7 +11,7 @@ public class PopupNoInternetBase : Panel
 {
     [SerializeField] private bool autoCheckRetry = true;
 
-    [ShowIf("@autoCheckRetry == true")] [SerializeField]
+    //[ShowIf("@autoCheckRetry == true")] [SerializeField]
     private float checkingTimeRate = 0.1f;
 
     private Service<CheckInternetService> checkInternetService;

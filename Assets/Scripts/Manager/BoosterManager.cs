@@ -25,7 +25,7 @@ namespace Booster
 
         private async Task InitializeWithDelay()
         {
-            await Task.Yield();
+            //await Task.Yield();
             //await Task.WaitUntil(() => SonatSystem.Instance != null);
             //await Task.WaitUntil(() => FindFirstObjectByType<BlockSpawner>() != null);
             InitializeSystem();
@@ -43,8 +43,8 @@ namespace Booster
         private void RegisterStrategies()
         {
             //_strategies[GameResource.Undo] = new UndoStrategy();
-            _strategies[GameResource.Hammer] = new HammerStrategy();
-            _strategies[GameResource.Clock] = new ClockStrategy(CLOCK_DURATION);
+            //_strategies[GameResource.Hammer] = new HammerStrategy();
+            //_strategies[GameResource.Clock] = new ClockStrategy(CLOCK_DURATION);
 
             foreach (var s in _strategies.Values)
                 s.Initialize(_context);
@@ -71,8 +71,8 @@ namespace Booster
         {
             return new BoosterContext(
                 GridManager.Instance,
-                FindFirstObjectByType<BlockSpawner>(),
-                FindFirstObjectByType<TowerController>()?.towerContainer
+                Object.FindObjectOfType<BlockSpawner>(),
+                Object.FindObjectOfType<TowerController>()?.towerContainer
             );
         }
 

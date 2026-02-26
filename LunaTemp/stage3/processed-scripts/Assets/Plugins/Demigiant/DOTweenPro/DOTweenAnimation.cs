@@ -669,14 +669,14 @@ namespace DG.Tweening
         /// Sends to the given time (and pauses) all the tweens whose target-id is the one set by this animation
         /// </summary>
         /// <param name="time">Time to send the tween to</param>
-        public override void DOGotoAndPause(float time)
-        { DOGoto(time, false); }
+        //public override void DOGotoAndPause(float time)
+        //{ DOGoto(time, false); }
         /// <summary>
         /// Sends to the given time (and plays) all the tweens whose target-id is the one set by this animation
         /// </summary>
         /// <param name="time">Time to send the tween to</param>
-        public override void DOGotoAndPlay(float time)
-        { DOGoto(time, true); }
+        //public override void DOGotoAndPlay(float time)
+        //{ DOGoto(time, true); }
         void DOGoto(float time, bool andPlay)
         {
             _tmpTweens.Clear();
@@ -896,6 +896,16 @@ namespace DG.Tweening
             } else if (animationType == AnimationType.LocalMove) {
                 ((Tweener)tween).ChangeEndValue(tweenGO.transform.localPosition + endValueV3, true);
             }
+        }
+
+        public override void DOGotoAndPause(float time)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void DOGotoAndPlay(float time)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

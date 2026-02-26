@@ -28,7 +28,7 @@ public class UIShopElement : MonoBehaviour
         this.index = index;
         if (uiTweenElement != null)
         {
-            uiTweenElement.tweenData.config.delay = index * delayElementAnim;
+            //uiTweenElement.tweenData.config.delay = index * delayElementAnim;
         }
     }
 

@@ -9,7 +9,7 @@ namespace Booster
     /// </summary>
     public class HammerStrategy : IBoosterStrategy
     {
-        public GameResource BoosterType => GameResource.Hammer;
+        //public GameResource BoosterType => GameResource.Hammer;
 
         private BoosterContext _context;
         private HammerService _service;

@@ -1,1 +1,0 @@
-namespace I2.Loc {}

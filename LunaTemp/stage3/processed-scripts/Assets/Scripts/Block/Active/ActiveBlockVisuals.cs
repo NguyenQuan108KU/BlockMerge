@@ -1,6 +1,6 @@
-﻿using UnityEngine;
-using DG.Tweening;
+﻿using DG.Tweening;
 using System.Threading.Tasks;
+using UnityEngine;
 
 /// <summary>
 /// Xử lý visual và animation của Active Block
@@ -76,10 +76,15 @@ public class ActiveBlockVisuals
     {
         float duration = grid?.config?.dropDuration ?? DropDuration;
 
-        await blockTransform
+        var tween = blockTransform
             .DOLocalMoveY(landingY, duration)
-            .SetEase(Ease.InQuad)
-            .AsyncWaitForCompletion();
+            .SetEase(Ease.InQuad);
+
+        var tcs = new TaskCompletionSource<bool>();
+
+        tween.OnComplete(() => tcs.SetResult(true));
+
+        await tcs.Task;
     }
 
     /// <summary>

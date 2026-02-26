@@ -203,7 +203,7 @@ namespace SonatFramework.Scripts.Utils
             if (time.Hours > 0) unit.Add($"{time.Hours:D1}h");
             if (time.Minutes > 0) unit.Add($"{time.Minutes:D1}m");
             if (time.Seconds > 0) unit.Add($"{time.Seconds:D1}s");
-            return res.AppendJoin(":", unit).ToString();
+            return null;
         }
 
         public static string GetReportTimeString([Bridge.Ref] DateTime servertime)

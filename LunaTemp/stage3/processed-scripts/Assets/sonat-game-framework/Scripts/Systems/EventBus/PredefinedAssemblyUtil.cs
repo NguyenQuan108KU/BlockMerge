@@ -60,7 +60,7 @@ namespace SonatFramework.Systems.EventBus
             var types = new List<Type>();
             for (var i = 0; i < assemblies.Length; i++)
             {
-                var assemblyType = GetAssemblyType(assemblies[i].GetName().Name);
+                var assemblyType = GetAssemblyType(assemblies[i].GetName().ToString());
                 if (assemblyType != null) assemblyTypes.Add((AssemblyType)assemblyType, assemblies[i].GetTypes());
             }
 

@@ -71,15 +71,14 @@ public class TransitionOverlay : MonoBehaviour
         if (overlayImage != null)
             overlayImage.raycastTarget = true;
 
-        await DOTween.To(
+        DOTween.To(
             () => _material.GetFloat(ProgressID),
             x => _material.SetFloat(ProgressID, x),
             1f,
             revealDuration
         )
         .SetEase(revealEase)
-        .SetUpdate(true)
-        .AsyncWaitForCompletion();
+        .SetUpdate(true);
 
         if (overlayImage != null)
             overlayImage.raycastTarget = false;

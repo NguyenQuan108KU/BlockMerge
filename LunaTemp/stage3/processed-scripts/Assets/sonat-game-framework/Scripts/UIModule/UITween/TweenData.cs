@@ -12,12 +12,12 @@ namespace SonatFramework.Scripts.UIModule
     {
         public Transform target;
 
-        [ShowIf("@custom == false")] [OnValueChanged("OnConfigSOValueChanged")]
+        //[ShowIf("@custom == false")] [OnValueChanged("OnConfigSOValueChanged")]
         public TweenConfigSO configSO;
 
         public bool custom;
 
-        [ShowIf("@custom")] public TweenConfig config;
+        public TweenConfig config;
 
         public Action OnCompleted;
 

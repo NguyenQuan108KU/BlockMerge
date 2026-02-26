@@ -22,7 +22,7 @@ public class FloodGroupRegistry
         var group = new GroupData
         {
             OriginBlockID = originBlockID,
-            AllBlockIDs = new HashSet<int>(floodBlockIDs.Count + 1) { originBlockID },
+            //AllBlockIDs = new HashSet<int>(floodBlockIDs.Count + 1) { originBlockID },
             State = GroupState.Intact
         };
 

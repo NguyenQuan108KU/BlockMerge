@@ -7,7 +7,7 @@ namespace Booster
 
     public class FloodBlockStrategy : IBoosterStrategy
     {
-        public GameResource BoosterType => GameResource.Flood;
+        //public GameResource BoosterType => GameResource.Flood;
 
         public void Initialize(BoosterContext context) { }
 

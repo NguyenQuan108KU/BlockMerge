@@ -269,8 +269,8 @@ public class LevelDataSOEditor : Editor
             block.colorIndex = EditorGUILayout.IntField("Color Index", block.colorIndex);
 
             BlockShapeSO currentShape = null;
-            if (block.blockShapeRef?.editorAsset != null)
-                currentShape = block.blockShapeRef.editorAsset as BlockShapeSO;
+            if (block.blockShapeRef != null)
+                currentShape = block.blockShapeRef as BlockShapeSO;
 
             var newShape = (BlockShapeSO)EditorGUILayout.ObjectField(
                 "Shape", currentShape, typeof(BlockShapeSO), false);
@@ -281,7 +281,7 @@ public class LevelDataSOEditor : Editor
                 {
                     string path = AssetDatabase.GetAssetPath(newShape);
                     string guid = AssetDatabase.AssetPathToGUID(path);
-                    block.blockShapeRef = new AssetReference(guid);
+                    block.blockShapeRef = newShape;
                 }
                 else
                 {

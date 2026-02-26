@@ -2,7 +2,6 @@ using Difficulty;
 using Sonat.Enums;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 
 [System.Serializable]
 public struct PreplacedBlockData
@@ -10,7 +9,7 @@ public struct PreplacedBlockData
     public int faceIndex;
     public int localX;
     public int y;
-    public AssetReference blockShapeRef;
+    public BlockShapeSO blockShapeRef;
     public int colorIndex;
 }
 
@@ -153,7 +152,7 @@ public class LevelDataSO : ScriptableObject
         if (data.y < 0)
             result.AddError($"Y không được âm (hiện tại: {data.y})");
 
-        if (data.blockShapeRef == null || !data.blockShapeRef.RuntimeKeyIsValid())
+        if (data.blockShapeRef == null)
         {
             result.AddError("Block Shape chưa được gán");
             return result;
@@ -235,11 +234,12 @@ public class LevelDataSO : ScriptableObject
 
     private BlockShapeSO GetShapeFromElement([Bridge.Ref] PreplacedBlockData data)
     {
-#if UNITY_EDITOR
-        if (data.blockShapeRef != null && data.blockShapeRef.editorAsset != null)
-            return data.blockShapeRef.editorAsset as BlockShapeSO;
-#endif
-        return null;
+        //#if UNITY_EDITOR
+        //        if (data.blockShapeRef != null && data.blockShapeRef.editorAsset != null)
+        //            return data.blockShapeRef.editorAsset as BlockShapeSO;
+        //#endif
+        //        return null;
+        return data.blockShapeRef;
     }
 
     public bool CanSave()

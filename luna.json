@@ -11,11 +11,17 @@
         "environmentID": -2046678880,
         "scripts": {
             "excludes": [
+                "Assets/I2/",
+                "Assets/JMO Assets/",
                 "Assets/MaxSdk/",
                 "Assets/Scripts/Cheat/",
                 "Assets/Scripts/Data/LevelDataJson.cs",
                 "Assets/Scripts/Manager/ObjectPoolManager.cs",
+                "Assets/Scripts/Tutorial/TutDragPanel.cs",
                 "Assets/Scripts/Tutorial/TutorialConfigSO.cs",
+                "Assets/Scripts/Tutorial/TutorialPanelBase.cs",
+                "Assets/Scripts/Tutorial/TutRotatePanel.cs",
+                "Assets/Scripts/Tutorial/TutUndoPanel.cs",
                 "Assets/Scripts/UI/Panel/BtnNoAds.cs",
                 "Assets/Scripts/UI/Panel/PopupSettings.cs",
                 "Assets/sonat-game-framework/Scripts/Feature/Shop/",
@@ -85,12 +91,12 @@
                 "Stubs/SupersonicWisdom/"
             ],
             "msbuildMac64": "/Library/Frameworks/Mono.framework/Versions/Current/bin/msbuild",
-            "msbuildWin64": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe",
+            "msbuildWin64": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe",
             "externalSources": [],
             "externalJSLibraries": [],
             "scriptingDefines": [],
-            "msbuildVersion": "17.9",
-            "monoVersion": "8.0.5",
+            "msbuildVersion": "18.0",
+            "monoVersion": "10.0.1",
             "dotnetVersion": ""
         },
         "assets": {

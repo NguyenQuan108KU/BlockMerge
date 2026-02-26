@@ -185,21 +185,21 @@ public class FloodFillExecutor : IPostLandEffect
         if (meshLibrary == null) return;
 
         // Build set tất cả positions trong group (absolute)
-        var allCells = new HashSet<Vector2Int>(blockCells.Count + floodCells.Count);
-        foreach (var cell in blockCells) allCells.Add(cell);
-        foreach (var cell in floodCells) allCells.Add(cell);
+        //var allCells = new HashSet<Vector2Int>(blockCells.Count + floodCells.Count);
+        //foreach (var cell in blockCells) allCells.Add(cell);
+        //foreach (var cell in floodCells) allCells.Add(cell);
 
         // Resolve mesh cho từng cell dựa trên neighbors trong group
-        foreach (var cell in allCells)
-        {
-            GameObject visual = _grid.visualizer.GetVisual(cell.x, cell.y);
-            if (visual == null) continue;
+        //foreach (var cell in allCells)
+        //{
+        //    GameObject visual = _grid.visualizer.GetVisual(cell.x, cell.y);
+        //    if (visual == null) continue;
 
-            var blockVis = visual.GetComponent<BlockVisual>();
-            if (blockVis == null) continue;
+        //    var blockVis = visual.GetComponent<BlockVisual>();
+        //    if (blockVis == null) continue;
 
-            blockVis.ResolveMesh(cell, allCells, meshLibrary);
-        }
+        //    blockVis.ResolveMesh(cell, allCells, meshLibrary);
+        //}
     }
 
     private async Task SpawnOneBlock(int x, int y)

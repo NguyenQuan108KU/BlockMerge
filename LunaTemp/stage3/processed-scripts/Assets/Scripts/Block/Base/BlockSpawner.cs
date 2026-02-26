@@ -126,7 +126,7 @@ public class BlockSpawner : MonoBehaviour
                 .DOScale(Vector3.one, 0.2f)
                 .SetEase(Ease.OutBack);
 
-            await spawnTween.AsyncWaitForCompletion();
+            //await spawnTween.AsyncWaitForCompletion();
 
             activeBlock.transform.localScale = Vector3.one;
             isSpawning = false;

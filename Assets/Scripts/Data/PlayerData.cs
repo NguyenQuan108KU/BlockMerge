@@ -30,8 +30,9 @@ public class PlayerData
         get
         {
             if (InventoryService == null) return 0;
-            return InventoryService.GetResource(GameResource.Live.ToGameResourceKey()).quantity;
+            return 1;
         }
+
     }
 
     public int CurrentCoins
@@ -39,7 +40,7 @@ public class PlayerData
         get
         {
             if (InventoryService == null) return 0;
-            return InventoryService.GetResource(GameResource.Coin.ToGameResourceKey()).quantity;
+            return 1;
         }
     }
 

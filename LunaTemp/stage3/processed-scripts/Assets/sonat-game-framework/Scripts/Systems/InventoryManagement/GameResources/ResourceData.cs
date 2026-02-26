@@ -11,14 +11,14 @@ namespace SonatFramework.Systems.InventoryManagement.GameResources
     [Serializable]
     public class ResourceData
     {
-        [FoldoutGroup("@gameResource", expanded: false)] [HorizontalGroup("@gameResource/Row1", width: 0.7f)] [LabelText("Resource")] [LabelWidth(70)]
+        //[FoldoutGroup("@gameResource", expanded: false)] [HorizontalGroup("@gameResource/Row1", width: 0.7f)] [LabelText("Resource")] [LabelWidth(70)]
         public GameResource gameResource;
 
-        [FoldoutGroup("@gameResource")] [HorizontalGroup("@gameResource/Row1", width: 0.3f)] [LabelText("ID")] [LabelWidth(30)]
+        //[FoldoutGroup("@gameResource")] [HorizontalGroup("@gameResource/Row1", width: 0.3f)] [LabelText("ID")] [LabelWidth(30)]
         public int id;
 
-        [FoldoutGroup("@gameResource")] public int quantity;
-        [FoldoutGroup("@gameResource")] public long seconds;
+        public int quantity;
+        public long seconds;
         [HideInInspector] public long timestamp = 0;
         [JsonIgnore] public Action onUpdate;
 
@@ -127,7 +127,7 @@ namespace SonatFramework.Systems.InventoryManagement.GameResources
         }
     }
 
-    [JsonConverter(typeof(GameResourceKeyConverter))]
+    //[JsonConverter(typeof(GameResourceKeyConverter))]
     public struct GameResourceKey
     {
         public GameResource gameResource;

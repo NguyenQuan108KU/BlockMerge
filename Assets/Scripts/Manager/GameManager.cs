@@ -59,7 +59,7 @@ public class GameManager : Singleton<GameManager>
         _mainCamera = Camera.main;
 
         // Chờ 1 frame để SonatSystem init xong
-        await Task.Yield();
+        //await Task.Yield();
 
         if (manualLevelData != null)
         {
@@ -176,7 +176,7 @@ public class GameManager : Singleton<GameManager>
         SetCameraEnabled(true);
 
         // Chờ 1 frame đảm bảo camera + overlay đã render
-        await Task.Yield();
+        //await Task.Yield();
 
         _isGameActive = true;
         SetGameState(GameState.Playing);
@@ -254,7 +254,7 @@ public class GameManager : Singleton<GameManager>
     private void SetupEnvironment(LevelDataSO data)
     {
         if (_cachedTower == null)
-            _cachedTower = FindFirstObjectByType<TowerController>();
+            _cachedTower = Object.FindObjectOfType<TowerController>();
 
         if (_cachedTower != null && _cachedTower.towerContainer != null)
             _cachedTower.towerContainer.localRotation = Quaternion.identity;
@@ -323,7 +323,7 @@ public class GameManager : Singleton<GameManager>
             phase = 0
         });
 
-        SetGameState(GameState.LevelComplete);
+        //SetGameState(GameState.LevelComplete);
 
         //await Task.Delay(System.TimeSpan.FromSeconds(1.0f), ignoreTimeScale: true);
 

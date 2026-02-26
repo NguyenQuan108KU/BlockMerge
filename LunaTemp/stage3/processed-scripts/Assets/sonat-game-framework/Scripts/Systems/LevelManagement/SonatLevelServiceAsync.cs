@@ -16,7 +16,6 @@ namespace SonatFramework.Systems.LevelManagement
     [CreateAssetMenu(fileName = "SonatLevelServiceAsync", menuName = "Sonat Services/Level Service/Sonat Level Service Async")]
     public class SonatLevelServiceAsync : LevelServiceAsync, IServiceInitialize, IServiceWaitingRemoteConfig
     {
-        [BoxGroup("SERVICES")]
         [Required]
         [SerializeField]
         protected Service<LoadObjectServiceAsync> loadObjectServiceAsync = new Service<LoadObjectServiceAsync>();

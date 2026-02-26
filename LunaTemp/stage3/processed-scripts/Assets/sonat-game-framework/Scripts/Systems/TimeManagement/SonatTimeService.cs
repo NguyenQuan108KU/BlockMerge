@@ -79,24 +79,24 @@ namespace SonatFramework.Systems.TimeManagement
 
         private DateTime LoadNetTime(bool force)
         {
-            if (!UsingLocalTime)
-                try
-                {
-                    using (var response = WebRequest.Create("https://www.google.com").GetResponse())
-                        //string todaysDates =  response.Headers["date"];
-                    {
-                        return DateTime.ParseExact(response.Headers["date"],
-                            "ddd, dd MMM yyyy HH:mm:ss 'GMT'",
-                            CultureInfo.InvariantCulture.DateTimeFormat,
-                            DateTimeStyles.AssumeUniversal);
-                    }
-                }
-                catch (WebException)
-                {
-                    if (force)
-                        return DateTime.Now; //In case something goes wrong. 
-                    return DateTime.Now;
-                }
+            //if (!UsingLocalTime)
+            //    try
+            //    {
+            //        //using (var response = WebRequest.Create("https://www.google.com").GetResponse())
+            //            //string todaysDates =  response.Headers["date"];
+            //        {
+            //            return DateTime.ParseExact(response.Headers["date"],
+            //                "ddd, dd MMM yyyy HH:mm:ss 'GMT'",
+            //                CultureInfo.InvariantCulture.DateTimeFormat,
+            //                DateTimeStyles.AssumeUniversal);
+            //        }
+            //    }
+            //    catch (WebException)
+            //    {
+            //        if (force)
+            //            return DateTime.Now; //In case something goes wrong. 
+            //        return DateTime.Now;
+            //    }
 
             return DateTime.Now;
         }

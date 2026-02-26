@@ -8,7 +8,7 @@ public class SingletonSimple<T> : MonoBehaviour where T : MonoBehaviour
     {
         get
         {
-            if (_instance == null && Application.isPlaying) _instance = FindFirstObjectByType<T>();
+            if (_instance == null && Application.isPlaying) _instance = Object.FindObjectOfType<T>();
 
             return _instance;
         }
